@@ -1,0 +1,26 @@
+{
+  "index.qmd": {
+    "index.html": "07147e90"
+  },
+  "intro.qmd": {
+    "intro.html": "5254cab9"
+  },
+  "summary.qmd": {
+    "summary.html": "c3148dc4"
+  },
+  "references.qmd": {
+    "references.html": "2c05bbcf"
+  },
+  "diego.qmd": {
+    "diego.html": "2a6d2c52"
+  },
+  "samuel.qmd": {
+    "samuel.html": "3c4d935b"
+  },
+  "janice.qmd": {
+    "janice.html": "c298b87f"
+  },
+  "chris.qmd": {
+    "chris.html": "5f73d6a4"
+  }
+}

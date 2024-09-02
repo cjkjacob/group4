@@ -1,0 +1,6 @@
+﻿ATTRIBUTE,DESCRIPTION,UNITS,NOTE
+PLOT,Plot number,,105-322
+REP,Replication,,"1, 2, 3"
+ROTATION,Rotation treatment,," 1 = Continuous spring wheat, residue retained; 2 = Continuous spring wheat, residue removed; 3 = Spring wheat - millet; 4 = Spring wheat - safflower - fallow; 5 = Spring wheat - safflower - rye; 6 = Spring wheat - fallow"
+TILLAGE,Tillage treatment,,T1 = Minimum tillage; T2 = No tillage
+SUMSVR,Sum of stover production,Mg/ha,"Sum of stover production, 1993-2000"

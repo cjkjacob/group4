@@ -1,0 +1,20 @@
+﻿ATTRIBUTE,DESCRIPTION,UNITS,NOTE
+PLOT,Plot number,,35-260; NA = Not applicable
+REP,Replication,,
+TRT,Treatment,,"cfc = Spring wheat - fallow, conventional tillage; ccn = Spring wheat - winter wheat - sunflower, no tillage; ModGraze = Grazed pasture"
+DEPTH,Soil depth,cm,7.5 = 0-7.5 cm; 15 = 7.5-15 cm; 30 = 15-30 cm
+SBD,Soil bulk density,Mg/m3,
+EC,Electrical conductivity,dS/m,1:1 soil-water ratio
+PH,Soil pH,-log[H+],1:1 soil-water ratio
+NO3,Soil nitrate N,kg/ha,Missing data = -9999
+SOC,Soil organic carbon,kg/ha,
+TN,Total soil nitrogen,kg/ha,
+POMC,Particulate organic matter carbon,kg/ha,
+POMN,Particulate organic matter nitrogen,kg/ha,
+POMC_TC,Percentage of POM-C as SOC,%,
+POMN_TN,Percentage of POM-N as TN,%,
+PMN,Potentially mineralizable nitrogen,kg/ha,
+MBC,Microbial biomass carbon,kg/ha,0-7.5 cm only; Missing data = -9999
+MBN,Microbial biomass nitrogen,kg/ha,0-7.5 cm only; Missing data = -9999
+INF,Infiltration rate,cm/h,0-7.5 cm only; Missing data = -9999
+WSA,Water-stable aggregates,%,0-7.5 cm only; Missing data = -9999

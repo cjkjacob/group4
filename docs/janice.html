@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Federal Reserve Economic Data - Janice Oenardi – CSC 477 - Group 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./chris.html" rel="next">
+<link href="./samuel.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./janice.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Federal Reserve Economic Data - Janice Oenardi</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CSC 477 - Group 4</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diego.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">US Department of Agriculture - Diego Mendoza</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./samuel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">NASA Earth Data - Samuel Zelaya</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./janice.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Federal Reserve Economic Data - Janice Oenardi</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chris.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">National Center for Education Statistics - Chris Jacob</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#wednesday" id="toc-wednesday" class="nav-link active" data-scroll-target="#wednesday"><span class="header-section-number">3.1</span> Wednesday</a>
+  <ul class="collapse">
+  <li><a href="#cleaning-the-dataset" id="toc-cleaning-the-dataset" class="nav-link" data-scroll-target="#cleaning-the-dataset"><span class="header-section-number">3.1.1</span> Cleaning the dataset</a></li>
+  <li><a href="#context-of-dataset" id="toc-context-of-dataset" class="nav-link" data-scroll-target="#context-of-dataset"><span class="header-section-number">3.1.2</span> Context of dataset</a></li>
+  <li><a href="#creating-different-basic-visualizations" id="toc-creating-different-basic-visualizations" class="nav-link" data-scroll-target="#creating-different-basic-visualizations"><span class="header-section-number">3.1.3</span> Creating Different Basic Visualizations</a></li>
+  <li><a href="#what-plot-represent-better-the-data-why" id="toc-what-plot-represent-better-the-data-why" class="nav-link" data-scroll-target="#what-plot-represent-better-the-data-why"><span class="header-section-number">3.1.4</span> What plot represent better the data? why?</a></li>
+  </ul></li>
+  <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">3.2</span> Friday</a>
+  <ul class="collapse">
+  <li><a href="#choosing-the-source-and-dataset" id="toc-choosing-the-source-and-dataset" class="nav-link" data-scroll-target="#choosing-the-source-and-dataset"><span class="header-section-number">3.2.1</span> Choosing the source and dataset</a></li>
+  <li><a href="#context-of-the-dataset" id="toc-context-of-the-dataset" class="nav-link" data-scroll-target="#context-of-the-dataset"><span class="header-section-number">3.2.2</span> Context of the dataset</a></li>
+  <li><a href="#cleaning-and-organizing-the-dataset" id="toc-cleaning-and-organizing-the-dataset" class="nav-link" data-scroll-target="#cleaning-and-organizing-the-dataset"><span class="header-section-number">3.2.3</span> Cleaning and organizing the dataset</a></li>
+  <li><a href="#making-visualizations" id="toc-making-visualizations" class="nav-link" data-scroll-target="#making-visualizations"><span class="header-section-number">3.2.4</span> Making Visualizations</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.2.5</span> References</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Federal Reserve Economic Data - Janice Oenardi</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="wednesday" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">3.1</span> Wednesday</h2>
+<section id="cleaning-the-dataset" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="cleaning-the-dataset"><span class="header-section-number">3.1.1</span> Cleaning the dataset</h3>
+<p>Before processing and creating visualizations of the dataset, it is important to prep the dataset by cleaning it. There might be N/A values or outliers in the dataset, which needs to be removed and cleaned to create better and more accurate visualizations.</p>
+<p>To clean the data, there are a few things that can be done: - Finding and highlighting NA values by selecting the range of cells and doing ‘Conditional Formatting’ to ‘Highlight Cells Rules’. - Removing NA values by using the ‘Find and Replace’. Find ‘NA’ and replace it with ‘0’. - Using IF function to check for NA values and replace it accordingly. Ex: =IF(A2=“NA”, “0”, A2)</p>
+<p>Additionally, upon converting the Swiss dataset from a .csv format into an Excel, the first column of the dataset became combined into one cell.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_cleaning.png" class="img-fluid"></p>
+<p>I fixed the titles that are separated by commas in the one cell by separating the titles into the different respective columns.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_cleaning2.png" class="img-fluid"></p>
+</section>
+<section id="context-of-dataset" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="context-of-dataset"><span class="header-section-number">3.1.2</span> Context of dataset</h3>
+<p>Before creating plots and visualizations of the dataset, it is important to know what each title in the columns mead and understand the context of the dataset.</p>
+<p><a href="https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/swiss.html" class="uri">https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/swiss.html</a></p>
+<p>The dataset contains 47 French-speaking “provinces” in Switzerland at around 1888. During that year, Switzerland was entering a demographic transition, where its fertility rates was beginning to fall from the typical level of underdeveloped countries. There are 6 variables in the dataset, where variables are scaled from 0 to 100, except Cathloic that is scaled from 0 to 1. The definitions of the dataset are as below:</p>
+<ul>
+<li>Fertility = common standardized fertility measure</li>
+<li>Agriculture = % of males involved in agriculture as occupation</li>
+<li>Examination = % draftees receiving highest mark on army examination</li>
+<li>Education = % education beyond primary school for draftees.</li>
+<li>Catholic = % ‘catholic’ (as opposed to ‘protestant’).</li>
+<li>Infant.Mortality = live births who live less than 1 year.</li>
+</ul>
+</section>
+<section id="creating-different-basic-visualizations" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="creating-different-basic-visualizations"><span class="header-section-number">3.1.3</span> Creating Different Basic Visualizations</h3>
+<section id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers"><span class="header-section-number">3.1.3.1</span> Scatterplot 1 - Fertility and Cathlic appear to cluster in two groups with four outliers</h4>
+<p>In creating plots, I utilized Excel’s tool of Recommended Charts, which included a scatterplot of ‘Fertility’ and ‘Catholic’. The scatterplot shown below shows two groups of cluster with four outliers.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_scatterplot.png" class="img-fluid"></p>
+<p>As shown in the scatterplot, provinces with higher percentage of Catholic people seem to have a slightly higher fertility compared to provinces with low percentage of Catholic people.</p>
+</section>
+<section id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province"><span class="header-section-number">3.1.3.2</span> Scatterplot 2 - Relationship between infant mortality and percentage of Catholic people in a province</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_scatterplot2.png" class="img-fluid"> Based on the scatterplot above, infant mortality and Catholic appear to have no apparent relationship. However, provinces with higher percentage of Catholic population appear to has a slightly higher infant mortality, with a few provinces having 25 and more live births in a year. Meanwhile, the provinces with a low percentage of Catholic population appear to have infant mortality mostly in the 15-25 range.</p>
+<p>Aside from that, the provinces in Swiss appear to have either a very high percentage of Catholic population or a very low percentage of Catholic population, with the scatterplot showing two clusters on the lower end of Catholic percentage (0-20%) and a higher end of Catholic percentage (80-100%). What do you observe?</p>
+</section>
+<section id="bar-charts" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="bar-charts"><span class="header-section-number">3.1.3.3</span> Bar Charts</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_barchart.png" class="img-fluid"> As mentioned in the discussion above, the provinces in Swiss appear to have either a very high percentage of Catholic population, or a very low percentage of Catholic population. The bar chart shows a high frequency within the 2.15-7.15% of Catholic population that gradually decreases as the percentage approaches 17.15-22.15 and gradually increases again as it approaches the 87.15-92.15 percentage of Catholic population. The bar chart above better visualize the two groups of highly populated Catholic province or lowly populated Catholic province.</p>
+</section>
+<section id="line-chart" class="level4" data-number="3.1.3.4">
+<h4 data-number="3.1.3.4" class="anchored" data-anchor-id="line-chart"><span class="header-section-number">3.1.3.4</span> Line Chart</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_linechart.png" class="img-fluid"> The line chart above clearly shows that there is a direct relationship between examination and education. As the percentage of education beyond primary school for draftees increases, the percentage of draftees receiving highest mark on army examination also increases. The two variables showcase a positive directly correlated relationship. Aside from that, the graph also shows that the 46th province outperformed all of the other provinces with the highest percentage of education beyond primary school for draftees and also the highest percentage of draftees receiving highest mark on army examination. The 46th province is followed by the 42th province which has the second highest percentage of education beyond primary school and second highest percentage of draftees receiving highest mark on army examination.</p>
+</section>
+<section id="pie-charts" class="level4" data-number="3.1.3.5">
+<h4 data-number="3.1.3.5" class="anchored" data-anchor-id="pie-charts"><span class="header-section-number">3.1.3.5</span> Pie Charts</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_piechart.png" class="img-fluid"> The pie chart does not really visualize the agriculture data well, as there are too many percentage classification of males involved in agriculture occupation. However, the pie chart can be made better by making the classifications into 5 groups to see which range of percentage of males involved in agriculture occupation is higher among the other provinces.</p>
+</section>
+<section id="histograms" class="level4" data-number="3.1.3.6">
+<h4 data-number="3.1.3.6" class="anchored" data-anchor-id="histograms"><span class="header-section-number">3.1.3.6</span> Histograms</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_histogram.png" class="img-fluid"> The histogram shows a slightly negative skew on the frequency of males involved in agriculture as occupation. The majority of the provinces have males involved in agriculture on the 61.2-71.2% range. The 1.2-11.2% range and the 21.2-31.2% range of males involved in agriculture have the lowest frequency.</p>
+</section>
+</section>
+<section id="what-plot-represent-better-the-data-why" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="what-plot-represent-better-the-data-why"><span class="header-section-number">3.1.4</span> What plot represent better the data? why?</h3>
+<p>There isn’t any plot that is more superior that the other, but it wholly depends on the variables being plotted. For instance, the relationship between examination and education can be better represented using a line chart, as a line chart shows a more visible distinction between the variable of examination and education. If using a scatterplot, the many plots in the chart may cause the distinction between the two variables to be less visible, as the two variables are directly correlated and have values very closely to one another.</p>
+<p>On the other hand, using a scatterplot can better highlight the two groups of highly-populated Catholic provinces and lowly-populated Catholic provinces better than a barchart. The scatterplot can visualize the two groups of clusters on opposite ends, highlighting there there are two major groups in the Swiss: Catholic heavily-populated province or Protestant heavily-populated province</p>
+<p>Therefore,different plots have different uses and can highlight the relationship of some variables better than the other, depending on the context and relationship of the variables being plotted. It is important to explore the different relationships of variables using different charts and plots to better visualize the relationships of the variables in the dataset.</p>
+</section>
+</section>
+<section id="friday" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">3.2</span> Friday</h2>
+<section id="choosing-the-source-and-dataset" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="choosing-the-source-and-dataset"><span class="header-section-number">3.2.1</span> Choosing the source and dataset</h3>
+<ul>
+<li>The source that I chose for this class is the Federal Reserve Economic Data (FRED), with the link: <a href="https://fred.stlouisfed.org/" class="uri">https://fred.stlouisfed.org/</a>.</li>
+</ul>
+<p>I chose the FRED source because I would like to delve more into the US economy to conduct economic analysis and financial research as a business major. Additionally, there are a lot of different datasets, including from different countries, that I an explore from the source.</p>
+<ul>
+<li>For this assignment, I used ChatGPT to brainstorm on which dataset I should choose from and why.</li>
+</ul>
+<p>After using ChatGPT and exploring the source website some more, I decided to choose the dataset containing Corporate Profits by Industry with this link: <a href="https://fredaccount.stlouisfed.org/public/datalist/6257" class="uri">https://fredaccount.stlouisfed.org/public/datalist/6257</a>. I downloaded the whole data lists, as it all involves the relevant corporate profits of different industries and sub-sectors.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Download_data.png" class="img-fluid"></p>
+<ul>
+<li>I think that it would be interesting to visualize how the different industries’ profits vary throughout the years, and whether there are correlations between any industries. I downloaded the dataset as Excel format.</li>
+</ul>
+</section>
+<section id="context-of-the-dataset" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="context-of-the-dataset"><span class="header-section-number">3.2.2</span> Context of the dataset</h3>
+<p>The dataset contains quarterly data on the corporate profits with inventory valuation adjustment for different industries, including non-financial, financial, federal, and many other sub-categories such as manufacturing, wholesale trade, and utilities. The data is presented in billions of dollars, seasonally adjusted annual rate. To set parameter, the study for this assignment only looks at the 10 year span from first quarter of 2014 to the first quarter of 2024.</p>
+</section>
+<section id="cleaning-and-organizing-the-dataset" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3" class="anchored" data-anchor-id="cleaning-and-organizing-the-dataset"><span class="header-section-number">3.2.3</span> Cleaning and organizing the dataset</h3>
+<ol type="1">
+<li>Replacing Series ID with Titles</li>
+</ol>
+<p>The dataset contains columns with Series ID instead of titles. Therefore, it needs to be replaced with the titles, which can be viewed in the other sheet in the same Excel document. - To do this, I copied the first Series ID and paste it on the ‘Find’ tool.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Replacing_column_titles.png" class="img-fluid"></p>
+<ul>
+<li>Then, I go to the other sheet in the same Excel document to find the same Series ID and locate the title</li>
+</ul>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Replacing_column_titles2.png" class="img-fluid"></p>
+<ul>
+<li>After locating the title, I copied it and paste it on the dataset sheet to replace the Series ID with the right title.</li>
+</ul>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Replacing_column_titles3.png" class="img-fluid"></p>
+<ul>
+<li>Repeat this until all other Series ID are replaced with its title</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Making the titles more concise When copy and pasting back the titles to the dataset sheet, I realized that the titles are very long and repetitive. Therefore, I reorganized the title and make it shorter and more concise.</p></li>
+<li><p>Formatting the columns to be more organized and neat To do this, I expanded the columns to the right width, and centered the text. Additionally, I also deleted the rows with data outside of the 10 year span from 2014 to 2024, as it is outside the parameter of the this exploration.</p></li>
+</ol>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Cleaned_and_organized_data.png" class="img-fluid"></p>
+</section>
+<section id="making-visualizations" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4" class="anchored" data-anchor-id="making-visualizations"><span class="header-section-number">3.2.4</span> Making Visualizations</h3>
+<p>In making visualizations, I utilized Excel’s ‘Recommended Charts’ tool under ‘Insert’. After using the tool, I looked over the data and explore to create more meaningful visualizations on my own.</p>
+<section id="line-chart-average-total-profits-in-10-years" class="level4" data-number="3.2.4.1">
+<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="line-chart-average-total-profits-in-10-years"><span class="header-section-number">3.2.4.1</span> Line chart: Average Total Profits in 10 Years</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Average_CP.png" class="img-fluid"></p>
+<p>When I added a graph from the ‘Recommended Charts’, a new sheet is created along with corporate profits summed into yearly instead of quarterly.</p>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Linechart.png" class="img-fluid"></p>
+<ul>
+<li>Total corporate profits increase over the 10 year period.</li>
+<li>There are some significant declines in corporate profits The two major declines occurred in the span of end of quarter of 2019 to end of quarter of 2020. in the late quarter of 2019 to 2020. It is evident that the COVID-19 pandemic caused the sudden drop in corporate profits, with the lock-down, inflation, and slowdown of the economy. The economy healed in the first two quarters of 2020 as the lock-downs are alleviated, however declined again in the end of quarter of 2020.</li>
+<li>The private enterprises’ profits appear to be very steadily increasing from first quarter of 2022 to the first quarter of 2024. The total corporate profits appear to be higher than the average total corporate profits dotted line, signifying that the increase in total corporate profits are quite significant.</li>
+</ul>
+</section>
+<section id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal" class="level4" data-number="3.2.4.2">
+<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal"><span class="header-section-number">3.2.4.2</span> Scatterplot 1: Domestic Industries (Non-financial: Manufacturing) vs.&nbsp;Federal</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Scatterplot1.png" class="img-fluid"></p>
+<ul>
+<li>“Domestic Industries: Non-financial: Manufacturing” appears to have an inverse relationship with “Federal”</li>
+</ul>
+<p>As ‘Manufacturing’ is high at a range of 675-825 billion dollars, ‘Federal’ appears to be on hundreds of billion dollars loss. However, as ‘Manufacturing’ decreases to below 600 billion dollars, ‘Federal’s’ corporate profits improved to a range of 50-125 billion dollars.</p>
+</section>
+<section id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing" class="level4" data-number="3.2.4.3">
+<h4 data-number="3.2.4.3" class="anchored" data-anchor-id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing"><span class="header-section-number">3.2.4.3</span> Scatterplot 2: Wholesale trade vs.&nbsp;Transportation and warehousing</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Scatterplot2.png" class="img-fluid"></p>
+<ul>
+<li>As wholesale trade’s corporate profits increases, the corporate profits in the sub-sector of transportation and warehousing also increases.</li>
+</ul>
+<p>The direct and proportional relationship of the two sub-sectors make sense, as wholesale trade involves purchasing goods in large quantities and reselling them in smaller quantities to businesses and other wholesalers, directly involving transportation and warehousing of the goods.</p>
+</section>
+<section id="barchart-non-financial-vs.-financial-domestic-industry" class="level4" data-number="3.2.4.4">
+<h4 data-number="3.2.4.4" class="anchored" data-anchor-id="barchart-non-financial-vs.-financial-domestic-industry"><span class="header-section-number">3.2.4.4</span> Barchart: Non-financial vs.&nbsp;Financial Domestic Industry</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Barchart.png" class="img-fluid"></p>
+<ul>
+<li>The non-financial domestic industry’s corporate profits are growing more significantly compared to the financial domestic industry’s stable corporate profits</li>
+</ul>
+<p>The non-financial domestic industry are growing more rapidly, especially in the last half of the decade. The financial domestic industry has over 2500 billions of dollars of corporate profits in the first quarter of 2024. Meanwhile, the financial domestic industry appears to have stable corporate profits throughout the past 10 years, as its corporate profits are varying slightly from year to year and are stuck under 750 billion dollars.</p>
+</section>
+<section id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits" class="level4" data-number="3.2.4.5">
+<h4 data-number="3.2.4.5" class="anchored" data-anchor-id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits"><span class="header-section-number">3.2.4.5</span> Piechart: Non-financial makes up the majority of the domestic industry’s corporate profits</h4>
+<p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Piechart.png" class="img-fluid"></p>
+<ul>
+<li>Non-financial domestic industry takes 70% of the domestic industry’s corporate profits, while the rest of the world takes up only 14% of the domestic industry’s corporate profits.</li>
+<li>As stated in a study, non-financial corporations are responsible for a large share of the economic activity in most advanced economies (Tebrake &amp; O’hagan, n.d.), which maakes sense as a lot of the important sub-sectors belong to the non-financial industry (including manufacturing of durable and non-durable goods, wholesale trade, retail trade, utilities, and information)</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5" class="anchored" data-anchor-id="references"><span class="header-section-number">3.2.5</span> References</h3>
+<ul>
+<li><p>Tebrake, J., &amp; O’hagan, P. (n.d.). Understanding Financial Accounts The financing of non-financial corporations. Retrieved August 31, 2024, from <a href="https://www.oecd-ilibrary.org/docserver/9789264281288-8-en.pdf?expires=1725145368&amp;id=id&amp;accname=guest&amp;checksum=CE2ED779ABF58E8BEB69C041927BC309" class="uri">https://www.oecd-ilibrary.org/docserver/9789264281288-8-en.pdf?expires=1725145368&amp;id=id&amp;accname=guest&amp;checksum=CE2ED779ABF58E8BEB69C041927BC309</a></p></li>
+<li><p><a href="https://fred.stlouisfed.org/" class="uri">https://fred.stlouisfed.org/</a>.</p></li>
+<li><p><a href="https://fredaccount.stlouisfed.org/public/datalist/6257" class="uri">https://fredaccount.stlouisfed.org/public/datalist/6257</a></p></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./samuel.html" class="pagination-link" aria-label="NASA Earth Data - Samuel Zelaya">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">NASA Earth Data - Samuel Zelaya</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chris.html" class="pagination-link" aria-label="National Center for Education Statistics - Chris Jacob">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">National Center for Education Statistics - Chris Jacob</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

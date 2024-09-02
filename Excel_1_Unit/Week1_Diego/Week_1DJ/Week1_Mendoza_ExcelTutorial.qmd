@@ -1,0 +1,39 @@
+---
+title: "Excel Tutorial"
+format: html
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+Overview Summary
+
+-Excel is an accelant document with dealing numbers -Great for tracking, predicting and storing values -Easy to add filters, formulas and graphs
+
+Main components
+
+-Cells- The basic unit of Excel where you enter data. Each cell is identified by a unique address, formed by combining the column letter and row number (e.g., A1, B2).
+
+-Rows- Horizontal sets of cells, labeled with numbers (1, 2, 3, etc.) -Columns- Vertical sets of cells, labeled with letters (A, B, C, etc.).
+
+Quick Access to OneDrive https://onedrive.live.com/
+
+![](%22C:\Users\djmen\OneDrive\Documents\CSC477\Screenshots\scatter1.png%22)

@@ -1,0 +1,19 @@
+﻿ATTRIBUTE,DESCRIPTION,UNITS,NOTE
+PLOT,Plot number,,105-322
+REP,Replication,,"1, 2, 3"
+ROTATION,Rotation treatment,," 1 = Continuous spring wheat, residue retained; 2 = Continuous spring wheat, residue removed; 3 = Spring wheat - millet; 4 = Spring wheat - safflower - fallow; 5 = Spring wheat - safflower - rye; 6 = Spring wheat - fallow"
+TILLAGE,Tillage treatment,,T1 = Minimum tillage; T2 = No tillage
+DEPTH,Soil depth,cm,7.5 = 0-7.5 cm; 15 = 7.5-15 cm; 30 = 15-30 cm
+SBD,Soil bulk density,Mg/m3,
+EC,Electrical conductivity,dS/m,1:1 soil-water ratio
+PH,Soil pH,-log[H+],1:1 soil-water ratio
+NO3N,Soil nitrate N,kg/ha,
+SOC,Soil organic carbon,kg/ha,Missing data = -9999
+TN,Total soil nitrogen,kg/ha,Missing data = -9999
+PMN,Potentially mineralizable nitrogen,kg/ha,
+POMLF,"Particulate organic matter, large fraction",kg/ha,Large fraction = 0.5-2.0 mm; 0-7.5 cm only; Missing data = -9999
+POMSF,"Particulate organic matter, small fraction",kg/ha,"Small fraction, 0.053-0.5 mm; 0-7.5 cm only; Missing data = -9999"
+POMT,"Particulate organic matter, total",kg/ha,Total fraction = 0.053-2.0 mm; 0-7.5 cm only; Missing data = -9999
+POMSOM,Percentage of POM as soil organic matter,%,0-7.5 cm only; Missing data = -9999
+MBC,Microbial biomass carbon,kg/ha,0-7.5 cm only; Missing data = -9999
+MBN,Microbial biomass nitrogen,kg/ha,0-7.5 cm only; Missing data = -9999
