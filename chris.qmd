@@ -16,8 +16,8 @@ Considering the size of the dataset, I had to use 500 random records to create m
 
 ##### Add a random number column
 - Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. ![Added Random Number COlumn](./Excel_1_Unit/Week1_Chris/random_number_column.png)
-- Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. ![Filter for randomness](./Excel_Unit_1/Week1_Chris/filter_for_randomness.png) 
-- Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. ![New Sheet with random values](./Excel_Unit_1/Week1_Chris/new_sheet_with_random_values.png)
+- Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. ![Filter for randomness](./Excel_1_Unit/Week1_Chris/filter_for_randomness.png) 
+- Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. ![New Sheet with random values](./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png)
 - Since the records didn't contain any NA values, this looked like the only preparation I needed to do.
 
 ##### Creating visualizations
