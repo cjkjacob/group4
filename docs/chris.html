@@ -145,14 +145,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#wednesday" id="toc-wednesday" class="nav-link active" data-scroll-target="#wednesday"><span class="header-section-number">4.1</span> Wednesday</a>
+  <li><a href="#week-1" id="toc-week-1" class="nav-link active" data-scroll-target="#week-1"><span class="header-section-number">4.1</span> Week 1</a>
   <ul class="collapse">
-  <li><a href="#diamonds-dataset" id="toc-diamonds-dataset" class="nav-link" data-scroll-target="#diamonds-dataset"><span class="header-section-number">4.1.1</span> Diamonds Dataset</a></li>
-  </ul></li>
-  <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">4.2</span> Friday</a>
-  <ul class="collapse">
-  <li><a href="#nces-education-dataset" id="toc-nces-education-dataset" class="nav-link" data-scroll-target="#nces-education-dataset"><span class="header-section-number">4.2.1</span> NCES Education Dataset</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4.2.2</span> Conclusion</a></li>
+  <li><a href="#wednesday" id="toc-wednesday" class="nav-link" data-scroll-target="#wednesday"><span class="header-section-number">4.1.1</span> Wednesday</a></li>
+  <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">4.1.2</span> Friday</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -179,16 +175,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="wednesday" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">4.1</span> Wednesday</h2>
-<section id="diamonds-dataset" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="diamonds-dataset"><span class="header-section-number">4.1.1</span> Diamonds Dataset</h3>
+<section id="week-1" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="week-1"><span class="header-section-number">4.1</span> Week 1</h2>
+<section id="wednesday" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">4.1.1</span> Wednesday</h3>
+<section id="diamonds-dataset" class="level4" data-number="4.1.1.1">
+<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="diamonds-dataset"><span class="header-section-number">4.1.1.1</span> Diamonds Dataset</h4>
 <p>I applied the learnings and findings from the Excel Unit to another dataset, the diamonds_ggplot2.csv set. - <img src="./Excel_1_Unit/Week1_Chris/VIZ_step1.png" class="img-fluid" alt="Step 1 - Loaded the CSV onto excel and examined the rows and columns"> - The Diamonds dataset defines the different characteristics of a diamond namely, carat, cut, color, clarity, depth, price, and lengths in the x, y, and z direction The dataset itself did not have any NA values, and hence did not need any additional steps for cleaning the data. An interesting observation to be made was that there are several interesting correlations between the columns that can help us observe some basic trends in the diamond trading business. There were more than 53,000 records collected, and so this dataset is very comprehensive!</p>
-<section id="preparing-the-dataset" class="level4" data-number="4.1.1.1">
-<h4 data-number="4.1.1.1" class="anchored" data-anchor-id="preparing-the-dataset"><span class="header-section-number">4.1.1.1</span> Preparing the dataset</h4>
+<section id="preparing-the-dataset" class="level5" data-number="4.1.1.1.1">
+<h5 data-number="4.1.1.1.1" class="anchored" data-anchor-id="preparing-the-dataset"><span class="header-section-number">4.1.1.1.1</span> Preparing the dataset</h5>
 <p>Considering the size of the dataset, I had to use 500 random records to create my visualizations. Here’s a step by step guide on how I did that.</p>
-<section id="add-a-random-number-column" class="level5" data-number="4.1.1.1.1">
-<h5 data-number="4.1.1.1.1" class="anchored" data-anchor-id="add-a-random-number-column"><span class="header-section-number">4.1.1.1.1</span> Add a random number column</h5>
+<section id="add-a-random-number-column" class="level6" data-number="4.1.1.1.1.1">
+<h6 data-number="4.1.1.1.1.1" class="anchored" data-anchor-id="add-a-random-number-column"><span class="header-section-number">4.1.1.1.1.1</span> Add a random number column</h6>
 <ul>
 <li>Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. <img src="./Excel_1_Unit/Week1_Chris/random_number_column.png" class="img-fluid" alt="Added Random Number COlumn"></li>
 <li>Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. <img src="./Excel_1_Unit/Week1_Chris/filter_for_randomness.png" class="img-fluid" alt="Filter for randomness"></li>
@@ -196,24 +194,24 @@ ul.task-list li input[type="checkbox"] {
 <li>Since the records didn’t contain any NA values, this looked like the only preparation I needed to do.</li>
 </ul>
 </section>
-<section id="creating-visualizations" class="level5" data-number="4.1.1.1.2">
-<h5 data-number="4.1.1.1.2" class="anchored" data-anchor-id="creating-visualizations"><span class="header-section-number">4.1.1.1.2</span> Creating visualizations</h5>
-<section id="scatter-plot-carat-vs-price" class="level6" data-number="4.1.1.1.2.1">
-<h6 data-number="4.1.1.1.2.1" class="anchored" data-anchor-id="scatter-plot-carat-vs-price"><span class="header-section-number">4.1.1.1.2.1</span> Scatter Plot: Carat VS Price</h6>
+<section id="creating-visualizations" class="level6" data-number="4.1.1.1.1.2">
+<h6 data-number="4.1.1.1.1.2" class="anchored" data-anchor-id="creating-visualizations"><span class="header-section-number">4.1.1.1.1.2</span> Creating visualizations</h6>
+<section id="scatter-plot-carat-vs-price" class="level7">
+<p class="heading">Scatter Plot: Carat VS Price</p>
 <ul>
 <li>The first plot I created was a scatter plot that visualized the relationship between the carat of the diamond and the price it would sell at <img src="./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png" class="img-fluid" alt="Carat VS Price Scatter Plot"></li>
 <li>From this, we can see that the dimaonds that have a higher carat sell for more.</li>
 </ul>
 </section>
-<section id="histogram-sum-of-price-by-color" class="level6" data-number="4.1.1.1.2.2">
-<h6 data-number="4.1.1.1.2.2" class="anchored" data-anchor-id="histogram-sum-of-price-by-color"><span class="header-section-number">4.1.1.1.2.2</span> Histogram: Sum of Price by Color</h6>
+<section id="histogram-sum-of-price-by-color" class="level7">
+<p class="heading">Histogram: Sum of Price by Color</p>
 <ul>
 <li><p>The next plot I created was a histogram that visualized the relationship between the prices and the color of the diamond. <img src="./Excel_1_Unit/Week1_Chris/histogram_price_color.png" class="img-fluid" alt="Sum of Price by Color"></p></li>
 <li><p>From this chart, it was clear to see that the diamonds that had the most value were those with the ‘H’ coloration.</p></li>
 </ul>
 </section>
-<section id="other-charts" class="level6" data-number="4.1.1.1.2.3">
-<h6 data-number="4.1.1.1.2.3" class="anchored" data-anchor-id="other-charts"><span class="header-section-number">4.1.1.1.2.3</span> Other charts</h6>
+<section id="other-charts" class="level7">
+<p class="heading">Other charts</p>
 <ul>
 <li>When trying to create more visualizations, I observed that not all charts were capable of visualizing this data, and furthermore, given the size of the dataset, all operations were much slower on the online excel sheet.</li>
 <li>I believe the best visualization for such data is the Scatter Plot of Price vs Carats, because it captures the inherent reality that more carats means more price. All in all, it was an interesting start to the class and helped me better understand how visualizations can be achieved on excel.</li>
@@ -223,21 +221,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="friday" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">4.2</span> Friday</h2>
-<section id="nces-education-dataset" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="nces-education-dataset"><span class="header-section-number">4.2.1</span> NCES Education Dataset</h3>
+<section id="friday" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">4.1.2</span> Friday</h3>
+<section id="nces-education-dataset" class="level4" data-number="4.1.2.1">
+<h4 data-number="4.1.2.1" class="anchored" data-anchor-id="nces-education-dataset"><span class="header-section-number">4.1.2.1</span> NCES Education Dataset</h4>
 <p>NCES Education Dataset is extremely vast and includes several different studies conducted over a range of years. Today, we’ll only be focusing the High School Longitudinal Study of 2009. <a href="https://nces.ed.gov/surveys/hsls09/index.asp" class="uri">https://nces.ed.gov/surveys/hsls09/index.asp</a></p>
 <p>The High School Longitudinal Study of 2009 (HSLS:09) is a comprehensive study conducted by the National Center for Education Statistics (NCES). It tracks a cohort of students who began 9th grade in 2009, following them through their high school years and beyond into postsecondary education and the workforce. The study focuses on students’ educational trajectories, especially in STEM, examining factors like course-taking patterns, college aspirations, and career choices. The data collected provides insights into how high school experiences influence long-term educational and career outcomes.</p>
-<section id="working-with-the-datset" class="level4" data-number="4.2.1.1">
-<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="working-with-the-datset"><span class="header-section-number">4.2.1.1</span> Working with the datset</h4>
+<section id="working-with-the-datset" class="level5" data-number="4.1.2.1.1">
+<h5 data-number="4.1.2.1.1" class="anchored" data-anchor-id="working-with-the-datset"><span class="header-section-number">4.1.2.1.1</span> Working with the datset</h5>
 <ul>
 <li>This can be an extremely complicated process. The first step should be to go to <a href="https://nces.ed.gov/datalab/membership/register" class="uri">https://nces.ed.gov/datalab/membership/register</a> and registering yourself to access all the benefits that NCES datalabs offer. <img src="./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png" class="img-fluid"></li>
 <li>This gives us access to the data lab dashboard. Since we can’t use excel because of the extremely large size, so we’ll have to use the datalabs power stats tool for this. <img src="./Excel_1_Unit/Week1_Chris/datalabs_overview.png" class="img-fluid"></li>
 </ul>
 </section>
-<section id="simple-visualization" class="level4" data-number="4.2.1.2">
-<h4 data-number="4.2.1.2" class="anchored" data-anchor-id="simple-visualization"><span class="header-section-number">4.2.1.2</span> Simple Visualization</h4>
+<section id="simple-visualization" class="level5" data-number="4.1.2.1.2">
+<h5 data-number="4.1.2.1.2" class="anchored" data-anchor-id="simple-visualization"><span class="header-section-number">4.1.2.1.2</span> Simple Visualization</h5>
 <ul>
 <li><p>Considering that I couldn’t use excel for this process, it was interesting to see the amount of data and variables I had at my disposal for this project. For example, just the keyword ‘STEM’ has 294 variables attached to it.</p></li>
 <li><p>One comparison I made using the PowerStats tool to create a percentage analysis of the relationship between variables S1 and S3.</p>
@@ -257,21 +255,22 @@ ul.task-list li input[type="checkbox"] {
 <li>It further allowed me to use the bar chart to show this information visually. <img src="./Excel_1_Unit/Week1_Chris/stem_math_chart.png" class="img-fluid" alt="Pecentage Analysis"></li>
 </ul>
 </section>
-<section id="inference" class="level4" data-number="4.2.1.3">
-<h4 data-number="4.2.1.3" class="anchored" data-anchor-id="inference"><span class="header-section-number">4.2.1.3</span> Inference</h4>
+<section id="inference" class="level5" data-number="4.1.2.1.3">
+<h5 data-number="4.1.2.1.3" class="anchored" data-anchor-id="inference"><span class="header-section-number">4.1.2.1.3</span> Inference</h5>
 <ul>
 <li>These visualizations make it clear that teachers who help make concepts like math and science easier to understand, help these students choose STEM as a major in university.</li>
 <li>This insight will further add to the ‘STEM Focused’ dataset that I’ll be building during this semester.</li>
 </ul>
 </section>
 </section>
-<section id="conclusion" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">4.2.2</span> Conclusion</h3>
+<section id="conclusion" class="level4" data-number="4.1.2.2">
+<h4 data-number="4.1.2.2" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">4.1.2.2</span> Conclusion</h4>
 <ul>
 <li>Given the vastness of this dataset, I believe it’s important for me to better understand and comprehend this dataset, so that I can fully utilize and appreciate all the data collected. Although I wasn’t able to use Excel on this dataset, the skills learned in the previous classes definitely helped set me up for success with this.</li>
 </ul>
 
 
+</section>
 </section>
 </section>
 

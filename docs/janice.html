@@ -146,20 +146,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#wednesday" id="toc-wednesday" class="nav-link active" data-scroll-target="#wednesday"><span class="header-section-number">3.1</span> Wednesday</a>
+  <li><a href="#week-1" id="toc-week-1" class="nav-link active" data-scroll-target="#week-1"><span class="header-section-number">3.1</span> Week 1</a>
   <ul class="collapse">
-  <li><a href="#cleaning-the-dataset" id="toc-cleaning-the-dataset" class="nav-link" data-scroll-target="#cleaning-the-dataset"><span class="header-section-number">3.1.1</span> Cleaning the dataset</a></li>
-  <li><a href="#context-of-dataset" id="toc-context-of-dataset" class="nav-link" data-scroll-target="#context-of-dataset"><span class="header-section-number">3.1.2</span> Context of dataset</a></li>
-  <li><a href="#creating-different-basic-visualizations" id="toc-creating-different-basic-visualizations" class="nav-link" data-scroll-target="#creating-different-basic-visualizations"><span class="header-section-number">3.1.3</span> Creating Different Basic Visualizations</a></li>
-  <li><a href="#what-plot-represent-better-the-data-why" id="toc-what-plot-represent-better-the-data-why" class="nav-link" data-scroll-target="#what-plot-represent-better-the-data-why"><span class="header-section-number">3.1.4</span> What plot represent better the data? why?</a></li>
-  </ul></li>
-  <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">3.2</span> Friday</a>
-  <ul class="collapse">
-  <li><a href="#choosing-the-source-and-dataset" id="toc-choosing-the-source-and-dataset" class="nav-link" data-scroll-target="#choosing-the-source-and-dataset"><span class="header-section-number">3.2.1</span> Choosing the source and dataset</a></li>
-  <li><a href="#context-of-the-dataset" id="toc-context-of-the-dataset" class="nav-link" data-scroll-target="#context-of-the-dataset"><span class="header-section-number">3.2.2</span> Context of the dataset</a></li>
-  <li><a href="#cleaning-and-organizing-the-dataset" id="toc-cleaning-and-organizing-the-dataset" class="nav-link" data-scroll-target="#cleaning-and-organizing-the-dataset"><span class="header-section-number">3.2.3</span> Cleaning and organizing the dataset</a></li>
-  <li><a href="#making-visualizations" id="toc-making-visualizations" class="nav-link" data-scroll-target="#making-visualizations"><span class="header-section-number">3.2.4</span> Making Visualizations</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.2.5</span> References</a></li>
+  <li><a href="#wednesday" id="toc-wednesday" class="nav-link" data-scroll-target="#wednesday"><span class="header-section-number">3.1.1</span> Wednesday</a></li>
+  <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">3.1.2</span> Friday</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -186,10 +176,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="wednesday" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">3.1</span> Wednesday</h2>
-<section id="cleaning-the-dataset" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="cleaning-the-dataset"><span class="header-section-number">3.1.1</span> Cleaning the dataset</h3>
+<section id="week-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="week-1"><span class="header-section-number">3.1</span> Week 1</h2>
+<section id="wednesday" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">3.1.1</span> Wednesday</h3>
+<section id="cleaning-the-dataset" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="cleaning-the-dataset"><span class="header-section-number">3.1.1.1</span> Cleaning the dataset</h4>
 <p>Before processing and creating visualizations of the dataset, it is important to prep the dataset by cleaning it. There might be N/A values or outliers in the dataset, which needs to be removed and cleaned to create better and more accurate visualizations.</p>
 <p>To clean the data, there are a few things that can be done: - Finding and highlighting NA values by selecting the range of cells and doing ‘Conditional Formatting’ to ‘Highlight Cells Rules’. - Removing NA values by using the ‘Find and Replace’. Find ‘NA’ and replace it with ‘0’. - Using IF function to check for NA values and replace it accordingly. Ex: =IF(A2=“NA”, “0”, A2)</p>
 <p>Additionally, upon converting the Swiss dataset from a .csv format into an Excel, the first column of the dataset became combined into one cell.</p>
@@ -197,8 +189,8 @@ ul.task-list li input[type="checkbox"] {
 <p>I fixed the titles that are separated by commas in the one cell by separating the titles into the different respective columns.</p>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_cleaning2.png" class="img-fluid"></p>
 </section>
-<section id="context-of-dataset" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="context-of-dataset"><span class="header-section-number">3.1.2</span> Context of dataset</h3>
+<section id="context-of-dataset" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="context-of-dataset"><span class="header-section-number">3.1.1.2</span> Context of dataset</h4>
 <p>Before creating plots and visualizations of the dataset, it is important to know what each title in the columns mead and understand the context of the dataset.</p>
 <p><a href="https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/swiss.html" class="uri">https://stat.ethz.ch/R-manual/R-patched/library/datasets/html/swiss.html</a></p>
 <p>The dataset contains 47 French-speaking “provinces” in Switzerland at around 1888. During that year, Switzerland was entering a demographic transition, where its fertility rates was beginning to fall from the typical level of underdeveloped countries. There are 6 variables in the dataset, where variables are scaled from 0 to 100, except Cathloic that is scaled from 0 to 1. The definitions of the dataset are as below:</p>
@@ -211,47 +203,47 @@ ul.task-list li input[type="checkbox"] {
 <li>Infant.Mortality = live births who live less than 1 year.</li>
 </ul>
 </section>
-<section id="creating-different-basic-visualizations" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="creating-different-basic-visualizations"><span class="header-section-number">3.1.3</span> Creating Different Basic Visualizations</h3>
-<section id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers" class="level4" data-number="3.1.3.1">
-<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers"><span class="header-section-number">3.1.3.1</span> Scatterplot 1 - Fertility and Cathlic appear to cluster in two groups with four outliers</h4>
+<section id="creating-different-basic-visualizations" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="creating-different-basic-visualizations"><span class="header-section-number">3.1.1.3</span> Creating Different Basic Visualizations</h4>
+<section id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers" class="level5" data-number="3.1.1.3.1">
+<h5 data-number="3.1.1.3.1" class="anchored" data-anchor-id="scatterplot-1---fertility-and-cathlic-appear-to-cluster-in-two-groups-with-four-outliers"><span class="header-section-number">3.1.1.3.1</span> Scatterplot 1 - Fertility and Cathlic appear to cluster in two groups with four outliers</h5>
 <p>In creating plots, I utilized Excel’s tool of Recommended Charts, which included a scatterplot of ‘Fertility’ and ‘Catholic’. The scatterplot shown below shows two groups of cluster with four outliers.</p>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_scatterplot.png" class="img-fluid"></p>
 <p>As shown in the scatterplot, provinces with higher percentage of Catholic people seem to have a slightly higher fertility compared to provinces with low percentage of Catholic people.</p>
 </section>
-<section id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province" class="level4" data-number="3.1.3.2">
-<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province"><span class="header-section-number">3.1.3.2</span> Scatterplot 2 - Relationship between infant mortality and percentage of Catholic people in a province</h4>
+<section id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province" class="level5" data-number="3.1.1.3.2">
+<h5 data-number="3.1.1.3.2" class="anchored" data-anchor-id="scatterplot-2---relationship-between-infant-mortality-and-percentage-of-catholic-people-in-a-province"><span class="header-section-number">3.1.1.3.2</span> Scatterplot 2 - Relationship between infant mortality and percentage of Catholic people in a province</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_scatterplot2.png" class="img-fluid"> Based on the scatterplot above, infant mortality and Catholic appear to have no apparent relationship. However, provinces with higher percentage of Catholic population appear to has a slightly higher infant mortality, with a few provinces having 25 and more live births in a year. Meanwhile, the provinces with a low percentage of Catholic population appear to have infant mortality mostly in the 15-25 range.</p>
 <p>Aside from that, the provinces in Swiss appear to have either a very high percentage of Catholic population or a very low percentage of Catholic population, with the scatterplot showing two clusters on the lower end of Catholic percentage (0-20%) and a higher end of Catholic percentage (80-100%). What do you observe?</p>
 </section>
-<section id="bar-charts" class="level4" data-number="3.1.3.3">
-<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="bar-charts"><span class="header-section-number">3.1.3.3</span> Bar Charts</h4>
+<section id="bar-charts" class="level5" data-number="3.1.1.3.3">
+<h5 data-number="3.1.1.3.3" class="anchored" data-anchor-id="bar-charts"><span class="header-section-number">3.1.1.3.3</span> Bar Charts</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_barchart.png" class="img-fluid"> As mentioned in the discussion above, the provinces in Swiss appear to have either a very high percentage of Catholic population, or a very low percentage of Catholic population. The bar chart shows a high frequency within the 2.15-7.15% of Catholic population that gradually decreases as the percentage approaches 17.15-22.15 and gradually increases again as it approaches the 87.15-92.15 percentage of Catholic population. The bar chart above better visualize the two groups of highly populated Catholic province or lowly populated Catholic province.</p>
 </section>
-<section id="line-chart" class="level4" data-number="3.1.3.4">
-<h4 data-number="3.1.3.4" class="anchored" data-anchor-id="line-chart"><span class="header-section-number">3.1.3.4</span> Line Chart</h4>
+<section id="line-chart" class="level5" data-number="3.1.1.3.4">
+<h5 data-number="3.1.1.3.4" class="anchored" data-anchor-id="line-chart"><span class="header-section-number">3.1.1.3.4</span> Line Chart</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_linechart.png" class="img-fluid"> The line chart above clearly shows that there is a direct relationship between examination and education. As the percentage of education beyond primary school for draftees increases, the percentage of draftees receiving highest mark on army examination also increases. The two variables showcase a positive directly correlated relationship. Aside from that, the graph also shows that the 46th province outperformed all of the other provinces with the highest percentage of education beyond primary school for draftees and also the highest percentage of draftees receiving highest mark on army examination. The 46th province is followed by the 42th province which has the second highest percentage of education beyond primary school and second highest percentage of draftees receiving highest mark on army examination.</p>
 </section>
-<section id="pie-charts" class="level4" data-number="3.1.3.5">
-<h4 data-number="3.1.3.5" class="anchored" data-anchor-id="pie-charts"><span class="header-section-number">3.1.3.5</span> Pie Charts</h4>
+<section id="pie-charts" class="level5" data-number="3.1.1.3.5">
+<h5 data-number="3.1.1.3.5" class="anchored" data-anchor-id="pie-charts"><span class="header-section-number">3.1.1.3.5</span> Pie Charts</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_piechart.png" class="img-fluid"> The pie chart does not really visualize the agriculture data well, as there are too many percentage classification of males involved in agriculture occupation. However, the pie chart can be made better by making the classifications into 5 groups to see which range of percentage of males involved in agriculture occupation is higher among the other provinces.</p>
 </section>
-<section id="histograms" class="level4" data-number="3.1.3.6">
-<h4 data-number="3.1.3.6" class="anchored" data-anchor-id="histograms"><span class="header-section-number">3.1.3.6</span> Histograms</h4>
+<section id="histograms" class="level5" data-number="3.1.1.3.6">
+<h5 data-number="3.1.1.3.6" class="anchored" data-anchor-id="histograms"><span class="header-section-number">3.1.1.3.6</span> Histograms</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Wednesday/Swiss_histogram.png" class="img-fluid"> The histogram shows a slightly negative skew on the frequency of males involved in agriculture as occupation. The majority of the provinces have males involved in agriculture on the 61.2-71.2% range. The 1.2-11.2% range and the 21.2-31.2% range of males involved in agriculture have the lowest frequency.</p>
 </section>
 </section>
-<section id="what-plot-represent-better-the-data-why" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="what-plot-represent-better-the-data-why"><span class="header-section-number">3.1.4</span> What plot represent better the data? why?</h3>
+<section id="what-plot-represent-better-the-data-why" class="level4" data-number="3.1.1.4">
+<h4 data-number="3.1.1.4" class="anchored" data-anchor-id="what-plot-represent-better-the-data-why"><span class="header-section-number">3.1.1.4</span> What plot represent better the data? why?</h4>
 <p>There isn’t any plot that is more superior that the other, but it wholly depends on the variables being plotted. For instance, the relationship between examination and education can be better represented using a line chart, as a line chart shows a more visible distinction between the variable of examination and education. If using a scatterplot, the many plots in the chart may cause the distinction between the two variables to be less visible, as the two variables are directly correlated and have values very closely to one another.</p>
 <p>On the other hand, using a scatterplot can better highlight the two groups of highly-populated Catholic provinces and lowly-populated Catholic provinces better than a barchart. The scatterplot can visualize the two groups of clusters on opposite ends, highlighting there there are two major groups in the Swiss: Catholic heavily-populated province or Protestant heavily-populated province</p>
 <p>Therefore,different plots have different uses and can highlight the relationship of some variables better than the other, depending on the context and relationship of the variables being plotted. It is important to explore the different relationships of variables using different charts and plots to better visualize the relationships of the variables in the dataset.</p>
 </section>
 </section>
-<section id="friday" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">3.2</span> Friday</h2>
-<section id="choosing-the-source-and-dataset" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="choosing-the-source-and-dataset"><span class="header-section-number">3.2.1</span> Choosing the source and dataset</h3>
+<section id="friday" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">3.1.2</span> Friday</h3>
+<section id="choosing-the-source-and-dataset" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="choosing-the-source-and-dataset"><span class="header-section-number">3.1.2.1</span> Choosing the source and dataset</h4>
 <ul>
 <li>The source that I chose for this class is the Federal Reserve Economic Data (FRED), with the link: <a href="https://fred.stlouisfed.org/" class="uri">https://fred.stlouisfed.org/</a>.</li>
 </ul>
@@ -265,12 +257,12 @@ ul.task-list li input[type="checkbox"] {
 <li>I think that it would be interesting to visualize how the different industries’ profits vary throughout the years, and whether there are correlations between any industries. I downloaded the dataset as Excel format.</li>
 </ul>
 </section>
-<section id="context-of-the-dataset" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="context-of-the-dataset"><span class="header-section-number">3.2.2</span> Context of the dataset</h3>
+<section id="context-of-the-dataset" class="level4" data-number="3.1.2.2">
+<h4 data-number="3.1.2.2" class="anchored" data-anchor-id="context-of-the-dataset"><span class="header-section-number">3.1.2.2</span> Context of the dataset</h4>
 <p>The dataset contains quarterly data on the corporate profits with inventory valuation adjustment for different industries, including non-financial, financial, federal, and many other sub-categories such as manufacturing, wholesale trade, and utilities. The data is presented in billions of dollars, seasonally adjusted annual rate. To set parameter, the study for this assignment only looks at the 10 year span from first quarter of 2014 to the first quarter of 2024.</p>
 </section>
-<section id="cleaning-and-organizing-the-dataset" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="cleaning-and-organizing-the-dataset"><span class="header-section-number">3.2.3</span> Cleaning and organizing the dataset</h3>
+<section id="cleaning-and-organizing-the-dataset" class="level4" data-number="3.1.2.3">
+<h4 data-number="3.1.2.3" class="anchored" data-anchor-id="cleaning-and-organizing-the-dataset"><span class="header-section-number">3.1.2.3</span> Cleaning and organizing the dataset</h4>
 <ol type="1">
 <li>Replacing Series ID with Titles</li>
 </ol>
@@ -293,11 +285,11 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Cleaned_and_organized_data.png" class="img-fluid"></p>
 </section>
-<section id="making-visualizations" class="level3" data-number="3.2.4">
-<h3 data-number="3.2.4" class="anchored" data-anchor-id="making-visualizations"><span class="header-section-number">3.2.4</span> Making Visualizations</h3>
+<section id="making-visualizations" class="level4" data-number="3.1.2.4">
+<h4 data-number="3.1.2.4" class="anchored" data-anchor-id="making-visualizations"><span class="header-section-number">3.1.2.4</span> Making Visualizations</h4>
 <p>In making visualizations, I utilized Excel’s ‘Recommended Charts’ tool under ‘Insert’. After using the tool, I looked over the data and explore to create more meaningful visualizations on my own.</p>
-<section id="line-chart-average-total-profits-in-10-years" class="level4" data-number="3.2.4.1">
-<h4 data-number="3.2.4.1" class="anchored" data-anchor-id="line-chart-average-total-profits-in-10-years"><span class="header-section-number">3.2.4.1</span> Line chart: Average Total Profits in 10 Years</h4>
+<section id="line-chart-average-total-profits-in-10-years" class="level5" data-number="3.1.2.4.1">
+<h5 data-number="3.1.2.4.1" class="anchored" data-anchor-id="line-chart-average-total-profits-in-10-years"><span class="header-section-number">3.1.2.4.1</span> Line chart: Average Total Profits in 10 Years</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Average_CP.png" class="img-fluid"></p>
 <p>When I added a graph from the ‘Recommended Charts’, a new sheet is created along with corporate profits summed into yearly instead of quarterly.</p>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Linechart.png" class="img-fluid"></p>
@@ -307,32 +299,32 @@ ul.task-list li input[type="checkbox"] {
 <li>The private enterprises’ profits appear to be very steadily increasing from first quarter of 2022 to the first quarter of 2024. The total corporate profits appear to be higher than the average total corporate profits dotted line, signifying that the increase in total corporate profits are quite significant.</li>
 </ul>
 </section>
-<section id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal" class="level4" data-number="3.2.4.2">
-<h4 data-number="3.2.4.2" class="anchored" data-anchor-id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal"><span class="header-section-number">3.2.4.2</span> Scatterplot 1: Domestic Industries (Non-financial: Manufacturing) vs.&nbsp;Federal</h4>
+<section id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal" class="level5" data-number="3.1.2.4.2">
+<h5 data-number="3.1.2.4.2" class="anchored" data-anchor-id="scatterplot-1-domestic-industries-non-financial-manufacturing-vs.-federal"><span class="header-section-number">3.1.2.4.2</span> Scatterplot 1: Domestic Industries (Non-financial: Manufacturing) vs.&nbsp;Federal</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Scatterplot1.png" class="img-fluid"></p>
 <ul>
 <li>“Domestic Industries: Non-financial: Manufacturing” appears to have an inverse relationship with “Federal”</li>
 </ul>
 <p>As ‘Manufacturing’ is high at a range of 675-825 billion dollars, ‘Federal’ appears to be on hundreds of billion dollars loss. However, as ‘Manufacturing’ decreases to below 600 billion dollars, ‘Federal’s’ corporate profits improved to a range of 50-125 billion dollars.</p>
 </section>
-<section id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing" class="level4" data-number="3.2.4.3">
-<h4 data-number="3.2.4.3" class="anchored" data-anchor-id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing"><span class="header-section-number">3.2.4.3</span> Scatterplot 2: Wholesale trade vs.&nbsp;Transportation and warehousing</h4>
+<section id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing" class="level5" data-number="3.1.2.4.3">
+<h5 data-number="3.1.2.4.3" class="anchored" data-anchor-id="scatterplot-2-wholesale-trade-vs.-transportation-and-warehousing"><span class="header-section-number">3.1.2.4.3</span> Scatterplot 2: Wholesale trade vs.&nbsp;Transportation and warehousing</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Scatterplot2.png" class="img-fluid"></p>
 <ul>
 <li>As wholesale trade’s corporate profits increases, the corporate profits in the sub-sector of transportation and warehousing also increases.</li>
 </ul>
 <p>The direct and proportional relationship of the two sub-sectors make sense, as wholesale trade involves purchasing goods in large quantities and reselling them in smaller quantities to businesses and other wholesalers, directly involving transportation and warehousing of the goods.</p>
 </section>
-<section id="barchart-non-financial-vs.-financial-domestic-industry" class="level4" data-number="3.2.4.4">
-<h4 data-number="3.2.4.4" class="anchored" data-anchor-id="barchart-non-financial-vs.-financial-domestic-industry"><span class="header-section-number">3.2.4.4</span> Barchart: Non-financial vs.&nbsp;Financial Domestic Industry</h4>
+<section id="barchart-non-financial-vs.-financial-domestic-industry" class="level5" data-number="3.1.2.4.4">
+<h5 data-number="3.1.2.4.4" class="anchored" data-anchor-id="barchart-non-financial-vs.-financial-domestic-industry"><span class="header-section-number">3.1.2.4.4</span> Barchart: Non-financial vs.&nbsp;Financial Domestic Industry</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Barchart.png" class="img-fluid"></p>
 <ul>
 <li>The non-financial domestic industry’s corporate profits are growing more significantly compared to the financial domestic industry’s stable corporate profits</li>
 </ul>
 <p>The non-financial domestic industry are growing more rapidly, especially in the last half of the decade. The financial domestic industry has over 2500 billions of dollars of corporate profits in the first quarter of 2024. Meanwhile, the financial domestic industry appears to have stable corporate profits throughout the past 10 years, as its corporate profits are varying slightly from year to year and are stuck under 750 billion dollars.</p>
 </section>
-<section id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits" class="level4" data-number="3.2.4.5">
-<h4 data-number="3.2.4.5" class="anchored" data-anchor-id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits"><span class="header-section-number">3.2.4.5</span> Piechart: Non-financial makes up the majority of the domestic industry’s corporate profits</h4>
+<section id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits" class="level5" data-number="3.1.2.4.5">
+<h5 data-number="3.1.2.4.5" class="anchored" data-anchor-id="piechart-non-financial-makes-up-the-majority-of-the-domestic-industrys-corporate-profits"><span class="header-section-number">3.1.2.4.5</span> Piechart: Non-financial makes up the majority of the domestic industry’s corporate profits</h5>
 <p><img src="./Excel_1_Unit/Week1_Janice/Week 1/Week 1 Friday/Piechart.png" class="img-fluid"></p>
 <ul>
 <li>Non-financial domestic industry takes 70% of the domestic industry’s corporate profits, while the rest of the world takes up only 14% of the domestic industry’s corporate profits.</li>
@@ -340,8 +332,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="references" class="level3" data-number="3.2.5">
-<h3 data-number="3.2.5" class="anchored" data-anchor-id="references"><span class="header-section-number">3.2.5</span> References</h3>
+<section id="references" class="level4" data-number="3.1.2.5">
+<h4 data-number="3.1.2.5" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1.2.5</span> References</h4>
 <ul>
 <li><p>Tebrake, J., &amp; O’hagan, P. (n.d.). Understanding Financial Accounts The financing of non-financial corporations. Retrieved August 31, 2024, from <a href="https://www.oecd-ilibrary.org/docserver/9789264281288-8-en.pdf?expires=1725145368&amp;id=id&amp;accname=guest&amp;checksum=CE2ED779ABF58E8BEB69C041927BC309" class="uri">https://www.oecd-ilibrary.org/docserver/9789264281288-8-en.pdf?expires=1725145368&amp;id=id&amp;accname=guest&amp;checksum=CE2ED779ABF58E8BEB69C041927BC309</a></p></li>
 <li><p><a href="https://fred.stlouisfed.org/" class="uri">https://fred.stlouisfed.org/</a>.</p></li>
@@ -349,6 +341,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
+</section>
 </section>
 </section>
 

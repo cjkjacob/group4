@@ -1,12 +1,14 @@
 # US Department of Agriculture - Diego Mendoza
 
-## Wednesday
+## Week 1
 
-### Overview
+### Wednesday
+
+#### Overview
 
 -Work on new data set based on previous skills -observe changes on different visual graphs -Explain any patterns or observe points -Test test and test again
 
-### Attitude
+#### Attitude
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Attitude_Base.png)
 
@@ -16,18 +18,18 @@
 -   7 columns: rating, complaint, privileges, leaning, raises, critical, advance
 -   Rating attitude
 
-### Filtering
+#### Filtering
 
 (How to Follow) -Use Condition Formating (In Home) -Highlight cells, equalt too or less than (58.5)
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Attitude_Base1.png)
 
-### Observations
+#### Observations
 
 -Each column has at least 2 cells =\<50
 -Advance attitude perform poorly in an standard normal look(Bigger = Better) -Critical attitude excelling in an standard normal look(Bigger = Better) -
 
-### Filtering + Formulas
+#### Filtering + Formulas
 
 (How to Follow) -Select group of Cells, Rows or Columns -Use Condition Formating (In Home) -Highlight cells, duplicate
 
@@ -35,7 +37,7 @@
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Attitude_Base2.png)
 
-### Observations
+#### Observations
 
 -   11 unique values that do not overlap/duplicated in another cell
 -   Highest value was Critical with 92, Complaint had the 2nd highest with 90, 
@@ -44,13 +46,13 @@
 -Minimum belongs to advance with 25 with privilege 2nd lowest with 30.
 -Critical with the highest average with 74.77 complaint 2nd highest with 66.59
 
-### Graphs
+#### Graphs
 
 (How to Follow) -Select group of Cells, Rows or Columns -In the setting insert, select graph or recommend graph
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Attitude_Base3.png) 
 
-### Observations
+#### Observations
 
 -   Bar graphs and pie graphs are not ver useful and do not provide any sort of information or trends
 
@@ -64,13 +66,13 @@
 -\>Can apply basic functions, or understanding to see trends 
 -\> Overall seem that those with Combative attitudes excelled, those who were humble seemed to a had a positive trend and privileged posh attitudes performed worse than counterparts.
 
-### Summary
+#### Summary
 
 -Applied skills learned from Monday -Found trends patterns and made conclusions -Researched possible data sets and other techniques
 
-## Friday
+### Friday
 
-### Overview
+#### Overview
 
 -Cleaning and filtering data in relation to soil samples
 -Applying techniques learned from Monday and Wednesday to data set
@@ -78,7 +80,7 @@
 -Find a story in the data
 
 
-### Data Information
+#### Data Information
 
 -Data is from the USDA
 -Multiple different data sets that could be chosen
@@ -88,7 +90,7 @@
 
 -The study provides insights into how soil properties respond to crop rotation and tillage practices under rainfed conditions in a semiarid continental climate
 
-#### Column Name and Information
+##### Column Name and Information
 PLOT: Plot number, identifying the specific plot where the data was collected.
 REP: Replicate number, indicating the repetition of the experiment or sampling within the plot.
 ROTATION: Crop rotation system used in the experiment, typically represented by a code.
@@ -108,7 +110,7 @@ ROTATION: Crop rotation system used in the experiment, typically represented by 
 -MBC: Microbial biomass carbon (mg/kg).
 -MBN: Microbial biomass nitrogen (mg/kg)
 
-### Intial Observation
+#### Intial Observation
 
 (How to Follow) -Select group of Cells, Rows or Columns
 -Select column with depth,(Step1)
@@ -117,31 +119,31 @@ ROTATION: Crop rotation system used in the experiment, typically represented by 
 -In the setting insert, select graph or recommend graph(Step4)
 -For this we used a Column cluster(reccomended)
 
-#### 7.5 cm depth
+##### 7.5 cm depth
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Soil1.png) 
 
 
-#### 15 cm depth
+##### 15 cm depth
 
 -Repeats steps, changing 7.5 to 15
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Soil2.png) 
 
-#### 30 cm depth
+##### 30 cm depth
 
 -Repeats steps, changing 7.5 to 30
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Soil3.png) 
 
 
-### observations
+#### observations
 
 -On Graphs 2 & 3 seem to lacking a series 4 and both have high series 7
 -On Graph 1 lacks series 5-7 and series 
 
 
-### Focus + 2nd graph
+#### Focus + 2nd graph
 
 -Focused on 2 columns ph and NO3N
 ->PH level and nitrogen.
@@ -151,7 +153,7 @@ ROTATION: Crop rotation system used in the experiment, typically represented by 
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Soil4.png)
 
-#### Observations
+##### Observations
 
 -Depth seems to correlate to steadier levels in PH and N03N to 15cm
 -15cm depth seems to the best to hold consistent level in PH and N03N
@@ -159,26 +161,26 @@ ROTATION: Crop rotation system used in the experiment, typically represented by 
 -30cm depth had the lowest valley in NO3N
 
 
-### Formatting 
+#### Formatting 
 
 -Highlight cells rule, less than value (6.25)
 -Highlighted each PH and NO3N for each respective depth
 
 ![](./Excel_1_Unit/Week1_Diego/Week_1DJ/screenshots/Soil5.png)
-#### Observations
+##### Observations
 
 -30 + 15 cm depths' nitrogen is below 6.25 cm
 -7.5cm depth's PH is below 6.25
 
 
-### Summary
+#### Summary
 
 -Worked with team lead and Professor at data sets and possible ideas 
 -Discussed what expectations were set and what documentation should look like 
 -Worked on USDA data set
 -Applied skills and tools to dataset
 
-### Notes for next work
+#### Notes for next work
 -Larger and more background information on a dataset is useful
 -Lacked comparsion test to 1984 data set
 -Extended research into subject provides a working platform
