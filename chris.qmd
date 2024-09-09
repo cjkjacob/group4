@@ -1,13 +1,13 @@
 # National Center for Education Statistics - Chris Jacob
 
-## Week 1
+## Week 1 - 08/26 ~ 08/30
 
 ### Wednesday
 
 #### Diamonds Dataset
 
 I applied the learnings and findings from the Excel Unit to another dataset, the diamonds_ggplot2.csv set.
-    - ![Step 1 - Loaded the CSV onto excel and examined the rows and columns](./Excel_1_Unit/Week1_Chris/VIZ_step1.png)
+  - ![Step 1 - Loaded the CSV onto excel and examined the rows and columns](./Excel_1_Unit/Week1_Chris/VIZ_step1.png){.lightbox}
   - The Diamonds dataset defines the different characteristics of a diamond namely, carat, cut, color, clarity, depth, price, and lengths in the x, y, and z direction
       The dataset itself did not have any NA values, and hence did not need any additional steps for cleaning the data.
       An interesting observation to be made was that there are several interesting correlations between the columns that can help us observe some basic trends in the diamond trading business. There were more than 53,000 records collected, and so this dataset is very comprehensive!
@@ -17,9 +17,9 @@ I applied the learnings and findings from the Excel Unit to another dataset, the
 Considering the size of the dataset, I had to use 500 random records to create my visualizations. Here's a step by step guide on how I did that.
 
 ###### Add a random number column
-- Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. ![Added Random Number COlumn](./Excel_1_Unit/Week1_Chris/random_number_column.png)
-- Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. ![Filter for randomness](./Excel_1_Unit/Week1_Chris/filter_for_randomness.png) 
-- Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. ![New Sheet with random values](./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png)
+- Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. ![Added Random Number COlumn](./Excel_1_Unit/Week1_Chris/random_number_column.png){.lightbox}
+- Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. ![Filter for randomness](./Excel_1_Unit/Week1_Chris/filter_for_randomness.png){.lightbox} 
+- Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. ![New Sheet with random values](./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png){.lightbox}
 - Since the records didn't contain any NA values, this looked like the only preparation I needed to do.
 
 ###### Creating visualizations
@@ -27,12 +27,12 @@ Considering the size of the dataset, I had to use 500 random records to create m
 ####### Scatter Plot: Carat VS Price
 
 - The first plot I created was a scatter plot that visualized the relationship between the carat of the diamond and the price it would sell at
-![Carat VS Price Scatter Plot](./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png)
+![Carat VS Price Scatter Plot](./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png){.lightbox}
 - From this, we can see that the dimaonds that have a higher carat sell for more.
 
 ####### Histogram: Sum of Price by Color
 - The next plot I created was a histogram that visualized the relationship between the prices and the color of the diamond.
-![Sum of Price by Color](./Excel_1_Unit/Week1_Chris/histogram_price_color.png)
+![Sum of Price by Color](./Excel_1_Unit/Week1_Chris/histogram_price_color.png){.lightbox}
 
 - From this chart, it was clear to see that the diamonds that had the most value were those with the 'H' coloration.
 
@@ -46,13 +46,13 @@ All in all, it was an interesting start to the class and helped me better unders
 
 #### NCES Education Dataset
 
-NCES Education Dataset is extremely vast and includes several different studies conducted over a range of years. Today,  we'll only be focusing the High School Longitudinal Study of 2009. <https://nces.ed.gov/surveys/hsls09/index.asp>
+NCES Education Dataset is extremely vast and includes several different studies conducted over a range of years. Today,  we'll only be focusing the High School Longitudinal Study of 2009. You can find out more [here](https://nces.ed.gov/surveys/hsls09/index.asp){target="_blank"}
 
 The High School Longitudinal Study of 2009 (HSLS:09) is a comprehensive study conducted by the National Center for Education Statistics (NCES). It tracks a cohort of students who began 9th grade in 2009, following them through their high school years and beyond into postsecondary education and the workforce. The study focuses on students' educational trajectories, especially in STEM, examining factors like course-taking patterns, college aspirations, and career choices. The data collected provides insights into how high school experiences influence long-term educational and career outcomes. 
 
 ##### Working with the datset
-- This can be an extremely complicated process. The first step should be to go to <https://nces.ed.gov/datalab/membership/register> and registering yourself to access all the benefits that NCES datalabs offer. ![](./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png)
-- This gives us access to the data lab dashboard. Since we can't use excel because of the extremely large size, so we'll have to use the datalabs power stats tool for this. ![](./Excel_1_Unit/Week1_Chris/datalabs_overview.png)
+- This can be an extremely complicated process. The first step should be to go to [the registration page](https://nces.ed.gov/datalab/membership/register){target="_blank"} and registering yourself to access all the benefits that NCES datalabs offer. ![](./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png){.lightbox}
+- This gives us access to the data lab dashboard. Since we can't use excel because of the extremely large size, so we'll have to use the datalabs power stats tool for this. ![](./Excel_1_Unit/Week1_Chris/datalabs_overview.png){.lightbox}
 
 ##### Simple Visualization
 
@@ -63,10 +63,10 @@ The High School Longitudinal Study of 2009 (HSLS:09) is a comprehensive study co
   - S3 shows how students might consider STEM as a major.
 - This visualization further strengthens the premise that teachers are the defining factors in a lot of the future decisions that students make.
 
-![Pecentage Analysis](./Excel_1_Unit/Week1_Chris/stem_math_visualization.png)
+![Pecentage Analysis](./Excel_1_Unit/Week1_Chris/stem_math_visualization.png){.lightbox}
 
 - It further allowed me to use the bar chart to show this information visually.
-![Pecentage Analysis](./Excel_1_Unit/Week1_Chris/stem_math_chart.png)
+![Pecentage Analysis](./Excel_1_Unit/Week1_Chris/stem_math_chart.png){.lightbox}
 
 
 ##### Inference
@@ -77,3 +77,217 @@ The High School Longitudinal Study of 2009 (HSLS:09) is a comprehensive study co
 #### Conclusion
 - Given the vastness of this dataset, I believe it's important for me to better understand and comprehend this dataset, so that I can fully utilize and appreciate all the data collected. Although I wasn't able to use Excel on this dataset, the skills learned in the previous classes definitely helped set me up for success with this.
 
+
+
+## Week 2 - 09/02 ~ 09/06
+
+### Wednesday & Friday
+
+#### Data Analysis & Pivot Techniques
+
+This week, we focused on using **pivot tables** and **pivot charts** on the cleaned dataset from last week, to explore relationships between variables in the dataset. Pivot tables allow for a quick and efficient way to summarize, reorganize, and analyze data without needing to manually group or sort data. They provide insights by aggregating data across categories and displaying results in a table format.
+
+- **Pivot tables**: Help summarize large datasets by grouping them according to key variables, allowing for quick identification of patterns and trends.
+- **Pivot charts**: Visual representations of the data in pivot tables. These charts help communicate the relationships and trends identified in the data through pivot analysis.
+
+Using these tools, we were able to gain deeper insights into the environmental data from the airquality dataset. Key relationships between temperature, wind speed, ozone concentration, and solar radiation were analyzed, leading to findings that provided a better understanding of weather and air quality trends.
+
+#### Context of the AirQuality Dataset
+
+The **airquality.csv** dataset is a popular dataset that contains information about New York's air quality measurements recorded in the year 1973. It consists of daily readings of various air quality parameters such as ozone concentration, solar radiation, wind speed, and temperature. 
+
+##### Key Variables:
+- **Ozone**: The concentration of ozone in parts per billion (ppb).
+- **Solar.R**: Solar radiation in langleys.
+- **Wind**: Wind speed in miles per hour.
+- **Temp**: Temperature in degrees Fahrenheit.
+- **Month**: The month during which the data was recorded (from May to September).
+- **Day**: The day of the month.
+
+This dataset provides valuable insights into how different environmental factors interact over time and can be used to analyze trends related to air pollution and weather patterns.
+
+
+#### Quick Recap of Data Preprocessing
+
+##### Download data
+
+I downloaded a fresh version of the airquality.csv file, and then saved it as a .xlsx file to then manipulate using Excel.
+
+![New Download of airquality.csv](./Excel_2_Unit/Week_2_Chris/airquality_new_download.png){.lightbox}
+
+##### Clean Data
+
+Since it was a fresh download of the file, we needed to clean the data of any NA values. Here is a high-level overview of the steps we take to achieve this:
+
+  - **Step 1**: Apply a filter to the data
+    ![Filter applied to dataset](./Excel_2_Unit/Week_2_Chris/airquality_filter_applied.png){.lightbox}
+  
+  - **Step 2**: Filter for all NA data in a column (in this case, Ozone)
+    ![NA Rows Filtered](./Excel_2_Unit/Week_2_Chris/airquality_na_filter_applied.png){.lightbox}
+
+  - **Step 3**: Delete all the rows with an NA value
+    ![Deleting NA Rows](./Excel_2_Unit/Week_2_Chris/airquality_delete_row_of_na.png){.lightbox}
+
+  - **Step 4**: Repeat for any other columns with NA values
+    ![Repeating for Solar Radiation Column](./Excel_2_Unit/Week_2_Chris/airquality_repeat_na_solar.png){.lightbox}
+  
+Now we have a clean dataset that we can use to create pivot tables and pivot charts.
+
+
+#### Pivot Tables and Insights
+
+##### Creating a genearl pivot table
+
+  - To create a general pivot table, you first select all the data in your dataset as seen below
+    ![Select all data in dataset](./Excel_2_Unit/Week_2_Chris/airquality_select_insert_pivot.png){.lightbox}
+  
+  - You then go to the insert tab and click on **Pivot Table** to insert a pivot table
+    ![Insert pivot table](./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table.png){.lightbox}
+  
+    Here is where you will specify where you want to insert this new table. As suggested by Dr. V, we'll insert it into a new sheet.
+    ![Insert in new sheet](./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table_2.png){.lightbox}
+  
+  - The next step is to select the fields you want to use in your pivot table. These fields can either be dragged and dropped or checked and unchecked. As the names of the boxes suggest, you have the option to add a **filter**, to add a **column**, to add a **row**, or to specify what **values** you want to use. An interesting point to note here is that you can **stack rows and columns**, essentially creating a dropdown like effect, making data more manageable and understandable.
+    ![Select value fields](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_select_fields.png){.lightbox}
+  
+  - Go ahead and select the fields as below
+    ![Fields for table selected](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_fields_selected.png){.lightbox}
+  
+  - After the fields have been selected, we now have the option to change the **value field settings**. This means that we can change the kind of data we interpret from the dataset. 
+    ![Change value field settings](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_1.png){.lightbox}
+  
+    In this example, we're going to change it from the sum to the average values for each field.
+    ![Use average instead of sum](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_2.png){.lightbox}
+  
+  - As part of 'prettifying' our data, let's decrease the decimal places in our data, to only the 2 decimal places.
+    ![Reducing significant figures](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_decrease_decimals.png){.lightbox}
+  
+  - After some more prettifying, we end up with the following **pivot table**, your first pivot table!
+    ![First Pivot Table](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_after_formatting.png){.lightbox}
+  
+  
+  
+##### Creating your first pivot chart
+
+  - Now that we have the pivot table, we can create a **pivot chart**. To do this, the first step would be to select your pivot table and click on **Pivot Chart** on the insert tab.
+    ![Insert pivot chart](./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart.png){.lightbox}
+
+  - We can then select what type of chart we'd like to use. Excel automatically tells you what are possible and what aren't possible.
+    ![Select chart type](./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart_2.png){.lightbox}
+  
+  - And after choosing the appropriate chart type, **bar chart** in our case, we have created our first pivot chart. *Congratulations*
+    ![First Pivot Chart](./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart.png){.lightbox}
+  
+  - Another interesting thing you can do with pivot charts, is that we can apply filters to the rows and columns on the chart itself. 
+    ![Pivot chart filtering](./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart_filtered.png){.lightbox}
+  
+
+
+##### Pivot Chart Variations
+
+Now that we know how to create pivot tables and pivot charts, let's use this knowledge to create comparisons in our dataset to further analyze how these different variables interact with each other.
+
+###### Pivot Chart 1: Average of Ozone, Solar Radiation, Temperature, Wind by Month and Day
+
+- This is the pivot chart we just created. This chart shows us a few general trends. Specifically:
+  + **Ozone levels seem to correlate with temperature** where higher temperatures in July and August correspond with higher ozone concentrations.
+  + **Solar radiation is also highest in the summer months**, contributing to higher temperatures, but interestingly, ozone concentrations are lower in September despite similar solar radiation levels.
+  + **Wind speeds decrease as temperatures rise**, indicating that calmer wind conditions occur during the hotter summer months, potentially allowing pollutants like ozone to accumulate more in the atmosphere.
+  
+  
+  ![Average of Ozone, Solar R., Temp, Wind by Month and Day](./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_1.png){.lightbox}
+  
+
+###### Pivot Chart 2: Average Temp vs Average Ozone by Month
+
+- This pivot chart looks at the average values of temperature vs the average values of ozone by month. The general understanding this gives us is that:
+  + The **ozone concentration increases with rising temperature during the summer months**, particularly in July and August.
+  + After peaking in the summer, both temperature and ozone levels decrease in September, though the decline in ozone levels is more pronounced than the drop in temperature.
+  + This pattern suggests that while temperature is a significant factor in ozone concentration, **other elements such as sunlight intensity and wind speed might also contribute to the sudden drop in ozone levels** observed in September.
+  
+  
+  ![Pivot table](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_2.png){.lightbox}
+  
+  
+  ![Pivot Chart - A trend line on a bar chart](./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_2.png){.lightbox}
+  
+
+###### Pivot Chart 3: Average Solar Radiation vs Average of Wind speeds by Month
+
+- This pivot chart looks at the average values of solar radiation vs the average values of wind speeds by month. Here are the trends we can observe:
+  + There is an **inverse relationship** between solar radiation and wind speed during the summer months. As solar radiation peaks in July, wind speeds drop to their lowest levels. This could be due to **more stable weather conditions with fewer disturbances** (such as storms) that typically bring stronger winds.
+  + In the transition months of May and September, the wind speeds are higher, possibly due to more atmospheric variability as seasons change, while solar radiation is moderate.
+  + The **decrease in wind speed during the summer may contribute to higher ozone levels observed in earlier analyses**, as calmer winds allow pollutants to accumulate.
+  
+  
+  ![Pivot table](./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_3.png){.lightbox}
+  
+  
+  ![Pivot Chart - 2 trend lines with markers with a secondary axis](./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_3.png){.lightbox}
+  
+
+##### **Pivot Chart Conclusion**
+- There are several different charts that can be made from this simple dataset, which further demonstrates just how powerful the pivot table and pivot chart features are! 
+- Learning how to use this feature is definitely going to be helpful in my future endeavors with data.
+
+
+
+### Midterm Project Context
+
+The goal of this midterm project is to analyze data from the **High School Longitudinal Study of 2009 (HSLS:09)** to explore how early exposure to STEM education affects future career outcomes. The project will focus on:
+- How students’ interest in STEM subjects during high school influences their college major and career choices.
+- The role of parents and school environments in shaping STEM aspirations.
+- (Possible consideration) A comparative analysis of HSLS:09 and other studies such as **ELS:2002** and **NELS:88** to identify broader educational trends.
+
+This project will aim to answer key questions regarding the **role of early STEM education** in fostering career readiness and bridging gaps for underrepresented groups in STEM.
+
+#### Introduction to NCES Data Source
+
+The **National Center for Education Statistics (NCES)** is a key provider of data on education in the U.S., offering a vast array of longitudinal studies, surveys, and tools. The NCES collects comprehensive data that is useful for understanding student pathways, outcomes, and how factors such as socioeconomic status, race, and school characteristics impact education.
+
+##### How to Use NCES Data
+You can access NCES data at [NCES Data Tools](https://nces.ed.gov/datatools/){target="_blank"}. The NCES website offers a range of tools that allow users to:
+- Download datasets for longitudinal studies such as HSLS:09.
+- Create custom reports using tools like **Data Lab**.
+- Visualize educational trends using tools like the **Trend Generator**.
+
+###### Related Resources:
+- [NCES Data Lab Tool](https://nces.ed.gov/datalab/){target="_blank"}
+- [NCES Online Codebook](https://nces.ed.gov/datalab/onlinecodebook){target="_blank"}
+
+#### HSLS Dataset
+
+The **High School Longitudinal Study of 2009 (HSLS:09)**, launched by the National Center for Education Statistics (NCES), provides a rich source of data for educational research. By tracking students from the beginning of high school through postsecondary education and into their careers, HSLS:09 offers valuable insights into student pathways, especially in STEM (Science, Technology, Engineering, Mathematics). 
+
+Let's break down the context of HSLS:09 using the 5 W's framework to better understand its significance.
+
+##### **Who?**
+- **Participants:** HSLS:09 initially sampled over **23,000 ninth-grade students** from 944 high schools across the United States. It also collected data from parents, teachers, counselors, and administrators.
+- **Demographics:** The participants represented a diverse cross-section of students, varying in socioeconomic backgrounds, ethnicities, and geographic locations.
+- **Stakeholders:** Aside from students, the survey data also involves insights from educators and family members, making it a comprehensive longitudinal study.
+
+##### **What?**
+- **Scope:** The HSLS:09 focuses on understanding students' educational choices, performance, and postsecondary transitions. One of the study’s unique features is its emphasis on **STEM education and career trajectories**. Cognitive assessments were administered alongside surveys to measure student aptitude in mathematics and science.
+- **Data Collected:** The study captures a wide range of data, including academic achievement, **cognitive tests**, postsecondary aspirations, **parental influence**, school characteristics, and career goals.
+- **Assessment:** The students underwent math assessments in the ninth grade, and their progress was tracked through **follow-up surveys** in 2012, 2016, and beyond.
+
+##### **Where?**
+- **Geographic Coverage:** The survey covered high schools throughout the United States, including urban, suburban, and rural areas. This allowed for a broad understanding of educational experiences across different geographic and socioeconomic environments.
+- **Postsecondary Transitions:** The follow-up surveys track students as they transition into a variety of postsecondary environments, including two- and four-year colleges, vocational programs, and directly into the workforce.
+
+##### **When?**
+- **Initial Data Collection:** The study began in 2009 when the participants were in ninth grade. Subsequent data collection points occurred in **2012, 2013, 2016**, and more recently, following students through their postsecondary education and career entry phases.
+- **Longitudinal Approach:** HSLS:09 is designed to track participants over an extended period, providing insights into the long-term effects of high school experiences on educational attainment and career success.
+
+##### **Why?**
+- **STEM Emphasis:** A primary goal of HSLS:09 is to understand how high school experiences, especially in STEM fields, influence later educational and career outcomes. The study explores what motivates students to pursue careers in STEM and what barriers may exist, such as socioeconomic factors or lack of resources.
+- **Educational Equity:** Another key objective is to assess **educational equity**. HSLS:09 allows researchers to examine disparities in student experiences based on race, gender, socioeconomic status, and geographic location, providing a wealth of information for policymakers.
+- **Policy Implications:** The data serves as a foundation for designing interventions that can address gaps in education, particularly for underrepresented groups in STEM.
+
+##### **How?**
+- **Methodology:** HSLS:09 uses a combination of surveys, **cognitive assessments**, and **follow-up interviews** to gather data. The study includes input from students, parents, educators, and administrators, creating a holistic view of each student's educational journey.
+- **Analysis Frameworks:** Researchers use the HSLS:09 data to conduct both quantitative and qualitative analyses. The longitudinal design enables researchers to look at changes over time, such as shifts in career aspirations or academic performance.
+
+##### Conclusion
+
+The **HSLS:09** dataset offers invaluable insights into the educational trajectories of U.S. high school students, with a particular focus on STEM fields. The data gathered from this study can be used to develop strategies that support student success, particularly in underrepresented communities. For this midterm project, analyzing this dataset allows us to explore key questions about educational pathways, parental influence, and career readiness, providing a solid foundation for research in educational policy and student development.

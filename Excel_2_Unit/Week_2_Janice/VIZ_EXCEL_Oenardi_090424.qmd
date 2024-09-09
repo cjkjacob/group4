@@ -1,0 +1,179 @@
+---
+title: "Week 2, Excel Pivot Table + Chart"
+author: "Janice Gifano Oenardi"
+format: html
+editor: visual
+---
+
+## Context of data set
+
+I am using the 'airquality' data set, which is the daily air quality measurements in New York from May 1, 1973, to September 30, 1973. The format is a data frame with 153 observations on 6 variables:
+
+1.  **Ozone:** numeric Ozone (ppb)
+2.  **Solar.R:** numeric Solar R (lang)
+3.  **Wind:** numeric Wind (mph)
+4.  **Temp:** numeric Temperature (degrees F)
+5.  **Month:** numeric Month (1--12)
+6.  **Day:** numeric Day of month (1--31)
+
+**Details:**
+
+-   Ozone: Mean ozone in parts per billion from 1300 to 1500 hours at Roosevelt Island
+
+-   Solar.R: Solar radiation in Langleys in the frequency band 4000–7700 Angstroms from 0800 to 1200 hours at Central Park
+
+-   Wind: Average wind speed in miles per hour at 0700 and 1000 hours at LaGuardia Airport
+
+-   Temp: Maximum daily temperature in degrees Fahrenheit at La Guardia Airport.
+
+**Source and reference:**
+
+The data were obtained from the New York State Department of Conservation (ozone data) and the National Weather Service (meteorological data).
+
+Chambers, J. M., Cleveland, W. S., Kleiner, B. and Tukey, P. A. (1983) *Graphical Methods for Data Analysis*. Belmont, CA: Wadsworth.
+
+## Uploading and converting the document
+
+-   I downloaded the airquality data set in .csv format from D2L.
+-   Then, I uploaded it onto Excel.
+
+Since the format is in .csv, I need to change from 'Viewing' to 'Editing', and convert the Excel into .xlsx format
+
+-   Afterwards, I renamed the Excel file and saved it onto the right folder.
+
+## Cleaning the data set
+
+Before processing and creating visualizations of the dataset, it is important to prep the data set by cleaning it. There might be N/A values or outliers in the dataset, which needs to be removed and cleaned to create better and more accurate visualizations.
+
+To clean the data, I used Excel to clean the data and remove all the rows which as NA values.
+
+Here are the things I did step by step to clean the data set:
+
+1.  Filtering the data set and checking only the NA values
+
+![](Cleaning-filtering_Oenardi.png)
+
+2.  Delete the rows with NA values
+
+![](Cleaning-deleting_Oenardi.png)
+
+3.  Repeat on the other columns
+
+![](Cleaning2_Oenardi.png)
+
+## Creating visualizations (Charts + Pivot Tables)
+
+### Histogram: Ozone Distribution
+
+![](Histogram_Ozone_Oenardi.png)
+
+-   The histogram shows a positively skewed (or right-skewed) distribution which most values are clustered around the left tail of the distribution while the right tail of the distribution is longer
+
+-   The mode of the ozone level is 1-25 ppb.
+
+### Scatter plot: Ozone vs. Temperature
+
+![](Scatterplot_Ozone_Temp.png)
+
+-   The scatter plot shows an increasing in trend of both variables. It suggests that ozone depend on temperature, but other factors like the day, month, and solar wind also affect temperature.
+
+-   Ozone and temperature shows a directly related relationship, where the increase in ozone may cause to an increase in temperature.
+
+## Creating a Pivot Table
+
+1.  Select the data you want to include in the pivot table
+
+![](Pivot_table-1_Oenardi.png)
+
+2.  Create pivot table in a new sheet
+
+![](Pivot_table-2_Oenardi.png)
+
+3\. Drag 'Month' into the Rows
+
+![](Pivot_table-3_Oenardi.png)
+
+4\. Drag 'Day' into Columns
+
+![](Pivot_table-4_Oenardi.png)
+
+5\. Drag 'Ozone', 'Solar.R', 'Wind', 'Temp' into Values
+
+![](Pivot_table-5_Oenardi.png)
+
+6.  Explore and drag around the variables in different ways to create more insightful pivot tables
+
+### Pivot Table 1: Average of Variables Summary
+
+Making visualizations in the form of a pivot table allows us to help understand the data set by allowing the data to be presented from another perspective. We can also choose where to put the values on the pivot table to present the data in different ways.
+
+![](Pivot-Table1_Summary-Variables_Oenardi.png)
+
+-   **Average Ozone Levels**: Peaks in July (59.1) and August (60.0), while May (24.1) and September (31.4) have the lowest levels.
+
+-   **Average Temperature**: Highest in July (83.9) and August (83.7), with May (66.5) being the coolest.
+
+-   **Average Wind Speed**: Highest in June (12.2) and lowest in July (8.5).
+
+-   **Average Solar Radiation (Solar.R)**: Peaks in July (216.4), and the lowest in September (168.2).
+
+-   Overall, July and August show higher ozone and temperature levels. Ozone and temperature levels appear to have a directly proportional relationship, with average ozone increasing in May to August and decreasing in September, and average temperature following a similar upward and downward trend throughout the months.
+
+-   Average temperature and solar levels appear to also have a directly proportional relationship, as solar directly affects the temperature.
+
+-   On the other hand, wind speed varies inversely with temperature. Wind speed appears to be increasing from May to June, sharply drops in July, and increasing again in August and September.
+
+## Pivot Table 2: Temperature
+
+![](Pivot_table-temp_Oenardi.png)
+
+-   The pivot table allows us to delve more deeply on the average temperature trend throughout the months and days.
+-   As seen from the pivot table, the hottest days appear to be on the end of August (August 28 to August 31) to the beginning of September (September 1 to September 4), with the temperature consistently reaching above 90 degrees throughout those days).
+-   Meanwhile, the coldest days seem to be in early May, with temperature ranging from 58 degrees to 79 degrees.
+
+## Pivot Table 3: Temperature vs. Ozone, Wind, and Solar
+
+![](Pivot_table-temp_vs_all_Oenardi.png)
+
+-   Solar generally increases with temperature and peaks at temperature 86 lang with an average of 211.6 lang. As seen from the chart, solar fluctuates most significantly among other variables, with values ranging from 20 to 298.5 lang.
+-   Ozone increases as temperature rises, with notable jumps at 71 degrees (15 ppb), 77 degrees (23 ppb), and peaks at 89 degrees (103.5 ppb).
+-   The highest average ozone level is 103.5 ppb at 89 degrees in. Meanwhile, ozone appears to be low (\<30 degrees) for temperatures below 70 degrees, such as in May and September. This further suggests that ozone and temperature has a directly proportional relationship.
+-   Wind shows a decreasing trend as the temperature rises. Wind peaks at 18.4 mph for 57 degrees and consistently reduces, reaching as low as 4.3 mph at 93 degrees, which shows that wind and temperature are inversely related.
+-   Wind has relatively stable values between 6-10 mph for temperatures above 80 degrees.
+-   Higher temperatures correlate with lower wind speeds and increased ozone levels. Meanwhile, solar has a fluctuating trend and does not show a consistent pattern with temperature changes.
+
+## Bar chart from pivot table
+
+I selected the pivot table and inserted a bar chart using Excel to visualize the relationship of temperature with solar, ozone, and wind by month. ![](Pivot_chart-2_Oenardi.png)
+
+-   Ozone shows a steady increase from May (5) to July (7), peaks in August (8), and then decreases in September (9).
+
+-   Temperature increases gradually from May (5) to July (7), maintains a similar level in August (8) and September (9).
+
+-   Wind remains relatively low and stable throughout all months, with slight fluctuations.
+
+-   Solar peaks sharply in May (5) and July (7), slightly decreases in June (6) and August (8), and remains high in September (9). Solar radiation shows high peaks in May and July.
+
+## Line chart from pivot table
+
+I selected another pivot table and inserted a line chart using Excel to visualize the relationship of temperature with solar, ozone, and wind.
+
+![](Pivot_chart_Oenardi.png)
+
+-   The pivot table allows us to look more closely on the effect of temperature on the other variables (ozone, wind, and solar).
+
+-   As seen on the pivot table and the line chart, the solar levels fluctuate the most among the other variables and seem to generally increase as temperature approaches 97.
+
+-   Besides that, ozone follow a similar upward trend as temperature increases, suggesting a directly proportional relationship.
+
+-   Additionally, wind appears to be inversely related with temperature, as it decreases when temperature approaches its maximum.
+
+## Findings and takeaways
+
+What and how does the findings pertains to our overall project objective?
+
+1.  The findings in this assignment allowed me to learn that making visualizations are not just about making different kinds of charts, but also can be in the form of tables -in this case, pivot tables.
+2.  Pivot tables are important and can be used strategically to present data from a new set of perspectives by arranging, formatting, and organizing the data in different rows, columns, and values. By presenting the data in a more organized way, we can draw more analysis and correlations of how different variables relate to one another in the data set.
+3.  Making a more insightful and in-depth analysis of the data set requires a deep exploration by trying to plot data in different ways, formatting them differently (ex: adjusting the min/max values or the bin range of a chart),
+
+I will incorporate the findings from this assignment into the mid-term project, to allow a better exploration and analysis of the FRED data set. Specifically, aside from making different charts (scatter plots, distribution, line chart, etc.), I will also deeply explore the data set variables through pivot tables. Pivot tables allow us to see the data in a different dimension, which is more concise and summarized for better comprehension. As the FRED data set is huge, pivot tables would be very useful in effectively visualizing and finding meaningful correlations and analyses of the variables.

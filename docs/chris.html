@@ -40,6 +40,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Project Scopes</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -145,10 +148,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-1" id="toc-week-1" class="nav-link active" data-scroll-target="#week-1"><span class="header-section-number">4.1</span> Week 1</a>
+  <li><a href="#week-1---0826-0830" id="toc-week-1---0826-0830" class="nav-link active" data-scroll-target="#week-1---0826-0830"><span class="header-section-number">4.1</span> Week 1 - 08/26 ~ 08/30</a>
   <ul class="collapse">
   <li><a href="#wednesday" id="toc-wednesday" class="nav-link" data-scroll-target="#wednesday"><span class="header-section-number">4.1.1</span> Wednesday</a></li>
   <li><a href="#friday" id="toc-friday" class="nav-link" data-scroll-target="#friday"><span class="header-section-number">4.1.2</span> Friday</a></li>
+  </ul></li>
+  <li><a href="#week-2---0902-0906" id="toc-week-2---0902-0906" class="nav-link" data-scroll-target="#week-2---0902-0906"><span class="header-section-number">4.2</span> Week 2 - 09/02 ~ 09/06</a>
+  <ul class="collapse">
+  <li><a href="#wednesday-friday" id="toc-wednesday-friday" class="nav-link" data-scroll-target="#wednesday-friday"><span class="header-section-number">4.2.1</span> Wednesday &amp; Friday</a></li>
+  <li><a href="#midterm-project-context" id="toc-midterm-project-context" class="nav-link" data-scroll-target="#midterm-project-context"><span class="header-section-number">4.2.2</span> Midterm Project Context</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -175,22 +183,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="week-1" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="week-1"><span class="header-section-number">4.1</span> Week 1</h2>
+<section id="week-1---0826-0830" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="week-1---0826-0830"><span class="header-section-number">4.1</span> Week 1 - 08/26 ~ 08/30</h2>
 <section id="wednesday" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="wednesday"><span class="header-section-number">4.1.1</span> Wednesday</h3>
 <section id="diamonds-dataset" class="level4" data-number="4.1.1.1">
 <h4 data-number="4.1.1.1" class="anchored" data-anchor-id="diamonds-dataset"><span class="header-section-number">4.1.1.1</span> Diamonds Dataset</h4>
-<p>I applied the learnings and findings from the Excel Unit to another dataset, the diamonds_ggplot2.csv set. - <img src="./Excel_1_Unit/Week1_Chris/VIZ_step1.png" class="img-fluid" alt="Step 1 - Loaded the CSV onto excel and examined the rows and columns"> - The Diamonds dataset defines the different characteristics of a diamond namely, carat, cut, color, clarity, depth, price, and lengths in the x, y, and z direction The dataset itself did not have any NA values, and hence did not need any additional steps for cleaning the data. An interesting observation to be made was that there are several interesting correlations between the columns that can help us observe some basic trends in the diamond trading business. There were more than 53,000 records collected, and so this dataset is very comprehensive!</p>
+<p>I applied the learnings and findings from the Excel Unit to another dataset, the diamonds_ggplot2.csv set. - <a href="./Excel_1_Unit/Week1_Chris/VIZ_step1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Step 1 - Loaded the CSV onto excel and examined the rows and columns"><img src="./Excel_1_Unit/Week1_Chris/VIZ_step1.png" class="img-fluid" alt="Step 1 - Loaded the CSV onto excel and examined the rows and columns"></a> - The Diamonds dataset defines the different characteristics of a diamond namely, carat, cut, color, clarity, depth, price, and lengths in the x, y, and z direction The dataset itself did not have any NA values, and hence did not need any additional steps for cleaning the data. An interesting observation to be made was that there are several interesting correlations between the columns that can help us observe some basic trends in the diamond trading business. There were more than 53,000 records collected, and so this dataset is very comprehensive!</p>
 <section id="preparing-the-dataset" class="level5" data-number="4.1.1.1.1">
 <h5 data-number="4.1.1.1.1" class="anchored" data-anchor-id="preparing-the-dataset"><span class="header-section-number">4.1.1.1.1</span> Preparing the dataset</h5>
 <p>Considering the size of the dataset, I had to use 500 random records to create my visualizations. Here’s a step by step guide on how I did that.</p>
 <section id="add-a-random-number-column" class="level6" data-number="4.1.1.1.1.1">
 <h6 data-number="4.1.1.1.1.1" class="anchored" data-anchor-id="add-a-random-number-column"><span class="header-section-number">4.1.1.1.1.1</span> Add a random number column</h6>
 <ul>
-<li>Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. <img src="./Excel_1_Unit/Week1_Chris/random_number_column.png" class="img-fluid" alt="Added Random Number COlumn"></li>
-<li>Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. <img src="./Excel_1_Unit/Week1_Chris/filter_for_randomness.png" class="img-fluid" alt="Filter for randomness"></li>
-<li>Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. <img src="./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png" class="img-fluid" alt="New Sheet with random values"></li>
+<li>Choose a column and add the RAND() function to the column. Double click on the bottom right of the cell to paste the function to the rest of the rows in the dataset. This creates a random number between 0 and 1. <a href="./Excel_1_Unit/Week1_Chris/random_number_column.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Added Random Number COlumn"><img src="./Excel_1_Unit/Week1_Chris/random_number_column.png" class="img-fluid" alt="Added Random Number COlumn"></a></li>
+<li>Next, we apply a filter to the entire dataset, and use the random number column (sorting it from smallest to largest). This automatically rearranges the data records, making the first 500 random. <a href="./Excel_1_Unit/Week1_Chris/filter_for_randomness.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Filter for randomness"><img src="./Excel_1_Unit/Week1_Chris/filter_for_randomness.png" class="img-fluid" alt="Filter for randomness"></a></li>
+<li>Copy the first 500 records to a new sheet. This now becomes your 500 records that give you a true random overview of the Diamonds dataset. <a href="./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="New Sheet with random values"><img src="./Excel_1_Unit/Week1_Chris/new_sheet_with_random_values.png" class="img-fluid" alt="New Sheet with random values"></a></li>
 <li>Since the records didn’t contain any NA values, this looked like the only preparation I needed to do.</li>
 </ul>
 </section>
@@ -199,14 +207,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="scatter-plot-carat-vs-price" class="level7">
 <p class="heading">Scatter Plot: Carat VS Price</p>
 <ul>
-<li>The first plot I created was a scatter plot that visualized the relationship between the carat of the diamond and the price it would sell at <img src="./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png" class="img-fluid" alt="Carat VS Price Scatter Plot"></li>
+<li>The first plot I created was a scatter plot that visualized the relationship between the carat of the diamond and the price it would sell at <a href="./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Carat VS Price Scatter Plot"><img src="./Excel_1_Unit/Week1_Chris/scatter_carat_vs_price.png" class="img-fluid" alt="Carat VS Price Scatter Plot"></a></li>
 <li>From this, we can see that the dimaonds that have a higher carat sell for more.</li>
 </ul>
 </section>
 <section id="histogram-sum-of-price-by-color" class="level7">
 <p class="heading">Histogram: Sum of Price by Color</p>
 <ul>
-<li><p>The next plot I created was a histogram that visualized the relationship between the prices and the color of the diamond. <img src="./Excel_1_Unit/Week1_Chris/histogram_price_color.png" class="img-fluid" alt="Sum of Price by Color"></p></li>
+<li><p>The next plot I created was a histogram that visualized the relationship between the prices and the color of the diamond. <a href="./Excel_1_Unit/Week1_Chris/histogram_price_color.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Sum of Price by Color"><img src="./Excel_1_Unit/Week1_Chris/histogram_price_color.png" class="img-fluid" alt="Sum of Price by Color"></a></p></li>
 <li><p>From this chart, it was clear to see that the diamonds that had the most value were those with the ‘H’ coloration.</p></li>
 </ul>
 </section>
@@ -225,13 +233,13 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="4.1.2" class="anchored" data-anchor-id="friday"><span class="header-section-number">4.1.2</span> Friday</h3>
 <section id="nces-education-dataset" class="level4" data-number="4.1.2.1">
 <h4 data-number="4.1.2.1" class="anchored" data-anchor-id="nces-education-dataset"><span class="header-section-number">4.1.2.1</span> NCES Education Dataset</h4>
-<p>NCES Education Dataset is extremely vast and includes several different studies conducted over a range of years. Today, we’ll only be focusing the High School Longitudinal Study of 2009. <a href="https://nces.ed.gov/surveys/hsls09/index.asp" class="uri">https://nces.ed.gov/surveys/hsls09/index.asp</a></p>
+<p>NCES Education Dataset is extremely vast and includes several different studies conducted over a range of years. Today, we’ll only be focusing the High School Longitudinal Study of 2009. You can find out more <a href="https://nces.ed.gov/surveys/hsls09/index.asp" target="_blank">here</a></p>
 <p>The High School Longitudinal Study of 2009 (HSLS:09) is a comprehensive study conducted by the National Center for Education Statistics (NCES). It tracks a cohort of students who began 9th grade in 2009, following them through their high school years and beyond into postsecondary education and the workforce. The study focuses on students’ educational trajectories, especially in STEM, examining factors like course-taking patterns, college aspirations, and career choices. The data collected provides insights into how high school experiences influence long-term educational and career outcomes.</p>
 <section id="working-with-the-datset" class="level5" data-number="4.1.2.1.1">
 <h5 data-number="4.1.2.1.1" class="anchored" data-anchor-id="working-with-the-datset"><span class="header-section-number">4.1.2.1.1</span> Working with the datset</h5>
 <ul>
-<li>This can be an extremely complicated process. The first step should be to go to <a href="https://nces.ed.gov/datalab/membership/register" class="uri">https://nces.ed.gov/datalab/membership/register</a> and registering yourself to access all the benefits that NCES datalabs offer. <img src="./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png" class="img-fluid"></li>
-<li>This gives us access to the data lab dashboard. Since we can’t use excel because of the extremely large size, so we’ll have to use the datalabs power stats tool for this. <img src="./Excel_1_Unit/Week1_Chris/datalabs_overview.png" class="img-fluid"></li>
+<li>This can be an extremely complicated process. The first step should be to go to <a href="https://nces.ed.gov/datalab/membership/register" target="_blank">the registration page</a> and registering yourself to access all the benefits that NCES datalabs offer. <a href="./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="./Excel_1_Unit/Week1_Chris/register_new_user_chris_nces.png" class="img-fluid"></a></li>
+<li>This gives us access to the data lab dashboard. Since we can’t use excel because of the extremely large size, so we’ll have to use the datalabs power stats tool for this. <a href="./Excel_1_Unit/Week1_Chris/datalabs_overview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="./Excel_1_Unit/Week1_Chris/datalabs_overview.png" class="img-fluid"></a></li>
 </ul>
 </section>
 <section id="simple-visualization" class="level5" data-number="4.1.2.1.2">
@@ -247,12 +255,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="./Excel_1_Unit/Week1_Chris/stem_math_visualization.png" class="img-fluid figure-img"></p>
+<p><a href="./Excel_1_Unit/Week1_Chris/stem_math_visualization.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Pecentage Analysis"><img src="./Excel_1_Unit/Week1_Chris/stem_math_visualization.png" class="img-fluid figure-img" alt="Pecentage Analysis"></a></p>
 <figcaption>Pecentage Analysis</figcaption>
 </figure>
 </div>
 <ul>
-<li>It further allowed me to use the bar chart to show this information visually. <img src="./Excel_1_Unit/Week1_Chris/stem_math_chart.png" class="img-fluid" alt="Pecentage Analysis"></li>
+<li>It further allowed me to use the bar chart to show this information visually. <a href="./Excel_1_Unit/Week1_Chris/stem_math_chart.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Pecentage Analysis"><img src="./Excel_1_Unit/Week1_Chris/stem_math_chart.png" class="img-fluid" alt="Pecentage Analysis"></a></li>
 </ul>
 </section>
 <section id="inference" class="level5" data-number="4.1.2.1.3">
@@ -268,8 +276,237 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>Given the vastness of this dataset, I believe it’s important for me to better understand and comprehend this dataset, so that I can fully utilize and appreciate all the data collected. Although I wasn’t able to use Excel on this dataset, the skills learned in the previous classes definitely helped set me up for success with this.</li>
 </ul>
+</section>
+</section>
+</section>
+<section id="week-2---0902-0906" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="week-2---0902-0906"><span class="header-section-number">4.2</span> Week 2 - 09/02 ~ 09/06</h2>
+<section id="wednesday-friday" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="wednesday-friday"><span class="header-section-number">4.2.1</span> Wednesday &amp; Friday</h3>
+<section id="data-analysis-pivot-techniques" class="level4" data-number="4.2.1.1">
+<h4 data-number="4.2.1.1" class="anchored" data-anchor-id="data-analysis-pivot-techniques"><span class="header-section-number">4.2.1.1</span> Data Analysis &amp; Pivot Techniques</h4>
+<p>This week, we focused on using <strong>pivot tables</strong> and <strong>pivot charts</strong> on the cleaned dataset from last week, to explore relationships between variables in the dataset. Pivot tables allow for a quick and efficient way to summarize, reorganize, and analyze data without needing to manually group or sort data. They provide insights by aggregating data across categories and displaying results in a table format.</p>
+<ul>
+<li><strong>Pivot tables</strong>: Help summarize large datasets by grouping them according to key variables, allowing for quick identification of patterns and trends.</li>
+<li><strong>Pivot charts</strong>: Visual representations of the data in pivot tables. These charts help communicate the relationships and trends identified in the data through pivot analysis.</li>
+</ul>
+<p>Using these tools, we were able to gain deeper insights into the environmental data from the airquality dataset. Key relationships between temperature, wind speed, ozone concentration, and solar radiation were analyzed, leading to findings that provided a better understanding of weather and air quality trends.</p>
+</section>
+<section id="context-of-the-airquality-dataset" class="level4" data-number="4.2.1.2">
+<h4 data-number="4.2.1.2" class="anchored" data-anchor-id="context-of-the-airquality-dataset"><span class="header-section-number">4.2.1.2</span> Context of the AirQuality Dataset</h4>
+<p>The <strong>airquality.csv</strong> dataset is a popular dataset that contains information about New York’s air quality measurements recorded in the year 1973. It consists of daily readings of various air quality parameters such as ozone concentration, solar radiation, wind speed, and temperature.</p>
+<section id="key-variables" class="level5" data-number="4.2.1.2.1">
+<h5 data-number="4.2.1.2.1" class="anchored" data-anchor-id="key-variables"><span class="header-section-number">4.2.1.2.1</span> Key Variables:</h5>
+<ul>
+<li><strong>Ozone</strong>: The concentration of ozone in parts per billion (ppb).</li>
+<li><strong>Solar.R</strong>: Solar radiation in langleys.</li>
+<li><strong>Wind</strong>: Wind speed in miles per hour.</li>
+<li><strong>Temp</strong>: Temperature in degrees Fahrenheit.</li>
+<li><strong>Month</strong>: The month during which the data was recorded (from May to September).</li>
+<li><strong>Day</strong>: The day of the month.</li>
+</ul>
+<p>This dataset provides valuable insights into how different environmental factors interact over time and can be used to analyze trends related to air pollution and weather patterns.</p>
+</section>
+</section>
+<section id="quick-recap-of-data-preprocessing" class="level4" data-number="4.2.1.3">
+<h4 data-number="4.2.1.3" class="anchored" data-anchor-id="quick-recap-of-data-preprocessing"><span class="header-section-number">4.2.1.3</span> Quick Recap of Data Preprocessing</h4>
+<section id="download-data" class="level5" data-number="4.2.1.3.1">
+<h5 data-number="4.2.1.3.1" class="anchored" data-anchor-id="download-data"><span class="header-section-number">4.2.1.3.1</span> Download data</h5>
+<p>I downloaded a fresh version of the airquality.csv file, and then saved it as a .xlsx file to then manipulate using Excel.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_new_download.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="New Download of airquality.csv"><img src="./Excel_2_Unit/Week_2_Chris/airquality_new_download.png" class="img-fluid figure-img" alt="New Download of airquality.csv"></a></p>
+<figcaption>New Download of airquality.csv</figcaption>
+</figure>
+</div>
+</section>
+<section id="clean-data" class="level5" data-number="4.2.1.3.2">
+<h5 data-number="4.2.1.3.2" class="anchored" data-anchor-id="clean-data"><span class="header-section-number">4.2.1.3.2</span> Clean Data</h5>
+<p>Since it was a fresh download of the file, we needed to clean the data of any NA values. Here is a high-level overview of the steps we take to achieve this:</p>
+<ul>
+<li><p><strong>Step 1</strong>: Apply a filter to the data <a href="./Excel_2_Unit/Week_2_Chris/airquality_filter_applied.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Filter applied to dataset"><img src="./Excel_2_Unit/Week_2_Chris/airquality_filter_applied.png" class="img-fluid" alt="Filter applied to dataset"></a></p></li>
+<li><p><strong>Step 2</strong>: Filter for all NA data in a column (in this case, Ozone) <a href="./Excel_2_Unit/Week_2_Chris/airquality_na_filter_applied.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="NA Rows Filtered"><img src="./Excel_2_Unit/Week_2_Chris/airquality_na_filter_applied.png" class="img-fluid" alt="NA Rows Filtered"></a></p></li>
+<li><p><strong>Step 3</strong>: Delete all the rows with an NA value <a href="./Excel_2_Unit/Week_2_Chris/airquality_delete_row_of_na.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Deleting NA Rows"><img src="./Excel_2_Unit/Week_2_Chris/airquality_delete_row_of_na.png" class="img-fluid" alt="Deleting NA Rows"></a></p></li>
+<li><p><strong>Step 4</strong>: Repeat for any other columns with NA values <a href="./Excel_2_Unit/Week_2_Chris/airquality_repeat_na_solar.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Repeating for Solar Radiation Column"><img src="./Excel_2_Unit/Week_2_Chris/airquality_repeat_na_solar.png" class="img-fluid" alt="Repeating for Solar Radiation Column"></a></p></li>
+</ul>
+<p>Now we have a clean dataset that we can use to create pivot tables and pivot charts.</p>
+</section>
+</section>
+<section id="pivot-tables-and-insights" class="level4" data-number="4.2.1.4">
+<h4 data-number="4.2.1.4" class="anchored" data-anchor-id="pivot-tables-and-insights"><span class="header-section-number">4.2.1.4</span> Pivot Tables and Insights</h4>
+<section id="creating-a-genearl-pivot-table" class="level5" data-number="4.2.1.4.1">
+<h5 data-number="4.2.1.4.1" class="anchored" data-anchor-id="creating-a-genearl-pivot-table"><span class="header-section-number">4.2.1.4.1</span> Creating a genearl pivot table</h5>
+<ul>
+<li><p>To create a general pivot table, you first select all the data in your dataset as seen below <a href="./Excel_2_Unit/Week_2_Chris/airquality_select_insert_pivot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Select all data in dataset"><img src="./Excel_2_Unit/Week_2_Chris/airquality_select_insert_pivot.png" class="img-fluid" alt="Select all data in dataset"></a></p></li>
+<li><p>You then go to the insert tab and click on <strong>Pivot Table</strong> to insert a pivot table <a href="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Insert pivot table"><img src="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table.png" class="img-fluid" alt="Insert pivot table"></a></p>
+<p>Here is where you will specify where you want to insert this new table. As suggested by Dr.&nbsp;V, we’ll insert it into a new sheet. <a href="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Insert in new sheet"><img src="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_table_2.png" class="img-fluid" alt="Insert in new sheet"></a></p></li>
+<li><p>The next step is to select the fields you want to use in your pivot table. These fields can either be dragged and dropped or checked and unchecked. As the names of the boxes suggest, you have the option to add a <strong>filter</strong>, to add a <strong>column</strong>, to add a <strong>row</strong>, or to specify what <strong>values</strong> you want to use. An interesting point to note here is that you can <strong>stack rows and columns</strong>, essentially creating a dropdown like effect, making data more manageable and understandable. <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_select_fields.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Select value fields"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_select_fields.png" class="img-fluid" alt="Select value fields"></a></p></li>
+<li><p>Go ahead and select the fields as below <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_fields_selected.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Fields for table selected"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_fields_selected.png" class="img-fluid" alt="Fields for table selected"></a></p></li>
+<li><p>After the fields have been selected, we now have the option to change the <strong>value field settings</strong>. This means that we can change the kind of data we interpret from the dataset. <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Change value field settings"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_1.png" class="img-fluid" alt="Change value field settings"></a></p>
+<p>In this example, we’re going to change it from the sum to the average values for each field. <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Use average instead of sum"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_value_field_settings_2.png" class="img-fluid" alt="Use average instead of sum"></a></p></li>
+<li><p>As part of ‘prettifying’ our data, let’s decrease the decimal places in our data, to only the 2 decimal places. <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_decrease_decimals.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Reducing significant figures"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_decrease_decimals.png" class="img-fluid" alt="Reducing significant figures"></a></p></li>
+<li><p>After some more prettifying, we end up with the following <strong>pivot table</strong>, your first pivot table! <a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_after_formatting.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="First Pivot Table"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_after_formatting.png" class="img-fluid" alt="First Pivot Table"></a></p></li>
+</ul>
+</section>
+<section id="creating-your-first-pivot-chart" class="level5" data-number="4.2.1.4.2">
+<h5 data-number="4.2.1.4.2" class="anchored" data-anchor-id="creating-your-first-pivot-chart"><span class="header-section-number">4.2.1.4.2</span> Creating your first pivot chart</h5>
+<ul>
+<li><p>Now that we have the pivot table, we can create a <strong>pivot chart</strong>. To do this, the first step would be to select your pivot table and click on <strong>Pivot Chart</strong> on the insert tab. <a href="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Insert pivot chart"><img src="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart.png" class="img-fluid" alt="Insert pivot chart"></a></p></li>
+<li><p>We can then select what type of chart we’d like to use. Excel automatically tells you what are possible and what aren’t possible. <a href="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Select chart type"><img src="./Excel_2_Unit/Week_2_Chris/airquality_insert_pivot_chart_2.png" class="img-fluid" alt="Select chart type"></a></p></li>
+<li><p>And after choosing the appropriate chart type, <strong>bar chart</strong> in our case, we have created our first pivot chart. <em>Congratulations</em> <a href="./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="First Pivot Chart"><img src="./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart.png" class="img-fluid" alt="First Pivot Chart"></a></p></li>
+<li><p>Another interesting thing you can do with pivot charts, is that we can apply filters to the rows and columns on the chart itself. <a href="./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart_filtered.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Pivot chart filtering"><img src="./Excel_2_Unit/Week_2_Chris/airquality_first_pivot_chart_filtered.png" class="img-fluid" alt="Pivot chart filtering"></a></p></li>
+</ul>
+</section>
+<section id="pivot-chart-variations" class="level5" data-number="4.2.1.4.3">
+<h5 data-number="4.2.1.4.3" class="anchored" data-anchor-id="pivot-chart-variations"><span class="header-section-number">4.2.1.4.3</span> Pivot Chart Variations</h5>
+<p>Now that we know how to create pivot tables and pivot charts, let’s use this knowledge to create comparisons in our dataset to further analyze how these different variables interact with each other.</p>
+<section id="pivot-chart-1-average-of-ozone-solar-radiation-temperature-wind-by-month-and-day" class="level6" data-number="4.2.1.4.3.1">
+<h6 data-number="4.2.1.4.3.1" class="anchored" data-anchor-id="pivot-chart-1-average-of-ozone-solar-radiation-temperature-wind-by-month-and-day"><span class="header-section-number">4.2.1.4.3.1</span> Pivot Chart 1: Average of Ozone, Solar Radiation, Temperature, Wind by Month and Day</h6>
+<ul>
+<li>This is the pivot chart we just created. This chart shows us a few general trends. Specifically:
+<ul>
+<li><strong>Ozone levels seem to correlate with temperature</strong> where higher temperatures in July and August correspond with higher ozone concentrations.</li>
+<li><strong>Solar radiation is also highest in the summer months</strong>, contributing to higher temperatures, but interestingly, ozone concentrations are lower in September despite similar solar radiation levels.</li>
+<li><strong>Wind speeds decrease as temperatures rise</strong>, indicating that calmer wind conditions occur during the hotter summer months, potentially allowing pollutants like ozone to accumulate more in the atmosphere.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Average of Ozone, Solar R., Temp, Wind by Month and Day"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_1.png" class="img-fluid figure-img" alt="Average of Ozone, Solar R., Temp, Wind by Month and Day"></a></p>
+<figcaption>Average of Ozone, Solar R., Temp, Wind by Month and Day</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="pivot-chart-2-average-temp-vs-average-ozone-by-month" class="level6" data-number="4.2.1.4.3.2">
+<h6 data-number="4.2.1.4.3.2" class="anchored" data-anchor-id="pivot-chart-2-average-temp-vs-average-ozone-by-month"><span class="header-section-number">4.2.1.4.3.2</span> Pivot Chart 2: Average Temp vs Average Ozone by Month</h6>
+<ul>
+<li>This pivot chart looks at the average values of temperature vs the average values of ozone by month. The general understanding this gives us is that:
+<ul>
+<li>The <strong>ozone concentration increases with rising temperature during the summer months</strong>, particularly in July and August.</li>
+<li>After peaking in the summer, both temperature and ozone levels decrease in September, though the decline in ozone levels is more pronounced than the drop in temperature.</li>
+<li>This pattern suggests that while temperature is a significant factor in ozone concentration, <strong>other elements such as sunlight intensity and wind speed might also contribute to the sudden drop in ozone levels</strong> observed in September.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Pivot table"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_2.png" class="img-fluid figure-img" alt="Pivot table"></a></p>
+<figcaption>Pivot table</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Pivot Chart - A trend line on a bar chart"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_2.png" class="img-fluid figure-img" alt="Pivot Chart - A trend line on a bar chart"></a></p>
+<figcaption>Pivot Chart - A trend line on a bar chart</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="pivot-chart-3-average-solar-radiation-vs-average-of-wind-speeds-by-month" class="level6" data-number="4.2.1.4.3.3">
+<h6 data-number="4.2.1.4.3.3" class="anchored" data-anchor-id="pivot-chart-3-average-solar-radiation-vs-average-of-wind-speeds-by-month"><span class="header-section-number">4.2.1.4.3.3</span> Pivot Chart 3: Average Solar Radiation vs Average of Wind speeds by Month</h6>
+<ul>
+<li>This pivot chart looks at the average values of solar radiation vs the average values of wind speeds by month. Here are the trends we can observe:
+<ul>
+<li>There is an <strong>inverse relationship</strong> between solar radiation and wind speed during the summer months. As solar radiation peaks in July, wind speeds drop to their lowest levels. This could be due to <strong>more stable weather conditions with fewer disturbances</strong> (such as storms) that typically bring stronger winds.</li>
+<li>In the transition months of May and September, the wind speeds are higher, possibly due to more atmospheric variability as seasons change, while solar radiation is moderate.</li>
+<li>The <strong>decrease in wind speed during the summer may contribute to higher ozone levels observed in earlier analyses</strong>, as calmer winds allow pollutants to accumulate.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Pivot table"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_table_3.png" class="img-fluid figure-img" alt="Pivot table"></a></p>
+<figcaption>Pivot table</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33" title="Pivot Chart - 2 trend lines with markers with a secondary axis"><img src="./Excel_2_Unit/Week_2_Chris/airquality_pivot_chart_3.png" class="img-fluid figure-img" alt="Pivot Chart - 2 trend lines with markers with a secondary axis"></a></p>
+<figcaption>Pivot Chart - 2 trend lines with markers with a secondary axis</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+</section>
+<section id="pivot-chart-conclusion" class="level5" data-number="4.2.1.4.4">
+<h5 data-number="4.2.1.4.4" class="anchored" data-anchor-id="pivot-chart-conclusion"><span class="header-section-number">4.2.1.4.4</span> <strong>Pivot Chart Conclusion</strong></h5>
+<ul>
+<li>There are several different charts that can be made from this simple dataset, which further demonstrates just how powerful the pivot table and pivot chart features are!</li>
+<li>Learning how to use this feature is definitely going to be helpful in my future endeavors with data.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="midterm-project-context" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="midterm-project-context"><span class="header-section-number">4.2.2</span> Midterm Project Context</h3>
+<p>The goal of this midterm project is to analyze data from the <strong>High School Longitudinal Study of 2009 (HSLS:09)</strong> to explore how early exposure to STEM education affects future career outcomes. The project will focus on: - How students’ interest in STEM subjects during high school influences their college major and career choices. - The role of parents and school environments in shaping STEM aspirations. - (Possible consideration) A comparative analysis of HSLS:09 and other studies such as <strong>ELS:2002</strong> and <strong>NELS:88</strong> to identify broader educational trends.</p>
+<p>This project will aim to answer key questions regarding the <strong>role of early STEM education</strong> in fostering career readiness and bridging gaps for underrepresented groups in STEM.</p>
+<section id="introduction-to-nces-data-source" class="level4" data-number="4.2.2.1">
+<h4 data-number="4.2.2.1" class="anchored" data-anchor-id="introduction-to-nces-data-source"><span class="header-section-number">4.2.2.1</span> Introduction to NCES Data Source</h4>
+<p>The <strong>National Center for Education Statistics (NCES)</strong> is a key provider of data on education in the U.S., offering a vast array of longitudinal studies, surveys, and tools. The NCES collects comprehensive data that is useful for understanding student pathways, outcomes, and how factors such as socioeconomic status, race, and school characteristics impact education.</p>
+<section id="how-to-use-nces-data" class="level5" data-number="4.2.2.1.1">
+<h5 data-number="4.2.2.1.1" class="anchored" data-anchor-id="how-to-use-nces-data"><span class="header-section-number">4.2.2.1.1</span> How to Use NCES Data</h5>
+<p>You can access NCES data at <a href="https://nces.ed.gov/datatools/" target="_blank">NCES Data Tools</a>. The NCES website offers a range of tools that allow users to: - Download datasets for longitudinal studies such as HSLS:09. - Create custom reports using tools like <strong>Data Lab</strong>. - Visualize educational trends using tools like the <strong>Trend Generator</strong>.</p>
+<section id="related-resources" class="level6" data-number="4.2.2.1.1.1">
+<h6 data-number="4.2.2.1.1.1" class="anchored" data-anchor-id="related-resources"><span class="header-section-number">4.2.2.1.1.1</span> Related Resources:</h6>
+<ul>
+<li><a href="https://nces.ed.gov/datalab/" target="_blank">NCES Data Lab Tool</a></li>
+<li><a href="https://nces.ed.gov/datalab/onlinecodebook" target="_blank">NCES Online Codebook</a></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="hsls-dataset" class="level4" data-number="4.2.2.2">
+<h4 data-number="4.2.2.2" class="anchored" data-anchor-id="hsls-dataset"><span class="header-section-number">4.2.2.2</span> HSLS Dataset</h4>
+<p>The <strong>High School Longitudinal Study of 2009 (HSLS:09)</strong>, launched by the National Center for Education Statistics (NCES), provides a rich source of data for educational research. By tracking students from the beginning of high school through postsecondary education and into their careers, HSLS:09 offers valuable insights into student pathways, especially in STEM (Science, Technology, Engineering, Mathematics).</p>
+<p>Let’s break down the context of HSLS:09 using the 5 W’s framework to better understand its significance.</p>
+<section id="who" class="level5" data-number="4.2.2.2.1">
+<h5 data-number="4.2.2.2.1" class="anchored" data-anchor-id="who"><span class="header-section-number">4.2.2.2.1</span> <strong>Who?</strong></h5>
+<ul>
+<li><strong>Participants:</strong> HSLS:09 initially sampled over <strong>23,000 ninth-grade students</strong> from 944 high schools across the United States. It also collected data from parents, teachers, counselors, and administrators.</li>
+<li><strong>Demographics:</strong> The participants represented a diverse cross-section of students, varying in socioeconomic backgrounds, ethnicities, and geographic locations.</li>
+<li><strong>Stakeholders:</strong> Aside from students, the survey data also involves insights from educators and family members, making it a comprehensive longitudinal study.</li>
+</ul>
+</section>
+<section id="what" class="level5" data-number="4.2.2.2.2">
+<h5 data-number="4.2.2.2.2" class="anchored" data-anchor-id="what"><span class="header-section-number">4.2.2.2.2</span> <strong>What?</strong></h5>
+<ul>
+<li><strong>Scope:</strong> The HSLS:09 focuses on understanding students’ educational choices, performance, and postsecondary transitions. One of the study’s unique features is its emphasis on <strong>STEM education and career trajectories</strong>. Cognitive assessments were administered alongside surveys to measure student aptitude in mathematics and science.</li>
+<li><strong>Data Collected:</strong> The study captures a wide range of data, including academic achievement, <strong>cognitive tests</strong>, postsecondary aspirations, <strong>parental influence</strong>, school characteristics, and career goals.</li>
+<li><strong>Assessment:</strong> The students underwent math assessments in the ninth grade, and their progress was tracked through <strong>follow-up surveys</strong> in 2012, 2016, and beyond.</li>
+</ul>
+</section>
+<section id="where" class="level5" data-number="4.2.2.2.3">
+<h5 data-number="4.2.2.2.3" class="anchored" data-anchor-id="where"><span class="header-section-number">4.2.2.2.3</span> <strong>Where?</strong></h5>
+<ul>
+<li><strong>Geographic Coverage:</strong> The survey covered high schools throughout the United States, including urban, suburban, and rural areas. This allowed for a broad understanding of educational experiences across different geographic and socioeconomic environments.</li>
+<li><strong>Postsecondary Transitions:</strong> The follow-up surveys track students as they transition into a variety of postsecondary environments, including two- and four-year colleges, vocational programs, and directly into the workforce.</li>
+</ul>
+</section>
+<section id="when" class="level5" data-number="4.2.2.2.4">
+<h5 data-number="4.2.2.2.4" class="anchored" data-anchor-id="when"><span class="header-section-number">4.2.2.2.4</span> <strong>When?</strong></h5>
+<ul>
+<li><strong>Initial Data Collection:</strong> The study began in 2009 when the participants were in ninth grade. Subsequent data collection points occurred in <strong>2012, 2013, 2016</strong>, and more recently, following students through their postsecondary education and career entry phases.</li>
+<li><strong>Longitudinal Approach:</strong> HSLS:09 is designed to track participants over an extended period, providing insights into the long-term effects of high school experiences on educational attainment and career success.</li>
+</ul>
+</section>
+<section id="why" class="level5" data-number="4.2.2.2.5">
+<h5 data-number="4.2.2.2.5" class="anchored" data-anchor-id="why"><span class="header-section-number">4.2.2.2.5</span> <strong>Why?</strong></h5>
+<ul>
+<li><strong>STEM Emphasis:</strong> A primary goal of HSLS:09 is to understand how high school experiences, especially in STEM fields, influence later educational and career outcomes. The study explores what motivates students to pursue careers in STEM and what barriers may exist, such as socioeconomic factors or lack of resources.</li>
+<li><strong>Educational Equity:</strong> Another key objective is to assess <strong>educational equity</strong>. HSLS:09 allows researchers to examine disparities in student experiences based on race, gender, socioeconomic status, and geographic location, providing a wealth of information for policymakers.</li>
+<li><strong>Policy Implications:</strong> The data serves as a foundation for designing interventions that can address gaps in education, particularly for underrepresented groups in STEM.</li>
+</ul>
+</section>
+<section id="how" class="level5" data-number="4.2.2.2.6">
+<h5 data-number="4.2.2.2.6" class="anchored" data-anchor-id="how"><span class="header-section-number">4.2.2.2.6</span> <strong>How?</strong></h5>
+<ul>
+<li><strong>Methodology:</strong> HSLS:09 uses a combination of surveys, <strong>cognitive assessments</strong>, and <strong>follow-up interviews</strong> to gather data. The study includes input from students, parents, educators, and administrators, creating a holistic view of each student’s educational journey.</li>
+<li><strong>Analysis Frameworks:</strong> Researchers use the HSLS:09 data to conduct both quantitative and qualitative analyses. The longitudinal design enables researchers to look at changes over time, such as shifts in career aspirations or academic performance.</li>
+</ul>
+</section>
+<section id="conclusion-1" class="level5" data-number="4.2.2.2.7">
+<h5 data-number="4.2.2.2.7" class="anchored" data-anchor-id="conclusion-1"><span class="header-section-number">4.2.2.2.7</span> Conclusion</h5>
+<p>The <strong>HSLS:09</strong> dataset offers invaluable insights into the educational trajectories of U.S. high school students, with a particular focus on STEM fields. The data gathered from this study can be used to develop strategies that support student success, particularly in underrepresented communities. For this midterm project, analyzing this dataset allows us to explore key questions about educational pathways, parental influence, and career readiness, providing a solid foundation for research in educational policy and student development.</p>
 
 
+</section>
 </section>
 </section>
 </section>
@@ -705,6 +942,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

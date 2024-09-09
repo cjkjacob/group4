@@ -1,0 +1,88 @@
+---
+title: "Week 2, Context of Dataset"
+author: "Janice Gifano Oenardi"
+format: html
+editor: visual
+---
+
+## Choosing the source and dataset
+
+-   The source that I chose for this class is the Federal Reserve Economic Data (FRED), with the link: https://fred.stlouisfed.org/.
+
+-   I chose the FRED source because I would like to delve more into the US economy to conduct economic analysis and financial research as a business major. Additionally, there are a lot of different data sets, including from different countries, that I an explore from the source.
+
+## Context of the FRED data source
+
+The FRED (Federal Reserve Economic Data) data set contains various economic indicators from the U.S., such as employment statistics, inflation rates, GDP data, and other key economic variables. Here’s a breakdown of the context of this data set:
+
+### Variables
+
+As the FRED source contains a lot of different datasets, here are only some of the variables included in the dataset source.
+
+-   GDP (Gross Domestic Product): A measure of the total economic output of a country.
+-   Unemployment Rate: The percentage of the labor force that is unemployed but actively seeking work.
+-   Inflation Rate (CPI or PPI): The rate at which the general level of prices for goods and services is rising.
+-   Interest Rates: Such as the Federal Funds Rate, which is the interest rate at which banks lend to each other overnight.
+-   Industrial Production Index: A measure of the real output of the manufacturing, mining, electric, and gas industries.
+-   Retail Sales: A measure of the total sales within the retail sector.
+-   Housing Starts: The number of new residential construction projects that have begun in a given period.
+-   Consumer Confidence Index: A measure of consumer sentiment about the economy.
+-   Exports and Imports: The total value of goods and services exported and imported by a country.
+
+### Who collected the data
+
+The data is collected by various U.S. government agencies such as:
+
+-   The U.S. Bureau of Labor Statistics (BLS)
+
+-   The U.S. Bureau of Economic Analysis (BEA)
+
+-   The Federal Reserve Board
+
+    The U.S. Census Bureau It is then compiled and made available to the public by the Federal Reserve Bank of St. Louis via the FRED platform.
+
+### Purpose of the source and data set
+
+#### The primary purpose of the FRED data set is to provide economic data that can be used for:
+
+-   Economic Research and Analysis: By economists, policymakers, and academic researchers to understand economic trends and conditions.
+
+-   Policy Making: By government agencies and the Federal Reserve to inform monetary and fiscal policy decisions.
+
+-   Market Analysis: By financial analysts and investors to forecast economic conditions and make informed decisions.
+
+-   Education: As a resource for students and educators in understanding economic principles and trends.
+
+#### There are several objectives/purposes of the data set that can be relevant fo the mid-tern project. I can delve into the economic indicators over time, such as:
+
+-   GDP Growth Rate: To observe economic expansion or contraction.
+
+-   Unemployment Rate: To identify periods of high or low employment.
+
+-   Inflation Rate: To detect inflationary or deflationary trends.
+
+-   Interest Rates: To understand changes in the cost of borrowing.
+
+#### For comparative analysis, I can also use bar charts, line charts, scatter plots, pivot charts, and other visualizatioons to compare different indicators:
+
+-   Interest Rates vs. Inflation Rates: To show the relationship between monetary policy and inflation.
+
+-   GDP vs. Unemployment Rate: To show how economic output correlates with employment levels.
+
+-   Consumer Confidence vs. Retail Sales: To visualize how sentiment aligns with spending behavior.
+
+#### For a deeper exploration using the source and data set, I can also create sector-specific visualizations to focus on specific sectors such as manufacturing, housing, or consumer spending:
+
+-   Industrial Production Index: To visualize the output of key industries.
+
+-   Housing Starts: To visualize the health of the real estate sector.
+
+-   Retail Sales by Category: To understand consumer spending patterns.
+
+#### I can create geographical visualizations from different countries that the data set including:
+
+-   Unemployment Rates by Country: To visualize regional differences in employment.
+
+-   GDP Growth by Country: To compare economic performance across different areas.
+
+Additionally, I can delve into leading and lagging Indicators by visualize leading indicators (like consumer confidence) against lagging indicators (like GDP) to understand potential future economic conditions.

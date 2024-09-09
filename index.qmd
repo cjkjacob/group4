@@ -1,4 +1,26 @@
-# Preface {.unnumbered}
+# Project Scopes {.unnumbered}
 
-This is a Quarto book for Group 4.
+This is a Quarto book for Group 4. Below are the project scopes for each of the datasets chosen by the team. Essentially a general direction in which we will be using our datasets for the midterm project.
 
+## Samuel Zelaya - NASA Earth Data {.unnumbered}
+- The purpose of this research is to evaluate the impacts of climate change on crop yields, specifically in relation to changes in temperature and precipitation. The study aims to identify potential adaptations and variations in yields across different countries and regions. It provides valuable insights into global food supply, price fluctuations, and the risks of hunger exacerbated by climate changes
+
+## Janice Oenardi -  Federal Reserve Economic Data {.unnumbered}
+- I chose the FRED source because I would like to delve more into the US economy to conduct economic analysis and financial research as a business major. Additionally, there are a lot of different datasets, including from different countries, that I an explore from the source. There are several objectives/purposes of the data set that can be relevant fo the mid-tern project. I can delve into the economic indicators over time, such as:
+  + GDP Growth Rate: To observe economic expansion or contraction.
+  + Unemployment Rate: To identify periods of high or low employment.
+  + Inflation Rate: To detect inflationary or deflationary trends.
+  + Interest Rates: To understand changes in the cost of borrowing.
+
+## Diego Mendoza - US Department of Agriculture Data {.unnumbered}
+- The USDA supports agriculture, food safety, rural development, and environmental protection in the U.S., collecting data on crop production, soil quality, and food security to inform policy and guide farmers. Research from fields in North Dakota focuses on the effects of tillage and crop rotation on soil health, highlighting the benefits of reduced tillage and crop diversity. The data evaluates key soil properties like bulk density, organic carbon, and microbial biomass to assess the impact of these agricultural practices. The goal is to promote sustainable farming by understanding how different management systems affect soil quality and productivity over time.
+  + Main objective: Assess the impact of tillage practices: Compare soil properties (e.g., bulk density, organic matter, pH) across different tillage systems (e.g., T1, T2) to determine how tillage affects soil health and suitability for agriculture.
+
+## Chris Jacob Karottukoikal - National Center for Education Statistics Data {.unnumbered}
+- The **National Center for Education Statistics (NCES)** is a key provider of data on education in the U.S., offering a vast array of longitudinal studies, surveys, and tools. The NCES collects comprehensive data that is useful for understanding student pathways, outcomes, and how factors such as socioeconomic status, race, and school characteristics impact education.
+  + The goal of this midterm project is to analyze data from the **High School Longitudinal Study of 2009 (HSLS:09)** to explore how early exposure to STEM education affects future career outcomes. The project will focus on:
+    - How students’ interest in STEM subjects during high school influences their college major and career choices.
+    - The role of parents and school environments in shaping STEM aspirations.
+    - (Possible consideration) A comparative analysis of HSLS:09 and other studies such as **ELS:2002** and **NELS:88** to identify broader educational trends.
+
+  + This project will aim to answer key questions regarding the **role of early STEM education** in fostering career readiness and bridging gaps for underrepresented groups in STEM.
