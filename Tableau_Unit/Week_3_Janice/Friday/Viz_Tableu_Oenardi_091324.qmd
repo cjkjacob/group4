@@ -1,0 +1,243 @@
+---
+title: "Tableu FRED Dataset Visualizations"
+author: "Janice Gifano Oenardi"
+format: html
+editor: visual
+---
+
+Link to Tableu Visualizations: <https://public.tableau.com/views/TableuFREDDataset/TrendsinRatesIndependent?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>
+
+## Context of data set
+
+-   The source that I chose for this class is the Federal Reserve Economic Data (FRED), with the link: https://fred.stlouisfed.org/.
+-   I chose the FRED source because I would like to delve more into the US economy to conduct economic analysis and financial research as a business major. Additionally, there are a lot of different data sets, including from different countries, that I an explore from the source.
+-   The FRED (Federal Reserve Economic Data) data set contains various economic indicators from the U.S., such as employment statistics, inflation rates, GDP data, and other key economic variables.
+-   For this assignment, here is the breakdown of the variables in the dataset:
+
+### Variables
+
+#### 1. **Labor Force Participation Rate**
+
+-   Source: U.S. Bureau of Labor Statistics
+
+-   Definition: A measure of the total economic output of a country.
+
+-   Units: Percent
+
+-   Frequency: Monthly
+
+-   Description: The labor force participation rate is defined by the Current Population Survey (CPS) as "the number of people in the labor force as a percentage of the civilian noninstitutional population". The participation rate is the percentage of the population that is either working or actively looking for work."
+
+    The Labor Force Participation Rate is collected in the CPS and published by the BLS. It is provided on a monthly basis, so this data is used in part by macroeconomists as an initial economic indicator of current labor market trends. The labor force participation rate helps government agencies, financial markets, and researchers gauge the overall health of the economy.
+
+#### 2. **Unemployment Rate**
+
+-   Source: U.S. Bureau of Labor Statistics
+
+-   Definition: The unemployment rate represents the number of unemployed as a percentage of the labor force.
+
+-   Units: Percent
+
+-   Frequency: Monthly
+
+-   Description: Labor force data are restricted to people 16 years of age and older, who currently reside in 1 of the 50 states or the District of Columbia, who do not reside in institutions (e.g., penal and mental facilities, homes for the aged), and who are not on active duty in the Armed Forces.
+
+#### 3. **30-Year Breakeven Inflation Rate**
+
+-   Source: Federal Reserve Bank of St. Louis
+
+-   Definition: The breakeven inflation rate represents a measure of expected inflation derived from 30-Year Treasury Constant Maturity Securities (BC_30YEAR) and 30-Year Treasury Inflation-Indexed Constant Maturity Securities (TC_30YEAR).
+
+-   Units: Percent
+
+-   Frequency: Monthly
+
+-   Description: The latest value implies what market participants expect inflation to be in the next 30 years, on average. Starting with the update on June 21, 2019, the Treasury bond data used in calculating interest rate spreads is obtained directly from the U.S. Treasury Department.
+
+#### 4. **10-Year Real Interest Rates**
+
+-   Source: Federal Reserve Bank of Cleveland
+
+-   Definition: the expected rate of inflation over the next 30 years along with the inflation risk premium, the real risk premium, and the real interest rate.
+
+-   Units: Percent
+
+-   Frequency: Monthly
+
+-   Description: Their estimates are calculated with a model that uses Treasury yields, inflation data, inflation swaps, and survey-based measures of inflation expectations.
+
+#### 5. **Real Disposable Personal Income**
+
+-   Source: U.S. Bureau of Economic Analysis
+
+-   Definition: a measure of an individual or household's purchasing power after adjusting for inflation and taxes.
+
+-   Units: Billions of Chained 2017 Dollars
+
+-   Frequency: Monthly
+
+-   Description: It's calculated by subtracting taxes and other mandatory payments from a household's disposable income, and then adjusting for inflation.
+
+#### 6. **Federal Funds Effective Rate**
+
+-   Source: Board of Governors of the Federal Reserve System (US)
+
+-   Definition: The federal funds rate is the interest rate at which depository institutions trade federal funds (balances held at Federal Reserve Banks) with each other overnight.
+
+-   Units: Percent
+
+-   Frequency: Monthly
+
+-   Description: When a depository institution has surplus balances in its reserve account, it lends to other banks in need of larger balances. In simpler terms, a bank with excess cash, which is often referred to as liquidity, will lend to another bank that needs to quickly raise liquidity. (1) The rate that the borrowing institution pays to the lending institution is determined between the two banks; the weighted average rate for all of these types of negotiations is called the effective federal funds rate.(2) The effective federal funds rate is essentially determined by the market but is influenced by the Federal Reserve through open market operations to reach the federal funds rate target.(2)
+
+#### 7. **Personal Consumption Expenditures**
+
+-   Source:U.S. Bureau of Economic Analysis
+
+-   Definition: a measure of the value of goods and services purchased by U.S. residents
+
+-   Units: Billions of Dollars
+
+-   Frequency: Monthly
+
+-   Description: The PCE price index is a key measure of inflation and consumer spending in the U.S.. It's calculated using PCE data and reflects changes in consumer behavior and inflation across a wide range of consumer expenses
+
+#### 8 **Personal Income**
+
+-   Source: U.S. Bureau of Economic Analysis
+
+-   Definition: Personal income is the income that persons receive in return for their provision of labor, land, and capital used in current production and the net current transfer payments that they receive from business and from government
+
+-   Units: Billions of Dollars
+
+-   Frequency: Monthly
+
+-   Description: Personal income is equal to national income minus corporate profits with inventory valuation and capital consumption adjustments, taxes on production and imports less subsidies, contributions for government social insurance, net interest and miscellaneous payments on assets, business current transfer payments (net), current surplus of government enterprises, and wage accruals less disbursements, plus personal income receipts on assets and personal current transfer receipts.
+
+### Format
+
+As the FRED source contains a lot of different datasets, here are only some of the variables included in the dataset source.
+
+### Who collected the data
+
+The data is collected by various U.S. government agencies such as:
+
+-   The U.S. Bureau of Labor Statistics (BLS)
+
+-   The U.S. Bureau of Economic Analysis (BEA)
+
+-   The Federal Reserve Board
+
+The U.S. Census Bureau It is then compiled and made available to the public by the Federal Reserve Bank of St. Louis via the FRED platform.
+
+### Purpose/Goal of data set
+
+#### There are several objectives/purposes of the data set that can be relevant fo the mid-term project:
+
+-   Personal Income and Consumption Expenditures: To observe the trends in personal income and expenditures over a decade from 2014 to 2024
+
+-   Unemployment Rate: To identify periods of high or low employment.
+
+-   Inflation Rate: To detect inflationary or deflationary trends.
+
+-   Interest Rates: To understand changes in the cost of borrowing.
+
+#### For comparative analysis, I create visualizations to compare different indicators:
+
+-   Interest Rates vs. Inflation Rates: To show the relationship between monetary policy and inflation.
+
+-   10-Year Real Interest Rate vs. Unemployment Rate: To show the relationship and correlation between interest rate and unemployment rate
+
+-   Personal Consumption Expenditures vs. 10-Year Real Interest Rates: To visualize how inflation affects spending behavior.
+
+-   Federal Funds Effective Rate vs. 10-Year Real Interest Rates: To see how federal funds effective rate affect the 10-year real interest rates
+
+-   Unemployment Rate vs. Inflation Rate: To see the correlation between unemployment and inflation rate.
+
+## References
+
+U.S. Bureau of Labor Statistics, Labor Force Participation Rate \[CIVPART\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/CIVPART, September 14, 2024.
+
+U.S. Bureau of Labor Statistics, Unemployment Rate \[UNRATE\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/UNRATE, September 14, 2024.
+
+Federal Reserve Bank of St. Louis, 30-year Breakeven Inflation Rate \[T30YIEM\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/T30YIEM, September 14, 2024.
+
+Federal Reserve Bank of Cleveland, 10-Year Real Interest Rate \[REAINTRATREARAT10Y\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/REAINTRATREARAT10Y, September 14, 2024.
+
+U.S. Bureau of Economic Analysis, Real Disposable Personal Income \[DSPIC96\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/DSPIC96, September 14, 2024.
+
+Board of Governors of the Federal Reserve System (US), Federal Funds Effective Rate \[FEDFUNDS\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/FEDFUNDS, September 14, 2024.
+
+U.S. Bureau of Economic Analysis, Personal Consumption Expenditures \[PCE\], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/series/PCE, September 14, 2024.
+
+## Visualizations and Observations
+
+### Figure 1: Personal Income and Expenditures in 2014 to 2024
+
+![](./Figure1_Oenardi.png)
+
+-   Trend of Personal Income and Expenditures: From 2014 to 2024, both average personal income and personal consumption expenditures show an overall increasing trend. The growth in personal income appears to be more consistent and slightly steeper compared to personal consumption expenditures.
+
+-   Year 2020 Anomaly: There is a sharp peak in the percentage difference of both personal income and consumption expenditures around 2020, likely reflecting economic impacts due to COVID-19, such as stimulus payments affecting income and changes in consumption patterns during the pandemic.
+
+-   Post-2020 Variability: After 2020, both the percentage differences in income and expenditures show increased variability, indicating a more turbulent economic environment post-pandemic with fluctuations in growth rates.
+
+-   Recovery and Stabilization by 2024: By 2024, the percentage differences in both variables appear to stabilize somewhat, suggesting a return to a more steady state compared to the immediate post-pandemic years.
+
+-   Intersection and Divergence: The graph indicates that the percentage difference in income and expenditures were quite close around 2017 and then diverged significantly during and after 2020, highlighting differing rates of recovery or growth in these economic factors.
+
+### Figure 2: Unemployment Rate vs. Inflation Rate
+
+![](./Figure2_Oenardi.png)
+
+Based on the scatter plot showing the relationship between the unemployment rate and the 30-year breakeven inflation rate, here are some concise observations:
+
+-   Inverse Relationship: There is an inverse relationship between the unemployment rate and the 30-year breakeven inflation rate. As the unemployment rate increases, the inflation rate generally decreases.
+
+-   Above and Below Threshold Clusters: Data points marked as below the threshold (orange) dominate the lower range of unemployment rates (between 3% and 6%) and tend to cluster around inflation rates of 1.8% to 2.4%.
+
+    Data points above the threshold occur at higher unemployment rates (above 6%), where the breakeven inflation rate drops, suggesting a stronger link between rising unemployment and lower inflation at these levels.
+
+-   High Unemployment, Low Inflation: At very high unemployment rates (above 10%), inflation rates are consistently below 2%, reinforcing the inverse relationship at extreme unemployment levels.
+
+-   Low Unemployment, Higher Inflation Stability: At lower unemployment rates (below 6%), the breakeven inflation rate stays within a tighter range (1.8% to 2.4%), indicating more stability in inflation during periods of lower unemployment.
+
+### Figure 3: Trends in Unemployment Rate, Inflation Rate, Federal Reserve Effective Rate, and Interest Rate
+
+![](./Figure3_Oenardi.png)
+
+-   Unemployment Rate: There is a steady decline in the unemployment rate from 2014 to 2019. However, a sharp increase occurs in 2020, likely due to the pandemic, followed by a sharp recovery by 2021, and then a slight increase in 2023 and 2024.
+
+-   Federal Reserve Effective Rate: This rate remained relatively stable and low from 2014 to 2015, then gradually increased from 2016 to 2019. There was a notable dip in 2020, corresponding with the economic stimulus and policy changes during the pandemic, followed by a steep rise starting in 2022.
+
+-   Inflation Rate: The inflation rate remains relatively flat from 2014 to 2020, with a slight increase during 2021-2022, followed by a stabilization trend in 2023 and 2024.
+
+-   Interest Rate (Dotted Line): This line shows a more gradual and consistent upward trend over the decade, likely reflecting a long-term increase in interest rates.
+
+-   COVID-19 Impact (2020-2021): The chart shows significant volatility in all metrics during 2020-2021, with unemployment spiking and interest rates dropping drastically before recovering post-pandemic.
+
+### Figure 4: Personal Consumption and Inflation Rate
+
+![](./Figure4_Oenardi.png)
+
+-   Average Personal Consumption Expenditures show a steady increase from 2014 to 2024 and grew from 11,874 in 2014 to 19,028 in 2024. There are significant jumps in expenditures from 2020 onward.
+-   Meanwhile, Average 30-year Breakeven Inflation Rate remains relatively stable. It fluctuates slightly around 1.5% - 2.0% throughout the period.
+-   While personal consumption expenditures increase consistently, inflation rate maintains a relatively flat trajectory, suggesting consumption grows regardless of inflation stability.
+
+### Figure 5: Interest Rate vs. Federal Funds Effective Rate
+
+![](./Figure5_Oenardi.png)
+
+-   Federal Funds Effective Rate and 10-Year Real Interest Rate follow a somewhat parallel paths with some fluctuations. Both rates were relatively stable and low from 2014 to around 2018.
+
+-   There is a significant spike in the 10-Year Real Interest Rate around 2023, exceeding 50%.
+
+-   There is a sharp decline in both rates from 2023 to 2024, with the Federal Funds Rate dropping back near 0%.
+
+-   Both rates saw a sharp increase in 2018, a drop in 2019, and a moderate rise towards 2021.
+
+-   The unprecedented peak in 2023 for the 10-Year Real Interest Rate is notably out of trend with historical data.
+
+-   Both rates have shown a sharp decline heading into 2024, suggesting a rapid loosening of monetary policy or economic conditions requiring significant rate cuts.
+
+-   The 10-Year Real Interest Rate and the Federal Funds Effective Rate start to diverge significantly around 2022 with the 10-Year rate peaking drastically higher than the Federal Funds rate. This might indicate a market anticipation of inflation or other economic pressures not immediately reflected in the Federal Funds rate.

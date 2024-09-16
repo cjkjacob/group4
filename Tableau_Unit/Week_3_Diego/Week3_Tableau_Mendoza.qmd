@@ -1,0 +1,199 @@
+---
+title: "Week3_Tableau_Mendoza"
+format: html
+---
+
+##Wedneday
+
+
+###Overview
+
+Document is CO2_DataSet
+Working with Tableau
+
+### Background Information
+
+The CO2 data frame has 84 rows and 5 columns of data from an experiment on the cold tolerance of the grass species Echinochloa crus-galli. uptake of six plants from Quebec and six plants from Mississippi was measured at several levels of ambient concentration. Half the plants of each type were chilled overnight before the experiment was conducted.
+
+This dataset was originally part of package nlme, and that has methods (including for [, as.data.frame, plot and print) for its grouped-data classes.
+
+#### Column Information
+
+Plant
+an ordered factor with levels Qn1 < Qn2 < Qn3 < ... < Mc1 giving a unique identifier for each plant.
+
+Type
+a factor with levels Quebec Mississippi giving the origin of the plant
+
+Treatment
+a factor with levels nonchilled chilled
+
+conc
+a numeric vector of ambient carbon dioxide concentrations (mL/L).
+
+uptake
+a numeric vector of carbon dioxide uptake rates (mol/2μmol/m 2sec).
+
+
+### Observations
+
+All chilled plants had lower uptakes than there not chilled equvilent(Sheet 1)
+
+If all chilled plants in the data show lower CO2 uptakes than their non-chilled equivalents, it indicates that lower temperatures may have negatively affected the plants' ability to absorb CO2. This is likely because chilling can slow down metabolic processes, including photosynthesis, which is crucial for CO2 uptake. Reduced enzyme activity at lower temperatures could hinder the plants' photosynthetic efficiency, leading to less CO2 being absorbed. Additionally, chilling may cause stress in some plant species, further limiting their ability to function optimally. It would be important to explore other environmental or physiological variables in the data to confirm if the drop in CO2 uptake is consistently linked to temperature or if other factors contribute to this trend.
+
+If plants had higher CO2 uptake in Quebec compared to Mississippi, this difference could be influenced by various environmental factors. Quebec, with its cooler climate, may provide more optimal conditions for photosynthesis in some plant species, particularly if they are adapted to cooler temperatures. Lower temperatures can reduce the rate of respiration, allowing more energy to be directed toward photosynthesis, which increases CO2 uptake.
+
+In contrast, Mississippi's warmer climate could lead to higher respiration rates, reducing the net CO2 uptake. Additionally, other factors like humidity, soil composition, and light exposure might vary between the regions, contributing to the observed differences. Exploring these environmental and regional variables in the dataset would help clarify the specific reasons behind the greater CO2 uptake in Quebec.
+
+Mississipi plant had tighter cluster inregarding to measurements taken(Sheet 4)
+
+A tighter cluster of measurements in Mississippi plants suggests that there is less variability in CO2 uptake under the conditions tested. This could be due to more consistent environmental factors such as temperature, humidity, and light intensity in Mississippi. If the climate in Mississippi is more stable during the period of measurement, the plants may experience fewer fluctuations in growing conditions, leading to more uniform physiological responses and, thus, more consistent CO2 uptake measurements.
+
+Additionally, if the Mississippi plants are of the same species or have similar adaptive traits to their local environment, this genetic or physiological uniformity could result in less variation in how they respond to environmental stimuli. In contrast, regions with more variable climates, like Quebec, might show a wider range of responses due to changing temperatures or other fluctuating environmental factors.
+
+
+The higher variance and standard deviation in CO2 uptake measurements for plants in Quebec, compared to Mississippi, suggest that there is greater variability in how plants in Quebec respond to environmental conditions. This could indicate that the growing conditions in Quebec are less stable or more variable, leading to more fluctuations in plant performance. For instance, Quebec's climate may experience more extreme temperature shifts, varying levels of sunlight, or differences in humidity, all of which can affect CO2 uptake differently across plant species or individual plants.(Sheet 6)
+
+Higher variance also implies that certain plants in Quebec are either more sensitive or more adaptive to these environmental changes, showing a broader range of responses, from low to high CO2 uptake. In contrast, Mississippi’s plants, with their tighter clustering and lower variability, are likely experiencing more consistent conditions, resulting in more uniform uptake patterns. This highlights that the environmental or biological factors affecting plant performance are more varied in Quebec, possibly due to its cooler and more fluctuating climate.
+
+### Summary
+
+Differenet reagions provide different enviroments for plants to respond
+
+Chilled plant perform at a lower rate than nonchilled regardless of enviromnet or species
+
+
+##Friday
+
+### Overview
+
+Focused look on plant usage on mineral B and Ca 
+Understanding what future food production prediction may look from such results
+
+#### BackGround Information
+
+
+In a study of wheat cultivation in the northern Great Plains, researchers investigated how different crop rotations affect wheat performance and the relationship between soil and grain mineral concentrations. The study compared spring wheat (fertilized, CSW) with wheat following 5 years of perennial forages, including alfalfa, intermediate wheatgrass (fertilized, IWG), and a mixture of alfalfa and intermediate wheatgrass (MIX). The wheat grown after alfalfa showed the highest yield, superior thousand kernel weight (TKW) compared to CSW, and increased crude protein (CP) concentration relative to IWG and CSW. However, wheat following alfalfa had lower grain zinc (Zn) concentration compared to IWG.
+
+Wheat following IWG exhibited higher concentrations of iron (Fe) and manganese (Mn) compared to the MIX treatment, higher magnesium (Mg) than CSW, and lower sulfur (S) concentration across all treatments. Multivariate correlation analysis revealed that plant available soil minerals were positively correlated with grain boron (B), Mg, Mn, and S concentrations, while they were negatively associated with grain Zn and calcium (Ca) concentrations.
+
+The results indicate that incorporating perennial forage phases into wheat cropping systems can enhance wheat yield and CP levels, but it may also reduce certain soil mineral availability. This suggests that while rotating perennials can improve some aspects of soil quality, it could also affect soil fertility by lowering the availability of certain essential minerals.
+
+#### Soil
+
+In this study, soil measurements provide insights into the availability of essential minerals that plants need for growth. Specifically, the soil measurements include:
+
+Plant Available Soil Minerals: These measurements assess the concentration of minerals in the soil that are accessible to plants. Key minerals analyzed in this study include boron (B), magnesium (Mg), manganese (Mn), sulfur (S), zinc (Zn), calcium (Ca), and others. These soil concentrations help determine how well nutrients are supplied to the crops.
+
+Correlation with Grain Mineral Concentrations: By examining the relationship between soil mineral availability and the mineral content in wheat grains, the study investigates how variations in soil nutrients influence the nutrient profile of the harvested grain. This correlation helps to understand how soil nutrient management affects the nutritional quality of the wheat produced.
+
+Impact of Crop Rotation: The study explores how rotating perennial forages into wheat cropping systems affects soil mineral availability. For instance, it assesses whether different crop rotations lead to changes in the levels of plant available soil minerals and how these changes impact wheat yield and grain mineral concentrations.
+
+Overall, soil measurements in this study help in understanding the dynamics of soil fertility, the efficiency of nutrient uptake by crops, and the broader implications for crop performance and nutritional quality.
+
+In the context of this study, soil samples were likely collected before planting to assess the plant available mineral concentrations in the soil prior to wheat cultivation. This allows researchers to establish a baseline of nutrient availability and understand how different crop rotations and management practices affect soil fertility.
+
+By analyzing soil conditions before planting, the study can correlate these initial nutrient levels with subsequent wheat performance and grain mineral concentrations. This approach helps to determine how soil nutrient availability influences crop yield and grain quality throughout the growing season.
+
+##### Focused Context
+
+In this study, Boron (B) and Calcium (Ca) were measured both in soil (plant-available form) and wheat grain to assess their correlation. Boron and Calcium are essential nutrients for plant growth, with their availability in the soil directly influencing the nutrient content of harvested wheat grain. These measurements help in understanding how different cropping systems (such as continuous wheat or rotations with perennials) affect the nutrient dynamics in both soil and plant tissue.
+
+##### Background Information on Mineral Use
+
+Boron (B) is vital for cell wall formation, reproductive growth, and nutrient transport within plants. Deficiency in B can lead to reduced yields and poor seed development, especially in crops like wheat. In semi-arid soils, Boron levels can fluctuate, influencing plant uptake and grain mineral content.
+
+Calcium (Ca) plays a critical role in strengthening cell walls, regulating enzyme activity, and supporting root and shoot development. A sufficient supply of Calcium ensures healthy plant structure and resistance to disease, but excessive or insufficient levels can lead to nutrient imbalances that affect plant health and grain quality. Soil Calcium levels are key to determining its availability to plants and eventual presence in grains.
+
+
+#### Observations:
+
+Dashboard 1 Sheets 2 and 3
+
+Grain Ca vs Soil Ca:
+
+Across all perennial treatments (Alfalfa, CSW, IWG, and MIX), the grain calcium (Ca) concentration appears to be relatively consistent, even though the soil calcium levels vary slightly by depth (0-5 cm and 5-10 cm).
+The variation in soil Ca levels across the treatments does not appear to have a significant effect on the grain Ca concentration, as the bars representing grain Ca are mostly uniform across the treatments.
+Grain B vs Soil B:
+
+In contrast, the grain boron (B) concentration shows a stronger association with soil B levels, especially in the Alfalfa and CSW treatments.
+For example, the Alfalfa treatment (0-5 cm) shows that higher soil B concentration is reflected in higher grain B concentration, while other treatments like CSW and MIX show more moderate levels.
+
+#### Inferences:
+
+Calcium (Ca):
+
+The weak correlation between soil Ca and grain Ca suggests that wheat plants might regulate Ca uptake, maintaining relatively consistent levels in grain even when soil Ca availability varies. This could imply that wheat plants prioritize Ca for grain formation, regardless of soil supply, or that Ca uptake is less responsive to soil concentration changes within this range.
+Boron (B):
+
+There is a clearer relationship between soil B and grain B, indicating that wheat's B uptake may be more directly influenced by soil B availability. Boron is crucial for reproductive development in plants, and its availability in the soil could directly affect the levels found in wheat grains.
+General Patterns in Rotation:
+
+Rotations involving perennial forages like alfalfa appear to increase soil B availability, which translates into higher grain B concentrations compared to continuous spring wheat (CSW). This suggests that integrating perennials into cropping systems might enhance the availability of specific micronutrients such as boron, potentially influencing the nutritional quality of the grain.
+
+
+#### Observations
+
+Sheet 1
+
+Potassium (K) indeed has the highest concentration (mg/kg) among all the minerals across different perennial treatments (Alfalfa, CSW, IWG, and MIX). This indicates that K is more abundant in the soil compared to other minerals like Boron (B), Aluminum (Al), Calcium (Ca), and Copper (Cu).
+
+Calcium (Ca) also appears in relatively high concentrations, particularly in the CSW and MIX treatments, where it shows levels close to Potassium, though slightly lower.
+
+Boron (B), in contrast, has much lower concentrations across all treatments, which confirms your earlier observation of lower Boron levels. The variation in Boron levels across treatments is minimal, with no significant spikes.
+
+Aluminum (Al) and Copper (Cu) show the lowest concentrations overall, with minimal differences between the different treatments.
+
+Additional Observations:
+CSW and MIX treatments appear to have the highest levels of K and Ca compared to IWG and Alfalfa treatments.
+Boron and Aluminum remain consistently low across all treatments, reinforcing the idea that these minerals might be less available in the soil or more rapidly depleted during crop growth.
+
+
+#### Observations
+
+Sheet 4
+
+Soil Boron (B) Concentration:
+
+The soil Boron concentrations vary across different treatments (Alfalfa, CSW, IWG, and MIX) and soil depths (0-5 cm and 5-10 cm).
+In the Alfalfa treatment, soil B is consistently higher, with values reaching around 0.6 mg/kg in both depth layers.
+The CSW treatment shows relatively lower soil Boron concentrations, mostly clustering between 0.2-0.4 mg/kg.
+IWG and MIX show intermediate soil Boron levels, with slightly higher concentrations at 0-5 cm compared to 5-10 cm.
+Grain Boron (B) Concentration:
+
+Grain B levels are much lower than soil B levels, with most of the values falling between 0.02 mg/kg and 0.07 mg/kg, indicating that only a small fraction of available Boron in the soil is taken up by the plants and transferred to the grain.
+The MIX treatment shows the highest grain B concentrations, particularly at the 0-5 cm depth. This suggests that plants under the MIX rotation were more efficient in uptaking Boron from the soil compared to other treatments.
+Other treatments like CSW and IWG have lower grain B levels, despite having moderate soil B concentrations, indicating a lower Boron uptake efficiency.
+No Measurements in Some Cells:
+
+Certain cells show "No Measure," indicating gaps in the data for specific treatment and depth combinations.
+Inferences:
+Boron Uptake Efficiency: The difference between soil B and grain B suggests that Boron uptake efficiency varies across treatments. For example, even though soil B levels are high under Alfalfa, the grain B concentration remains relatively low, indicating that the plants might not be fully utilizing the available Boron.
+
+Treatment Effect: The MIX treatment seems to have enhanced Boron uptake, resulting in higher grain B levels despite moderate soil B concentrations, suggesting that this treatment may improve nutrient acquisition.
+
+Depth Influence: Soil depth plays a role in Boron availability, with slightly higher soil B concentrations in the 0-5 cm layer across most treatments. However, this does not always translate into higher grain B concentrations.
+
+
+### Summary
+
+The data provided shows the relationship between soil and grain concentrations of minerals like Boron (B) and Calcium (Ca) across different cropping systems and soil depths. In the case of Boron, soil concentrations are generally higher than the corresponding levels in the grain, indicating that although Boron is present in the soil, the plants' uptake and transfer to the grain are limited. Among the different treatments, the MIX rotation (alfalfa and intermediate wheatgrass) appears to facilitate the highest Boron uptake efficiency, showing relatively higher grain B concentrations despite moderate soil levels. Other treatments, such as CSW (continuous spring wheat) and IWG (intermediate wheatgrass), demonstrate lower Boron uptake efficiency, with grain B concentrations remaining low even when soil Boron levels are moderate.
+
+For Calcium, the relationship between soil and grain concentrations is more linear, with higher soil Ca levels correlating with higher grain Ca concentrations. This is especially evident in the CSW and MIX treatments, where soil Ca levels are high, and grain Ca uptake is relatively efficient. The consistent uptake of Ca suggests that plants have a more stable mechanism for absorbing this macronutrient, regardless of the cropping system. In contrast, the variability in Boron uptake indicates that B availability and plant uptake are more sensitive to crop type, rotation, and soil depth. This insight highlights the potential for certain perennial rotations, like the MIX treatment, to enhance micronutrient uptake efficiency, particularly for nutrients like Boron that are essential in small quantities but crucial for plant growth.
+
+These findings have significant implications for future food production, especially in the context of nutrient management in soils. As the global population grows, there will be increasing pressure to optimize crop yields while maintaining or enhancing nutritional quality. The data suggests that certain cropping systems can enhance the uptake of key nutrients like Calcium, but micronutrients such as Boron may be more challenging to manage. If future agricultural systems focus on rotations with perennial forages or mixed systems, it could lead to better nutrient efficiency and soil health, making food production more sustainable. However, continuous cropping of annual cereals without proper nutrient replenishment could result in micronutrient deficiencies, impacting both crop health and the nutritional quality of food.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

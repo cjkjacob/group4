@@ -283,3 +283,110 @@ The dataset includes several key variables the only used right now where:
 **5.MZ_2000: Average maize production from 2000 to 2006 in metric tons, sourced from the FAO**
 
 **The purpose of this research is to evaluate the impacts of climate change on crop yields, specifically in relation to changes in temperature and precipitation. The study aims to identify potential adaptations and variations in yields across different countries and regions. It provides valuable insights into global food supply, price fluctuations, and the risks of hunger exacerbated by climate changes.**
+
+## Week 3 - 09/09 ~ 09/13
+
+### Wednesday 9/11/24
+
+Here's a review of Monday:
+1.  We were introduced to Tableau and spent time familiarizing ourselves with the platform.
+2.  Tableau Public is a free data visualization tool that allows users to create interactive and shareable dashboards. It is widely used due to its ability to handle large datasets, provide rich visualizations, and perform data cleaning and transformation tasks. This tutorial covered the basics of Tableau Public, including its main features, advantages over Excel, and step-by-step instructions on importing, cleaning, and visualizing data, as well as creating pivot tables and building dashboards using a sample dataset.
+3.  We created accounts to log in to Tableau Public.
+4.  Our professor gave us a guided tour of the website, showing how to start working with datasets and create simple visualizations. We also learned how to export datasets from Excel to Tableau.
+
+Here's Wednesday's work:
+
+1.  We continued working with Tableau, diving deeper into its functionality.
+2.  I created my first visualization using the **Orange_Dataset**, focusing on the relationship between tree age and trunk circumference.
+3.  This visualization was relatively simple, showcasing the difference and relationship between these variables.
+4.  We posted our graphs in a discussion thread to compare progress and share insights with classmates.
+
+**Average of age and circumference :**
+
+<https://public.tableau.com/app/profile/samuel.zelaya/viz/averageofageandcircumference/Sheet1>
+
+```{=html}
+<div class='tableauPlaceholder' id='viz1726469825993' style='position: relative'><noscript><a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;av&#47;averageofageandcircumference&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='averageofageandcircumference&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;av&#47;averageofageandcircumference&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1726469825993');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+```
+
+### Friday 9/13/24
+
+#### **Data Preview**
+
+This dataset provides an assessment of potential climate change impacts on global staple crop production, focusing on wheat, rice, and maize. The dataset was developed to offer quantitative estimates of crop yield changes under different climate scenarios, including the impacts of temperature and precipitation changes on crop yields. It also incorporates the physiological effects of rising carbon dioxide levels on plant growth, and adaptation measures are considered in evaluating potential yields.
+
+#### **Data Categories:Production Data (2000-2006):**
+
+Wheat (WH_2000)
+
+Rice (RI_2000)
+
+Maize (MZ_2000)
+
+#### **Climate Scenario Yield Changes (2020, SRES A1FI):**
+
+Wheat (WHA1F2020): Projected percentage change in wheat yield.
+
+Rice (RIA1F2020): Projected percentage change in rice yield.
+
+Maize (MZA1F2020): Projected percentage change in maize yield.
+
+#### **Total Production Changes:**
+
+**Wheat (ActChWHA1F2020):** Change in total wheat production under the SRES A1FI 2020 scenario.
+
+**Rice (ActChRIAIF2020):** Change in total rice production under the SRES A1FI 2020 scenario.
+
+**Maize (ActChMZA1F2020):** Change in total maize production under the SRES A1FI 2020 scenario.
+
+#### Actual Work
+
+1.  **Today, we worked with NASA Earth Data as our primary dataset.**
+
+2.  **I cleaned the data and focused on the same variables as my previous homework: wheat, maize, and rice production levels. I also added three new important variables**
+
+    The change in crop growth for wheat, maize, and rice from the year 2000 to 2020.
+
+    The projected changes in yield for these crops in 2020 due to climate change, using the A1F scenario.
+
+    CO2 levels and their impact on the change in crop yields from 1990 to 2020.
+
+3.  **Key variables included:**
+
+    **WH_2000, RI_2000, MZ_2000** -- Production levels of wheat, rice, and maize in 2000.
+
+    **WHA1F2020, RIA1F2020, MZA1F2020** -- Projected percentage change in yield for these crops in 2020 under the A1F climate scenario.
+
+    **ActChWHA1F2020, ActChRIA1F2020, ActChMZA1F2020** -- Actual changes in yield for these crops in 2020 under the A1F scenario.
+
+    **CO2 levels and dY%** -- CO2 levels and percentage change in yield (dY%) for wheat, rice, and maize under different scenarios like A1FI, A2, B1, and B2.
+
+4.  **I cleaned the data in Excel, highlighting the values that showed a decrease in red and those that showed an increase in green.**
+
+5.  **After cleaning, I imported the file into Tableau and started creating graphs to visualize the changes and trends.**
+
+#### **Links to Visualization**
+
+
+**Overall Crop Production - Sheet 1**
+
+
+**Crop Production Per Country - Sheet 2**
+
+
+**Crop Production Forecast for 2020 per Country - Sheet 3**
+
+
+**Sum Of Actual Change 2000-2020 Per Country - Sheet 4**
+
+
+**Crop Production Forecast Relationship - Sheet 5**
+
+
+**Comparison between 2000 Production and 2020 Forecast Production - Sheet 6**
+
+
+```{=html}
+<div class='tableauPlaceholder' id='viz1726469919281' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;Week3_Zelaya_91424&#47;Sheet4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Week3_Zelaya_91424&#47;Sheet4' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;Week3_Zelaya_91424&#47;Sheet4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1726469919281');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+```
+

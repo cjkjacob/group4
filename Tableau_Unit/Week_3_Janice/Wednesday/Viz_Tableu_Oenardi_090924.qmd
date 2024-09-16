@@ -1,0 +1,124 @@
+---
+title: "Week 3, Tableu on Edgar Anderson's Iris Data"
+author: "Janice Gifano Oenardi"
+format: html
+editor: visual
+---
+
+Link to Tableu dashboard: <https://public.tableau.com/views/IrisDataset_17261876822440/Scatterplot?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>
+
+
+
+## Context of data set
+
+### Description
+
+This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+### Format
+
+iris is a data frame with 150 cases (rows) and 5 variables (columns). The columns are named:
+
+-   Sepal.Length
+
+-   Sepal.Width
+
+-   Petal.Length
+
+-   Petal.Width
+
+-   Species
+
+iris3 gives the same data arranged as a 3-dimensional array of size 50 by 4 by 3, as represented by S-PLUS. The first dimension gives the case number within the species subsample, the second the measurements with names Sepal L., Sepal W., Petal L., and Petal W., and the third the species.
+
+## Source and references
+
+Fisher, R. A. (1936) The use of multiple measurements in taxonomic problems. Annals of Eugenics, 7, Part II, 179--188.
+
+The data were collected by Anderson, Edgar (1935). The irises of the Gaspe Peninsula, Bulletin of the American Iris Society, 59, 2--5.
+
+Becker, R. A., Chambers, J. M. and Wilks, A. R. (1988) The New S Language. Wadsworth & Brooks/Cole. (has iris3 as iris.)
+
+### Figure 1:
+
+![](./Figure1_Oenardi.png)
+
+-   The chart shows the relationship between petal width and petal length for three iris species: setosa, versicolor, and virginica.
+
+-   Setosa has the smallest petal length and width, clustering around the lower left corner.
+
+-   Versicolor occupies the middle range of petal length and width, showing a positive correlation between these two variables.
+
+-   Virginica has the largest petal dimensions, forming a cluster in the upper right corner, also showing a clear positive trend.
+
+-   There is little overlap between setosa and the other species, but versicolor and virginica have some overlap in their measurements.
+
+### Figure 2:
+
+![](./Figure2_Oenardi.png)
+
+-   Setosa has the shortest average sepal length, smallest petal length, and width compared to the other species.
+
+-   Versicolor (orange) displays moderate values for sepal and petal length/width, generally in between setosa and virginica.
+
+-   Virginica has the largest average values for all four measurements (sepal length, sepal width, petal length, petal width).
+
+-   Sepal width for setosa is the highest among the three species, while virginica has the largest values for both petal length and width.
+
+### Figure 3:
+
+![](./Figure3_Oenardi.png)
+
+-   The boxplot visualizes the distribution of the average petal and sepal dimensions (length and width) across different iris species:
+
+-   Average Petal Length: Ranges from around 1 to 5, with most data concentrated between 3 and 4.
+
+-   Average Petal Width: A narrower range from 0.5 to 2.0, with the majority between 1.0 and 1.5.
+
+-   Average Sepal Length: A wider range, mostly between 5 and 7, indicating greater variation in sepal length.
+
+-   Average Sepal Width: Ranges between 2.0 and 4.0, with a tighter spread, suggesting less variability.
+
+-   Overall, petal and sepal dimensions show distinct ranges, with sepal measurements generally larger than petal measurements.
+
+### Figure 4:
+
+![](./Figure4_Oenardi.png)
+
+-   A deeper analysis of the scatter plot reveals the following patterns and relationships among the three iris species:
+
+Setosa:
+
+-   This species has a distinct cluster with relatively small sepal lengths (around 4.5 to 5.5) and larger sepal widths (typically 3.2 to 4.4).
+
+-   The clear separation of this cluster indicates that setosa has distinct structure and form characteristics compared to the other two species.
+
+Versicolor:
+
+-   Versicolor occupies a middle ground in terms of both sepal length and width. Its sepal lengths range from 5.0 to 7.0, while its widths fall mostly between 2.5 and 3.2.
+
+-   There is some overlap with virginica, making it less distinct in terms of sepal dimensions. However, it is separable from setosa, especially in sepal width.
+
+Virginica:
+
+-   Virginica shows the highest sepal lengths, ranging from 6.0 to 8.0, but with sepal widths similar to versicolor (around 2.5 to 3.5).
+
+-   The overlap in width with versicolor shows that there is some ambiguity between these two species based on sepal dimensions alone, but virginica's larger sepal length helps differentiate it.
+
+Petal Length (Point Size):
+
+-   The size of the circles represents average petal length, with larger circles indicating longer petals.
+
+-   Setosa has the smallest petals on average, as indicated by the small circle sizes.
+
+-   Virginica has the largest petals, reflected in its larger circle sizes.
+
+-   Versicolor is in between, with moderate petal lengths.
+
+Inter-Species Overlap:
+
+-   Setosa is well-separated from the other two species in terms of both sepal length and width, making it easy to distinguish.
+
+-   Versicolor and Virginica overlap significantly in their sepal width and partially in sepal length. The main distinction between these two species lies in sepal length, where virginica tends to have longer sepals, and in petal length, with virginica showing larger petals.
+
+The chart shows clear separation of setosa from the other species based on sepal dimensions, while versicolor and virginica show partial overlap, making them more challenging to differentiate. Petal length, represented by circle size, is an important additional factor in distinguishing virginica from versicolor.
