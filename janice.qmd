@@ -799,3 +799,163 @@ Based on the scatter plot showing the relationship between the unemployment rate
 -   Both rates have shown a sharp decline heading into 2024, suggesting a rapid loosening of monetary policy or economic conditions requiring significant rate cuts.
 
 -   The 10-Year Real Interest Rate and the Federal Funds Effective Rate start to diverge significantly around 2022 with the 10-Year rate peaking drastically higher than the Federal Funds rate. This might indicate a market anticipation of inflation or other economic pressures not immediately reflected in the Federal Funds rate.
+
+
+
+
+## Week 4 - 09/16 ~ 09/20
+
+### Activating virtual environment
+- In class, we activated our virtual environment by typing in the terminal: source venv477/bin/activate
+- Then, I typed: jupyter lab
+- This brings me to my browser, opening the jupyter lab where I created a new file to do the Python tutorial
+
+### This is a markdown  title
+
+in markdown we can create lists:
+
+- item 1
+- item 2
+- item 3
+
+also we can create enumerated lists
+
+1. Hola
+2. Hi
+3. Namaste
+
+we can do **bold**, also *italic*
+
+
+### Kernels in Jupyter
+- There are three types of kernels that you can make: code, markdown, and raw.
+- Make sure to save the airquality.csv file within the same  folder of the jupyter lab file.
+
+
+```python
+##  Here we are importing numpy with a nickname np
+import numpy as np
+print(np.absolute(-1))
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+
+## Click control+enter to run
+```
+
+    1
+    [1 2 3 4 5]
+    
+
+
+```python
+# list are native to Python
+my_list = [1, 2, 3, 4, 5]
+print(my_list)
+```
+
+    [1, 2, 3, 4, 5]
+    
+
+
+```python
+## We will be using a lot of dataframes, so we need pandas library
+import pandas as pd
+data = {'Ozone': [41, 36, 12], 'Temp': [67, 72, 74]}
+df = pd.DataFrame(data)
+```
+
+
+```python
+## 4. Loading csv files
+
+## To load .csv files into a 'DataFrame', we use the pandas function 'read_csv'
+
+```
+
+
+```python
+print(df)
+```
+
+       Ozone  Temp
+    0     41    67
+    1     36    72
+    2     12    74
+    
+
+
+```python
+df = pd.read_csv('airquality_datasets.csv')
+```
+
+
+```python
+print(df.info())
+print(df.describe())
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 153 entries, 0 to 152
+    Data columns (total 6 columns):
+     #   Column   Non-Null Count  Dtype  
+    ---  ------   --------------  -----  
+     0   Ozone    116 non-null    float64
+     1   Solar.R  146 non-null    float64
+     2   Wind     153 non-null    float64
+     3   Temp     153 non-null    int64  
+     4   Month    153 non-null    int64  
+     5   Day      153 non-null    int64  
+    dtypes: float64(3), int64(3)
+    memory usage: 7.3 KB
+    None
+                Ozone     Solar.R        Wind        Temp       Month         Day
+    count  116.000000  146.000000  153.000000  153.000000  153.000000  153.000000
+    mean    42.129310  185.931507    9.957516   77.882353    6.993464   15.803922
+    std     32.987885   90.058422    3.523001    9.465270    1.416522    8.864520
+    min      1.000000    7.000000    1.700000   56.000000    5.000000    1.000000
+    25%     18.000000  115.750000    7.400000   72.000000    6.000000    8.000000
+    50%     31.500000  205.000000    9.700000   79.000000    7.000000   16.000000
+    75%     63.250000  258.750000   11.500000   85.000000    8.000000   23.000000
+    max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000
+    
+
+### Histograms
+
+- dropna will erase the NA values that are in ozone and other columns
+- plt.hist will format the bins, including the number of bins, color, and outline color of the histogram.
+- plt.xlabel is the name of the x-axis
+- plt.ylabel is the name of the axis
+- plot.show is the command to show the histograms
+
+
+```python
+import matplotlib.pyplot as plt
+
+# Ozone Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(df['Ozone'].dropna(), bins=20, color='blue', edgecolor='black')
+plt.title('Distribution of Ozone Levels')
+plt.xlabel('Ozone (ppb)')
+plt.ylabel('Frequency')
+plt.show()
+
+# Temp Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(df['Temp'].dropna(), bins=20, color='orange', edgecolor='black')
+plt.title('Distribution of Temperature')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+    
+![Distribution of Ozone Levels](Python_Unit_1\Week_4_Janice_files/Week_4_Janice_13_0.png)
+    
+
+
+
+    
+![Distribution of Temperature](Python_Unit_1\Week_4_Janice_files/Week_4_Janice_13_1.png)
+    
+

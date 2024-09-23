@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -162,6 +196,12 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#wednesday-1" id="toc-wednesday-1" class="nav-link" data-scroll-target="#wednesday-1"><span class="header-section-number">4.3.1</span> Wednesday</a></li>
   <li><a href="#friday-1" id="toc-friday-1" class="nav-link" data-scroll-target="#friday-1"><span class="header-section-number">4.3.2</span> Friday</a></li>
+  </ul></li>
+  <li><a href="#week-4---0916-0920" id="toc-week-4---0916-0920" class="nav-link" data-scroll-target="#week-4---0916-0920"><span class="header-section-number">4.4</span> Week 4 - 09/16 ~ 09/20</a>
+  <ul class="collapse">
+  <li><a href="#mondaywednesday" id="toc-mondaywednesday" class="nav-link" data-scroll-target="#mondaywednesday"><span class="header-section-number">4.4.1</span> Monday/Wednesday</a></li>
+  <li><a href="#friday-2" id="toc-friday-2" class="nav-link" data-scroll-target="#friday-2"><span class="header-section-number">4.4.2</span> Friday</a></li>
+  <li><a href="#week-4-conclusion" id="toc-week-4-conclusion" class="nav-link" data-scroll-target="#week-4-conclusion"><span class="header-section-number">4.4.3</span> Week 4 Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -1468,10 +1508,1002 @@ ul.task-list li input[type="checkbox"] {
 <section id="final-thoughts" class="level6" data-number="4.3.2.5.8.8">
 <h6 data-number="4.3.2.5.8.8" class="anchored" data-anchor-id="final-thoughts"><span class="header-section-number">4.3.2.5.8.8</span> Final Thoughts:</h6>
 <p>This comprehensive analysis emphasizes the need for systemic changes to level the playing field, ensuring that factors such as <strong>income</strong> and <strong>race</strong> no longer determine a student’s success in math and STEM fields.</p>
-
-
 </section>
 </section>
+</section>
+</section>
+</section>
+<section id="week-4---0916-0920" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="week-4---0916-0920"><span class="header-section-number">4.4</span> Week 4 - 09/16 ~ 09/20</h2>
+<section id="mondaywednesday" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="mondaywednesday"><span class="header-section-number">4.4.1</span> Monday/Wednesday</h3>
+<section id="this-is-markdown-content" class="level4" data-number="4.4.1.1">
+<h4 data-number="4.4.1.1" class="anchored" data-anchor-id="this-is-markdown-content"><span class="header-section-number">4.4.1.1</span> This is markdown content</h4>
+<p>Here is a list</p>
+<ol type="1">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<p><strong>bold</strong> <em>italic</em></p>
+</section>
+<section id="jupyter-notebook---python-basics" class="level4" data-number="4.4.1.2">
+<h4 data-number="4.4.1.2" class="anchored" data-anchor-id="jupyter-notebook---python-basics"><span class="header-section-number">4.4.1.2</span> Jupyter Notebook - Python Basics</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First we activate the virtual environment (venv477) - it has all the required libraries already downloaded and installed</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># In this code block, we'll be using numpy, a library to deal with numbers and complex calculations</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.absolute(<span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>1
+[1 2 3 4 5]</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#lists are native to python</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>[1, 2, 3, 4, 5]</code></pre>
+</section>
+<section id="python-dataframes" class="level4" data-number="4.4.1.3">
+<h4 data-number="4.4.1.3" class="anchored" data-anchor-id="python-dataframes"><span class="header-section-number">4.4.1.3</span> Python Dataframes</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#For dataframes, we use pandas library, which will be used for handling large amounts of data.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>data<span class="op">=</span>{<span class="st">'Ozone'</span>: [<span class="dv">41</span>,<span class="dv">36</span>,<span class="dv">12</span>],<span class="st">'Temp'</span>:[<span class="dv">67</span>,<span class="dv">72</span>,<span class="dv">74</span>]}</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.info())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>   Ozone  Temp
+0     41    67
+1     36    72
+2     12    74
+           Ozone       Temp
+count   3.000000   3.000000
+mean   29.666667  71.000000
+std    15.502688   3.605551
+min    12.000000  67.000000
+25%    24.000000  69.500000
+50%    36.000000  72.000000
+75%    38.500000  73.000000
+max    41.000000  74.000000
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   Ozone   3 non-null      int64
+ 1   Temp    3 non-null      int64
+dtypes: int64(2)
+memory usage: 176.0 bytes
+None</code></pre>
+</section>
+<section id="airquality-dataset" class="level4" data-number="4.4.1.4">
+<h4 data-number="4.4.1.4" class="anchored" data-anchor-id="airquality-dataset"><span class="header-section-number">4.4.1.4</span> Airquality Dataset</h4>
+<section id="overview-of-the-airquality-dataset" class="level5" data-number="4.4.1.4.1">
+<h5 data-number="4.4.1.4.1" class="anchored" data-anchor-id="overview-of-the-airquality-dataset"><span class="header-section-number">4.4.1.4.1</span> Overview of the Airquality Dataset</h5>
+<p>The <strong>airquality</strong> dataset contains daily air quality measurements taken in New York from <strong>May to September 1973</strong>. It is frequently used for data analysis and visualization exercises. Below is a detailed overview of the dataset based on the image and general characteristics of the airquality dataset. Here is some analysis, with the help of ChatGPT.</p>
+<section id="dataset-structure" class="level6" data-number="4.4.1.4.1.1">
+<h6 data-number="4.4.1.4.1.1" class="anchored" data-anchor-id="dataset-structure"><span class="header-section-number">4.4.1.4.1.1</span> Dataset Structure:</h6>
+<p>The dataset consists of the following six columns: 1. <strong>Ozone</strong>: Mean ozone concentration in parts per billion (<strong>ppb</strong>). 2. <strong>Solar.R</strong>: Solar radiation in <strong>Langleys (ly)</strong>. 3. <strong>Wind</strong>: Average wind speed in <strong>miles per hour (mph)</strong>. 4. <strong>Temp</strong>: Maximum daily temperature in degrees <strong>Fahrenheit (°F)</strong>. 5. <strong>Month</strong>: Coded as integers <strong>5 (May)</strong> to <strong>9 (September)</strong>. 6. <strong>Day</strong>: The day of the month.</p>
+</section>
+<section id="dataset-characteristics" class="level6" data-number="4.4.1.4.1.2">
+<h6 data-number="4.4.1.4.1.2" class="anchored" data-anchor-id="dataset-characteristics"><span class="header-section-number">4.4.1.4.1.2</span> Dataset Characteristics:</h6>
+<ul>
+<li>The dataset includes <strong>153 observations (rows)</strong>.</li>
+<li>Some columns contain <strong>missing values</strong>, especially for <strong>Ozone</strong> and <strong>Solar.R</strong>:
+<ul>
+<li><strong>Ozone</strong>: 116 non-null entries, 37 missing (NaN).</li>
+<li><strong>Solar.R</strong>: 146 non-null entries, 7 missing (NaN).</li>
+</ul></li>
+<li>The <strong>Wind</strong> and <strong>Temp</strong> columns are complete, with no missing values.</li>
+<li>The <strong>Month</strong> and <strong>Day</strong> columns represent the time variables and do not have missing values.</li>
+</ul>
+</section>
+<section id="basic-statistics" class="level6" data-number="4.4.1.4.1.3">
+<h6 data-number="4.4.1.4.1.3" class="anchored" data-anchor-id="basic-statistics"><span class="header-section-number">4.4.1.4.1.3</span> Basic Statistics:</h6>
+<p>Here are some basic statistics derived from the dataset:</p>
+<ul>
+<li><strong>Ozone</strong>:
+<ul>
+<li><strong>Mean</strong>: 42.1 ppb</li>
+<li><strong>Minimum</strong>: 1 ppb, <strong>Maximum</strong>: 168 ppb</li>
+<li><strong>50th percentile (median)</strong>: 31 ppb</li>
+</ul></li>
+<li><strong>Solar.R</strong>:
+<ul>
+<li><strong>Mean</strong>: 185.9 ly</li>
+<li><strong>Minimum</strong>: 7 ly, <strong>Maximum</strong>: 334 ly</li>
+<li><strong>50th percentile (median)</strong>: 207 ly</li>
+</ul></li>
+<li><strong>Wind</strong>:
+<ul>
+<li><strong>Mean</strong>: 9.96 mph</li>
+<li><strong>Minimum</strong>: 1.7 mph, <strong>Maximum</strong>: 20.7 mph</li>
+<li><strong>50th percentile (median)</strong>: 9.7 mph</li>
+</ul></li>
+<li><strong>Temp</strong>:
+<ul>
+<li><strong>Mean</strong>: 77.88°F</li>
+<li><strong>Minimum</strong>: 56°F, <strong>Maximum</strong>: 97°F</li>
+<li><strong>50th percentile (median)</strong>: 79°F</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-insights-4" class="level6" data-number="4.4.1.4.1.4">
+<h6 data-number="4.4.1.4.1.4" class="anchored" data-anchor-id="key-insights-4"><span class="header-section-number">4.4.1.4.1.4</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Ozone and Solar.R have missing data</strong>: The <strong>Ozone</strong> column has 37 missing values and <strong>Solar.R</strong> has 7 missing values, which may need to be handled for detailed analysis.</li>
+<li><strong>Temperature and Wind show no missing values</strong>: These columns provide a full set of observations, which can be used for detailed statistical analysis without any data imputation.</li>
+<li><strong>Temperature ranges</strong>: The daily maximum temperatures recorded range from <strong>56°F</strong> to <strong>97°F</strong>, typical for summer months in New York.</li>
+<li><strong>Ozone levels</strong>: The ozone concentration ranges from <strong>1 ppb</strong> to <strong>168 ppb</strong>, with a mean of <strong>42.1 ppb</strong>, but there are notable missing values.</li>
+</ol>
+</section>
+<section id="potential-analysis" class="level6" data-number="4.4.1.4.1.5">
+<h6 data-number="4.4.1.4.1.5" class="anchored" data-anchor-id="potential-analysis"><span class="header-section-number">4.4.1.4.1.5</span> Potential Analysis:</h6>
+<ul>
+<li><strong>Correlation Analysis</strong>: Investigating how <strong>ozone levels</strong> relate to temperature, wind, and solar radiation.</li>
+<li><strong>Time Series Analysis</strong>: Analyzing how air quality changes over time, such as by <strong>month</strong> and <strong>day</strong>.</li>
+<li><strong>Handling Missing Data</strong>: Addressing missing values in <strong>Ozone</strong> and <strong>Solar.R</strong> before performing any advanced analysis to avoid bias.</li>
+</ul>
+</section>
+<section id="conclusion-10" class="level6" data-number="4.4.1.4.1.6">
+<h6 data-number="4.4.1.4.1.6" class="anchored" data-anchor-id="conclusion-10"><span class="header-section-number">4.4.1.4.1.6</span> Conclusion:</h6>
+<p>The <strong>airquality</strong> dataset provides a rich set of environmental data that can be analyzed to explore the relationships between <strong>ozone levels</strong>, <strong>temperature</strong>, <strong>wind speed</strong>, and <strong>solar radiation</strong>. Missing data in <strong>Ozone</strong> and <strong>Solar.R</strong> will require careful handling to ensure meaningful insights. This dataset offers a great opportunity to explore <strong>seasonal air quality patterns</strong> and their <strong>environmental drivers</strong>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Here we load the airquality dataset to start visualizing it.</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>airquality_df <span class="op">=</span> pd.read_csv(<span class="st">'airquality_datasets.csv'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(airquality_df) <span class="co"># This will print out a concise version of the dataset</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>     Ozone  Solar.R  Wind  Temp  Month  Day
+0     41.0    190.0   7.4    67      5    1
+1     36.0    118.0   8.0    72      5    2
+2     12.0    149.0  12.6    74      5    3
+3     18.0    313.0  11.5    62      5    4
+4      NaN      NaN  14.3    56      5    5
+..     ...      ...   ...   ...    ...  ...
+148   30.0    193.0   6.9    70      9   26
+149    NaN    145.0  13.2    77      9   27
+150   14.0    191.0  14.3    75      9   28
+151   18.0    131.0   8.0    76      9   29
+152   20.0    223.0  11.5    68      9   30
+
+[153 rows x 6 columns]</code></pre>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(airquality_df.info()) <span class="co"># This will print out the information of the dataframe.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 153 entries, 0 to 152
+Data columns (total 6 columns):
+ #   Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   Ozone    116 non-null    float64
+ 1   Solar.R  146 non-null    float64
+ 2   Wind     153 non-null    float64
+ 3   Temp     153 non-null    int64  
+ 4   Month    153 non-null    int64  
+ 5   Day      153 non-null    int64  
+dtypes: float64(3), int64(3)
+memory usage: 7.3 KB
+None</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(airquality_df.describe()) <span class="co"># This will print out some basic stats on the dataset</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>            Ozone     Solar.R        Wind        Temp       Month         Day
+count  116.000000  146.000000  153.000000  153.000000  153.000000  153.000000
+mean    42.129310  185.931507    9.957516   77.882353    6.993464   15.803922
+std     32.987885   90.058422    3.523001    9.465270    1.416522    8.864520
+min      1.000000    7.000000    1.700000   56.000000    5.000000    1.000000
+25%     18.000000  115.750000    7.400000   72.000000    6.000000    8.000000
+50%     31.500000  205.000000    9.700000   79.000000    7.000000   16.000000
+75%     63.250000  258.750000   11.500000   85.000000    8.000000   23.000000
+max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000</code></pre>
+</section>
+</section>
+</section>
+<section id="visualizations-on-the-airquality-dataset" class="level4" data-number="4.4.1.5">
+<h4 data-number="4.4.1.5" class="anchored" data-anchor-id="visualizations-on-the-airquality-dataset"><span class="header-section-number">4.4.1.5</span> Visualizations on the Airquality Dataset</h4>
+<section id="distribution-of-ozone-levels-histogram" class="level5" data-number="4.4.1.5.1">
+<h5 data-number="4.4.1.5.1" class="anchored" data-anchor-id="distribution-of-ozone-levels-histogram"><span class="header-section-number">4.4.1.5.1</span> Distribution of Ozone Levels Histogram</h5>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we can start creating visualizations</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt <span class="co"># This import will be used for plotting</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ozone Histogram</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>plt.hist(airquality_df[<span class="st">'Ozone'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'blue'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>) <span class="co">#dropna() will drop all NA values</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Ozone Levels'</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Ozone (ppb)'</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_7_0.png" class="img-fluid figure-img"></p>
+<figcaption>Distribution of Ozone Levels</figcaption>
+</figure>
+</div>
+<p>The histogram visualizes the distribution of ozone levels (in parts per billion - ppb) from the dataset.</p>
+<section id="key-insights-5" class="level6" data-number="4.4.1.5.1.1">
+<h6 data-number="4.4.1.5.1.1" class="anchored" data-anchor-id="key-insights-5"><span class="header-section-number">4.4.1.5.1.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Skewed Distribution:</strong>
+<ul>
+<li>The distribution of ozone levels is <strong>right-skewed</strong>. Most of the data points fall in the lower ozone ranges, particularly between <strong>0 and 50 ppb</strong>.</li>
+<li>There are fewer data points with higher ozone levels, with a long tail extending toward <strong>175 ppb</strong>.</li>
+</ul></li>
+<li><strong>High Frequency in Low Ozone Levels:</strong>
+<ul>
+<li>The highest frequency of ozone levels is concentrated between <strong>0 and 25 ppb</strong>, where more than <strong>20 occurrences</strong> are recorded.</li>
+<li>This suggests that lower ozone levels are more common in the dataset.</li>
+</ul></li>
+<li><strong>Moderate Levels Between 25 and 50 ppb:</strong>
+<ul>
+<li>There is a significant drop in frequency between <strong>25 and 50 ppb</strong>, with frequencies ranging between <strong>10 to 15 occurrences</strong>.</li>
+<li>These levels are still relatively common but less so than the lowest ozone levels.</li>
+</ul></li>
+<li><strong>Low Frequency of High Ozone Levels:</strong>
+<ul>
+<li>Ozone levels greater than <strong>50 ppb</strong> occur much less frequently.</li>
+<li>Between <strong>50 and 100 ppb</strong>, there are scattered occurrences, with frequencies generally <strong>below 10</strong>.</li>
+<li>Beyond <strong>100 ppb</strong>, the frequencies drop dramatically, with very few data points between <strong>100 and 175 ppb</strong>.</li>
+</ul></li>
+<li><strong>Outliers in High Ozone Levels:</strong>
+<ul>
+<li>There are a few outliers with ozone levels exceeding <strong>150 ppb</strong>, but these are rare occurrences, indicating that extremely high ozone levels are uncommon in this dataset.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends" class="level6" data-number="4.4.1.5.1.2">
+<h6 data-number="4.4.1.5.1.2" class="anchored" data-anchor-id="general-trends"><span class="header-section-number">4.4.1.5.1.2</span> General Trends:</h6>
+<ul>
+<li>The data shows that <strong>low ozone levels</strong> dominate, while <strong>higher ozone levels</strong> are rare.</li>
+<li>This type of distribution might reflect <strong>air quality</strong> patterns in the region where the data was collected, suggesting that <strong>low ozone</strong> is the norm, with fewer instances of high ozone pollution.</li>
+</ul>
+</section>
+<section id="conclusion-11" class="level6" data-number="4.4.1.5.1.3">
+<h6 data-number="4.4.1.5.1.3" class="anchored" data-anchor-id="conclusion-11"><span class="header-section-number">4.4.1.5.1.3</span> Conclusion:</h6>
+<p>The histogram reveals that ozone levels are predominantly low, with a clear skew toward the lower end of the spectrum. The <strong>right-skew</strong> suggests that high ozone levels are infrequent, possibly indicating generally better air quality in the region of interest.</p>
+</section>
+</section>
+<section id="distribution-of-temperature-levels-histogram" class="level5" data-number="4.4.1.5.2">
+<h5 data-number="4.4.1.5.2" class="anchored" data-anchor-id="distribution-of-temperature-levels-histogram"><span class="header-section-number">4.4.1.5.2</span> Distribution of Temperature Levels Histogram</h5>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temp Histogram</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.hist(airquality_df[<span class="st">'Temp'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'orange'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Temperature'</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Temperature (°F)'</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_8_0.png" class="img-fluid figure-img"></p>
+<figcaption>Distribution of Temperature</figcaption>
+</figure>
+</div>
+<p>This histogram visualizes the distribution of <strong>temperature (in °F)</strong> from the dataset.</p>
+<section id="key-insights-6" class="level6" data-number="4.4.1.5.2.1">
+<h6 data-number="4.4.1.5.2.1" class="anchored" data-anchor-id="key-insights-6"><span class="header-section-number">4.4.1.5.2.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Normal Distribution with Slight Skew:</strong>
+<ul>
+<li>The distribution of temperatures appears to have a <strong>normal distribution</strong> with a slight right skew. The temperatures are mostly concentrated between <strong>60°F and 90°F</strong>.</li>
+<li>The peak temperature occurs around <strong>80°F</strong>, with the highest frequency of over <strong>20 occurrences</strong>.</li>
+</ul></li>
+<li><strong>High Frequency at 80°F:</strong>
+<ul>
+<li>The highest frequency is at <strong>80°F</strong>, where over <strong>20 occurrences</strong> are recorded. This indicates that <strong>80°F</strong> is a commonly observed temperature in the dataset.</li>
+</ul></li>
+<li><strong>Balanced Spread Between 60°F and 90°F:</strong>
+<ul>
+<li>Temperatures ranging from <strong>60°F to 90°F</strong> are well represented, with a fairly <strong>even spread</strong>. Most temperatures in this range occur with moderate frequencies between <strong>5 and 15 occurrences</strong>.</li>
+<li>The distribution suggests that the temperature tends to fluctuate within this range, without extreme lows or highs.</li>
+</ul></li>
+<li><strong>Low Frequency Below 60°F and Above 90°F:</strong>
+<ul>
+<li>There are fewer occurrences of temperatures below <strong>60°F</strong> and above <strong>90°F</strong>. These extremes are less common, and the dataset is largely concentrated within the <strong>60°F to 90°F range</strong>.</li>
+<li>The tail at the lower end (&lt; 60°F) suggests that <strong>colder temperatures</strong> are less frequent in this dataset.</li>
+</ul></li>
+<li><strong>Outliers at Low and High Temperatures:</strong>
+<ul>
+<li>The lower and higher temperature extremes (below <strong>60°F</strong> and above <strong>90°F</strong>) are outliers in the dataset, as they occur with much lower frequency. This suggests that these temperatures are unusual in the context of this dataset.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-1" class="level6" data-number="4.4.1.5.2.2">
+<h6 data-number="4.4.1.5.2.2" class="anchored" data-anchor-id="general-trends-1"><span class="header-section-number">4.4.1.5.2.2</span> General Trends:</h6>
+<ul>
+<li>The dataset shows that <strong>temperatures between 70°F and 80°F</strong> are the most common, with <strong>80°F</strong> being the peak.</li>
+<li>Both <strong>lower temperatures (&lt; 60°F)</strong> and <strong>higher temperatures (&gt; 90°F)</strong> are uncommon, indicating that most temperature observations fall within a moderate range.</li>
+</ul>
+</section>
+<section id="conclusion-12" class="level6" data-number="4.4.1.5.2.3">
+<h6 data-number="4.4.1.5.2.3" class="anchored" data-anchor-id="conclusion-12"><span class="header-section-number">4.4.1.5.2.3</span> Conclusion:</h6>
+<p>The temperature distribution in this dataset follows a fairly <strong>normal pattern</strong>, with a clear peak around <strong>80°F</strong>. The histogram suggests that temperatures typically range between <strong>60°F and 90°F</strong>, with a relatively <strong>low frequency</strong> of extreme temperatures. This distribution may indicate a <strong>moderate climate</strong> in the region where the data was collected.</p>
+</section>
+</section>
+<section id="boxplot-of-ozone-levels" class="level5" data-number="4.4.1.5.3">
+<h5 data-number="4.4.1.5.3" class="anchored" data-anchor-id="boxplot-of-ozone-levels"><span class="header-section-number">4.4.1.5.3</span> Boxplot of Ozone Levels</h5>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot for Ozone</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>plt.boxplot(airquality_df[<span class="st">'Ozone'</span>].dropna())</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Ozone Levels'</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Ozone (ppb)'</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_9_0.png" class="img-fluid figure-img"></p>
+<figcaption>Boxplot of Ozone Levels</figcaption>
+</figure>
+</div>
+<p>This boxplot provides a summary of the distribution of <strong>ozone levels</strong> (in ppb - parts per billion), highlighting key statistics such as the median, interquartile range (IQR), and potential outliers.</p>
+<section id="key-insights-7" class="level6" data-number="4.4.1.5.3.1">
+<h6 data-number="4.4.1.5.3.1" class="anchored" data-anchor-id="key-insights-7"><span class="header-section-number">4.4.1.5.3.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Median and Interquartile Range (IQR):</strong></li>
+</ol>
+<ul>
+<li>The <strong>median ozone level</strong> is around <strong>25 ppb</strong>, as indicated by the orange line inside the box.</li>
+<li>The <strong>IQR</strong> (the box) ranges from <strong>approximately 20 ppb to 70 ppb</strong>, meaning that <strong>50% of the data</strong> falls within this range.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>IQR</strong>, or <strong>Interquartile Range</strong>, is a measure of statistical dispersion and is used to describe the spread of data. It indicates the range within which the <strong>middle 50%</strong> of values in a dataset fall.</p>
+</div>
+</div>
+<ul>
+<li>The lower quartile is just above <strong>20 ppb</strong>, and the upper quartile is around <strong>70 ppb</strong>, showing where the middle half of the ozone levels lie.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Whiskers and Data Spread:</strong>
+<ul>
+<li>The <strong>lower whisker</strong> extends down to around <strong>5 ppb</strong>, suggesting that the lowest ozone levels in the dataset are close to zero.</li>
+<li>The <strong>upper whisker</strong> extends to about <strong>125 ppb</strong>, indicating the highest ozone levels within the normal range (excluding outliers).</li>
+<li>This spread indicates that the ozone levels vary widely, with most values lying between <strong>5 ppb and 125 ppb</strong>.</li>
+</ul></li>
+<li><strong>Outliers:</strong>
+<ul>
+<li>There are <strong>two outliers</strong> above the upper whisker, with values around <strong>150 ppb</strong> and <strong>175 ppb</strong>. These represent unusual, high ozone levels that are not common in the dataset.</li>
+<li>The presence of these outliers suggests that while most ozone readings are moderate, there are some instances of much higher ozone levels.</li>
+</ul></li>
+<li><strong>Symmetry of the Distribution:</strong>
+<ul>
+<li>The distribution appears to be <strong>slightly right-skewed</strong>, as the upper whisker is longer than the lower whisker and there are high-value outliers.</li>
+<li>This implies that while most ozone levels are concentrated at lower values, there are occasional higher levels.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-2" class="level6" data-number="4.4.1.5.3.2">
+<h6 data-number="4.4.1.5.3.2" class="anchored" data-anchor-id="general-trends-2"><span class="header-section-number">4.4.1.5.3.2</span> General Trends:</h6>
+<ul>
+<li><strong>Moderate Ozone Levels:</strong> The data shows that most ozone levels fall between <strong>20 and 70 ppb</strong>, with a median of about <strong>25 ppb</strong>, suggesting that moderate ozone levels are the norm.</li>
+<li><strong>Outliers Indicating High Ozone Events:</strong> The outliers above <strong>150 ppb</strong> indicate that there are occasional <strong>high ozone events</strong>, which could be of interest for further investigation (e.g., environmental factors causing ozone spikes).</li>
+</ul>
+</section>
+<section id="conclusion-13" class="level6" data-number="4.4.1.5.3.3">
+<h6 data-number="4.4.1.5.3.3" class="anchored" data-anchor-id="conclusion-13"><span class="header-section-number">4.4.1.5.3.3</span> Conclusion:</h6>
+<p>The boxplot of ozone levels reveals that the distribution is <strong>slightly skewed to the right</strong>, with most values falling between <strong>20 and 70 ppb</strong>. The <strong>median</strong> is around <strong>25 ppb</strong>, and there are <strong>two notable outliers</strong> with much higher ozone levels, pointing to occasional extreme events. This provides a useful overview of ozone concentration variability and the presence of high-level ozone outliers in the dataset.</p>
+</section>
+</section>
+<section id="boxplot-of-temperature-levels" class="level5" data-number="4.4.1.5.4">
+<h5 data-number="4.4.1.5.4" class="anchored" data-anchor-id="boxplot-of-temperature-levels"><span class="header-section-number">4.4.1.5.4</span> Boxplot of Temperature Levels</h5>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot for Temp</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.boxplot(airquality_df[<span class="st">'Temp'</span>].dropna())</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Temperature'</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Temperature (°F)'</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_10_0.png" class="img-fluid figure-img"></p>
+<figcaption>Boxplot of Temperature</figcaption>
+</figure>
+</div>
+<p>This boxplot provides a summary of the distribution of <strong>temperature (in °F)</strong>, highlighting key statistics such as the median, interquartile range (IQR), and overall temperature spread.</p>
+<section id="key-insights-8" class="level6" data-number="4.4.1.5.4.1">
+<h6 data-number="4.4.1.5.4.1" class="anchored" data-anchor-id="key-insights-8"><span class="header-section-number">4.4.1.5.4.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Median and Interquartile Range (IQR):</strong>
+<ul>
+<li>The <strong>median temperature</strong> is approximately <strong>80°F</strong>, as indicated by the orange line inside the box.</li>
+<li>The <strong>IQR</strong> (the box) ranges from about <strong>70°F to 85°F</strong>, meaning that <strong>50% of the data</strong> falls within this range.</li>
+<li>The lower quartile (25th percentile) is just above <strong>70°F</strong>, while the upper quartile (75th percentile) is around <strong>85°F</strong>, indicating where the middle half of the temperature data lies.</li>
+</ul></li>
+<li><strong>Whiskers and Data Spread:</strong>
+<ul>
+<li>The <strong>lower whisker</strong> extends down to around <strong>60°F</strong>, suggesting that the lowest temperatures in the dataset are close to this value.</li>
+<li>The <strong>upper whisker</strong> extends to just under <strong>95°F</strong>, indicating the highest temperatures within the normal range.</li>
+<li>This spread shows that temperatures generally range between <strong>60°F and 95°F</strong>, with most values concentrated around the <strong>median of 80°F</strong>.</li>
+</ul></li>
+<li><strong>Absence of Outliers:</strong>
+<ul>
+<li>There are <strong>no outliers</strong> in this dataset, meaning that all temperature observations fall within the expected range without any extreme values.</li>
+<li>The data appears well-contained between <strong>60°F and 95°F</strong>, suggesting a consistent temperature range.</li>
+</ul></li>
+<li><strong>Symmetry of the Distribution:</strong>
+<ul>
+<li>The boxplot demonstrates a <strong>fairly symmetric distribution</strong>, with the median line positioned centrally within the IQR. This suggests a balanced temperature distribution.</li>
+<li>The whiskers are of similar length, indicating that there is no extreme skewness in the temperature data.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-3" class="level6" data-number="4.4.1.5.4.2">
+<h6 data-number="4.4.1.5.4.2" class="anchored" data-anchor-id="general-trends-3"><span class="header-section-number">4.4.1.5.4.2</span> General Trends:</h6>
+<ul>
+<li><strong>Moderate Temperature Range:</strong> The data shows that most temperature observations fall between <strong>70°F and 85°F</strong>, with a median temperature of about <strong>80°F</strong>.</li>
+<li><strong>Well-Distributed Temperatures:</strong> The absence of outliers and the symmetry of the boxplot suggest that the temperatures in the dataset are fairly consistent and fall within a moderate range.</li>
+</ul>
+</section>
+<section id="conclusion-14" class="level6" data-number="4.4.1.5.4.3">
+<h6 data-number="4.4.1.5.4.3" class="anchored" data-anchor-id="conclusion-14"><span class="header-section-number">4.4.1.5.4.3</span> Conclusion:</h6>
+<p>The temperature distribution in this dataset follows a <strong>normal and balanced pattern</strong>, with no outliers and a clear concentration around the <strong>median of 80°F</strong>. The data suggests that temperatures typically range between <strong>60°F and 95°F</strong>, with most values within the moderate range of <strong>70°F to 85°F</strong>. This indicates a stable and consistent temperature pattern in the dataset.</p>
+</section>
+</section>
+<section id="scatter-plot-of-temperature-and-ozone-by-month" class="level5" data-number="4.4.1.5.5">
+<h5 data-number="4.4.1.5.5" class="anchored" data-anchor-id="scatter-plot-of-temperature-and-ozone-by-month"><span class="header-section-number">4.4.1.5.5</span> Scatter plot of Temperature and Ozone by Month</h5>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot with regression line</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'Temp'</span>, y<span class="op">=</span><span class="st">'Ozone'</span>, hue<span class="op">=</span><span class="st">'Month'</span>, data<span class="op">=</span>airquality_df)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Temperature vs Ozone Levels by Month'</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Temperature (°F)'</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Ozone (ppb)'</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_11_0.png" class="img-fluid figure-img"></p>
+<figcaption>Temperature vs Ozone Levels by Month</figcaption>
+</figure>
+</div>
+<p>This scatter plot visualizes the relationship between <strong>temperature (°F)</strong> and <strong>ozone levels (ppb)</strong>, while also distinguishing data points by <strong>month</strong> (represented by different shades of color).</p>
+<section id="key-insights-9" class="level6" data-number="4.4.1.5.5.1">
+<h6 data-number="4.4.1.5.5.1" class="anchored" data-anchor-id="key-insights-9"><span class="header-section-number">4.4.1.5.5.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Positive Correlation Between Temperature and Ozone:</strong>
+<ul>
+<li>There is a clear <strong>positive correlation</strong> between temperature and ozone levels. As the temperature increases, ozone levels tend to increase as well.</li>
+<li>This trend is particularly evident at <strong>temperatures above 75°F</strong>, where the ozone levels start to rise more significantly.</li>
+</ul></li>
+<li><strong>Ozone Increases with Higher Temperatures:</strong>
+<ul>
+<li>Ozone levels generally remain below <strong>50 ppb</strong> for temperatures <strong>below 70°F</strong>, but as temperatures rise beyond this point, ozone levels increase, with many values exceeding <strong>100 ppb</strong> when the temperature reaches around <strong>90°F</strong> and above.</li>
+<li>This indicates that <strong>higher temperatures</strong> contribute to higher ozone concentrations.</li>
+</ul></li>
+<li><strong>Monthly Influence on Ozone and Temperature:</strong>
+<ul>
+<li>The data points are colored by month, with lighter colors (Month 5 = May) representing earlier months and darker colors (Month 9 = September) representing later months.</li>
+<li>In the <strong>warmer months</strong> (July, August, September), represented by darker shades of purple and blue, there are more instances of <strong>high ozone levels</strong>, particularly at temperatures above <strong>80°F</strong>.</li>
+<li><strong>Lower months</strong> (May and June), represented by lighter shades of pink, tend to have lower ozone levels overall, even at higher temperatures, which suggests a seasonal effect on ozone levels.</li>
+</ul></li>
+<li><strong>Outliers and Extreme Ozone Levels:</strong>
+<ul>
+<li>There are a few <strong>outliers</strong> where ozone levels exceed <strong>150 ppb</strong>, particularly for temperatures around <strong>85°F to 90°F</strong>. These data points mostly appear in <strong>July and August</strong>, indicating that extreme ozone events occur during the peak summer months.</li>
+<li>The outliers reflect instances where ozone levels spike dramatically even though the temperature is not exceptionally high.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-4" class="level6" data-number="4.4.1.5.5.2">
+<h6 data-number="4.4.1.5.5.2" class="anchored" data-anchor-id="general-trends-4"><span class="header-section-number">4.4.1.5.5.2</span> General Trends:</h6>
+<ul>
+<li><strong>Temperature-Driven Ozone Formation:</strong> The positive correlation between temperature and ozone levels suggests that <strong>ozone formation</strong> increases as temperatures rise, particularly during the summer months.</li>
+<li><strong>Seasonal Influence:</strong> The coloring by month indicates a <strong>seasonal pattern</strong>, where ozone levels are generally higher in the later summer months (July to September) compared to earlier in the year (May and June).</li>
+<li><strong>High Ozone in Summer:</strong> The majority of the higher ozone levels are observed in <strong>July and August</strong>, especially at temperatures above <strong>80°F</strong>, reflecting the impact of summer heat on ozone concentration.</li>
+</ul>
+</section>
+<section id="conclusion-15" class="level6" data-number="4.4.1.5.5.3">
+<h6 data-number="4.4.1.5.5.3" class="anchored" data-anchor-id="conclusion-15"><span class="header-section-number">4.4.1.5.5.3</span> Conclusion:</h6>
+<p>This scatter plot highlights the <strong>strong relationship</strong> between <strong>temperature</strong> and <strong>ozone levels</strong>, with higher temperatures leading to increased ozone concentrations, particularly during the <strong>summer months</strong>. The seasonal trend suggests that ozone levels peak during <strong>July and August</strong>, likely due to the combination of <strong>higher temperatures</strong> and <strong>environmental conditions</strong> that promote ozone formation. This information can be critical for air quality monitoring and predicting <strong>ozone pollution</strong> during the warmer months of the year.</p>
+</section>
+</section>
+<section id="correlation-matrix-of-ozone-temp-wind" class="level5" data-number="4.4.1.5.6">
+<h5 data-number="4.4.1.5.6" class="anchored" data-anchor-id="correlation-matrix-of-ozone-temp-wind"><span class="header-section-number">4.4.1.5.6</span> Correlation Matrix of Ozone, Temp, Wind</h5>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation matrix</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> airquality_df[[<span class="st">'Ozone'</span>, <span class="st">'Temp'</span>, <span class="st">'Wind'</span>]].corr()</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix'</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_12_0.png" class="img-fluid figure-img"></p>
+<figcaption>Correlation Matrix of Ozone, Temp and Wind</figcaption>
+</figure>
+</div>
+<p>This correlation matrix visualizes the relationships between <strong>ozone levels</strong>, <strong>temperature</strong>, and <strong>wind speed</strong>. The matrix provides values between -1 and 1, where: - <strong>1</strong> indicates a perfect positive correlation, - <strong>-1</strong> indicates a perfect negative correlation, and - <strong>0</strong> indicates no correlation.</p>
+<section id="key-insights-10" class="level6" data-number="4.4.1.5.6.1">
+<h6 data-number="4.4.1.5.6.1" class="anchored" data-anchor-id="key-insights-10"><span class="header-section-number">4.4.1.5.6.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Ozone and Temperature (Correlation = 0.7):</strong>
+<ul>
+<li>There is a <strong>strong positive correlation</strong> of <strong>0.7</strong> between <strong>ozone levels</strong> and <strong>temperature</strong>.</li>
+<li>This suggests that as temperature increases, ozone levels tend to increase as well. This aligns with the previous visualizations where high temperatures were associated with higher ozone concentrations.</li>
+</ul></li>
+<li><strong>Ozone and Wind Speed (Correlation = -0.6):</strong>
+<ul>
+<li>There is a <strong>moderate negative correlation</strong> of <strong>-0.6</strong> between <strong>ozone levels</strong> and <strong>wind speed</strong>.</li>
+<li>This indicates that as wind speed increases, ozone levels tend to decrease. Wind likely disperses ozone, leading to lower concentrations.</li>
+</ul></li>
+<li><strong>Temperature and Wind Speed (Correlation = -0.46):</strong>
+<ul>
+<li>There is a <strong>moderate negative correlation</strong> of <strong>-0.46</strong> between <strong>temperature</strong> and <strong>wind speed</strong>.</li>
+<li>This suggests that higher temperatures tend to occur when wind speeds are lower, and vice versa.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-5" class="level6" data-number="4.4.1.5.6.2">
+<h6 data-number="4.4.1.5.6.2" class="anchored" data-anchor-id="general-trends-5"><span class="header-section-number">4.4.1.5.6.2</span> General Trends:</h6>
+<ul>
+<li><p><strong>Strong Positive Correlation Between Ozone and Temperature:</strong> The positive correlation between ozone and temperature indicates that ozone levels tend to rise with higher temperatures, which may be due to increased sunlight and chemical reactions that generate ozone.</p></li>
+<li><p><strong>Negative Correlation Between Ozone and Wind:</strong> The negative correlation between ozone and wind suggests that windier conditions help <strong>disperse ozone</strong>, leading to lower concentrations.</p></li>
+<li><p><strong>Interplay of Wind and Temperature:</strong> The negative correlation between wind speed and temperature suggests that <strong>calmer, warmer conditions</strong> are conducive to higher ozone levels, while <strong>windier conditions</strong> are typically associated with lower temperatures and lower ozone concentrations.</p></li>
+</ul>
+</section>
+<section id="conclusion-16" class="level6" data-number="4.4.1.5.6.3">
+<h6 data-number="4.4.1.5.6.3" class="anchored" data-anchor-id="conclusion-16"><span class="header-section-number">4.4.1.5.6.3</span> Conclusion:</h6>
+<p>The correlation matrix provides valuable insights into the relationship between <strong>ozone</strong>, <strong>temperature</strong>, and <strong>wind speed</strong>. The <strong>strong positive correlation</strong> between ozone and temperature suggests that hotter days lead to higher ozone concentrations, while the <strong>negative correlation</strong> between wind and ozone indicates that wind helps reduce ozone levels by dispersing it. This matrix highlights the complex interplay between these environmental factors, with temperature driving ozone formation and wind acting as a dispersive force.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="friday-2" class="level3" data-number="4.4.2">
+<h3 data-number="4.4.2" class="anchored" data-anchor-id="friday-2"><span class="header-section-number">4.4.2</span> Friday</h3>
+<p>On Friday, I decided to go one step ahead and try these python basics on another dataset, the Swiss Dataset.</p>
+<section id="overview-of-the-swiss-dataset" class="level4" data-number="4.4.2.1">
+<h4 data-number="4.4.2.1" class="anchored" data-anchor-id="overview-of-the-swiss-dataset"><span class="header-section-number">4.4.2.1</span> Overview of the Swiss Dataset</h4>
+<p>The <strong>Swiss</strong> dataset, originally from <strong>RStudio</strong>, provides standardized fertility and socio-economic data for <strong>47 French-speaking provinces of Switzerland</strong> in 1888. This dataset is commonly used for exploring relationships between fertility rates and various socio-economic factors.</p>
+<section id="dataset-structure-1" class="level5" data-number="4.4.2.1.1">
+<h5 data-number="4.4.2.1.1" class="anchored" data-anchor-id="dataset-structure-1"><span class="header-section-number">4.4.2.1.1</span> Dataset Structure:</h5>
+<p>The dataset consists of six variables: 1. <strong>Fertility</strong>: Standardized fertility measure. 2. <strong>Agriculture</strong>: Percentage of males involved in agriculture as an occupation. 3. <strong>Examination</strong>: Percentage of draftees receiving the highest mark on army examination. 4. <strong>Education</strong>: Percentage of education beyond primary school for draftees. 5. <strong>Catholic</strong>: Percentage of the population that is Catholic (a measure of religion). 6. <strong>Infant.Mortality</strong>: Number of live births who live less than 1 year per 1000 births.</p>
+</section>
+<section id="dataset-characteristics-1" class="level5" data-number="4.4.2.1.2">
+<h5 data-number="4.4.2.1.2" class="anchored" data-anchor-id="dataset-characteristics-1"><span class="header-section-number">4.4.2.1.2</span> Dataset Characteristics:</h5>
+<ul>
+<li>The dataset contains <strong>47 entries</strong> (rows) for each variable.</li>
+<li>There are no missing values in any of the columns, ensuring a complete dataset for analysis.</li>
+<li>The data types for the variables are primarily <strong>float64</strong>, except for <strong>Examination</strong> and <strong>Education</strong>, which are of type <strong>int64</strong>.</li>
+</ul>
+</section>
+<section id="basic-statistics-1" class="level5" data-number="4.4.2.1.3">
+<h5 data-number="4.4.2.1.3" class="anchored" data-anchor-id="basic-statistics-1"><span class="header-section-number">4.4.2.1.3</span> Basic Statistics:</h5>
+<p>Below are the key statistics for each variable based on the data:</p>
+<ul>
+<li><strong>Fertility</strong>:
+<ul>
+<li><strong>Mean</strong>: 70.14</li>
+<li><strong>Minimum</strong>: 35, <strong>Maximum</strong>: 92.5</li>
+<li><strong>50th percentile (median)</strong>: 70.4</li>
+</ul></li>
+<li><strong>Agriculture</strong>:
+<ul>
+<li><strong>Mean</strong>: 50.66%</li>
+<li><strong>Minimum</strong>: 1.2%, <strong>Maximum</strong>: 89.7%</li>
+<li><strong>50th percentile (median)</strong>: 54%</li>
+</ul></li>
+<li><strong>Examination</strong>:
+<ul>
+<li><strong>Mean</strong>: 16.49%</li>
+<li><strong>Minimum</strong>: 3%, <strong>Maximum</strong>: 37%</li>
+<li><strong>50th percentile (median)</strong>: 16%</li>
+</ul></li>
+<li><strong>Education</strong>:
+<ul>
+<li><strong>Mean</strong>: 10.98%</li>
+<li><strong>Minimum</strong>: 1%, <strong>Maximum</strong>: 53%</li>
+<li><strong>50th percentile (median)</strong>: 8%</li>
+</ul></li>
+<li><strong>Catholic</strong>:
+<ul>
+<li><strong>Mean</strong>: 41.14%</li>
+<li><strong>Minimum</strong>: 2.15%, <strong>Maximum</strong>: 100%</li>
+<li><strong>50th percentile (median)</strong>: 15.14%</li>
+</ul></li>
+<li><strong>Infant.Mortality</strong>:
+<ul>
+<li><strong>Mean</strong>: 19.94 per 1000 births</li>
+<li><strong>Minimum</strong>: 10.8, <strong>Maximum</strong>: 26.6</li>
+<li><strong>50th percentile (median)</strong>: 20.0</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-insights-11" class="level5" data-number="4.4.2.1.4">
+<h5 data-number="4.4.2.1.4" class="anchored" data-anchor-id="key-insights-11"><span class="header-section-number">4.4.2.1.4</span> Key Insights:</h5>
+<ol type="1">
+<li><strong>Fertility</strong>:
+<ul>
+<li>Fertility rates range from <strong>35 to 92.5</strong>, with a mean of <strong>70.14</strong>. The median fertility is <strong>70.4</strong>, indicating that most provinces have moderate to high fertility rates.</li>
+</ul></li>
+<li><strong>Agriculture</strong>:
+<ul>
+<li>The percentage of males involved in agriculture varies significantly across provinces, ranging from <strong>1.2%</strong> to <strong>89.7%</strong>. The median is <strong>54%</strong>, showing that agriculture was a major occupation in many regions during this time.</li>
+</ul></li>
+<li><strong>Examination and Education</strong>:
+<ul>
+<li>The <strong>Examination</strong> score ranges from <strong>3%</strong> to <strong>37%</strong>, with a mean of <strong>16.49%</strong>, indicating that only a small portion of draftees received the highest marks.</li>
+<li>The <strong>Education</strong> level ranges from <strong>1%</strong> to <strong>53%</strong>, with a median of <strong>8%</strong>, suggesting that a relatively small portion of the population had education beyond primary school.</li>
+</ul></li>
+<li><strong>Catholic</strong>:
+<ul>
+<li>The percentage of <strong>Catholic</strong> population varies significantly, from <strong>2.15%</strong> to <strong>100%</strong>, reflecting the diversity in religious adherence across the provinces. The median is <strong>15.14%</strong>, but the dataset includes provinces with a fully Catholic population.</li>
+</ul></li>
+<li><strong>Infant Mortality</strong>:
+<ul>
+<li><strong>Infant Mortality</strong> ranges from <strong>10.8</strong> to <strong>26.6 per 1000 births</strong>, with a mean of <strong>19.94</strong>. The median is <strong>20.0</strong>, indicating that most provinces had similar infant mortality rates, though some had much higher rates.</li>
+</ul></li>
+</ol>
+</section>
+<section id="potential-analysis-1" class="level5" data-number="4.4.2.1.5">
+<h5 data-number="4.4.2.1.5" class="anchored" data-anchor-id="potential-analysis-1"><span class="header-section-number">4.4.2.1.5</span> Potential Analysis:</h5>
+<ul>
+<li><strong>Correlation Analysis</strong>: Investigating how fertility is related to variables like <strong>education, agriculture</strong>, and <strong>religion (Catholic)</strong>.</li>
+<li><strong>Geographical Trends</strong>: Analyzing how these socio-economic factors vary across different regions in Switzerland.</li>
+<li><strong>Socio-Economic Influence</strong>: Understanding the impact of education, religion, and occupation (agriculture) on fertility and infant mortality rates.</li>
+</ul>
+</section>
+<section id="conclusion-17" class="level5" data-number="4.4.2.1.6">
+<h5 data-number="4.4.2.1.6" class="anchored" data-anchor-id="conclusion-17"><span class="header-section-number">4.4.2.1.6</span> Conclusion:</h5>
+<p>The <strong>Swiss</strong> dataset provides valuable insights into fertility rates and socio-economic factors in <strong>47 Swiss provinces</strong> in the late 19th century. With complete data and a range of variables, this dataset is an excellent resource for studying the relationships between <strong>fertility</strong>, <strong>occupation</strong>, <strong>education</strong>, <strong>religion</strong>, and <strong>infant mortality</strong> in a historical context.</p>
+</section>
+</section>
+<section id="python-visualizations" class="level4" data-number="4.4.2.2">
+<h4 data-number="4.4.2.2" class="anchored" data-anchor-id="python-visualizations"><span class="header-section-number">4.4.2.2</span> Python Visualizations</h4>
+<p>Next, we use python to create visualizations on the swiss dataset.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>swiss_df <span class="op">=</span> pd.read_csv(<span class="st">'swiss_datasets.csv'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(swiss_df.info())</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(swiss_df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 47 entries, 0 to 46
+Data columns (total 6 columns):
+ #   Column            Non-Null Count  Dtype  
+---  ------            --------------  -----  
+ 0   Fertility         47 non-null     float64
+ 1   Agriculture       47 non-null     float64
+ 2   Examination       47 non-null     int64  
+ 3   Education         47 non-null     int64  
+ 4   Catholic          47 non-null     float64
+ 5   Infant.Mortality  47 non-null     float64
+dtypes: float64(4), int64(2)
+memory usage: 2.3 KB
+None
+       Fertility  Agriculture  Examination  Education   Catholic  \
+count  47.000000    47.000000    47.000000  47.000000   47.00000   
+mean   70.142553    50.659574    16.489362  10.978723   41.14383   
+std    12.491697    22.711218     7.977883   9.615407   41.70485   
+min    35.000000     1.200000     3.000000   1.000000    2.15000   
+25%    64.700000    35.900000    12.000000   6.000000    5.19500   
+50%    70.400000    54.100000    16.000000   8.000000   15.14000   
+75%    78.450000    67.650000    22.000000  12.000000   93.12500   
+max    92.500000    89.700000    37.000000  53.000000  100.00000   
+
+       Infant.Mortality  
+count         47.000000  
+mean          19.942553  
+std            2.912697  
+min           10.800000  
+25%           18.150000  
+50%           20.000000  
+75%           21.700000  
+max           26.600000  </code></pre>
+<section id="distribution-of-infant-mortality" class="level5" data-number="4.4.2.2.1">
+<h5 data-number="4.4.2.2.1" class="anchored" data-anchor-id="distribution-of-infant-mortality"><span class="header-section-number">4.4.2.2.1</span> Distribution of Infant Mortality</h5>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>plt.hist(swiss_df[<span class="st">'Infant.Mortality'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'red'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribute of Infant Mortality'</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Infant Mortality'</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_1_0.png" class="img-fluid figure-img"></p>
+<figcaption>Distribution of Infant Mortality</figcaption>
+</figure>
+</div>
+<p>This histogram visualizes the distribution of <strong>Infant Mortality</strong> rates (per 1000 live births) for the Swiss dataset.</p>
+<section id="key-insights-12" class="level6" data-number="4.4.2.2.1.1">
+<h6 data-number="4.4.2.2.1.1" class="anchored" data-anchor-id="key-insights-12"><span class="header-section-number">4.4.2.2.1.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Central Tendency:</strong>
+<ul>
+<li>The <strong>peak of the distribution</strong> is around <strong>20 infant deaths per 1000 births</strong>, with the highest frequency of provinces having this mortality rate.</li>
+<li>The <strong>mean infant mortality rate</strong> is approximately <strong>19.94</strong>, aligning closely with the histogram’s peak.</li>
+</ul></li>
+<li><strong>Moderate Spread:</strong>
+<ul>
+<li>The <strong>majority</strong> of the data is concentrated between <strong>18 and 22 infant deaths per 1000 births</strong>. This indicates that most provinces had relatively similar infant mortality rates.</li>
+<li>The central grouping of bars shows that most provinces had <strong>moderate infant mortality</strong>.</li>
+</ul></li>
+<li><strong>Tails on Both Ends:</strong>
+<ul>
+<li>On the <strong>lower end</strong>, a few provinces have relatively low infant mortality, with values around <strong>12 to 16 per 1000 births</strong>.</li>
+<li>On the <strong>higher end</strong>, a few provinces have infant mortality rates reaching up to <strong>26 per 1000 births</strong>, but these higher mortality rates are less frequent.</li>
+</ul></li>
+<li><strong>Outliers:</strong>
+<ul>
+<li>There is a slight <strong>outlier</strong> around <strong>12 infant deaths per 1000 births</strong>, representing a province with significantly lower mortality than most others.</li>
+<li>Similarly, provinces with <strong>mortality rates above 24 per 1000</strong> are relatively rare, indicating that extremely high infant mortality rates were uncommon.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-6" class="level6" data-number="4.4.2.2.1.2">
+<h6 data-number="4.4.2.2.1.2" class="anchored" data-anchor-id="general-trends-6"><span class="header-section-number">4.4.2.2.1.2</span> General Trends:</h6>
+<ul>
+<li><strong>Most provinces</strong> in this dataset experienced <strong>infant mortality rates between 18 and 22 per 1000 births</strong>, showing that this range is the norm.</li>
+<li>There is <strong>moderate variation</strong> in infant mortality rates, with a few provinces at the lower and higher extremes, indicating some regional differences.</li>
+</ul>
+</section>
+<section id="conclusion-18" class="level6" data-number="4.4.2.2.1.3">
+<h6 data-number="4.4.2.2.1.3" class="anchored" data-anchor-id="conclusion-18"><span class="header-section-number">4.4.2.2.1.3</span> Conclusion:</h6>
+<p>The histogram illustrates that <strong>infant mortality</strong> in Swiss provinces during this period is <strong>concentrated around 20 deaths per 1000 births</strong>, with some variation on both ends. A few provinces experienced unusually high or low rates, but the overall trend is centered around moderate infant mortality. This provides insights into <strong>health conditions and regional disparities</strong> in 19th century Switzerland.</p>
+</section>
+</section>
+<section id="distribution-of-education" class="level5" data-number="4.4.2.2.2">
+<h5 data-number="4.4.2.2.2" class="anchored" data-anchor-id="distribution-of-education"><span class="header-section-number">4.4.2.2.2</span> Distribution of Education</h5>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>plt.hist(swiss_df[<span class="st">'Education'</span>].dropna(), bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">'blue'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Education'</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Education'</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_2_0.png" class="img-fluid" alt="Distribution of Education"> This histogram visualizes the distribution of <strong>Education</strong> in the Swiss dataset, where <strong>education</strong> represents the percentage of draftees with education beyond primary school.</p>
+<section id="key-insights-13" class="level6" data-number="4.4.2.2.2.1">
+<h6 data-number="4.4.2.2.2.1" class="anchored" data-anchor-id="key-insights-13"><span class="header-section-number">4.4.2.2.2.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Bimodal Distribution:</strong>
+<ul>
+<li>The distribution shows a <strong>bimodal pattern</strong>, with two clear peaks.</li>
+<li>The first peak is around <strong>10% education</strong>, with most provinces falling within the <strong>0-15% range</strong>.</li>
+<li>There is a second, smaller peak around <strong>30% education</strong>, indicating a few provinces with significantly higher levels of education beyond primary school.</li>
+</ul></li>
+<li><strong>Concentration at Low Education Levels:</strong>
+<ul>
+<li>A large portion of the dataset is concentrated at <strong>lower education levels</strong>, particularly between <strong>0% and 15%</strong>. The <strong>highest frequency</strong> occurs between <strong>5% and 10%</strong>, indicating that most provinces had a relatively low percentage of draftees receiving education beyond primary school.</li>
+<li>This highlights the limited access to advanced education for most provinces during this period.</li>
+</ul></li>
+<li><strong>Gaps in Education Levels:</strong>
+<ul>
+<li>There is a noticeable <strong>gap</strong> between <strong>15% and 25%</strong> where very few provinces fall, indicating that there were fewer provinces with moderate education levels.</li>
+<li>This could suggest that provinces either had <strong>low</strong> or <strong>relatively high</strong> education levels, but not many had intermediate values.</li>
+</ul></li>
+<li><strong>High Education Outliers:</strong>
+<ul>
+<li>There are a few provinces with <strong>extremely high levels of education</strong>, with one outlier reaching <strong>50%</strong>. These outliers represent provinces where a significant portion of the population pursued education beyond primary school, a rarity in the dataset.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-7" class="level6" data-number="4.4.2.2.2.2">
+<h6 data-number="4.4.2.2.2.2" class="anchored" data-anchor-id="general-trends-7"><span class="header-section-number">4.4.2.2.2.2</span> General Trends:</h6>
+<ul>
+<li><strong>Majority of Provinces with Low Education Levels</strong>: Most provinces in Switzerland during this period had <strong>low education rates</strong>, with the majority of values concentrated between <strong>0% and 15%</strong>.</li>
+<li><strong>Higher Education Outliers</strong>: A small number of provinces had significantly higher levels of education, particularly around <strong>30% and 50%</strong>, suggesting substantial regional differences in access to education.</li>
+</ul>
+</section>
+<section id="conclusion-19" class="level6" data-number="4.4.2.2.2.3">
+<h6 data-number="4.4.2.2.2.3" class="anchored" data-anchor-id="conclusion-19"><span class="header-section-number">4.4.2.2.2.3</span> Conclusion:</h6>
+<p>The histogram reveals that most provinces had <strong>low education levels</strong>, with few opportunities for education beyond primary school. However, a few provinces show significantly higher education rates, indicating <strong>regional disparities</strong> in educational attainment. This distribution underscores the <strong>uneven access to education</strong> in 19th-century Switzerland, where the majority of the population had limited access to further education.</p>
+</section>
+</section>
+<section id="boxplot-of-examination" class="level5" data-number="4.4.2.2.3">
+<h5 data-number="4.4.2.2.3" class="anchored" data-anchor-id="boxplot-of-examination"><span class="header-section-number">4.4.2.2.3</span> Boxplot of Examination</h5>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plt.boxplot(swiss_df[<span class="st">'Examination'</span>].dropna())</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Boxplot of Examination'</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Examination'</span>)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_3_0.png" class="img-fluid figure-img"></p>
+<figcaption>Boxplot of Examination</figcaption>
+</figure>
+</div>
+<p>This boxplot visualizes the distribution of <strong>Examination</strong> scores in the Swiss dataset, where <strong>Examination</strong> refers to the percentage of draftees receiving the highest mark in the military examination.</p>
+<section id="key-insights-14" class="level6" data-number="4.4.2.2.3.1">
+<h6 data-number="4.4.2.2.3.1" class="anchored" data-anchor-id="key-insights-14"><span class="header-section-number">4.4.2.2.3.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Median Examination Score:</strong>
+<ul>
+<li>The <strong>median</strong> examination score is approximately <strong>16%</strong>, as indicated by the orange line in the box. This suggests that, on average, 16% of draftees in each province achieved the highest mark.</li>
+</ul></li>
+<li><strong>Interquartile Range (IQR):</strong>
+<ul>
+<li>The <strong>IQR</strong> (the range between the 25th and 75th percentiles) spans from about <strong>12% to 22%</strong>. This indicates that the middle 50% of the provinces had between 12% and 22% of their draftees achieving the highest marks.</li>
+<li>The relatively narrow IQR suggests that most provinces had similar examination outcomes within this range.</li>
+</ul></li>
+<li><strong>Whiskers and Data Spread:</strong>
+<ul>
+<li>The <strong>lower whisker</strong> extends down to <strong>3%</strong>, representing the province with the lowest percentage of draftees receiving the highest examination mark.</li>
+<li>The <strong>upper whisker</strong> extends up to <strong>37%</strong>, indicating that the highest-performing province had 37% of its draftees achieving the top marks.</li>
+<li>The whiskers indicate that most provinces fall between <strong>3% and 37%</strong>, with no extreme outliers in the data.</li>
+</ul></li>
+<li><strong>Symmetry of Distribution:</strong>
+<ul>
+<li>The boxplot shows a relatively <strong>balanced distribution</strong>, with the median line close to the center of the IQR. The whiskers are roughly of equal length, indicating that the data is <strong>not heavily skewed</strong>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-8" class="level6" data-number="4.4.2.2.3.2">
+<h6 data-number="4.4.2.2.3.2" class="anchored" data-anchor-id="general-trends-8"><span class="header-section-number">4.4.2.2.3.2</span> General Trends:</h6>
+<ul>
+<li>The <strong>majority</strong> of the provinces have between <strong>12% and 22%</strong> of draftees receiving the highest marks on the military examination.</li>
+<li>The examination scores do not have any outliers, suggesting that there is <strong>consistent performance</strong> across provinces with no extreme deviations.</li>
+</ul>
+</section>
+<section id="conclusion-20" class="level6" data-number="4.4.2.2.3.3">
+<h6 data-number="4.4.2.2.3.3" class="anchored" data-anchor-id="conclusion-20"><span class="header-section-number">4.4.2.2.3.3</span> Conclusion:</h6>
+<p>This boxplot of the <strong>Examination</strong> scores reveals a <strong>moderately concentrated</strong> distribution, with most provinces achieving similar performance. The <strong>median score of 16%</strong> and the spread between <strong>3% and 37%</strong> suggest some variation between provinces, but the overall distribution is balanced. This data provides insights into the level of military readiness and education among draftees in different provinces of Switzerland during this period.</p>
+</section>
+</section>
+<section id="scatterplot-of-fertility-vs-infant-mortality-by-catholic-population" class="level5" data-number="4.4.2.2.4">
+<h5 data-number="4.4.2.2.4" class="anchored" data-anchor-id="scatterplot-of-fertility-vs-infant-mortality-by-catholic-population"><span class="header-section-number">4.4.2.2.4</span> Scatterplot of Fertility vs Infant Mortality by Catholic Population</h5>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'Fertility'</span>, y<span class="op">=</span><span class="st">'Infant.Mortality'</span>, hue<span class="op">=</span><span class="st">'Catholic'</span>, data<span class="op">=</span>swiss_df)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Fertility vs Infant Mortality by Catholic population'</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Fertility'</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Infant Mortality'</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_4_0.png" class="img-fluid figure-img"></p>
+<figcaption>Fertility vs Infant Mortality by Catholic Population</figcaption>
+</figure>
+</div>
+<p>This scatter plot visualizes the relationship between <strong>fertility rates</strong> and <strong>infant mortality</strong> across the Swiss dataset, with the color hue representing the <strong>percentage of Catholic population</strong> in each province.</p>
+<section id="key-insights-15" class="level6" data-number="4.4.2.2.4.1">
+<h6 data-number="4.4.2.2.4.1" class="anchored" data-anchor-id="key-insights-15"><span class="header-section-number">4.4.2.2.4.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Positive Correlation Between Fertility and Infant Mortality:</strong>
+<ul>
+<li>There is a <strong>positive correlation</strong> between <strong>fertility</strong> and <strong>infant mortality</strong>. As the fertility rate increases, infant mortality tends to increase as well. Provinces with higher fertility generally experience higher rates of infant mortality.</li>
+<li>This relationship indicates that regions with more births also have higher rates of infant deaths.</li>
+</ul></li>
+<li><strong>Impact of Catholic Population:</strong>
+<ul>
+<li>The <strong>color hue</strong> represents the percentage of the population that is <strong>Catholic</strong>, with darker points indicating provinces with a higher percentage of Catholics.</li>
+<li>Provinces with higher fertility rates and higher infant mortality (upper right portion of the plot) tend to have a <strong>higher Catholic population</strong> (darker points). This suggests that provinces with a larger Catholic population tend to have higher fertility and infant mortality rates.</li>
+<li>In contrast, provinces with lower fertility and lower infant mortality (lower left portion) generally have a <strong>lower Catholic population</strong> (lighter points).</li>
+</ul></li>
+<li><strong>Concentration of Points Around Median Fertility:</strong>
+<ul>
+<li>A significant number of points are concentrated between <strong>fertility rates of 60 and 80</strong> and <strong>infant mortality rates between 18 and 22</strong>. These central values suggest that many provinces fall within this range, indicating a moderate relationship between fertility and infant mortality.</li>
+<li>Provinces with these mid-range values are spread across different levels of Catholic population, showing diversity in religious composition within this group.</li>
+</ul></li>
+<li><strong>Outliers:</strong>
+<ul>
+<li>Some provinces with extremely high fertility rates (<strong>above 80</strong>) and high infant mortality rates (<strong>above 24</strong>) are outliers, and they tend to have a high percentage of Catholic population.</li>
+<li>On the lower end, a few provinces with <strong>low fertility rates (below 50)</strong> and <strong>low infant mortality</strong> also stand out as exceptions.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-trends-9" class="level6" data-number="4.4.2.2.4.2">
+<h6 data-number="4.4.2.2.4.2" class="anchored" data-anchor-id="general-trends-9"><span class="header-section-number">4.4.2.2.4.2</span> General Trends:</h6>
+<ul>
+<li><strong>Higher Catholic Population</strong>: Provinces with a higher percentage of Catholics tend to exhibit both <strong>higher fertility rates</strong> and <strong>higher infant mortality</strong>.</li>
+<li><strong>Moderate Fertility and Mortality Range</strong>: Most provinces are concentrated around <strong>60-80 fertility</strong> and <strong>18-22 infant mortality</strong>, with varying Catholic population percentages.</li>
+<li><strong>Religious Influence</strong>: The distribution of Catholic population suggests a potential cultural or socio-economic influence on fertility and infant mortality trends.</li>
+</ul>
+</section>
+<section id="conclusion-21" class="level6" data-number="4.4.2.2.4.3">
+<h6 data-number="4.4.2.2.4.3" class="anchored" data-anchor-id="conclusion-21"><span class="header-section-number">4.4.2.2.4.3</span> Conclusion:</h6>
+<p>This scatter plot highlights a <strong>positive correlation</strong> between <strong>fertility</strong> and <strong>infant mortality</strong>, with provinces that have a <strong>higher Catholic population</strong> generally showing higher rates in both metrics. This relationship suggests that religious and cultural factors might play a role in shaping fertility and infant health outcomes in Swiss provinces. Further analysis could explore whether this pattern is driven by socio-economic factors or access to healthcare.</p>
+</section>
+</section>
+<section id="correlation-matrix-of-catholic-population-education-and-infant-mortality" class="level5" data-number="4.4.2.2.5">
+<h5 data-number="4.4.2.2.5" class="anchored" data-anchor-id="correlation-matrix-of-catholic-population-education-and-infant-mortality"><span class="header-section-number">4.4.2.2.5</span> Correlation Matrix of Catholic Population, Education and Infant Mortality</h5>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> swiss_df[[<span class="st">'Catholic'</span>, <span class="st">'Education'</span>, <span class="st">'Infant.Mortality'</span>]].corr()</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">'coolwarm'</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix'</span>)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_5_0.png" class="img-fluid figure-img"></p>
+<figcaption>Correlation matrix of Catholic Population, Education, and Infant Mortality</figcaption>
+</figure>
+</div>
+<p>This correlation matrix shows the relationships between three variables from the Swiss dataset: <strong>Catholic</strong> (percentage of Catholic population), <strong>Education</strong> (percentage of education beyond primary school for draftees), and <strong>Infant Mortality</strong> (infant deaths per 1000 live births).</p>
+<section id="key-insights-16" class="level6" data-number="4.4.2.2.5.1">
+<h6 data-number="4.4.2.2.5.1" class="anchored" data-anchor-id="key-insights-16"><span class="header-section-number">4.4.2.2.5.1</span> Key Insights:</h6>
+<ol type="1">
+<li><strong>Catholic and Infant Mortality (0.18):</strong>
+<ul>
+<li>There is a <strong>positive correlation</strong> of <strong>0.18</strong> between the <strong>Catholic population</strong> and <strong>Infant Mortality</strong>. While this is a weak correlation, it suggests that provinces with a higher percentage of Catholics tend to have slightly higher infant mortality rates.</li>
+<li>This positive correlation could be linked to cultural, religious, or socio-economic factors in predominantly Catholic regions that may affect infant mortality rates.</li>
+</ul></li>
+<li><strong>Catholic and Education (-0.15):</strong>
+<ul>
+<li>There is a <strong>negative correlation</strong> of <strong>-0.15</strong> between <strong>Catholic population</strong> and <strong>Education</strong>. Although the correlation is weak, it indicates that provinces with a higher percentage of Catholics tend to have slightly lower levels of education beyond primary school.</li>
+<li>This trend might reflect historical or cultural differences in access to education in Catholic regions.</li>
+</ul></li>
+<li><strong>Education and Infant Mortality (-0.099):</strong>
+<ul>
+<li>The <strong>correlation between Education and Infant Mortality</strong> is <strong>-0.099</strong>, which is also weak but negative. This indicates that provinces with higher levels of education tend to have slightly lower infant mortality rates.</li>
+<li>This finding suggests that increased education may have a minor protective effect on infant mortality, likely due to better healthcare knowledge or socioeconomic conditions associated with higher education levels.</li>
+</ul></li>
+</ol>
+</section>
+<section id="general-observations-6" class="level6" data-number="4.4.2.2.5.2">
+<h6 data-number="4.4.2.2.5.2" class="anchored" data-anchor-id="general-observations-6"><span class="header-section-number">4.4.2.2.5.2</span> General Observations:</h6>
+<ul>
+<li><strong>Weak Correlations</strong>: All correlations in the matrix are relatively weak (close to 0), indicating that there is no strong linear relationship between these variables. The weak positive correlation between <strong>Catholic</strong> and <strong>Infant Mortality</strong> is the highest, but still not strong.</li>
+<li><strong>Cultural and Socio-Economic Factors</strong>: The relationships between Catholicism, education, and infant mortality may be influenced by a variety of socio-economic and cultural factors that are not fully captured by these simple correlations.</li>
+</ul>
+</section>
+<section id="conclusion-22" class="level6" data-number="4.4.2.2.5.3">
+<h6 data-number="4.4.2.2.5.3" class="anchored" data-anchor-id="conclusion-22"><span class="header-section-number">4.4.2.2.5.3</span> Conclusion:</h6>
+<p>This correlation matrix reveals <strong>weak associations</strong> between <strong>Catholic population</strong>, <strong>education</strong>, and <strong>infant mortality</strong>. The slightly positive correlation between <strong>Catholicism</strong> and <strong>infant mortality</strong> suggests a possible link worth further investigation, while the negative correlation between <strong>education</strong> and <strong>infant mortality</strong> aligns with expectations that higher education may contribute to better health outcomes. However, the weak correlations indicate that other factors likely play a significant role in shaping these relationships.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="week-4-conclusion" class="level3" data-number="4.4.3">
+<h3 data-number="4.4.3" class="anchored" data-anchor-id="week-4-conclusion"><span class="header-section-number">4.4.3</span> Week 4 Conclusion</h3>
+<section id="python-basics-and-data-analysis" class="level4" data-number="4.4.3.1">
+<h4 data-number="4.4.3.1" class="anchored" data-anchor-id="python-basics-and-data-analysis"><span class="header-section-number">4.4.3.1</span> Python Basics and Data Analysis</h4>
+<p>This week, we focused on several fundamental and advanced Python concepts, particularly in the context of data analysis, using libraries like <code>numpy</code>, <code>pandas</code>, <code>matplotlib</code>, and <code>seaborn</code>. Here’s a breakdown of the key areas covered:</p>
+<section id="python-lists-arrays" class="level5" data-number="4.4.3.1.1">
+<h5 data-number="4.4.3.1.1" class="anchored" data-anchor-id="python-lists-arrays"><span class="header-section-number">4.4.3.1.1</span> 1. Python Lists &amp; Arrays</h5>
+<ul>
+<li>Practiced working with basic Python lists and <code>numpy</code> arrays for handling numerical computations.</li>
+<li>Reinforced foundational Python skills by manipulating lists and performing basic array operations.</li>
+</ul>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example of using numpy arrays</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(arr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dataframes-with-pandas" class="level5" data-number="4.4.3.1.2">
+<h5 data-number="4.4.3.1.2" class="anchored" data-anchor-id="dataframes-with-pandas"><span class="header-section-number">4.4.3.1.2</span> 2. DataFrames with Pandas</h5>
+<ul>
+<li>Explored <code>pandas</code> for creating and manipulating dataframes.</li>
+<li>Extracted statistics from datasets and analyzed their structure using key functions like <code>describe()</code> and <code>info()</code>.</li>
+</ul>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a dataframe</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Ozone'</span>: [<span class="dv">41</span>, <span class="dv">36</span>, <span class="dv">12</span>], <span class="st">'Temp'</span>: [<span class="dv">67</span>, <span class="dv">72</span>, <span class="dv">74</span>]}</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.describe())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="airquality-dataset-analysis" class="level5" data-number="4.4.3.1.3">
+<h5 data-number="4.4.3.1.3" class="anchored" data-anchor-id="airquality-dataset-analysis"><span class="header-section-number">4.4.3.1.3</span> 3. Airquality Dataset Analysis</h5>
+<ul>
+<li><strong>Overview</strong>: Analyzed air quality data in New York from May to September 1973, focusing on variables like ozone, temperature, and wind speed.</li>
+<li><strong>Visualizations</strong>: Created histograms and scatter plots to understand the distribution and relationships between these variables.</li>
+<li><strong>Key Insights</strong>:
+<ul>
+<li>Higher temperatures correlated with higher ozone levels.</li>
+<li>Wind speeds showed a negative correlation with ozone concentration.</li>
+<li>Missing values in Ozone and Solar Radiation were identified as needing further handling.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot of Temperature vs Ozone Levels</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'Temp'</span>, y<span class="op">=</span><span class="st">'Ozone'</span>, data<span class="op">=</span>df)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="swiss-dataset-analysis" class="level5" data-number="4.4.3.1.4">
+<h5 data-number="4.4.3.1.4" class="anchored" data-anchor-id="swiss-dataset-analysis"><span class="header-section-number">4.4.3.1.4</span> 4. Swiss Dataset Analysis</h5>
+<ul>
+<li><strong>Overview</strong>: Explored fertility and socio-economic factors in 47 Swiss provinces from 1888, examining variables like fertility, education, and Catholic population percentages.</li>
+<li><strong>Visualizations</strong>: Created visualizations like histograms and boxplots to understand the distribution of variables such as education and infant mortality.</li>
+<li><strong>Correlation Analysis</strong>: Investigated relationships between fertility, infant mortality, and Catholic population using a correlation matrix.</li>
+<li><strong>Key Insights</strong>:
+<ul>
+<li>Higher fertility rates correlated with higher infant mortality.</li>
+<li>Catholic provinces tended to show higher fertility and infant mortality.</li>
+<li>Education was inversely correlated with infant mortality.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlation Matrix Heatmap</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>corr <span class="op">=</span> df[[<span class="st">'Catholic'</span>, <span class="st">'Education'</span>, <span class="st">'Infant.Mortality'</span>]].corr()</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>sns.heatmap(corr, annot<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="conclusion-23" class="level4" data-number="4.4.3.2">
+<h4 data-number="4.4.3.2" class="anchored" data-anchor-id="conclusion-23"><span class="header-section-number">4.4.3.2</span> Conclusion</h4>
+<p>This week was an in-depth exploration of Python’s capabilities for data analysis, focusing on extracting meaningful insights from real-world datasets. The work demonstrated strong relationships between environmental and socio-economic variables, using visualizations and statistical analysis to uncover trends. These skills are essential for further data-driven projects, offering opportunities for deeper exploration of historical datasets and environmental data.</p>
+
+
 </section>
 </section>
 </section>
@@ -1907,7 +2939,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","loop":false,"closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

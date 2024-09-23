@@ -973,3 +973,896 @@ Across the board, these visualizations reveal that **socioeconomic status** and 
 
 ###### Final Thoughts:
 This comprehensive analysis emphasizes the need for systemic changes to level the playing field, ensuring that factors such as **income** and **race** no longer determine a student's success in math and STEM fields.
+
+
+## Week 4 - 09/16 ~ 09/20
+
+### Monday/Wednesday 
+
+#### This is markdown content
+
+Here is a list
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+**bold**
+*italic*
+
+#### Jupyter Notebook - Python Basics
+
+```python
+# First we activate the virtual environment (venv477) - it has all the required libraries already downloaded and installed
+# In this code block, we'll be using numpy, a library to deal with numbers and complex calculations
+
+import numpy as np
+print(np.absolute(-1))
+arr = np.array([1,2,3,4,5,])
+print(arr)
+```
+
+    1
+    [1 2 3 4 5]
+    
+
+
+```python
+#lists are native to python
+my_list = [1,2,3,4,5]
+print(my_list)
+```
+
+    [1, 2, 3, 4, 5]
+    
+#### Python Dataframes
+
+```python
+#For dataframes, we use pandas library, which will be used for handling large amounts of data.
+import pandas as pd
+data={'Ozone': [41,36,12],'Temp':[67,72,74]}
+df = pd.DataFrame(data)
+print(df)
+print(df.describe())
+print(df.info())
+```
+
+       Ozone  Temp
+    0     41    67
+    1     36    72
+    2     12    74
+               Ozone       Temp
+    count   3.000000   3.000000
+    mean   29.666667  71.000000
+    std    15.502688   3.605551
+    min    12.000000  67.000000
+    25%    24.000000  69.500000
+    50%    36.000000  72.000000
+    75%    38.500000  73.000000
+    max    41.000000  74.000000
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 3 entries, 0 to 2
+    Data columns (total 2 columns):
+     #   Column  Non-Null Count  Dtype
+    ---  ------  --------------  -----
+     0   Ozone   3 non-null      int64
+     1   Temp    3 non-null      int64
+    dtypes: int64(2)
+    memory usage: 176.0 bytes
+    None
+    
+
+#### Airquality Dataset
+
+##### Overview of the Airquality Dataset
+
+The **airquality** dataset contains daily air quality measurements taken in New York from **May to September 1973**. It is frequently used for data analysis and visualization exercises. Below is a detailed overview of the dataset based on the image and general characteristics of the airquality dataset. Here is some analysis, with the help of ChatGPT.
+
+###### Dataset Structure:
+The dataset consists of the following six columns:
+1. **Ozone**: Mean ozone concentration in parts per billion (**ppb**).
+2. **Solar.R**: Solar radiation in **Langleys (ly)**.
+3. **Wind**: Average wind speed in **miles per hour (mph)**.
+4. **Temp**: Maximum daily temperature in degrees **Fahrenheit (°F)**.
+5. **Month**: Coded as integers **5 (May)** to **9 (September)**.
+6. **Day**: The day of the month.
+
+###### Dataset Characteristics:
+- The dataset includes **153 observations (rows)**.
+- Some columns contain **missing values**, especially for **Ozone** and **Solar.R**:
+  - **Ozone**: 116 non-null entries, 37 missing (NaN).
+  - **Solar.R**: 146 non-null entries, 7 missing (NaN).
+- The **Wind** and **Temp** columns are complete, with no missing values.
+- The **Month** and **Day** columns represent the time variables and do not have missing values.
+
+###### Basic Statistics:
+Here are some basic statistics derived from the dataset:
+
+- **Ozone**:
+  - **Mean**: 42.1 ppb
+  - **Minimum**: 1 ppb, **Maximum**: 168 ppb
+  - **50th percentile (median)**: 31 ppb
+- **Solar.R**:
+  - **Mean**: 185.9 ly
+  - **Minimum**: 7 ly, **Maximum**: 334 ly
+  - **50th percentile (median)**: 207 ly
+- **Wind**:
+  - **Mean**: 9.96 mph
+  - **Minimum**: 1.7 mph, **Maximum**: 20.7 mph
+  - **50th percentile (median)**: 9.7 mph
+- **Temp**:
+  - **Mean**: 77.88°F
+  - **Minimum**: 56°F, **Maximum**: 97°F
+  - **50th percentile (median)**: 79°F
+
+###### Key Insights:
+1. **Ozone and Solar.R have missing data**: The **Ozone** column has 37 missing values and **Solar.R** has 7 missing values, which may need to be handled for detailed analysis.
+2. **Temperature and Wind show no missing values**: These columns provide a full set of observations, which can be used for detailed statistical analysis without any data imputation.
+3. **Temperature ranges**: The daily maximum temperatures recorded range from **56°F** to **97°F**, typical for summer months in New York.
+4. **Ozone levels**: The ozone concentration ranges from **1 ppb** to **168 ppb**, with a mean of **42.1 ppb**, but there are notable missing values.
+
+###### Potential Analysis:
+- **Correlation Analysis**: Investigating how **ozone levels** relate to temperature, wind, and solar radiation.
+- **Time Series Analysis**: Analyzing how air quality changes over time, such as by **month** and **day**.
+- **Handling Missing Data**: Addressing missing values in **Ozone** and **Solar.R** before performing any advanced analysis to avoid bias.
+
+###### Conclusion:
+The **airquality** dataset provides a rich set of environmental data that can be analyzed to explore the relationships between **ozone levels**, **temperature**, **wind speed**, and **solar radiation**. Missing data in **Ozone** and **Solar.R** will require careful handling to ensure meaningful insights. This dataset offers a great opportunity to explore **seasonal air quality patterns** and their **environmental drivers**.
+
+
+```python
+# Here we load the airquality dataset to start visualizing it.
+airquality_df = pd.read_csv('airquality_datasets.csv')
+print(airquality_df) # This will print out a concise version of the dataset
+```
+
+         Ozone  Solar.R  Wind  Temp  Month  Day
+    0     41.0    190.0   7.4    67      5    1
+    1     36.0    118.0   8.0    72      5    2
+    2     12.0    149.0  12.6    74      5    3
+    3     18.0    313.0  11.5    62      5    4
+    4      NaN      NaN  14.3    56      5    5
+    ..     ...      ...   ...   ...    ...  ...
+    148   30.0    193.0   6.9    70      9   26
+    149    NaN    145.0  13.2    77      9   27
+    150   14.0    191.0  14.3    75      9   28
+    151   18.0    131.0   8.0    76      9   29
+    152   20.0    223.0  11.5    68      9   30
+    
+    [153 rows x 6 columns]
+    
+
+
+```python
+print(airquality_df.info()) # This will print out the information of the dataframe.
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 153 entries, 0 to 152
+    Data columns (total 6 columns):
+     #   Column   Non-Null Count  Dtype  
+    ---  ------   --------------  -----  
+     0   Ozone    116 non-null    float64
+     1   Solar.R  146 non-null    float64
+     2   Wind     153 non-null    float64
+     3   Temp     153 non-null    int64  
+     4   Month    153 non-null    int64  
+     5   Day      153 non-null    int64  
+    dtypes: float64(3), int64(3)
+    memory usage: 7.3 KB
+    None
+    
+
+
+```python
+print(airquality_df.describe()) # This will print out some basic stats on the dataset
+```
+
+                Ozone     Solar.R        Wind        Temp       Month         Day
+    count  116.000000  146.000000  153.000000  153.000000  153.000000  153.000000
+    mean    42.129310  185.931507    9.957516   77.882353    6.993464   15.803922
+    std     32.987885   90.058422    3.523001    9.465270    1.416522    8.864520
+    min      1.000000    7.000000    1.700000   56.000000    5.000000    1.000000
+    25%     18.000000  115.750000    7.400000   72.000000    6.000000    8.000000
+    50%     31.500000  205.000000    9.700000   79.000000    7.000000   16.000000
+    75%     63.250000  258.750000   11.500000   85.000000    8.000000   23.000000
+    max    168.000000  334.000000   20.700000   97.000000    9.000000   31.000000
+    
+
+#### Visualizations on the Airquality Dataset
+
+##### Distribution of Ozone Levels Histogram
+```python
+# Now we can start creating visualizations
+import matplotlib.pyplot as plt # This import will be used for plotting
+
+# Ozone Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(airquality_df['Ozone'].dropna(), bins=20, color='blue', edgecolor='black') #dropna() will drop all NA values
+plt.title('Distribution of Ozone Levels')
+plt.xlabel('Ozone (ppb)')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+![Distribution of Ozone Levels](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_7_0.png)
+
+
+The histogram visualizes the distribution of ozone levels (in parts per billion - ppb) from the dataset.
+
+###### Key Insights:
+
+1. **Skewed Distribution:**
+   - The distribution of ozone levels is **right-skewed**. Most of the data points fall in the lower ozone ranges, particularly between **0 and 50 ppb**.
+   - There are fewer data points with higher ozone levels, with a long tail extending toward **175 ppb**.
+
+2. **High Frequency in Low Ozone Levels:**
+   - The highest frequency of ozone levels is concentrated between **0 and 25 ppb**, where more than **20 occurrences** are recorded.
+   - This suggests that lower ozone levels are more common in the dataset.
+
+3. **Moderate Levels Between 25 and 50 ppb:**
+   - There is a significant drop in frequency between **25 and 50 ppb**, with frequencies ranging between **10 to 15 occurrences**.
+   - These levels are still relatively common but less so than the lowest ozone levels.
+
+4. **Low Frequency of High Ozone Levels:**
+   - Ozone levels greater than **50 ppb** occur much less frequently.
+   - Between **50 and 100 ppb**, there are scattered occurrences, with frequencies generally **below 10**.
+   - Beyond **100 ppb**, the frequencies drop dramatically, with very few data points between **100 and 175 ppb**.
+
+5. **Outliers in High Ozone Levels:**
+   - There are a few outliers with ozone levels exceeding **150 ppb**, but these are rare occurrences, indicating that extremely high ozone levels are uncommon in this dataset.
+
+###### General Trends:
+
+- The data shows that **low ozone levels** dominate, while **higher ozone levels** are rare.
+- This type of distribution might reflect **air quality** patterns in the region where the data was collected, suggesting that **low ozone** is the norm, with fewer instances of high ozone pollution.
+
+###### Conclusion:
+
+The histogram reveals that ozone levels are predominantly low, with a clear skew toward the lower end of the spectrum. The **right-skew** suggests that high ozone levels are infrequent, possibly indicating generally better air quality in the region of interest.
+
+##### Distribution of Temperature Levels Histogram
+
+```python
+# Temp Histogram
+plt.figure(figsize=(8, 6))
+plt.hist(airquality_df['Temp'].dropna(), bins=20, color='orange', edgecolor='black')
+plt.title('Distribution of Temperature')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+    
+![Distribution of Temperature](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_8_0.png)
+    
+This histogram visualizes the distribution of **temperature (in °F)** from the dataset.
+
+###### Key Insights:
+
+1. **Normal Distribution with Slight Skew:**
+   - The distribution of temperatures appears to have a **normal distribution** with a slight right skew. The temperatures are mostly concentrated between **60°F and 90°F**.
+   - The peak temperature occurs around **80°F**, with the highest frequency of over **20 occurrences**.
+
+2. **High Frequency at 80°F:**
+   - The highest frequency is at **80°F**, where over **20 occurrences** are recorded. This indicates that **80°F** is a commonly observed temperature in the dataset.
+
+3. **Balanced Spread Between 60°F and 90°F:**
+   - Temperatures ranging from **60°F to 90°F** are well represented, with a fairly **even spread**. Most temperatures in this range occur with moderate frequencies between **5 and 15 occurrences**.
+   - The distribution suggests that the temperature tends to fluctuate within this range, without extreme lows or highs.
+
+4. **Low Frequency Below 60°F and Above 90°F:**
+   - There are fewer occurrences of temperatures below **60°F** and above **90°F**. These extremes are less common, and the dataset is largely concentrated within the **60°F to 90°F range**.
+   - The tail at the lower end (< 60°F) suggests that **colder temperatures** are less frequent in this dataset.
+
+5. **Outliers at Low and High Temperatures:**
+   - The lower and higher temperature extremes (below **60°F** and above **90°F**) are outliers in the dataset, as they occur with much lower frequency. This suggests that these temperatures are unusual in the context of this dataset.
+
+###### General Trends:
+
+- The dataset shows that **temperatures between 70°F and 80°F** are the most common, with **80°F** being the peak.
+- Both **lower temperatures (< 60°F)** and **higher temperatures (> 90°F)** are uncommon, indicating that most temperature observations fall within a moderate range.
+
+###### Conclusion:
+
+The temperature distribution in this dataset follows a fairly **normal pattern**, with a clear peak around **80°F**. The histogram suggests that temperatures typically range between **60°F and 90°F**, with a relatively **low frequency** of extreme temperatures. This distribution may indicate a **moderate climate** in the region where the data was collected.
+
+
+##### Boxplot of Ozone Levels
+
+```python
+# Boxplot for Ozone
+plt.figure(figsize=(8, 6))
+plt.boxplot(airquality_df['Ozone'].dropna())
+plt.title('Boxplot of Ozone Levels')
+plt.ylabel('Ozone (ppb)')
+plt.show()
+```
+
+
+![Boxplot of Ozone Levels](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_9_0.png)
+    
+
+This boxplot provides a summary of the distribution of **ozone levels** (in ppb - parts per billion), highlighting key statistics such as the median, interquartile range (IQR), and potential outliers.
+
+###### Key Insights:
+
+  1. **Median and Interquartile Range (IQR):**
+   - The **median ozone level** is around **25 ppb**, as indicated by the orange line inside the box.
+   - The **IQR** (the box) ranges from **approximately 20 ppb to 70 ppb**, meaning that **50% of the data** falls within this range.
+
+:::{.callout-note}
+**IQR**, or **Interquartile Range**, is a measure of statistical dispersion and is used to describe the spread of data. It indicates the range within which the **middle 50%** of values in a dataset fall.
+:::
+
+   - The lower quartile is just above **20 ppb**, and the upper quartile is around **70 ppb**, showing where the middle half of the ozone levels lie.
+
+2. **Whiskers and Data Spread:**
+   - The **lower whisker** extends down to around **5 ppb**, suggesting that the lowest ozone levels in the dataset are close to zero.
+   - The **upper whisker** extends to about **125 ppb**, indicating the highest ozone levels within the normal range (excluding outliers).
+   - This spread indicates that the ozone levels vary widely, with most values lying between **5 ppb and 125 ppb**.
+
+3. **Outliers:**
+   - There are **two outliers** above the upper whisker, with values around **150 ppb** and **175 ppb**. These represent unusual, high ozone levels that are not common in the dataset.
+   - The presence of these outliers suggests that while most ozone readings are moderate, there are some instances of much higher ozone levels.
+
+4. **Symmetry of the Distribution:**
+   - The distribution appears to be **slightly right-skewed**, as the upper whisker is longer than the lower whisker and there are high-value outliers.
+   - This implies that while most ozone levels are concentrated at lower values, there are occasional higher levels.
+
+###### General Trends:
+
+- **Moderate Ozone Levels:** The data shows that most ozone levels fall between **20 and 70 ppb**, with a median of about **25 ppb**, suggesting that moderate ozone levels are the norm.
+- **Outliers Indicating High Ozone Events:** The outliers above **150 ppb** indicate that there are occasional **high ozone events**, which could be of interest for further investigation (e.g., environmental factors causing ozone spikes).
+
+###### Conclusion:
+
+The boxplot of ozone levels reveals that the distribution is **slightly skewed to the right**, with most values falling between **20 and 70 ppb**. The **median** is around **25 ppb**, and there are **two notable outliers** with much higher ozone levels, pointing to occasional extreme events. This provides a useful overview of ozone concentration variability and the presence of high-level ozone outliers in the dataset.
+
+##### Boxplot of Temperature Levels
+
+```python
+# Boxplot for Temp
+plt.figure(figsize=(8, 6))
+plt.boxplot(airquality_df['Temp'].dropna())
+plt.title('Boxplot of Temperature')
+plt.ylabel('Temperature (°F)')
+plt.show()
+```
+
+
+![Boxplot of Temperature](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_10_0.png)
+    
+This boxplot provides a summary of the distribution of **temperature (in °F)**, highlighting key statistics such as the median, interquartile range (IQR), and overall temperature spread.
+
+###### Key Insights:
+
+1. **Median and Interquartile Range (IQR):**
+   - The **median temperature** is approximately **80°F**, as indicated by the orange line inside the box.
+   - The **IQR** (the box) ranges from about **70°F to 85°F**, meaning that **50% of the data** falls within this range.
+   - The lower quartile (25th percentile) is just above **70°F**, while the upper quartile (75th percentile) is around **85°F**, indicating where the middle half of the temperature data lies.
+
+2. **Whiskers and Data Spread:**
+   - The **lower whisker** extends down to around **60°F**, suggesting that the lowest temperatures in the dataset are close to this value.
+   - The **upper whisker** extends to just under **95°F**, indicating the highest temperatures within the normal range.
+   - This spread shows that temperatures generally range between **60°F and 95°F**, with most values concentrated around the **median of 80°F**.
+
+3. **Absence of Outliers:**
+   - There are **no outliers** in this dataset, meaning that all temperature observations fall within the expected range without any extreme values.
+   - The data appears well-contained between **60°F and 95°F**, suggesting a consistent temperature range.
+
+4. **Symmetry of the Distribution:**
+   - The boxplot demonstrates a **fairly symmetric distribution**, with the median line positioned centrally within the IQR. This suggests a balanced temperature distribution.
+   - The whiskers are of similar length, indicating that there is no extreme skewness in the temperature data.
+
+###### General Trends:
+
+- **Moderate Temperature Range:** The data shows that most temperature observations fall between **70°F and 85°F**, with a median temperature of about **80°F**.
+- **Well-Distributed Temperatures:** The absence of outliers and the symmetry of the boxplot suggest that the temperatures in the dataset are fairly consistent and fall within a moderate range.
+
+###### Conclusion:
+
+The temperature distribution in this dataset follows a **normal and balanced pattern**, with no outliers and a clear concentration around the **median of 80°F**. The data suggests that temperatures typically range between **60°F and 95°F**, with most values within the moderate range of **70°F to 85°F**. This indicates a stable and consistent temperature pattern in the dataset.
+
+##### Scatter plot of Temperature and Ozone by Month
+
+```python
+import seaborn as sns
+
+# Scatter plot with regression line
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='Temp', y='Ozone', hue='Month', data=airquality_df)
+plt.title('Temperature vs Ozone Levels by Month')
+plt.xlabel('Temperature (°F)')
+plt.ylabel('Ozone (ppb)')
+plt.show()
+```
+
+
+    
+![Temperature vs Ozone Levels by Month](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_11_0.png)
+    
+This scatter plot visualizes the relationship between **temperature (°F)** and **ozone levels (ppb)**, while also distinguishing data points by **month** (represented by different shades of color).
+
+###### Key Insights:
+
+1. **Positive Correlation Between Temperature and Ozone:**
+   - There is a clear **positive correlation** between temperature and ozone levels. As the temperature increases, ozone levels tend to increase as well.
+   - This trend is particularly evident at **temperatures above 75°F**, where the ozone levels start to rise more significantly.
+
+2. **Ozone Increases with Higher Temperatures:**
+   - Ozone levels generally remain below **50 ppb** for temperatures **below 70°F**, but as temperatures rise beyond this point, ozone levels increase, with many values exceeding **100 ppb** when the temperature reaches around **90°F** and above.
+   - This indicates that **higher temperatures** contribute to higher ozone concentrations.
+
+3. **Monthly Influence on Ozone and Temperature:**
+   - The data points are colored by month, with lighter colors (Month 5 = May) representing earlier months and darker colors (Month 9 = September) representing later months.
+   - In the **warmer months** (July, August, September), represented by darker shades of purple and blue, there are more instances of **high ozone levels**, particularly at temperatures above **80°F**.
+   - **Lower months** (May and June), represented by lighter shades of pink, tend to have lower ozone levels overall, even at higher temperatures, which suggests a seasonal effect on ozone levels.
+
+4. **Outliers and Extreme Ozone Levels:**
+   - There are a few **outliers** where ozone levels exceed **150 ppb**, particularly for temperatures around **85°F to 90°F**. These data points mostly appear in **July and August**, indicating that extreme ozone events occur during the peak summer months.
+   - The outliers reflect instances where ozone levels spike dramatically even though the temperature is not exceptionally high.
+
+###### General Trends:
+
+- **Temperature-Driven Ozone Formation:** The positive correlation between temperature and ozone levels suggests that **ozone formation** increases as temperatures rise, particularly during the summer months.
+- **Seasonal Influence:** The coloring by month indicates a **seasonal pattern**, where ozone levels are generally higher in the later summer months (July to September) compared to earlier in the year (May and June).
+- **High Ozone in Summer:** The majority of the higher ozone levels are observed in **July and August**, especially at temperatures above **80°F**, reflecting the impact of summer heat on ozone concentration.
+
+###### Conclusion:
+
+This scatter plot highlights the **strong relationship** between **temperature** and **ozone levels**, with higher temperatures leading to increased ozone concentrations, particularly during the **summer months**. The seasonal trend suggests that ozone levels peak during **July and August**, likely due to the combination of **higher temperatures** and **environmental conditions** that promote ozone formation. This information can be critical for air quality monitoring and predicting **ozone pollution** during the warmer months of the year.
+
+
+##### Correlation Matrix of Ozone, Temp, Wind
+
+```python
+# Correlation matrix
+corr = airquality_df[['Ozone', 'Temp', 'Wind']].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+```
+
+
+    
+![Correlation Matrix of Ozone, Temp and Wind](Python_Unit_1/Week_4_Chris/Tut2_Python_Karottukoikal_092024_files/Tut2_Python_Karottukoikal_092024_12_0.png)
+    
+This correlation matrix visualizes the relationships between **ozone levels**, **temperature**, and **wind speed**. The matrix provides values between -1 and 1, where:
+- **1** indicates a perfect positive correlation,
+- **-1** indicates a perfect negative correlation, and
+- **0** indicates no correlation.
+
+###### Key Insights:
+
+1. **Ozone and Temperature (Correlation = 0.7):**
+   - There is a **strong positive correlation** of **0.7** between **ozone levels** and **temperature**.
+   - This suggests that as temperature increases, ozone levels tend to increase as well. This aligns with the previous visualizations where high temperatures were associated with higher ozone concentrations.
+
+2. **Ozone and Wind Speed (Correlation = -0.6):**
+   - There is a **moderate negative correlation** of **-0.6** between **ozone levels** and **wind speed**.
+   - This indicates that as wind speed increases, ozone levels tend to decrease. Wind likely disperses ozone, leading to lower concentrations.
+
+3. **Temperature and Wind Speed (Correlation = -0.46):**
+   - There is a **moderate negative correlation** of **-0.46** between **temperature** and **wind speed**.
+   - This suggests that higher temperatures tend to occur when wind speeds are lower, and vice versa.
+
+###### General Trends:
+
+- **Strong Positive Correlation Between Ozone and Temperature:** The positive correlation between ozone and temperature indicates that ozone levels tend to rise with higher temperatures, which may be due to increased sunlight and chemical reactions that generate ozone.
+  
+- **Negative Correlation Between Ozone and Wind:** The negative correlation between ozone and wind suggests that windier conditions help **disperse ozone**, leading to lower concentrations.
+
+- **Interplay of Wind and Temperature:** The negative correlation between wind speed and temperature suggests that **calmer, warmer conditions** are conducive to higher ozone levels, while **windier conditions** are typically associated with lower temperatures and lower ozone concentrations.
+
+###### Conclusion:
+
+The correlation matrix provides valuable insights into the relationship between **ozone**, **temperature**, and **wind speed**. The **strong positive correlation** between ozone and temperature suggests that hotter days lead to higher ozone concentrations, while the **negative correlation** between wind and ozone indicates that wind helps reduce ozone levels by dispersing it. This matrix highlights the complex interplay between these environmental factors, with temperature driving ozone formation and wind acting as a dispersive force.
+
+
+### Friday
+
+On Friday, I decided to go one step ahead and try these python basics on another dataset, the Swiss Dataset.
+
+#### Overview of the Swiss Dataset
+
+The **Swiss** dataset, originally from **RStudio**, provides standardized fertility and socio-economic data for **47 French-speaking provinces of Switzerland** in 1888. This dataset is commonly used for exploring relationships between fertility rates and various socio-economic factors.
+
+##### Dataset Structure:
+The dataset consists of six variables:
+1. **Fertility**: Standardized fertility measure.
+2. **Agriculture**: Percentage of males involved in agriculture as an occupation.
+3. **Examination**: Percentage of draftees receiving the highest mark on army examination.
+4. **Education**: Percentage of education beyond primary school for draftees.
+5. **Catholic**: Percentage of the population that is Catholic (a measure of religion).
+6. **Infant.Mortality**: Number of live births who live less than 1 year per 1000 births.
+
+##### Dataset Characteristics:
+- The dataset contains **47 entries** (rows) for each variable.
+- There are no missing values in any of the columns, ensuring a complete dataset for analysis.
+- The data types for the variables are primarily **float64**, except for **Examination** and **Education**, which are of type **int64**.
+
+##### Basic Statistics:
+Below are the key statistics for each variable based on the data:
+
+- **Fertility**:
+  - **Mean**: 70.14
+  - **Minimum**: 35, **Maximum**: 92.5
+  - **50th percentile (median)**: 70.4
+- **Agriculture**:
+  - **Mean**: 50.66%
+  - **Minimum**: 1.2%, **Maximum**: 89.7%
+  - **50th percentile (median)**: 54%
+- **Examination**:
+  - **Mean**: 16.49%
+  - **Minimum**: 3%, **Maximum**: 37%
+  - **50th percentile (median)**: 16%
+- **Education**:
+  - **Mean**: 10.98%
+  - **Minimum**: 1%, **Maximum**: 53%
+  - **50th percentile (median)**: 8%
+- **Catholic**:
+  - **Mean**: 41.14%
+  - **Minimum**: 2.15%, **Maximum**: 100%
+  - **50th percentile (median)**: 15.14%
+- **Infant.Mortality**:
+  - **Mean**: 19.94 per 1000 births
+  - **Minimum**: 10.8, **Maximum**: 26.6
+  - **50th percentile (median)**: 20.0
+
+##### Key Insights:
+1. **Fertility**:
+   - Fertility rates range from **35 to 92.5**, with a mean of **70.14**. The median fertility is **70.4**, indicating that most provinces have moderate to high fertility rates.
+   
+2. **Agriculture**:
+   - The percentage of males involved in agriculture varies significantly across provinces, ranging from **1.2%** to **89.7%**. The median is **54%**, showing that agriculture was a major occupation in many regions during this time.
+
+3. **Examination and Education**:
+   - The **Examination** score ranges from **3%** to **37%**, with a mean of **16.49%**, indicating that only a small portion of draftees received the highest marks.
+   - The **Education** level ranges from **1%** to **53%**, with a median of **8%**, suggesting that a relatively small portion of the population had education beyond primary school.
+
+4. **Catholic**:
+   - The percentage of **Catholic** population varies significantly, from **2.15%** to **100%**, reflecting the diversity in religious adherence across the provinces. The median is **15.14%**, but the dataset includes provinces with a fully Catholic population.
+
+5. **Infant Mortality**:
+   - **Infant Mortality** ranges from **10.8** to **26.6 per 1000 births**, with a mean of **19.94**. The median is **20.0**, indicating that most provinces had similar infant mortality rates, though some had much higher rates.
+
+##### Potential Analysis:
+- **Correlation Analysis**: Investigating how fertility is related to variables like **education, agriculture**, and **religion (Catholic)**.
+- **Geographical Trends**: Analyzing how these socio-economic factors vary across different regions in Switzerland.
+- **Socio-Economic Influence**: Understanding the impact of education, religion, and occupation (agriculture) on fertility and infant mortality rates.
+
+##### Conclusion:
+The **Swiss** dataset provides valuable insights into fertility rates and socio-economic factors in **47 Swiss provinces** in the late 19th century. With complete data and a range of variables, this dataset is an excellent resource for studying the relationships between **fertility**, **occupation**, **education**, **religion**, and **infant mortality** in a historical context.
+
+
+#### Python Visualizations
+
+Next, we use python to create visualizations on the swiss dataset.
+
+
+```python
+import pandas as pd
+swiss_df = pd.read_csv('swiss_datasets.csv')
+print(swiss_df.info())
+print(swiss_df.describe())
+```
+
+    <class 'pandas.core.frame.DataFrame'>
+    RangeIndex: 47 entries, 0 to 46
+    Data columns (total 6 columns):
+     #   Column            Non-Null Count  Dtype  
+    ---  ------            --------------  -----  
+     0   Fertility         47 non-null     float64
+     1   Agriculture       47 non-null     float64
+     2   Examination       47 non-null     int64  
+     3   Education         47 non-null     int64  
+     4   Catholic          47 non-null     float64
+     5   Infant.Mortality  47 non-null     float64
+    dtypes: float64(4), int64(2)
+    memory usage: 2.3 KB
+    None
+           Fertility  Agriculture  Examination  Education   Catholic  \
+    count  47.000000    47.000000    47.000000  47.000000   47.00000   
+    mean   70.142553    50.659574    16.489362  10.978723   41.14383   
+    std    12.491697    22.711218     7.977883   9.615407   41.70485   
+    min    35.000000     1.200000     3.000000   1.000000    2.15000   
+    25%    64.700000    35.900000    12.000000   6.000000    5.19500   
+    50%    70.400000    54.100000    16.000000   8.000000   15.14000   
+    75%    78.450000    67.650000    22.000000  12.000000   93.12500   
+    max    92.500000    89.700000    37.000000  53.000000  100.00000   
+    
+           Infant.Mortality  
+    count         47.000000  
+    mean          19.942553  
+    std            2.912697  
+    min           10.800000  
+    25%           18.150000  
+    50%           20.000000  
+    75%           21.700000  
+    max           26.600000  
+    
+
+##### Distribution of Infant Mortality
+
+```python
+import matplotlib.pyplot as plt
+plt.figure(figsize=(8,6))
+plt.hist(swiss_df['Infant.Mortality'].dropna(), bins=20, color='red', edgecolor='black')
+plt.title('Distribute of Infant Mortality')
+plt.xlabel('Infant Mortality')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+    
+![Distribution of Infant Mortality](Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_1_0.png)
+    
+
+This histogram visualizes the distribution of **Infant Mortality** rates (per 1000 live births) for the Swiss dataset.
+
+###### Key Insights:
+
+1. **Central Tendency:**
+   - The **peak of the distribution** is around **20 infant deaths per 1000 births**, with the highest frequency of provinces having this mortality rate.
+   - The **mean infant mortality rate** is approximately **19.94**, aligning closely with the histogram's peak.
+
+2. **Moderate Spread:**
+   - The **majority** of the data is concentrated between **18 and 22 infant deaths per 1000 births**. This indicates that most provinces had relatively similar infant mortality rates.
+   - The central grouping of bars shows that most provinces had **moderate infant mortality**.
+
+3. **Tails on Both Ends:**
+   - On the **lower end**, a few provinces have relatively low infant mortality, with values around **12 to 16 per 1000 births**.
+   - On the **higher end**, a few provinces have infant mortality rates reaching up to **26 per 1000 births**, but these higher mortality rates are less frequent.
+
+4. **Outliers:**
+   - There is a slight **outlier** around **12 infant deaths per 1000 births**, representing a province with significantly lower mortality than most others.
+   - Similarly, provinces with **mortality rates above 24 per 1000** are relatively rare, indicating that extremely high infant mortality rates were uncommon.
+
+###### General Trends:
+
+- **Most provinces** in this dataset experienced **infant mortality rates between 18 and 22 per 1000 births**, showing that this range is the norm.
+- There is **moderate variation** in infant mortality rates, with a few provinces at the lower and higher extremes, indicating some regional differences.
+
+###### Conclusion:
+
+The histogram illustrates that **infant mortality** in Swiss provinces during this period is **concentrated around 20 deaths per 1000 births**, with some variation on both ends. A few provinces experienced unusually high or low rates, but the overall trend is centered around moderate infant mortality. This provides insights into **health conditions and regional disparities** in 19th century Switzerland.
+
+
+##### Distribution of Education
+
+```python
+plt.figure(figsize=(8,6))
+plt.hist(swiss_df['Education'].dropna(), bins=20, color='blue', edgecolor='black')
+plt.title('Distribution of Education')
+plt.xlabel('Education')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+    
+![Distribution of Education](Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_2_0.png)
+This histogram visualizes the distribution of **Education** in the Swiss dataset, where **education** represents the percentage of draftees with education beyond primary school.
+
+###### Key Insights:
+
+1. **Bimodal Distribution:**
+   - The distribution shows a **bimodal pattern**, with two clear peaks. 
+   - The first peak is around **10% education**, with most provinces falling within the **0-15% range**.
+   - There is a second, smaller peak around **30% education**, indicating a few provinces with significantly higher levels of education beyond primary school.
+
+2. **Concentration at Low Education Levels:**
+   - A large portion of the dataset is concentrated at **lower education levels**, particularly between **0% and 15%**. The **highest frequency** occurs between **5% and 10%**, indicating that most provinces had a relatively low percentage of draftees receiving education beyond primary school.
+   - This highlights the limited access to advanced education for most provinces during this period.
+
+3. **Gaps in Education Levels:**
+   - There is a noticeable **gap** between **15% and 25%** where very few provinces fall, indicating that there were fewer provinces with moderate education levels.
+   - This could suggest that provinces either had **low** or **relatively high** education levels, but not many had intermediate values.
+
+4. **High Education Outliers:**
+   - There are a few provinces with **extremely high levels of education**, with one outlier reaching **50%**. These outliers represent provinces where a significant portion of the population pursued education beyond primary school, a rarity in the dataset.
+
+###### General Trends:
+
+- **Majority of Provinces with Low Education Levels**: Most provinces in Switzerland during this period had **low education rates**, with the majority of values concentrated between **0% and 15%**. 
+- **Higher Education Outliers**: A small number of provinces had significantly higher levels of education, particularly around **30% and 50%**, suggesting substantial regional differences in access to education.
+
+###### Conclusion:
+
+The histogram reveals that most provinces had **low education levels**, with few opportunities for education beyond primary school. However, a few provinces show significantly higher education rates, indicating **regional disparities** in educational attainment. This distribution underscores the **uneven access to education** in 19th-century Switzerland, where the majority of the population had limited access to further education.
+
+##### Boxplot of Examination
+
+```python
+plt.figure(figsize=(8, 6))
+plt.boxplot(swiss_df['Examination'].dropna())
+plt.title('Boxplot of Examination')
+plt.ylabel('Examination')
+plt.show()
+```
+
+
+    
+![Boxplot of Examination](Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_3_0.png)
+    
+This boxplot visualizes the distribution of **Examination** scores in the Swiss dataset, where **Examination** refers to the percentage of draftees receiving the highest mark in the military examination.
+
+###### Key Insights:
+
+1. **Median Examination Score:**
+   - The **median** examination score is approximately **16%**, as indicated by the orange line in the box. This suggests that, on average, 16% of draftees in each province achieved the highest mark.
+
+2. **Interquartile Range (IQR):**
+   - The **IQR** (the range between the 25th and 75th percentiles) spans from about **12% to 22%**. This indicates that the middle 50% of the provinces had between 12% and 22% of their draftees achieving the highest marks.
+   - The relatively narrow IQR suggests that most provinces had similar examination outcomes within this range.
+
+3. **Whiskers and Data Spread:**
+   - The **lower whisker** extends down to **3%**, representing the province with the lowest percentage of draftees receiving the highest examination mark.
+   - The **upper whisker** extends up to **37%**, indicating that the highest-performing province had 37% of its draftees achieving the top marks.
+   - The whiskers indicate that most provinces fall between **3% and 37%**, with no extreme outliers in the data.
+
+4. **Symmetry of Distribution:**
+   - The boxplot shows a relatively **balanced distribution**, with the median line close to the center of the IQR. The whiskers are roughly of equal length, indicating that the data is **not heavily skewed**.
+
+###### General Trends:
+
+- The **majority** of the provinces have between **12% and 22%** of draftees receiving the highest marks on the military examination.
+- The examination scores do not have any outliers, suggesting that there is **consistent performance** across provinces with no extreme deviations.
+
+###### Conclusion:
+
+This boxplot of the **Examination** scores reveals a **moderately concentrated** distribution, with most provinces achieving similar performance. The **median score of 16%** and the spread between **3% and 37%** suggest some variation between provinces, but the overall distribution is balanced. This data provides insights into the level of military readiness and education among draftees in different provinces of Switzerland during this period.
+
+
+##### Scatterplot of Fertility vs Infant Mortality by Catholic Population
+
+```python
+import seaborn as sns
+
+plt.figure(figsize=(10,6))
+sns.scatterplot(x='Fertility', y='Infant.Mortality', hue='Catholic', data=swiss_df)
+plt.title('Fertility vs Infant Mortality by Catholic population')
+plt.xlabel('Fertility')
+plt.ylabel('Infant Mortality')
+plt.show()
+```
+
+
+    
+![Fertility vs Infant Mortality by Catholic Population](Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_4_0.png)
+    
+This scatter plot visualizes the relationship between **fertility rates** and **infant mortality** across the Swiss dataset, with the color hue representing the **percentage of Catholic population** in each province.
+
+###### Key Insights:
+
+1. **Positive Correlation Between Fertility and Infant Mortality:**
+   - There is a **positive correlation** between **fertility** and **infant mortality**. As the fertility rate increases, infant mortality tends to increase as well. Provinces with higher fertility generally experience higher rates of infant mortality.
+   - This relationship indicates that regions with more births also have higher rates of infant deaths.
+
+2. **Impact of Catholic Population:**
+   - The **color hue** represents the percentage of the population that is **Catholic**, with darker points indicating provinces with a higher percentage of Catholics.
+   - Provinces with higher fertility rates and higher infant mortality (upper right portion of the plot) tend to have a **higher Catholic population** (darker points). This suggests that provinces with a larger Catholic population tend to have higher fertility and infant mortality rates.
+   - In contrast, provinces with lower fertility and lower infant mortality (lower left portion) generally have a **lower Catholic population** (lighter points).
+
+3. **Concentration of Points Around Median Fertility:**
+   - A significant number of points are concentrated between **fertility rates of 60 and 80** and **infant mortality rates between 18 and 22**. These central values suggest that many provinces fall within this range, indicating a moderate relationship between fertility and infant mortality.
+   - Provinces with these mid-range values are spread across different levels of Catholic population, showing diversity in religious composition within this group.
+
+4. **Outliers:**
+   - Some provinces with extremely high fertility rates (**above 80**) and high infant mortality rates (**above 24**) are outliers, and they tend to have a high percentage of Catholic population.
+   - On the lower end, a few provinces with **low fertility rates (below 50)** and **low infant mortality** also stand out as exceptions.
+
+###### General Trends:
+
+- **Higher Catholic Population**: Provinces with a higher percentage of Catholics tend to exhibit both **higher fertility rates** and **higher infant mortality**.
+- **Moderate Fertility and Mortality Range**: Most provinces are concentrated around **60-80 fertility** and **18-22 infant mortality**, with varying Catholic population percentages.
+- **Religious Influence**: The distribution of Catholic population suggests a potential cultural or socio-economic influence on fertility and infant mortality trends.
+
+###### Conclusion:
+
+This scatter plot highlights a **positive correlation** between **fertility** and **infant mortality**, with provinces that have a **higher Catholic population** generally showing higher rates in both metrics. This relationship suggests that religious and cultural factors might play a role in shaping fertility and infant health outcomes in Swiss provinces. Further analysis could explore whether this pattern is driven by socio-economic factors or access to healthcare.
+
+##### Correlation Matrix of Catholic Population, Education and Infant Mortality
+
+```python
+corr = swiss_df[['Catholic', 'Education', 'Infant.Mortality']].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+```
+
+    
+![Correlation matrix of Catholic Population, Education, and Infant Mortality](Python_Unit_1/Week_4_Chris/Swiss_Data_Analysis_files/Swiss_Data_Analysis_5_0.png)
+
+This correlation matrix shows the relationships between three variables from the Swiss dataset: **Catholic** (percentage of Catholic population), **Education** (percentage of education beyond primary school for draftees), and **Infant Mortality** (infant deaths per 1000 live births).
+
+###### Key Insights:
+
+1. **Catholic and Infant Mortality (0.18):**
+   - There is a **positive correlation** of **0.18** between the **Catholic population** and **Infant Mortality**. While this is a weak correlation, it suggests that provinces with a higher percentage of Catholics tend to have slightly higher infant mortality rates.
+   - This positive correlation could be linked to cultural, religious, or socio-economic factors in predominantly Catholic regions that may affect infant mortality rates.
+
+2. **Catholic and Education (-0.15):**
+   - There is a **negative correlation** of **-0.15** between **Catholic population** and **Education**. Although the correlation is weak, it indicates that provinces with a higher percentage of Catholics tend to have slightly lower levels of education beyond primary school.
+   - This trend might reflect historical or cultural differences in access to education in Catholic regions.
+
+3. **Education and Infant Mortality (-0.099):**
+   - The **correlation between Education and Infant Mortality** is **-0.099**, which is also weak but negative. This indicates that provinces with higher levels of education tend to have slightly lower infant mortality rates.
+   - This finding suggests that increased education may have a minor protective effect on infant mortality, likely due to better healthcare knowledge or socioeconomic conditions associated with higher education levels.
+
+###### General Observations:
+
+- **Weak Correlations**: All correlations in the matrix are relatively weak (close to 0), indicating that there is no strong linear relationship between these variables. The weak positive correlation between **Catholic** and **Infant Mortality** is the highest, but still not strong.
+- **Cultural and Socio-Economic Factors**: The relationships between Catholicism, education, and infant mortality may be influenced by a variety of socio-economic and cultural factors that are not fully captured by these simple correlations.
+
+###### Conclusion:
+
+This correlation matrix reveals **weak associations** between **Catholic population**, **education**, and **infant mortality**. The slightly positive correlation between **Catholicism** and **infant mortality** suggests a possible link worth further investigation, while the negative correlation between **education** and **infant mortality** aligns with expectations that higher education may contribute to better health outcomes. However, the weak correlations indicate that other factors likely play a significant role in shaping these relationships.
+
+### Week 4 Conclusion 
+
+#### Python Basics and Data Analysis
+
+This week, we focused on several fundamental and advanced Python concepts, particularly in the context of data analysis, using libraries like `numpy`, `pandas`, `matplotlib`, and `seaborn`. Here’s a breakdown of the key areas covered:
+
+##### 1. Python Lists & Arrays
+- Practiced working with basic Python lists and `numpy` arrays for handling numerical computations.
+- Reinforced foundational Python skills by manipulating lists and performing basic array operations.
+
+```python
+# Example of using numpy arrays
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print(arr)
+```
+
+##### 2. DataFrames with Pandas
+- Explored `pandas` for creating and manipulating dataframes.
+- Extracted statistics from datasets and analyzed their structure using key functions like `describe()` and `info()`.
+
+```python
+# Creating a dataframe
+import pandas as pd
+data = {'Ozone': [41, 36, 12], 'Temp': [67, 72, 74]}
+df = pd.DataFrame(data)
+print(df.describe())
+```
+
+##### 3. Airquality Dataset Analysis
+- **Overview**: Analyzed air quality data in New York from May to September 1973, focusing on variables like ozone, temperature, and wind speed.
+- **Visualizations**: Created histograms and scatter plots to understand the distribution and relationships between these variables.
+- **Key Insights**:
+    - Higher temperatures correlated with higher ozone levels.
+    - Wind speeds showed a negative correlation with ozone concentration.
+    - Missing values in Ozone and Solar Radiation were identified as needing further handling.
+
+```python
+# Scatter plot of Temperature vs Ozone Levels
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.scatterplot(x='Temp', y='Ozone', data=df)
+plt.show()
+```
+
+##### 4. Swiss Dataset Analysis
+- **Overview**: Explored fertility and socio-economic factors in 47 Swiss provinces from 1888, examining variables like fertility, education, and Catholic population percentages.
+- **Visualizations**: Created visualizations like histograms and boxplots to understand the distribution of variables such as education and infant mortality.
+- **Correlation Analysis**: Investigated relationships between fertility, infant mortality, and Catholic population using a correlation matrix.
+- **Key Insights**:
+    - Higher fertility rates correlated with higher infant mortality.
+    - Catholic provinces tended to show higher fertility and infant mortality.
+    - Education was inversely correlated with infant mortality.
+
+```python
+# Correlation Matrix Heatmap
+corr = df[['Catholic', 'Education', 'Infant.Mortality']].corr()
+sns.heatmap(corr, annot=True)
+plt.show()
+```
+
+#### Conclusion
+This week was an in-depth exploration of Python’s capabilities for data analysis, focusing on extracting meaningful insights from real-world datasets. The work demonstrated strong relationships between environmental and socio-economic variables, using visualizations and statistical analysis to uncover trends. These skills are essential for further data-driven projects, offering opportunities for deeper exploration of historical datasets and environmental data.
