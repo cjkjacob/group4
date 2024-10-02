@@ -1,0 +1,10 @@
+---
+title: "Midterm_Graph"
+author: "Janice Oenardi"
+format: html
+editor: visual
+---
+
+## Graph
+
+![](./Economic_indicators.png) This graph illustrates the trends of various key economic indicators over time, including the Consumer Price Index, U.S. National Home Price Index, and Industrial Production Index, and Personal Saving Rate from 2014 to mid-2024,s providing insights into their fluctuations.
