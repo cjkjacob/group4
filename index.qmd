@@ -1,22 +1,67 @@
 # Project Scopes {.unnumbered}
 
-This is a Quarto book for Group 4. Below are the project scopes for each of the datasets chosen by the team. Essentially a general direction in which we will be using our datasets for the midterm project.
+This is a Quarto book for Group 4. 
 
-## Samuel Zelaya - NASA Earth Data {.unnumbered}
+## Final Project Scopes
+
+Below are the project scopes for each of the team members and their general aim for the final project.
+
+### Diego Mendoza - Energy Prices and Consumption Analysis {.unnumbered}
+- The purpose of this research is to explore the relationship between energy prices and consumption patterns, focusing on how changes in oil, natural gas, and electricity prices influence household and industrial energy usage. The study aims to identify trends in energy demand, consumption behaviors across different economic sectors, and the broader implications for energy policy and sustainability. The analysis will provide insights into the economic and environmental impacts of energy pricing strategies.
+  + Main objectives:
+    - Assess the effect of fluctuating energy prices on household and industrial energy consumption.
+    - Explore the role of energy efficiency initiatives in reducing consumption.
+    - Examine the relationship between energy prices and renewable energy adoption.
+
+---
+
+### Samuel Zelaya - Labor Market Dynamics Analysis {.unnumbered}
+- The purpose of this analysis is to understand the various factors influencing labor market dynamics in the U.S. economy. The research will focus on key variables such as employment levels, wage growth, labor force participation rates, and job openings to provide a comprehensive view of the labor market’s health and challenges. This study will explore the interaction between different labor indicators and their implications for businesses, job seekers, and policymakers.
+  + Key variables to be analyzed include:
+    - Unemployment rate: To understand periods of economic stress or growth.
+    - Labor force participation rate: To assess the engagement of the working-age population in the economy.
+    - Wage growth: To track how changes in wages reflect economic health and inflation.
+
+---
+
+### Janice Oenardi - Macroeconomic Analysis {.unnumbered}
+- This analysis will delve into macroeconomic data to evaluate the U.S. economy's overall performance. The focus will be on understanding key indicators such as GDP growth, inflation, unemployment, and interest rates to assess the state of the economy and predict future trends. The research will provide valuable insights into how macroeconomic factors interact and influence both domestic and global markets.
+  + The objectives of the project are:
+    - Examine GDP growth trends to understand economic expansion or contraction.
+    - Analyze inflation rates to track purchasing power and price stability.
+    - Study unemployment rates to assess labor market strength.
+    - Understand interest rate trends and their impact on economic activities like investment and consumption.
+
+---
+
+### Chris Jacob Karottukoikal - Education Spending and Outcomes Analysis {.unnumbered}
+- This project aims to explore the relationship between public education spending and economic outcomes such as employment rates, earnings, and labor force participation. By analyzing government expenditures on elementary, secondary, and higher education, the study will assess how investment in education impacts workforce readiness and economic mobility. The research will focus on identifying the return on investment in education and providing policy recommendations for improving educational systems.
+  + The project will focus on the following key areas:
+    - Analyze government spending trends across different education levels (elementary, secondary, higher).
+    - Assess labor force participation rates and unemployment rates for individuals with different educational attainments.
+    - Explore the median weekly earnings of high school graduates compared to college graduates.
+    - Understand the impact of education spending on youth unemployment rates and early career outcomes.
+
+
+## Midterm Project Scopes
+
+Below were the project scopes for each of the datasets chosen by the team. Essentially a general direction in which we will be using our datasets for the midterm project.
+
+### Samuel Zelaya - NASA Earth Data {.unnumbered}
 - The purpose of this research is to evaluate the impacts of climate change on crop yields, specifically in relation to changes in temperature and precipitation. The study aims to identify potential adaptations and variations in yields across different countries and regions. It provides valuable insights into global food supply, price fluctuations, and the risks of hunger exacerbated by climate changes
 
-## Janice Oenardi -  Federal Reserve Economic Data {.unnumbered}
+### Janice Oenardi -  Federal Reserve Economic Data {.unnumbered}
 - I chose the FRED source because I would like to delve more into the US economy to conduct economic analysis and financial research as a business major. Additionally, there are a lot of different datasets, including from different countries, that I an explore from the source. There are several objectives/purposes of the data set that can be relevant fo the mid-tern project. I can delve into the economic indicators over time, such as:
   + GDP Growth Rate: To observe economic expansion or contraction.
   + Unemployment Rate: To identify periods of high or low employment.
   + Inflation Rate: To detect inflationary or deflationary trends.
   + Interest Rates: To understand changes in the cost of borrowing.
 
-## Diego Mendoza - US Department of Agriculture Data {.unnumbered}
+### Diego Mendoza - US Department of Agriculture Data {.unnumbered}
 - The USDA supports agriculture, food safety, rural development, and environmental protection in the U.S., collecting data on crop production, soil quality, and food security to inform policy and guide farmers. Research from fields in North Dakota focuses on the effects of tillage and crop rotation on soil health, highlighting the benefits of reduced tillage and crop diversity. The data evaluates key soil properties like bulk density, organic carbon, and microbial biomass to assess the impact of these agricultural practices. The goal is to promote sustainable farming by understanding how different management systems affect soil quality and productivity over time.
   + Main objective: Assess the impact of tillage practices: Compare soil properties (e.g., bulk density, organic matter, pH) across different tillage systems (e.g., T1, T2) to determine how tillage affects soil health and suitability for agriculture.
 
-## Chris Jacob Karottukoikal - National Center for Education Statistics Data {.unnumbered}
+### Chris Jacob Karottukoikal - National Center for Education Statistics Data {.unnumbered}
 - The **National Center for Education Statistics (NCES)** is a key provider of data on education in the U.S., offering a vast array of longitudinal studies, surveys, and tools. The NCES collects comprehensive data that is useful for understanding student pathways, outcomes, and how factors such as socioeconomic status, race, and school characteristics impact education.
   + The goal of this midterm project is to analyze data from the **High School Longitudinal Study of 2009 (HSLS:09)** to explore how early exposure to STEM education affects future career outcomes. The project will focus on:
     - How students’ interest in STEM subjects during high school influences their college major and career choices.

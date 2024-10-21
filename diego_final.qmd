@@ -1,0 +1,107 @@
+# Energy Prices and Consumption Analysis - Diego Mendoza
+
+## Week 1 - 10/14 ~ 10/21
+
+### Energy Prices
+
+#### Context
+
+The Global Price of Energy Index (PNRGINDEXM) is a composite measure of global energy prices, using 2016 as the base year (index = 100). Published by the Federal Reserve Bank of St. Louis, with data from the International Monetary Fund (IMF), it provides insights into global energy price fluctuations, tracking key energy sources such as oil, natural gas, and coal. This index is updated monthly, reflecting the latest changes in global energy markets, allowing businesses, policymakers, and investors to make informed decisions about energy-dependent sectors.
+
+The data is significant for its role in guiding economic policy, as energy prices have a direct impact on inflation, business costs, and global economic stability. Rising energy prices can signal inflationary pressures, while declines can reflect decreased demand or increased supply. Understanding trends in energy prices helps businesses manage costs, governments formulate energy and fiscal policies, and investors adjust strategies in energy-dependent markets. Tracking this index is critical in today's interconnected and energy-driven global economy.
+
+##### Links
+
+- Data come from the Federal Reserve Economic Data (FRED), with the link: https://fred.stlouisfed.org/.
+
+The specific data set came from: 
+https://fred.stlouisfed.org/series/PNRGINDEXM
+
+#### 6Ws
+
+##### 1. Who:
+The data for the Global Price of Energy Index (PNRGINDEXM) is published by the Federal Reserve Bank of St. Louis on its FRED platform, one of the most trusted sources for economic data in the U.S. The underlying data is provided by the International Monetary Fund (IMF), a global financial institution focused on international economic stability. The IMF monitors global price indices for energy, which include oil, natural gas, and coal, and aggregates them into this index. Their methodology ensures reliable, high-quality data for economists and policymakers.
+
+##### 2. What:
+The Global Price of Energy Index measures the fluctuations in global energy prices relative to a base year, 2016. This index covers key energy sources like oil, natural gas, and coal, giving a composite view of energy price trends worldwide. The index is crucial for understanding how energy prices affect broader economic variables like inflation, production costs, and consumer prices. It also helps to gauge market reactions to geopolitical events and shifts in supply-demand dynamics.
+
+##### 3. When:
+The index is updated monthly, providing near-real-time insights into global energy prices. This frequent updating allows the data to reflect recent events, such as oil supply cuts or demand surges due to seasonal changes. Monthly data ensures that stakeholders—such as governments, businesses, and investors—can make timely decisions based on current energy prices. The availability of historical data also makes it easier to analyze long-term energy trends and to make future projections.
+
+##### 4. Where:
+The index is global, meaning it aggregates energy price data from major markets worldwide, including the U.S., Europe, Asia, and the Middle East. This gives a comprehensive view of how energy prices evolve across different regions and economies. Energy prices can be influenced by various global factors, including regional conflicts, trade policies, and local demand-supply imbalances. Therefore, tracking a global index allows for better understanding of energy price trends, as local indices might not capture broader international influences.
+
+##### 5. Why:
+Tracking global energy prices is vital due to energy's foundational role in every economy, from fueling transportation to powering industries. Fluctuations in energy prices affect inflation rates, consumer purchasing power, and even the cost structures of businesses. Policymakers monitor energy prices closely as changes can prompt adjustments in monetary and fiscal policies. Investors and financial analysts use this data to anticipate shifts in market sectors dependent on energy, such as utilities, transportation, and manufacturing.
+
+##### 6. How:
+The IMF calculates the index by aggregating prices for several energy sources, including crude oil, natural gas, and coal, and adjusting them to a common base year, 2016. This base year is assigned an index value of 100. Movements in the index reflect the weighted average of price changes across different energy sources. The methodology ensures consistency and comparability over time, providing a clear snapshot of energy price trends regardless of which energy source is driving the change.
+
+#### Variables You Can Use:
+
+Global Energy Index Value: The raw monthly index number, giving the price level relative to 2016.
+
+Percentage Change: The month-over-month or year-over-year change in the index, signaling trends in energy price inflation or deflation.
+
+Specific Energy Prices: Breakdown of prices for individual energy sources like oil, natural gas, or coal that feed into the overall index.
+
+Correlation with Macroeconomic Indicators: You can compare the index against variables like inflation, GDP growth, or commodity price indices to identify economic relationships.
+
+#### Real-World Significance:
+
+Economic Policy: Policymakers use the index to gauge energy's contribution to inflation, which can influence decisions on interest rates and taxation.
+Business Costs: Companies, especially in energy-intensive sectors like manufacturing or transportation, track energy prices to adjust production costs and pricing strategies.
+Environmental and Energy Policy: Governments can use the index to make decisions about subsidies or investments in renewable energy alternatives when traditional energy prices rise.
+Investment Strategies: Investors and analysts use the index to identify trends in energy stocks and commodities, helping them to time trades and manage risk in volatile markets.
+
+### Energy Consumption
+
+#### Context
+
+The Consumer Price Index for All Urban Consumers: Energy (CPIENGSL) measures changes in energy costs for urban households in the U.S., with data sourced from the Bureau of Labor Statistics (BLS). This index tracks price fluctuations for energy-related goods like gasoline, electricity, and fuel oil, using 1982-1984 as the base period (index = 100). Updated monthly, it reflects short-term and long-term trends in energy inflation, making it essential for assessing the impact of energy prices on consumer expenses and inflation.
+
+The CPI: Energy index provides insights into how energy prices affect the broader economy, especially for policymakers who need to gauge inflation and adjust monetary policies. Businesses use it to manage energy costs, while households monitor it to understand shifts in their living expenses. Energy prices, often volatile, have a direct impact on sectors like transportation, utilities, and manufacturing, making this index a vital tool for evaluating economic stability and forecasting inflationary pressures.
+
+##### Links
+
+Link to the data set is:
+https://fred.stlouisfed.org/series/CPIENGSL
+
+#### 6Ws
+
+##### Who:
+The data is published by the Federal Reserve Bank of St. Louis on the FRED platform, with the data source being the U.S. Bureau of Labor Statistics (BLS). The BLS is responsible for calculating and maintaining the Consumer Price Index (CPI), which covers various categories including energy. This index is widely used to track inflationary trends and assess cost-of-living changes. Economists, businesses, and policymakers rely on the BLS's standardized methodology for accurate pricing data.
+
+##### What:
+The Consumer Price Index: Energy measures changes in the price of energy goods and services consumed by urban households, including items like gasoline, fuel oil, and electricity. The index represents the average price change for these energy products, relative to a base period of 1982-1984, where the index is set to 100. This helps assess how energy prices have increased or decreased over time. It's important because energy is a volatile component of inflation, often causing price shocks that impact household budgets and business costs.
+
+##### When:
+The index is updated monthly, providing regular insights into how energy prices change from one period to the next. This timely data allows for the analysis of short-term trends, such as seasonal increases in fuel prices, as well as long-term trends driven by changes in energy production, consumption, and market disruptions. This frequency ensures the index captures immediate responses to global energy supply issues, regulatory changes, or geopolitical factors that can influence prices.
+
+##### Where:
+The CPI: Energy focuses on urban consumers in the United States, representing about 88% of the U.S. population. Urban consumers typically face more price volatility for energy due to transportation costs, infrastructure, and regional market conditions. Energy prices vary widely by region, but the national average presented in this index gives a broad sense of how energy prices are trending across the country. While it doesn’t cover rural areas, the index provides a useful benchmark for the overall energy cost landscape.
+
+##### Why:
+Energy prices are a crucial economic factor, as they directly affect household expenses, business operations, and the broader economy. The CPI: Energy is used to track inflation, especially core inflation when energy is excluded. Policymakers monitor this index to assess the impact of energy prices on the economy and to guide decisions related to energy policy, monetary policy, and fiscal interventions. For businesses, understanding energy price trends is essential for managing costs, pricing strategies, and investment decisions.
+
+##### How:
+The BLS calculates the CPI: Energy by tracking the prices of specific energy-related goods and services consumed by urban households. These include gasoline, electricity, natural gas, and fuel oil. Prices are collected from thousands of retail outlets across the country, and adjustments are made for seasonal variations. The index is then reported relative to the base period (1982-1984), making it easy to compare how current energy prices stack up against historical trends.
+
+#### Variables You Can Use:
+
+- Index Value: Represents the price level relative to the 1982-1984 baseline.
+Monthly Percentage Change: Measures the short-term variation in energy prices.
+
+- Year-Over-Year Change: Shows the longer-term trends in energy inflation.
+
+- Energy Subcategories: Prices of specific items like gasoline, electricity, or natural gas, which can help break down the broader energy inflation trends.
+
+#### Real-World Significance:
+
+Consumer Impact: Higher energy prices directly increase household expenses, especially for essentials like heating, cooling, and transportation.
+
+Inflation Tracking: Energy is a volatile component of inflation, and understanding its trends helps policymakers and economists gauge overall price stability.
+
+Business Costs: Energy prices are a major component of production costs for many industries, affecting profitability and pricing strategies.
+
+Policy Development: The index informs decisions on energy policy, tax incentives, and subsidies aimed at mitigating the impact of energy price shocks on consumers and businesses.

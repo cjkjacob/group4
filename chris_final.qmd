@@ -1,0 +1,150 @@
+# Education Spending and Outcomes Analysis - Chris Jacob Karottukoikal
+
+## Week 1 - 10/14 ~ 10/21
+
+**This analysis focuses on understanding the financial aspects of the U.S. education system, utilizing data from the Federal Reserve Economic Data (FRED). By analyzing several variables related to government spending, unemployment rates, and labor market participation, we aim to highlight the correlation between education investment and economic outcomes.** 
+
+The following key indicators will be examined:
+
+- Government Expenditures on Education: Elementary and Secondary
+- Labor Force Participation Rate - High School Graduates, No College, 25 Years and Over
+- Unemployment Rate - Less Than a High School Diploma, 25 Years and Over
+- Employed Full-Time: Median Weekly Earnings - High School Graduates
+- Government Expenditures on Higher Education
+- Unemployment Rate - Some College or Associate Degree
+- Youth Unemployment Rate (16-24 years old)
+
+**Access Link: [FRED](https://fred.stlouisfed.org/){target="blank"}**
+
+### Variables Selected
+
+---
+
+#### 1. Government Expenditures on Education: Elementary and Secondary
+
+- **Access Link**: [FRED - Elementary & Secondary Education Spending](https://fred.stlouisfed.org/series/G160301A027NBEA){target="blank"}
+- **Definition**: This variable tracks the annual state and local government spending on elementary and secondary education in billions of dollars. It highlights the investment made by governments to improve educational infrastructure and opportunities at the K-12 level.
+- **Contextual Significance**: Understanding this metric is essential for assessing how public investment in education impacts broader economic outcomes, particularly in labor force readiness and the quality of future workers.
+
+---
+
+#### 2. Labor Force Participation Rate - High School Graduates, No College, 25 Years and Over
+
+- **Access Link**: [FRED - Labor Force Participation Rate (High School Grads)](https://fred.stlouisfed.org/series/LNS11327660){target="blank"}
+- **Definition**: This data tracks the percentage of high school graduates, aged 25 and older, who participate in the labor force. It provides insight into the economic engagement of individuals who have not pursued post-secondary education.
+- **Contextual Significance**: By examining labor force participation rates, policymakers and educators can better understand how high school graduates fare in the job market and assess the need for further educational programs or job training.
+
+---
+
+#### 3. Unemployment Rate - Less Than a High School Diploma, 25 Years and Over
+
+- **Access Link**: [FRED - Unemployment Rate (Less Than High School Diploma)](https://fred.stlouisfed.org/series/LNS14027659){target="blank"}
+- **Definition**: This metric captures the unemployment rate for individuals aged 25 years and older who have not completed high school. It is reported monthly and seasonally adjusted to account for fluctuations.
+- **Contextual Significance**: Analyzing the unemployment rate for individuals with less than a high school diploma helps shed light on the economic challenges faced by those with lower educational attainment. This is crucial for understanding the return on investment in education and guiding educational reforms.
+
+---
+
+#### 4. Employed Full-Time: Median Weekly Earnings - High School Graduates
+
+- **Access Link**: [FRED - Median Weekly Earnings (High School Grads)](https://fred.stlouisfed.org/series/LEU0252917300Q){target="blank"}
+- **Definition**: This variable measures the median weekly earnings of full-time workers who have completed high school but have not attended college.
+- **Contextual Significance**: Earnings data is an essential aspect of understanding the economic returns of completing high school. This data informs decisions about the relative value of pursuing further education or vocational training.
+
+---
+
+#### 5. Government Expenditures on Higher Education
+
+- **Access Link**: [FRED - Government Expenditures on Higher Education](https://fred.stlouisfed.org/series/G161091A027NBEA){target="blank"}
+- **Definition**: This data shows the annual spending by state and local governments on higher education institutions such as colleges and universities.
+- **Contextual Significance**: Higher education spending impacts not only access to education but also the quality of education provided. It influences the workforce’s readiness for advanced job roles and can drive innovation in critical sectors of the economy.
+
+---
+
+#### 6. Unemployment Rate - Some College or Associate Degree, 25 Years and Over
+
+- **Access Link**: [FRED - Unemployment Rate (Some College)](https://fred.stlouisfed.org/series/LNS14027689){target="blank"}
+- **Definition**: This data tracks the unemployment rate for individuals who have attended some college or obtained an associate degree, but not a bachelor’s degree.
+- **Contextual Significance**: By analyzing this metric, we can understand how partial post-secondary education impacts employability and what gaps exist in the labor market for those with intermediate education levels.
+
+---
+
+#### 7. Youth Unemployment Rate (16-19 years old)
+
+- **Access Link**: [FRED - Youth Unemployment Rate](https://fred.stlouisfed.org/series/LNS14000012){target="blank"}
+- **Definition**: This data provides the unemployment rate for individuals aged 16 to 19, typically a reflection of young people entering the labor force, many of whom are recent high school graduates.
+- **Contextual Significance**: High youth unemployment can indicate challenges in the transition from school to work. It also helps in evaluating the effectiveness of education systems in preparing young people for the job market.
+
+---
+
+### Overall Contextual Significance
+
+The analysis aims to provide insights into the relationship between **government education spending** and **economic outcomes** such as labor force participation, unemployment rates, and median earnings across different education levels. By exploring these variables, we can assess the **return on investment** in education. This is crucial for understanding how public funding influences workforce readiness, employment stability, and the earnings potential of individuals at different levels of educational attainment. These insights have the potential to inform **policy decisions** on education reform, workforce development, and social equality.
+
+---
+
+### The 6 W's
+
+#### 1. Who:
+- The **primary stakeholders** are:
+  - **Students** at various education levels (high school, college, vocational training).
+  - **Governments** (local, state, and federal) responsible for allocating funds to educational institutions.
+  - **Policymakers** who make decisions on education and employment policies.
+  - **Employers** and the **workforce** affected by the quality of education provided.
+  - **Economists** and **researchers** analyzing the correlation between educational spending and economic returns.
+
+---
+
+#### 2. What:
+- This analysis focuses on key **financial and economic indicators** related to education:
+  - **Government expenditures** on elementary, secondary, and higher education.
+  - **Unemployment rates** segmented by educational attainment (less than high school, some college, etc.).
+  - **Labor force participation rates** for different education levels.
+  - **Median weekly earnings** for high school graduates without college education.
+- The **goal** is to understand how **public education spending** influences employment, earnings, and economic stability.
+
+---
+
+#### 3. Where:
+- The primary focus is on **the United States**, covering:
+  - **State and local government** education expenditures.
+  - **Labor market data** specific to U.S. residents aged 16 and over.
+  - The analysis draws on data from the **Federal Reserve Economic Data (FRED)** database, which provides a comprehensive view of national economic trends.
+- Some **global comparisons** (e.g., gender parity in education) may be referenced to assess the U.S. in a broader international context.
+
+---
+
+#### 4. When:
+- The data is **current** and **historical**, spanning from past decades up to the present.
+- This allows for:
+  - Analyzing **trends over time** in education spending, labor market outcomes, and economic stability.
+  - Identifying **recent shifts** in unemployment rates or labor force participation due to changes in government policy or economic conditions.
+- **Monthly and annual data** are used to provide both short-term and long-term perspectives.
+
+---
+
+#### 5. Why:
+- The **purpose** of this analysis is to:
+  - Examine the **effectiveness of government spending** on education and its impact on the economy.
+  - Identify whether higher investments in **education yield better employment outcomes** (e.g., lower unemployment rates, higher earnings).
+  - Understand which **education levels** (high school vs. college) benefit the most from public funding.
+  - Provide **actionable insights** for improving education policies, focusing on labor force readiness, job market integration, and economic prosperity.
+  - Help governments and policymakers **allocate resources efficiently** to improve educational outcomes and workforce competitiveness.
+
+---
+
+#### 6. How:
+- The analysis uses **data-driven methods**:
+  - **Federal Reserve Economic Data (FRED)** is the primary source of data for variables like government education spending, labor force participation, unemployment rates, and median earnings.
+  - **Comparative analysis** is done across education levels to assess their respective impacts on labor market outcomes.
+  - **Economic models** and statistical tools will likely be employed to establish relationships between education spending and economic outcomes (e.g., correlations, trends, and forecasts).
+- The **outcome** of this analysis provides a **holistic view** of how investments in education influence the national economy and provides a **roadmap for policymakers** to improve education systems based on financial and labor market data.
+
+---
+
+### Conclusion
+
+This breakdown reveals the **interconnected nature** of education spending and economic outcomes, emphasizing the need for a **data-driven approach** in evaluating how government investments in education translate to **real-world results**. Understanding these relationships helps policymakers prioritize education as a driver of economic stability and prosperity.
+
+It will provide a comprehensive view of how government spending on education and related economic factors interact. By examining labor force participation, unemployment rates, and earnings across educational levels, we gain critical insights into the **returns on education investments**. These insights can guide policymakers in designing interventions that improve employment outcomes, reduce unemployment, and enhance the overall quality of education across the country.
+
+**Access Link: [FRED Data Overview](https://fred.stlouisfed.org/){target="blank"}**

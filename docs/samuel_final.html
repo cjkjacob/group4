@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Labor Market Dynamics Analysis - Samuel Zelaya – CSC 477 - Group 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./janice_final.html" rel="next">
+<link href="./diego_final.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diego_final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./samuel_final.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CSC 477 - Group 4</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Scopes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diego_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Energy Prices and Consumption Analysis - Diego Mendoza</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./samuel_final.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./janice_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Macroeconomic Analysis - Janice Oenardi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chris_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Education Spending and Outcomes Analysis - Chris Jacob Karottukoikal</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Midterm</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diego.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">US Department of Agriculture - Diego Mendoza</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./samuel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">NASA Earth Data - Samuel Zelaya</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./janice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Federal Reserve Economic Data - Janice Oenardi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chris.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">National Center for Education Statistics - Chris Jacob</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#week-1---1014-1021" id="toc-week-1---1014-1021" class="nav-link active" data-scroll-target="#week-1---1014-1021"><span class="header-section-number">2.1</span> Week 1 - 10/14 ~ 10/21</a>
+  <ul class="collapse">
+  <li><a href="#unemployment-rate" id="toc-unemployment-rate" class="nav-link" data-scroll-target="#unemployment-rate"><span class="header-section-number">2.1.1</span> 1. Unemployment Rate</a></li>
+  <li><a href="#employment-level" id="toc-employment-level" class="nav-link" data-scroll-target="#employment-level"><span class="header-section-number">2.1.2</span> 2. Employment Level</a></li>
+  <li><a href="#labor-force-participation-rate" id="toc-labor-force-participation-rate" class="nav-link" data-scroll-target="#labor-force-participation-rate"><span class="header-section-number">2.1.3</span> 3. Labor Force Participation Rate</a></li>
+  <li><a href="#average-hourly-earnings" id="toc-average-hourly-earnings" class="nav-link" data-scroll-target="#average-hourly-earnings"><span class="header-section-number">2.1.4</span> 4. Average Hourly Earnings</a></li>
+  <li><a href="#job-openings" id="toc-job-openings" class="nav-link" data-scroll-target="#job-openings"><span class="header-section-number">2.1.5</span> 5. Job Openings</a></li>
+  <li><a href="#labor-force-participation-rate-by-gender" id="toc-labor-force-participation-rate-by-gender" class="nav-link" data-scroll-target="#labor-force-participation-rate-by-gender"><span class="header-section-number">2.1.6</span> 6. Labor Force Participation Rate by Gender</a></li>
+  <li><a href="#gross-domestic-product-gdp" id="toc-gross-domestic-product-gdp" class="nav-link" data-scroll-target="#gross-domestic-product-gdp"><span class="header-section-number">2.1.7</span> 7. Gross Domestic Product (GDP)</a></li>
+  <li><a href="#labor-underutilization-measures" id="toc-labor-underutilization-measures" class="nav-link" data-scroll-target="#labor-underutilization-measures"><span class="header-section-number">2.1.8</span> 8. Labor Underutilization Measures</a></li>
+  <li><a href="#the-5ws-of-labor-market-dynamics" id="toc-the-5ws-of-labor-market-dynamics" class="nav-link" data-scroll-target="#the-5ws-of-labor-market-dynamics"><span class="header-section-number">2.1.9</span> 9. The 5Ws of Labor Market Dynamics</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diego_final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./samuel_final.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-1---1014-1021" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="week-1---1014-1021"><span class="header-section-number">2.1</span> Week 1 - 10/14 ~ 10/21</h2>
+<p><strong>Understanding labor market dynamics is essential for analyzing the nation’s economic health. This analysis utilizes data from the Federal Reserve Economic Data (FRED) to explore significant variables that impact the U.S. labor market. so I compiled a series of variables and merged them together in an excel file containing The following key indicators that we will examine:</strong></p>
+<ul>
+<li>Unemployment Rate</li>
+<li>Employment Level</li>
+<li>Labor Force Participation Rate</li>
+<li>Average Hourly Earnings</li>
+<li>Job Openings</li>
+<li>Labor Force Participation Rate by Gender</li>
+<li>Gross Domestic Product (GDP)</li>
+<li>Labor Underutilization Measures</li>
+</ul>
+<p><strong>By analyzing these variables, we aim to provide insights into the current state and long-term trends of the labor market, highlighting the interactions between these factors and their implications for policymakers, businesses, and job seekers.</strong></p>
+<p><strong>Access Link: <a href="https://fred.stlouisfed.org/">FRED</a></strong></p>
+<hr>
+<section id="unemployment-rate" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="unemployment-rate"><span class="header-section-number">2.1.1</span> 1. Unemployment Rate</h3>
+<p>The Unemployment Rate (percent, seasonally adjusted) is a critical indicator of labor market conditions. The data is sourced from the U.S. Bureau of Labor Statistics as part of their Employment Situation report and is calculated monthly. Here’s a breakdown of the key components:</p>
+<ul>
+<li><strong>Access Link</strong>:<a href="https://fred.stlouisfed.org/series/UNRATE" class="uri">https://fred.stlouisfed.org/series/UNRATE</a></li>
+<li><strong>Definition</strong>: The unemployment rate represents the percentage of the labor force that is unemployed. It is calculated by dividing the number of unemployed individuals by the total labor force. This data is specific to individuals 16 years and older who reside in one of the 50 U.S. states or the District of Columbia. The population is limited to non-institutionalized individuals and those not serving in the armed forces.</li>
+<li><strong>Seasonally Adjusted</strong>: The adjustment accounts for predictable seasonal fluctuations, making the data more accurate for month-to-month comparisons.</li>
+<li><strong>U-3 Measure</strong>: This is the official unemployment rate as defined by the Bureau of Labor Statistics. It is also referred to as a measure of labor underutilization, focusing on people who are actively seeking and available for work.</li>
+<li><strong>Significance</strong>: As one of the most closely followed indicators, the unemployment rate helps assess the overall health of the economy. Changes in the rate can signal shifts in economic conditions, labor market tightness, or broader economic challenges.</li>
+</ul>
+</section>
+<section id="employment-level" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="employment-level"><span class="header-section-number">2.1.2</span> 2. Employment Level</h3>
+<p>The Employment Level (measured in thousands of persons and seasonally adjusted) is another important labor market indicator provided by the U.S. Bureau of Labor Statistics through its Employment Situation report. Here’s an overview of the key components:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/CE16OV" class="uri">https://fred.stlouisfed.org/series/CE16OV</a></li>
+<li><strong>Definition</strong>: The employment level indicates the total number of employed persons in the civilian noninstitutional population. This population includes individuals who are 16 years and older and reside in one of the 50 U.S. states or the District of Columbia. It excludes individuals who are inmates of institutions (such as penal or mental facilities), those living in long-term care facilities, and those on active duty in the Armed Forces.</li>
+<li><strong>Seasonally Adjusted</strong>: Seasonal adjustments are made to account for regular seasonal variations in employment, allowing for more accurate comparisons across different months.</li>
+<li><strong>Significance</strong>: Tracking the employment level helps economists and policymakers gauge the health of the job market. An increasing employment level generally indicates economic growth and labor market strength, while a declining level may signal economic challenges.</li>
+</ul>
+</section>
+<section id="labor-force-participation-rate" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="labor-force-participation-rate"><span class="header-section-number">2.1.3</span> 3. Labor Force Participation Rate</h3>
+<p>The Labor Force Participation Rate (percent, seasonally adjusted) is a vital economic indicator that provides insights into the engagement of the working-age population in the labor market. Here’s a detailed overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/CIVPART" class="uri">https://fred.stlouisfed.org/series/CIVPART</a></li>
+<li><strong>Definition</strong>: The Labor Force Participation Rate (LFPR) is defined as the percentage of the civilian noninstitutional population that is either employed or actively seeking employment. Specifically, it includes individuals aged 16 and older who reside in the 50 states or the District of Columbia, excluding those who are institutionalized or on active military duty.</li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for predictable fluctuations in labor force participation due to seasonal factors (like holidays or school schedules), allowing for more accurate month-to-month comparisons.</li>
+<li><strong>Significance</strong>: The LFPR is an important measure for economists, policymakers, and financial markets. It provides insights into the overall health of the economy. A rising participation rate can indicate increasing confidence in the job market, while a declining rate may suggest economic challenges or shifts in demographic trends.</li>
+<li><strong>Long-Run Trends</strong>: Changes in the LFPR over time can reflect broader economic and demographic trends. For example, an aging population may contribute to a decrease in the participation rate as more individuals retire and exit the labor force, which is not necessarily indicative of economic decline.</li>
+</ul>
+</section>
+<section id="average-hourly-earnings" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="average-hourly-earnings"><span class="header-section-number">2.1.4</span> 4. Average Hourly Earnings</h3>
+<p>The Average Hourly Earnings of Production and Nonsupervisory Employees (measured in dollars per hour and seasonally adjusted) is a key economic indicator that reflects wage trends in the private sector. Here’s a detailed overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/AHETPI" class="uri">https://fred.stlouisfed.org/series/AHETPI</a></li>
+<li><strong>Definition</strong>:
+<ul>
+<li><strong>Scope</strong>: This measure includes the average hourly earnings for all production and related employees, as well as nonsupervisory employees in total private industries. It covers a wide range of occupations, including but not limited to:
+<ul>
+<li>Production Employees: Those involved in fabricating, processing, assembling, inspecting, and related activities.</li>
+<li>Nonsupervisory Employees: This group encompasses individuals in private service-providing industries who do not hold supervisory roles. Examples include office and clerical workers, repairers, salespersons, drivers, nurses, teachers, custodial workers, and more.</li>
+</ul></li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The figures are seasonally adjusted to account for regular fluctuations in employment and wage levels that occur throughout the year (e.g., holiday hiring or seasonal layoffs), making it easier to analyze month-to-month changes.</li>
+<li><strong>Frequency</strong>: Data is reported on a monthly basis, providing timely insights into wage trends.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Wage Trends</strong>: Average hourly earnings are crucial for understanding wage growth and inflationary pressures in the economy. Rising average hourly earnings can indicate a tightening labor market, where employers must raise wages to attract and retain workers.</li>
+<li><strong>Economic Indicator</strong>: This measure is widely used by economists, policymakers, and financial analysts to gauge the overall health of the labor market and economic conditions. Higher wages typically lead to increased consumer spending, which is a significant driver of economic growth.</li>
+</ul></li>
+</ul>
+</section>
+<section id="job-openings" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="job-openings"><span class="header-section-number">2.1.5</span> 5. Job Openings</h3>
+<p>Job Openings (measured in thousands, seasonally adjusted) is a critical labor market indicator that provides insights into the demand for labor. Here’s an overview of the key elements:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/JTSJOL" class="uri">https://fred.stlouisfed.org/series/JTSJOL</a></li>
+<li><strong>Definition</strong>:
+<ul>
+<li><strong>Total Nonfarm Job Openings</strong>: This metric represents the total number of unfilled jobs on the last business day of the month across all nonfarm sectors. A job is classified as open if:
+<ul>
+<li>A specific position exists and there is work available for it.</li>
+<li>The job can commence within 30 days.</li>
+<li>Active recruiting efforts are underway for the position.</li>
+</ul></li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for regular patterns in job openings that occur throughout the year, making it easier to analyze trends over time.</li>
+<li><strong>Frequency</strong>: The data is reported on a monthly basis, providing timely updates on job market conditions.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Indicator of Labor Demand</strong>: Job openings are a key indicator of unmet demand for labor and can reflect labor shortages. A high number of job openings suggests a tight labor market, where employers may struggle to find suitable candidates.</li>
+<li><strong>Economic Analysis</strong>: Economists, government officials, and researchers use job openings data to gauge the overall health of the labor market. Increases in job openings can signal economic growth, while declines may indicate economic slowdowns or shifts in demand for certain types of labor.</li>
+</ul></li>
+</ul>
+</section>
+<section id="labor-force-participation-rate-by-gender" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="labor-force-participation-rate-by-gender"><span class="header-section-number">2.1.6</span> 6. Labor Force Participation Rate by Gender</h3>
+<p><strong>Labor Force Participation Rate - Men</strong></p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/LNS11300001" class="uri">https://fred.stlouisfed.org/series/LNS11300001</a></li>
+<li><strong>Definition</strong>: The percentage of men aged 16 and older who are either employed or actively seeking employment.</li>
+<li><strong>Significance</strong>:<br>
+The LFPR serves as a key economic indicator, reflecting the health of the labor market; higher rates generally suggest a robust economy. It also provides insights into policy effectiveness, highlights gender disparities in workforce engagement, and signals shifts in industry demand.</li>
+</ul>
+<p><strong>Labor Force Participation Rate - Women</strong></p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/LNS11300002" class="uri">https://fred.stlouisfed.org/series/LNS11300002</a></li>
+<li><strong>Definition</strong>: The percentage of women aged 16 and older who are either employed or actively seeking employment.</li>
+<li><strong>Significance</strong>:<br>
+The LFPR is a crucial economic indicator, revealing insights about the labor market’s health and women’s engagement in the workforce. Changes in this rate can reflect shifts in economic conditions, societal norms, and policy effectiveness, providing a better understanding of gender dynamics in employment.</li>
+</ul>
+</section>
+<section id="gross-domestic-product-gdp" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="gross-domestic-product-gdp"><span class="header-section-number">2.1.7</span> 7. Gross Domestic Product (GDP)</h3>
+<p>The Gross Domestic Product (GDP) is a comprehensive measure of economic activity that reflects the total value of goods and services produced in a country. Here’s an overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/GDP" class="uri">https://fred.stlouisfed.org/series/GDP</a></li>
+<li><strong>Definition</strong>: GDP is defined as the total market value of all final goods and services produced within a country’s borders in a given time period, typically measured quarterly or annually.</li>
+<li><strong>Components</strong>: GDP can be expressed through three main approaches:
+<ul>
+<li><strong>Production Approach</strong>: Calculates GDP as the sum of the value added at each stage of production.</li>
+<li><strong>Income Approach</strong>: Measures GDP as the total income earned by factors of production, including wages, profits, rents, and taxes, minus subsidies.</li>
+<li><strong>Expenditure Approach</strong>: Computes GDP by adding up all expenditures made in the economy, including consumption, investment, government spending, and net exports.</li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for predictable fluctuations in economic activity throughout the year.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Economic Health</strong>: GDP is one of the most critical indicators of economic health, providing insights into the overall economic performance and growth trends. It reflects the strength or weakness of the economy, influencing policy decisions and investment strategies.</li>
+<li><strong>Comparison Across Time and Geography</strong>: GDP enables comparisons of economic performance over time and between different countries, regions, or economic sectors.</li>
+</ul></li>
+</ul>
+</section>
+<section id="labor-underutilization-measures" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="labor-underutilization-measures"><span class="header-section-number">2.1.8</span> 8. Labor Underutilization Measures</h3>
+<p>Labor underutilization measures provide insights into various forms of labor market slack, reflecting the challenges faced by workers. The primary measures include:</p>
+<p><strong>Access Link</strong> : <a href="https://www.bls.gov/lau/stalt.htm" class="uri">https://www.bls.gov/lau/stalt.htm</a></p>
+<ul>
+<li><p><strong>U-1</strong>: Persons unemployed for 15 weeks or longer, as a percentage of the civilian labor force.</p></li>
+<li><p><strong>U-2</strong>: Job losers and persons who completed temporary jobs, as a percentage of the civilian labor force.</p></li>
+<li><p><strong>U-3</strong>: The official unemployment rate, as defined by the Bureau of Labor Statistics.</p></li>
+<li><p><strong>U-4</strong>: Total unemployed plus discouraged workers, as a percentage of the civilian labor force plus discouraged workers.</p></li>
+<li><p><strong>U-5</strong>: Total unemployed, plus discouraged workers, plus all other persons marginally attached to the labor force, as a percentage of the civilian labor force plus all persons marginally attached to the labor force.</p></li>
+<li><p><strong>U-6</strong>: Total unemployed, plus all persons marginally attached to the labor force, plus total employed part-time for economic reasons, as a percentage of the civilian labor force plus all persons marginally attached to the labor force.</p></li>
+<li><p><strong>Significance</strong>: Labor underutilization measures provide a more comprehensive view of labor market conditions by accounting for individuals who are unemployed, underemployed, or discouraged from seeking work. They are vital for understanding the true state of the labor market and the challenges faced by various groups of workers.</p></li>
+</ul>
+<hr>
+</section>
+<section id="the-5ws-of-labor-market-dynamics" class="level3" data-number="2.1.9">
+<h3 data-number="2.1.9" class="anchored" data-anchor-id="the-5ws-of-labor-market-dynamics"><span class="header-section-number">2.1.9</span> 9. The 5Ws of Labor Market Dynamics</h3>
+<section id="who" class="level4" data-number="2.1.9.1">
+<h4 data-number="2.1.9.1" class="anchored" data-anchor-id="who"><span class="header-section-number">2.1.9.1</span> Who</h4>
+<p>The analysis involves key stakeholders, including:</p>
+<ul>
+<li><strong>Policymakers</strong>: Government officials making decisions on economic policies.</li>
+<li><strong>Businesses</strong>: Employers seeking to understand labor market conditions for strategic planning.</li>
+<li><strong>Job Seekers</strong>: Individuals searching for employment opportunities.</li>
+<li><strong>Economists and Researchers</strong>: Analysts studying labor market trends and implications.</li>
+</ul>
+</section>
+<section id="what" class="level4" data-number="2.1.9.2">
+<h4 data-number="2.1.9.2" class="anchored" data-anchor-id="what"><span class="header-section-number">2.1.9.2</span> What</h4>
+<p>The focus is on key labor market indicators, including:</p>
+<ol type="1">
+<li><strong>Unemployment Rate</strong>: Percentage of the labor force that is unemployed.</li>
+<li><strong>Employment Level</strong>: Total number of employed persons in the civilian noninstitutional population.</li>
+<li><strong>Labor Force Participation Rate</strong>: Percentage of the working-age population engaged in the labor market.</li>
+<li><strong>Average Hourly Earnings</strong>: Wage trends in the private sector.</li>
+<li><strong>Job Openings</strong>: Demand for labor represented by unfilled jobs.</li>
+<li><strong>Labor Force Participation Rate by Gender</strong>: Employment engagement metrics disaggregated by gender.</li>
+<li><strong>Gross Domestic Product (GDP)</strong>: Measure of overall economic activity.</li>
+<li><strong>Labor Underutilization Measures</strong>: Insights into various forms of labor market slack.</li>
+</ol>
+</section>
+<section id="when" class="level4" data-number="2.1.9.3">
+<h4 data-number="2.1.9.3" class="anchored" data-anchor-id="when"><span class="header-section-number">2.1.9.3</span> When</h4>
+<p>The analysis will use data sourced from:</p>
+<ul>
+<li><strong>Current Population Survey (CPS)</strong>: Monthly data collected from about 60,000 households.</li>
+<li><strong>Current Employment Statistics (Establishment Survey)</strong>: Monthly employment and wage data.</li>
+<li><strong>Job Openings and Labor Turnover Survey (JOLTS)</strong>: Monthly data on job openings and labor turnover.</li>
+<li><strong>Bureau of Economic Analysis (BEA)</strong>: Quarterly and annual GDP data.</li>
+</ul>
+</section>
+<section id="where" class="level4" data-number="2.1.9.4">
+<h4 data-number="2.1.9.4" class="anchored" data-anchor-id="where"><span class="header-section-number">2.1.9.4</span> Where</h4>
+<p>The data pertains to:</p>
+<ul>
+<li>The <strong>United States</strong>, specifically focusing on the labor market conditions within the 50 states and the District of Columbia.</li>
+</ul>
+</section>
+<section id="why" class="level4" data-number="2.1.9.5">
+<h4 data-number="2.1.9.5" class="anchored" data-anchor-id="why"><span class="header-section-number">2.1.9.5</span> Why</h4>
+<p>Understanding these labor market dynamics is vital for:</p>
+<ul>
+<li><p><strong>Economic Health Assessment</strong>: Evaluating the overall economy’s performance.</p></li>
+<li><p><strong>Policy Development</strong>: Informing decisions on labor-related policies.</p></li>
+<li><p><strong>Business Strategy</strong>: Helping companies navigate labor market conditions for hiring and compensation strategies.</p></li>
+<li><p><strong>Job Seekers</strong>: Empowering individuals to make informed career choices based on market trends.</p></li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./diego_final.html" class="pagination-link" aria-label="Energy Prices and Consumption Analysis - Diego Mendoza">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Energy Prices and Consumption Analysis - Diego Mendoza</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./janice_final.html" class="pagination-link" aria-label="Macroeconomic Analysis - Janice Oenardi">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Macroeconomic Analysis - Janice Oenardi</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

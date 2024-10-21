@@ -1,0 +1,57 @@
+# Macroeconomic Analysis - Janice Oenardi
+
+## Week 1 - 10/14/24 ~ 10/21/24
+
+Our group chose the Federal Reserve Economic Data (FRED) data source, with the link: <https://fred.stlouisfed.org/>, because we would like to delve more into the US economy to conduct economic analysis and financial research. Our group think that the data set contains lots of information that we can draw meaningful relationships and significance to explore. Additionally, there are a lot of different data sets under different sections, which enable us to explore different aspects of the US economy including: macroeconomic analysis, energy prices and consumption, labor market dynamics, and education spending and outcomes. 
+
+
+### Context of the FRED Dataset for Macroeconomic Analysis
+The Federal Reserve Economic Data (FRED) is a database maintained by the Research division of the Federal Reserve Bank of St. Louis that has more than 816,000 economic time series from various sources, making it a crucial resource for economists, researchers, and policymakers to analyze economic trends and make informed decisions regarding the U.S. economy; essentially, it's a central repository for a wide range of economic data, allowing users to easily compare and visualize different economic indicators over time.
+
+### Who uses the data?
+
+Economists, policy makers, business leaders/owners, researchers, financial market analysts, and students can use the FRED data. 
+
+### What does the FRED offer? What does the dataset include?
+
+FRED contains frequently updated US macro and regional economic time series at annual, quarterly, monthly, weekly, and daily frequencies. The FRED data source has time series data from mid 1900s and up to the most recent days in 2024. FRED aggregates economic data from a variety of sources, most of which are US government agencies including the Bureau of Labor Statistics, Census Bureau, and other national and international organizations. Some topics that the FRED provide data on include GDP, employment rate, inflation rate, housing price index, trade, and more.
+
+Some aspects that we can explore and the variables to look into to conduct macroeconomic analysis are:
+
+#### Inflation
+
+- **10-Year Breakeven Inflation Rate**: represents the market's expectation for the average annual inflation over the next ten years. Break-even inflation is the difference between the nominal yield on a fixed-rate investment and the real yield (fixed spread) on an inflation-linked investment of similar maturity and credit quality.
+
+#### National Income
+
+- **Nominal Gross Domestic Product (GPD)**: to track the  total market value  of all finished goods and services produced within a country's borders in a specific period.
+
+- **Real Personal Income**: adjusted for inflation, it measures the purchasing power of individuals.
+
+#### Fiscal Policy
+- **Consumer Confidence Index (CCI)**: reflects consumers' level of optimism about the performance of the economy.
+
+- **Federal Debt: Total Public Debt as Percent of Gross Domestic Product**: tracks the government's debt level in relation to the GDP (economic output).
+
+- **Federal Government Current Receipts**: tracks the total money the federal government obtains from taxes.
+
+#### Employment levels
+
+- **Unemployment Rate**: the percentage of the total labor force that is unemployed but actively seeking employment.
+
+#### International trade
+
+- **Trade Balance: Goods and Services, Balance of Payments Basis**: the difference between a country's value of exports and imports of goods and services over a specific period of time.
+
+
+#### Where is the data from?
+
+The data is taken from reputable organizations such as the U.S. Bureau of Labor Statistics (BLS), Bureau of Economic Analysis (BEA), Federal Reserve Board, World Bank, and other national and global reputable organizations.
+
+#### Why is the FRED important?
+
+The FRED offers reliable, intensive, and broad database for analyzing and visualizing key economic indicators, which can help make data-driven and more informed decisions regarding business strategies, investment, and monetary/public policy.
+
+#### Significance in the real world
+
+Inflation affects purchasing power of consumers, interest rates, wages, and more. Analyzing inflation can help to anticipate inflationary pressures, which would affect the whole economy in various industries. Secondly, the national income measures the overall health of a country financially by providing insight onto the citizen's economic well-being. Additionally, the fiscal policy variables influence stability and growth by affecting tax income, debt level, government spending, investments, and more. Furtermore, employment levels are a key indicator of the economic health, as it influences consumer spenidng and business investments. Lastly, international trade shows the country's global economic imports and exports and helps to understand a country's competitiveness.

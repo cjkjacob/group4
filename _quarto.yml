@@ -8,10 +8,18 @@ book:
   date: "8/31/2024"
   chapters:
     - index.qmd
-    - diego.qmd
-    - samuel.qmd
-    - janice.qmd
-    - chris.qmd
+    - part: "Final Project"
+      chapters:
+        - diego_final.qmd
+        - samuel_final.qmd
+        - janice_final.qmd
+        - chris_final.qmd
+    - part: "Midterm"
+      chapters: 
+        - diego.qmd
+        - samuel.qmd
+        - janice.qmd
+        - chris.qmd
 
 bibliography: references.bib
 
