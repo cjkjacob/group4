@@ -1,6 +1,12 @@
+---
+execute:
+  echo: false
+jupyter: python3
+---
+
 # Education Spending and Outcomes Analysis - Chris Jacob Karottukoikal
 
-## Week 1 - 10/14 ~ 10/21
+## Week 1 - 10/14 ~ 10/20
 
 **This analysis focuses on understanding the financial aspects of the U.S. education system, utilizing data from the Federal Reserve Economic Data (FRED). By analyzing several variables related to government spending, unemployment rates, and labor market participation, we aim to highlight the correlation between education investment and economic outcomes.** 
 
@@ -148,3 +154,151 @@ This breakdown reveals the **interconnected nature** of education spending and e
 It will provide a comprehensive view of how government spending on education and related economic factors interact. By examining labor force participation, unemployment rates, and earnings across educational levels, we gain critical insights into the **returns on education investments**. These insights can guide policymakers in designing interventions that improve employment outcomes, reduce unemployment, and enhance the overall quality of education across the country.
 
 **Access Link: [FRED Data Overview](https://fred.stlouisfed.org/){target="blank"}**
+
+
+## Week 2 - 10/21 ~ 10/27
+
+Here are the visualizations for this week.
+
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+# Load the data
+data = pd.read_excel(r".\EducationalSpendingFinalProject.xlsx", sheet_name="Annual")
+
+# Filter data for the last 20 years
+data['DATE'] = pd.to_datetime(data['DATE'])
+recent_data = data[data['DATE'] >= data['DATE'].max() - pd.DateOffset(years=20)]
+
+# Plotting with colors
+fig1 = go.Figure()
+fig1.add_trace(go.Scatter(
+    x=recent_data['DATE'],
+    y=recent_data['Government current expenditures: Education: Elementary and secondary'],
+    mode='lines',
+    name='Elementary & Secondary Education Expenditures',
+    line=dict(color='royalblue', width=3)
+))
+fig1.add_trace(go.Scatter(
+    x=recent_data['DATE'],
+    y=recent_data['Government current expenditures: State and local: Education: Higher'],
+    mode='lines',
+    name='Higher Education Expenditures',
+    line=dict(color='firebrick', width=3)
+))
+
+# Update layout with contrasting colors and improved readability
+fig1.update_layout(
+    title='Trends in Government Education Expenditures (Last 20 Years)',
+    xaxis_title='Year',
+    yaxis_title='Expenditure (Billions)',
+    template='plotly_dark',
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='black'),
+    legend=dict(bgcolor='rgba(0,0,0,0)', bordercolor="White", borderwidth=1)
+)
+
+fig1.show()
+
+```
+
+### Key Observations and Differences for Plot 1
+
+#### Key Insights
+
+Here are some key insights and observations from Plot 1, which compares government expenditures on elementary & secondary education versus higher education over the last 20 years:
+
+- **Consistent Growth in Elementary & Secondary Education Spending**: Expenditures on elementary and secondary education have shown steady growth, reaching significantly higher levels compared to higher education spending. This indicates a consistent prioritization of foundational education in government budgets.
+
+- **Higher Education Spending Lagging Behind**: While spending on higher education has also grown, it remains much lower than that for elementary and secondary education. This suggests that government investment is disproportionately concentrated in K-12 education compared to tertiary education.
+
+- **Diverging Trends**: The gap between elementary & secondary education spending and higher education spending has widened over the last two decades. This widening gap may indicate a strategic decision to focus more resources on earlier education levels rather than higher education.
+
+- **Plateau in Growth During the Mid-2010s**: There appears to be a period around 2010-2015 where the growth in expenditures on elementary and secondary education slows down or flattens slightly. This may reflect economic conditions, policy shifts, or budget reallocations during that period.
+
+- **Accelerated Increase in Recent Years**: Both spending categories show an uptick in growth in the most recent years, possibly due to recent educational reforms, increases in funding for education, or response to demands for better educational outcomes.
+
+These observations suggest that the government has placed sustained emphasis on foundational education, with limited, yet growing, investments in higher education. This pattern could have implications for workforce readiness and the accessibility of higher education for students.
+
+### Key Differences in Spending
+
+- **Magnitude of Investment**: Elementary & secondary education consistently receives a much larger share of government expenditures than higher education. This suggests that foundational education is prioritized in public spending, possibly due to its universal coverage and critical role in building basic literacy and skills across the population.
+
+- **Growth Rate Differences**: While both categories show an upward trend, elementary & secondary education spending has a sharper growth trajectory. In contrast, higher education spending, though increasing, is at a much slower rate, indicating that higher education is not expanding proportionately in the budget relative to K-12 education.
+
+- **Widening Gap Over Time**: Over the last two decades, the difference between the two spending levels has not only persisted but widened. This growing gap suggests a long-term policy focus on primary and secondary education, possibly at the expense of investment in higher education infrastructure, affordability, and access.
+
+- **Impact of Economic or Policy Shifts**: The flat or slower growth phase around the mid-2010s for elementary & secondary education spending indicates a possible reallocation or constraint in resources, which affected K-12 more significantly than higher education spending during that period. However, after this plateau, spending in K-12 appears to resume a strong upward trend, while higher education maintains a steadier, less variable increase.
+
+- **Recent Acceleration in Spending**: Both categories show an uptick in the most recent years, but elementary & secondary education’s increase is more pronounced. This could reflect targeted policy changes to address educational challenges or reinforce the quality of primary and secondary education. The less dramatic increase in higher education spending suggests that recent policies may still prioritize K-12 improvements rather than expanding higher education funding.
+
+These differences highlight a distinct strategic focus: prioritizing broad-based, foundational education to ensure a well-prepared general population, with less emphasis on increasing access or funding for tertiary education. This approach could influence workforce skill levels and economic mobility, as access to higher education is often associated with better economic outcomes.
+
+---
+
+
+```{python}
+import plotly.express as px
+
+# Prepare data for proportions
+data['Total Expenditures'] = data['Government current expenditures: Education: Elementary and secondary'] + data['Government current expenditures: State and local: Education: Higher']
+data['Elementary & Secondary (%)'] = data['Government current expenditures: Education: Elementary and secondary'] / data['Total Expenditures'] * 100
+data['Higher Education (%)'] = data['Government current expenditures: State and local: Education: Higher'] / data['Total Expenditures'] * 100
+
+# Melt data for easier plotting
+melted_data = data.melt(id_vars=['DATE'], value_vars=['Elementary & Secondary (%)', 'Higher Education (%)'],
+                        var_name='Education Level', value_name='Percentage')
+
+# Stacked bar chart with enhanced colors
+fig2 = px.bar(
+    melted_data, x='DATE', y='Percentage', color='Education Level',
+    title='Proportional Education Spending Over Time',
+    labels={'DATE': 'Year', 'Percentage': 'Spending Proportion (%)'},
+    color_discrete_map={'Elementary & Secondary (%)': 'dodgerblue', 'Higher Education (%)': 'crimson'},
+    template='plotly_dark'
+)
+
+# Update layout for readability
+fig2.update_layout(
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='black'),
+    xaxis=dict(tickangle=-45),
+    legend=dict(bgcolor='rgba(0,0,0,0)', bordercolor="White", borderwidth=1)
+)
+
+fig2.show()
+
+```
+
+### Key Observations and Differences for Plot 2
+
+Here are key observations and differences based on Plot 2, which illustrates the proportional spending on elementary & secondary education versus higher education over time:
+
+#### Key Observations
+
+- **Dominance of Elementary & Secondary Education Spending**: The majority of education spending consistently goes to elementary and secondary education, as indicated by the larger blue sections. This shows a longstanding priority for foundational education within the government budget.
+
+- **Relatively Stable Proportions**: Over time, the proportions have been relatively consistent, with elementary and secondary education occupying roughly 80-90% of the budget. This suggests limited reallocation within the education budget toward higher education over the years.
+
+- **Slight Decline in Elementary & Secondary Proportion in Recent Decades**: There is a very gradual decline in the proportion allocated to elementary and secondary education, allowing a small increase in the share for higher education. This shift, though minor, may reflect a growing recognition of the importance of tertiary education in recent years.
+
+- **Minimal Variation in Higher Education Share**: The red section (higher education) shows limited fluctuation, staying within a narrow band of 10-20% of the total budget. This reflects a sustained, albeit modest, commitment to higher education without significant increases over time.
+
+- **Subtle Response to Economic Shifts**: The slight changes in proportions over certain periods, such as around the 1980s and early 2000s, could indicate responses to economic conditions, but overall, the proportions appear resilient to short-term fluctuations.
+
+#### Key Differences
+
+- **Proportionally Larger Investment in K-12**: The consistently larger blue section illustrates the government's focus on elementary and secondary education as a fundamental aspect of public spending. Higher education consistently receives a much smaller proportion, highlighting a clear funding priority.
+
+- **Stability vs. Gradual Shift**: The proportion of elementary and secondary spending is relatively stable but shows a slow downward trend, allowing a marginal increase in the higher education proportion. This shift is subtle, suggesting incremental changes rather than a significant policy shift.
+
+- **Higher Education's Limited Growth in Proportion**: Despite some increase in recent years, higher education’s budget share remains limited, reflecting possible constraints or a lack of substantial policy movement toward expanding tertiary education funding within the public budget.
+
+- **Consistency Across Economic Periods**: Elementary and secondary education's spending share remains robust across different economic phases (e.g., recessions or booms), indicating that foundational education funding is a more resilient priority. Higher education, while stable, does not show notable growth during favorable economic periods.
+
+- **Allocation Priorities**: The sustained focus on K-12 funding over higher education may reflect priorities in achieving universal basic education or addressing early educational inequalities, potentially at the expense of expanding access to higher education.
+
+These insights highlight the government’s priority in securing strong foundational education through significant investment in K-12. In contrast, the relatively small share for higher education suggests a limited expansion focus on tertiary education, possibly affecting the country’s higher education accessibility and long-term economic mobility for students.
