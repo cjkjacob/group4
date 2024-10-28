@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Labor Market Dynamics Analysis - Samuel Zelaya – CSC 477 - Group 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./janice_final.html" rel="next">
+<link href="./diego_final.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diego_final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./samuel_final.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CSC 477 - Group 4</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project Scopes</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Final Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diego_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Energy Prices and Consumption Analysis - Diego Mendoza</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./samuel_final.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./janice_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Macroeconomic Analysis - Janice Oenardi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chris_final.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Education Spending and Outcomes Analysis - Chris Jacob Karottukoikal</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Midterm</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./diego.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">US Department of Agriculture - Diego Mendoza</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./samuel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">NASA Earth Data - Samuel Zelaya</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./janice.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Federal Reserve Economic Data - Janice Oenardi</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chris.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">National Center for Education Statistics - Chris Jacob</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#week-1---1014-1020" id="toc-week-1---1014-1020" class="nav-link active" data-scroll-target="#week-1---1014-1020"><span class="header-section-number">2.1</span> Week 1 - 10/14 ~ 10/20</a>
+  <ul class="collapse">
+  <li><a href="#unemployment-rate" id="toc-unemployment-rate" class="nav-link" data-scroll-target="#unemployment-rate"><span class="header-section-number">2.1.1</span> 1. Unemployment Rate</a></li>
+  <li><a href="#employment-level" id="toc-employment-level" class="nav-link" data-scroll-target="#employment-level"><span class="header-section-number">2.1.2</span> 2. Employment Level</a></li>
+  <li><a href="#labor-force-participation-rate" id="toc-labor-force-participation-rate" class="nav-link" data-scroll-target="#labor-force-participation-rate"><span class="header-section-number">2.1.3</span> 3. Labor Force Participation Rate</a></li>
+  <li><a href="#average-hourly-earnings" id="toc-average-hourly-earnings" class="nav-link" data-scroll-target="#average-hourly-earnings"><span class="header-section-number">2.1.4</span> 4. Average Hourly Earnings</a></li>
+  <li><a href="#job-openings" id="toc-job-openings" class="nav-link" data-scroll-target="#job-openings"><span class="header-section-number">2.1.5</span> 5. Job Openings</a></li>
+  <li><a href="#labor-force-participation-rate-by-gender" id="toc-labor-force-participation-rate-by-gender" class="nav-link" data-scroll-target="#labor-force-participation-rate-by-gender"><span class="header-section-number">2.1.6</span> 6. Labor Force Participation Rate by Gender</a></li>
+  <li><a href="#gross-domestic-product-gdp" id="toc-gross-domestic-product-gdp" class="nav-link" data-scroll-target="#gross-domestic-product-gdp"><span class="header-section-number">2.1.7</span> 7. Gross Domestic Product (GDP)</a></li>
+  <li><a href="#labor-underutilization-measures" id="toc-labor-underutilization-measures" class="nav-link" data-scroll-target="#labor-underutilization-measures"><span class="header-section-number">2.1.8</span> 8. Labor Underutilization Measures</a></li>
+  <li><a href="#the-5ws-of-labor-market-dynamics" id="toc-the-5ws-of-labor-market-dynamics" class="nav-link" data-scroll-target="#the-5ws-of-labor-market-dynamics"><span class="header-section-number">2.1.9</span> 9. The 5Ws of Labor Market Dynamics</a></li>
+  </ul></li>
+  <li><a href="#week-2---1021-1027" id="toc-week-2---1021-1027" class="nav-link" data-scroll-target="#week-2---1021-1027"><span class="header-section-number">2.2</span> Week 2 - 10/21 ~ 10/27</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2.2.1</span> Introduction</a></li>
+  <li><a href="#unemployment" id="toc-unemployment" class="nav-link" data-scroll-target="#unemployment"><span class="header-section-number">2.2.2</span> Unemployment</a></li>
+  <li><a href="#yearly-data-trends-from-2014-to-2024" id="toc-yearly-data-trends-from-2014-to-2024" class="nav-link" data-scroll-target="#yearly-data-trends-from-2014-to-2024"><span class="header-section-number">2.2.3</span> 1. Yearly Data Trends from 2014 to 2024”</a></li>
+  <li><a href="#annual-unrate-summation-from-2014-to-2024" id="toc-annual-unrate-summation-from-2014-to-2024" class="nav-link" data-scroll-target="#annual-unrate-summation-from-2014-to-2024"><span class="header-section-number">2.2.4</span> 2. Annual UNRATE Summation from 2014 to 2024</a></li>
+  <li><a href="#monthly-sum-of-unrate-from-2014-to-2024" id="toc-monthly-sum-of-unrate-from-2014-to-2024" class="nav-link" data-scroll-target="#monthly-sum-of-unrate-from-2014-to-2024"><span class="header-section-number">2.2.5</span> 3.Monthly Sum of UNRATE from 2014 to 2024</a></li>
+  <li><a href="#monthly-unrate-sum-across-all-year" id="toc-monthly-unrate-sum-across-all-year" class="nav-link" data-scroll-target="#monthly-unrate-sum-across-all-year"><span class="header-section-number">2.2.6</span> 4.Monthly UNRATE Sum Across All Year</a></li>
+  <li><a href="#distribution-of-unrate-count-by-value-and-year" id="toc-distribution-of-unrate-count-by-value-and-year" class="nav-link" data-scroll-target="#distribution-of-unrate-count-by-value-and-year"><span class="header-section-number">2.2.7</span> 5.Distribution of UNRATE Count by Value and Year”</a></li>
+  <li><a href="#employment" id="toc-employment" class="nav-link" data-scroll-target="#employment"><span class="header-section-number">2.2.8</span> Employment</a></li>
+  <li><a href="#monthly-sum-of-ce16ov-from-2014-to-2024" id="toc-monthly-sum-of-ce16ov-from-2014-to-2024" class="nav-link" data-scroll-target="#monthly-sum-of-ce16ov-from-2014-to-2024"><span class="header-section-number">2.2.9</span> 1.Monthly Sum of CE16OV from 2014 to 2024”</a></li>
+  <li><a href="#annual-sum-of-ce16ov-from-2014-to-2024" id="toc-annual-sum-of-ce16ov-from-2014-to-2024" class="nav-link" data-scroll-target="#annual-sum-of-ce16ov-from-2014-to-2024"><span class="header-section-number">2.2.10</span> 2 Annual Sum of CE16OV from 2014 to 2024</a></li>
+  <li><a href="#sum-of-ce16ov-for-each-year." id="toc-sum-of-ce16ov-for-each-year." class="nav-link" data-scroll-target="#sum-of-ce16ov-for-each-year."><span class="header-section-number">2.2.11</span> 3. Sum of CE16OV” for each year.</a></li>
+  <li><a href="#monthly-sum-of-ce16ov-values" id="toc-monthly-sum-of-ce16ov-values" class="nav-link" data-scroll-target="#monthly-sum-of-ce16ov-values"><span class="header-section-number">2.2.12</span> 4. Monthly Sum of CE16OV Values</a></li>
+  <li><a href="#comparison-between-unemployment-and-employment-rates" id="toc-comparison-between-unemployment-and-employment-rates" class="nav-link" data-scroll-target="#comparison-between-unemployment-and-employment-rates"><span class="header-section-number">2.2.13</span> 1. Comparison between Unemployment and Employment Rates</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">2.2.14</span> Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./diego_final.html">Final Project</a></li><li class="breadcrumb-item"><a href="./samuel_final.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Labor Market Dynamics Analysis - Samuel Zelaya</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="week-1---1014-1020" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="week-1---1014-1020"><span class="header-section-number">2.1</span> Week 1 - 10/14 ~ 10/20</h2>
+<p><strong>Understanding labor market dynamics is essential for analyzing the nation’s economic health. This analysis utilizes data from the Federal Reserve Economic Data (FRED) to explore significant variables that impact the U.S. labor market. so I compiled a series of variables and merged them together in an excel file containing The following key indicators that we will examine:</strong></p>
+<ul>
+<li>Unemployment Rate</li>
+<li>Employment Level</li>
+<li>Labor Force Participation Rate</li>
+<li>Average Hourly Earnings</li>
+<li>Job Openings</li>
+<li>Labor Force Participation Rate by Gender</li>
+<li>Gross Domestic Product (GDP)</li>
+<li>Labor Underutilization Measures</li>
+</ul>
+<p><strong>By analyzing these variables, we aim to provide insights into the current state and long-term trends of the labor market, highlighting the interactions between these factors and their implications for policymakers, businesses, and job seekers.</strong></p>
+<p><strong>Access Link: <a href="https://fred.stlouisfed.org/">FRED</a></strong></p>
+<hr>
+<section id="unemployment-rate" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="unemployment-rate"><span class="header-section-number">2.1.1</span> 1. Unemployment Rate</h3>
+<p>The Unemployment Rate (percent, seasonally adjusted) is a critical indicator of labor market conditions. The data is sourced from the U.S. Bureau of Labor Statistics as part of their Employment Situation report and is calculated monthly. Here’s a breakdown of the key components:</p>
+<ul>
+<li><strong>Access Link</strong>:<a href="https://fred.stlouisfed.org/series/UNRATE" class="uri">https://fred.stlouisfed.org/series/UNRATE</a></li>
+<li><strong>Definition</strong>: The unemployment rate represents the percentage of the labor force that is unemployed. It is calculated by dividing the number of unemployed individuals by the total labor force. This data is specific to individuals 16 years and older who reside in one of the 50 U.S. states or the District of Columbia. The population is limited to non-institutionalized individuals and those not serving in the armed forces.</li>
+<li><strong>Seasonally Adjusted</strong>: The adjustment accounts for predictable seasonal fluctuations, making the data more accurate for month-to-month comparisons.</li>
+<li><strong>U-3 Measure</strong>: This is the official unemployment rate as defined by the Bureau of Labor Statistics. It is also referred to as a measure of labor underutilization, focusing on people who are actively seeking and available for work.</li>
+<li><strong>Significance</strong>: As one of the most closely followed indicators, the unemployment rate helps assess the overall health of the economy. Changes in the rate can signal shifts in economic conditions, labor market tightness, or broader economic challenges.</li>
+</ul>
+</section>
+<section id="employment-level" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="employment-level"><span class="header-section-number">2.1.2</span> 2. Employment Level</h3>
+<p>The Employment Level (measured in thousands of persons and seasonally adjusted) is another important labor market indicator provided by the U.S. Bureau of Labor Statistics through its Employment Situation report. Here’s an overview of the key components:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/CE16OV" class="uri">https://fred.stlouisfed.org/series/CE16OV</a></li>
+<li><strong>Definition</strong>: The employment level indicates the total number of employed persons in the civilian noninstitutional population. This population includes individuals who are 16 years and older and reside in one of the 50 U.S. states or the District of Columbia. It excludes individuals who are inmates of institutions (such as penal or mental facilities), those living in long-term care facilities, and those on active duty in the Armed Forces.</li>
+<li><strong>Seasonally Adjusted</strong>: Seasonal adjustments are made to account for regular seasonal variations in employment, allowing for more accurate comparisons across different months.</li>
+<li><strong>Significance</strong>: Tracking the employment level helps economists and policymakers gauge the health of the job market. An increasing employment level generally indicates economic growth and labor market strength, while a declining level may signal economic challenges.</li>
+</ul>
+</section>
+<section id="labor-force-participation-rate" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="labor-force-participation-rate"><span class="header-section-number">2.1.3</span> 3. Labor Force Participation Rate</h3>
+<p>The Labor Force Participation Rate (percent, seasonally adjusted) is a vital economic indicator that provides insights into the engagement of the working-age population in the labor market. Here’s a detailed overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/CIVPART" class="uri">https://fred.stlouisfed.org/series/CIVPART</a></li>
+<li><strong>Definition</strong>: The Labor Force Participation Rate (LFPR) is defined as the percentage of the civilian noninstitutional population that is either employed or actively seeking employment. Specifically, it includes individuals aged 16 and older who reside in the 50 states or the District of Columbia, excluding those who are institutionalized or on active military duty.</li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for predictable fluctuations in labor force participation due to seasonal factors (like holidays or school schedules), allowing for more accurate month-to-month comparisons.</li>
+<li><strong>Significance</strong>: The LFPR is an important measure for economists, policymakers, and financial markets. It provides insights into the overall health of the economy. A rising participation rate can indicate increasing confidence in the job market, while a declining rate may suggest economic challenges or shifts in demographic trends.</li>
+<li><strong>Long-Run Trends</strong>: Changes in the LFPR over time can reflect broader economic and demographic trends. For example, an aging population may contribute to a decrease in the participation rate as more individuals retire and exit the labor force, which is not necessarily indicative of economic decline.</li>
+</ul>
+</section>
+<section id="average-hourly-earnings" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="average-hourly-earnings"><span class="header-section-number">2.1.4</span> 4. Average Hourly Earnings</h3>
+<p>The Average Hourly Earnings of Production and Nonsupervisory Employees (measured in dollars per hour and seasonally adjusted) is a key economic indicator that reflects wage trends in the private sector. Here’s a detailed overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/AHETPI" class="uri">https://fred.stlouisfed.org/series/AHETPI</a></li>
+<li><strong>Definition</strong>:
+<ul>
+<li><strong>Scope</strong>: This measure includes the average hourly earnings for all production and related employees, as well as nonsupervisory employees in total private industries. It covers a wide range of occupations, including but not limited to:
+<ul>
+<li>Production Employees: Those involved in fabricating, processing, assembling, inspecting, and related activities.</li>
+<li>Nonsupervisory Employees: This group encompasses individuals in private service-providing industries who do not hold supervisory roles. Examples include office and clerical workers, repairers, salespersons, drivers, nurses, teachers, custodial workers, and more.</li>
+</ul></li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The figures are seasonally adjusted to account for regular fluctuations in employment and wage levels that occur throughout the year (e.g., holiday hiring or seasonal layoffs), making it easier to analyze month-to-month changes.</li>
+<li><strong>Frequency</strong>: Data is reported on a monthly basis, providing timely insights into wage trends.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Wage Trends</strong>: Average hourly earnings are crucial for understanding wage growth and inflationary pressures in the economy. Rising average hourly earnings can indicate a tightening labor market, where employers must raise wages to attract and retain workers.</li>
+<li><strong>Economic Indicator</strong>: This measure is widely used by economists, policymakers, and financial analysts to gauge the overall health of the labor market and economic conditions. Higher wages typically lead to increased consumer spending, which is a significant driver of economic growth.</li>
+</ul></li>
+</ul>
+</section>
+<section id="job-openings" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="job-openings"><span class="header-section-number">2.1.5</span> 5. Job Openings</h3>
+<p>Job Openings (measured in thousands, seasonally adjusted) is a critical labor market indicator that provides insights into the demand for labor. Here’s an overview of the key elements:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/JTSJOL" class="uri">https://fred.stlouisfed.org/series/JTSJOL</a></li>
+<li><strong>Definition</strong>:
+<ul>
+<li><strong>Total Nonfarm Job Openings</strong>: This metric represents the total number of unfilled jobs on the last business day of the month across all nonfarm sectors. A job is classified as open if:
+<ul>
+<li>A specific position exists and there is work available for it.</li>
+<li>The job can commence within 30 days.</li>
+<li>Active recruiting efforts are underway for the position.</li>
+</ul></li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for regular patterns in job openings that occur throughout the year, making it easier to analyze trends over time.</li>
+<li><strong>Frequency</strong>: The data is reported on a monthly basis, providing timely updates on job market conditions.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Indicator of Labor Demand</strong>: Job openings are a key indicator of unmet demand for labor and can reflect labor shortages. A high number of job openings suggests a tight labor market, where employers may struggle to find suitable candidates.</li>
+<li><strong>Economic Analysis</strong>: Economists, government officials, and researchers use job openings data to gauge the overall health of the labor market. Increases in job openings can signal economic growth, while declines may indicate economic slowdowns or shifts in demand for certain types of labor.</li>
+</ul></li>
+</ul>
+</section>
+<section id="labor-force-participation-rate-by-gender" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="labor-force-participation-rate-by-gender"><span class="header-section-number">2.1.6</span> 6. Labor Force Participation Rate by Gender</h3>
+<p><strong>Labor Force Participation Rate - Men</strong></p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/LNS11300001" class="uri">https://fred.stlouisfed.org/series/LNS11300001</a></li>
+<li><strong>Definition</strong>: The percentage of men aged 16 and older who are either employed or actively seeking employment.</li>
+<li><strong>Significance</strong>:<br>
+The LFPR serves as a key economic indicator, reflecting the health of the labor market; higher rates generally suggest a robust economy. It also provides insights into policy effectiveness, highlights gender disparities in workforce engagement, and signals shifts in industry demand.</li>
+</ul>
+<p><strong>Labor Force Participation Rate - Women</strong></p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/LNS11300002" class="uri">https://fred.stlouisfed.org/series/LNS11300002</a></li>
+<li><strong>Definition</strong>: The percentage of women aged 16 and older who are either employed or actively seeking employment.</li>
+<li><strong>Significance</strong>:<br>
+The LFPR is a crucial economic indicator, revealing insights about the labor market’s health and women’s engagement in the workforce. Changes in this rate can reflect shifts in economic conditions, societal norms, and policy effectiveness, providing a better understanding of gender dynamics in employment.</li>
+</ul>
+</section>
+<section id="gross-domestic-product-gdp" class="level3" data-number="2.1.7">
+<h3 data-number="2.1.7" class="anchored" data-anchor-id="gross-domestic-product-gdp"><span class="header-section-number">2.1.7</span> 7. Gross Domestic Product (GDP)</h3>
+<p>The Gross Domestic Product (GDP) is a comprehensive measure of economic activity that reflects the total value of goods and services produced in a country. Here’s an overview:</p>
+<ul>
+<li><strong>Access Link</strong>: <a href="https://fred.stlouisfed.org/series/GDP" class="uri">https://fred.stlouisfed.org/series/GDP</a></li>
+<li><strong>Definition</strong>: GDP is defined as the total market value of all final goods and services produced within a country’s borders in a given time period, typically measured quarterly or annually.</li>
+<li><strong>Components</strong>: GDP can be expressed through three main approaches:
+<ul>
+<li><strong>Production Approach</strong>: Calculates GDP as the sum of the value added at each stage of production.</li>
+<li><strong>Income Approach</strong>: Measures GDP as the total income earned by factors of production, including wages, profits, rents, and taxes, minus subsidies.</li>
+<li><strong>Expenditure Approach</strong>: Computes GDP by adding up all expenditures made in the economy, including consumption, investment, government spending, and net exports.</li>
+</ul></li>
+<li><strong>Seasonally Adjusted</strong>: The data is seasonally adjusted to account for predictable fluctuations in economic activity throughout the year.</li>
+<li><strong>Significance</strong>:
+<ul>
+<li><strong>Economic Health</strong>: GDP is one of the most critical indicators of economic health, providing insights into the overall economic performance and growth trends. It reflects the strength or weakness of the economy, influencing policy decisions and investment strategies.</li>
+<li><strong>Comparison Across Time and Geography</strong>: GDP enables comparisons of economic performance over time and between different countries, regions, or economic sectors.</li>
+</ul></li>
+</ul>
+</section>
+<section id="labor-underutilization-measures" class="level3" data-number="2.1.8">
+<h3 data-number="2.1.8" class="anchored" data-anchor-id="labor-underutilization-measures"><span class="header-section-number">2.1.8</span> 8. Labor Underutilization Measures</h3>
+<p>Labor underutilization measures provide insights into various forms of labor market slack, reflecting the challenges faced by workers. The primary measures include:</p>
+<p><strong>Access Link</strong> : <a href="https://www.bls.gov/lau/stalt.htm" class="uri">https://www.bls.gov/lau/stalt.htm</a></p>
+<ul>
+<li><p><strong>U-1</strong>: Persons unemployed for 15 weeks or longer, as a percentage of the civilian labor force.</p></li>
+<li><p><strong>U-2</strong>: Job losers and persons who completed temporary jobs, as a percentage of the civilian labor force.</p></li>
+<li><p><strong>U-3</strong>: The official unemployment rate, as defined by the Bureau of Labor Statistics.</p></li>
+<li><p><strong>U-4</strong>: Total unemployed plus discouraged workers, as a percentage of the civilian labor force plus discouraged workers.</p></li>
+<li><p><strong>U-5</strong>: Total unemployed, plus discouraged workers, plus all other persons marginally attached to the labor force, as a percentage of the civilian labor force plus all persons marginally attached to the labor force.</p></li>
+<li><p><strong>U-6</strong>: Total unemployed, plus all persons marginally attached to the labor force, plus total employed part-time for economic reasons, as a percentage of the civilian labor force plus all persons marginally attached to the labor force.</p></li>
+<li><p><strong>Significance</strong>: Labor underutilization measures provide a more comprehensive view of labor market conditions by accounting for individuals who are unemployed, underemployed, or discouraged from seeking work. They are vital for understanding the true state of the labor market and the challenges faced by various groups of workers.</p></li>
+</ul>
+<hr>
+</section>
+<section id="the-5ws-of-labor-market-dynamics" class="level3" data-number="2.1.9">
+<h3 data-number="2.1.9" class="anchored" data-anchor-id="the-5ws-of-labor-market-dynamics"><span class="header-section-number">2.1.9</span> 9. The 5Ws of Labor Market Dynamics</h3>
+<section id="who" class="level4" data-number="2.1.9.1">
+<h4 data-number="2.1.9.1" class="anchored" data-anchor-id="who"><span class="header-section-number">2.1.9.1</span> Who</h4>
+<p>The analysis involves key stakeholders, including:</p>
+<ul>
+<li><strong>Policymakers</strong>: Government officials making decisions on economic policies.</li>
+<li><strong>Businesses</strong>: Employers seeking to understand labor market conditions for strategic planning.</li>
+<li><strong>Job Seekers</strong>: Individuals searching for employment opportunities.</li>
+<li><strong>Economists and Researchers</strong>: Analysts studying labor market trends and implications.</li>
+</ul>
+</section>
+<section id="what" class="level4" data-number="2.1.9.2">
+<h4 data-number="2.1.9.2" class="anchored" data-anchor-id="what"><span class="header-section-number">2.1.9.2</span> What</h4>
+<p>The focus is on key labor market indicators, including:</p>
+<ol type="1">
+<li><strong>Unemployment Rate</strong>: Percentage of the labor force that is unemployed.</li>
+<li><strong>Employment Level</strong>: Total number of employed persons in the civilian noninstitutional population.</li>
+<li><strong>Labor Force Participation Rate</strong>: Percentage of the working-age population engaged in the labor market.</li>
+<li><strong>Average Hourly Earnings</strong>: Wage trends in the private sector.</li>
+<li><strong>Job Openings</strong>: Demand for labor represented by unfilled jobs.</li>
+<li><strong>Labor Force Participation Rate by Gender</strong>: Employment engagement metrics disaggregated by gender.</li>
+<li><strong>Gross Domestic Product (GDP)</strong>: Measure of overall economic activity.</li>
+<li><strong>Labor Underutilization Measures</strong>: Insights into various forms of labor market slack.</li>
+</ol>
+</section>
+<section id="when" class="level4" data-number="2.1.9.3">
+<h4 data-number="2.1.9.3" class="anchored" data-anchor-id="when"><span class="header-section-number">2.1.9.3</span> When</h4>
+<p>The analysis will use data sourced from:</p>
+<ul>
+<li><strong>Current Population Survey (CPS)</strong>: Monthly data collected from about 60,000 households.</li>
+<li><strong>Current Employment Statistics (Establishment Survey)</strong>: Monthly employment and wage data.</li>
+<li><strong>Job Openings and Labor Turnover Survey (JOLTS)</strong>: Monthly data on job openings and labor turnover.</li>
+<li><strong>Bureau of Economic Analysis (BEA)</strong>: Quarterly and annual GDP data.</li>
+</ul>
+</section>
+<section id="where" class="level4" data-number="2.1.9.4">
+<h4 data-number="2.1.9.4" class="anchored" data-anchor-id="where"><span class="header-section-number">2.1.9.4</span> Where</h4>
+<p>The data pertains to:</p>
+<ul>
+<li>The <strong>United States</strong>, specifically focusing on the labor market conditions within the 50 states and the District of Columbia.</li>
+</ul>
+</section>
+<section id="why" class="level4" data-number="2.1.9.5">
+<h4 data-number="2.1.9.5" class="anchored" data-anchor-id="why"><span class="header-section-number">2.1.9.5</span> Why</h4>
+<p>Understanding these labor market dynamics is vital for:</p>
+<ul>
+<li><p><strong>Economic Health Assessment</strong>: Evaluating the overall economy’s performance.</p></li>
+<li><p><strong>Policy Development</strong>: Informing decisions on labor-related policies.</p></li>
+<li><p><strong>Business Strategy</strong>: Helping companies navigate labor market conditions for hiring and compensation strategies.</p></li>
+<li><p><strong>Job Seekers</strong>: Empowering individuals to make informed career choices based on market trends.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="week-2---1021-1027" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="week-2---1021-1027"><span class="header-section-number">2.2</span> Week 2 - 10/21 ~ 10/27</h2>
+<section id="introduction" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.2.1</span> Introduction</h3>
+<p>In recent years, understanding economic indicators has become increasingly crucial for policymakers, researchers, and the general public. This document aims to analyze key economic metrics, including the unemployment rate and employment rate, utilizing data from the Federal Reserve Economic Data (FRED) database.</p>
+<p>The focus of this analysis will be on trends over the past decade, highlighting significant fluctuations and their implications on the broader economy. By examining the relationships between the unemployment rate and employment rate, we aim to uncover insights that can inform future economic strategies.</p>
+<p>Throughout this document, we will utilize visualizations and statistical analyses to present our findings clearly and concisely. The goal is to provide a comprehensive overview of the current economic landscape and to foster a deeper understanding of these vital indicators.</p>
+<hr>
+</section>
+<section id="unemployment" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="unemployment"><span class="header-section-number">2.2.2</span> Unemployment</h3>
+</section>
+<section id="yearly-data-trends-from-2014-to-2024" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="yearly-data-trends-from-2014-to-2024"><span class="header-section-number">2.2.3</span> 1. Yearly Data Trends from 2014 to 2024”</h3>
+<section id="overview" class="level4" data-number="2.2.3.1">
+<h4 data-number="2.2.3.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.2.3.1</span> Overview</h4>
+<p><strong>The dataset presents the monthly unemployment rates in the United States from January 2014 to October 2024. This analysis identifies trends and significant changes in the unemployment landscape, particularly around economic events and policy responses.</strong></p>
+</section>
+<section id="key-insights" class="level4" data-number="2.2.3.2">
+<h4 data-number="2.2.3.2" class="anchored" data-anchor-id="key-insights"><span class="header-section-number">2.2.3.2</span> Key Insights:</h4>
+<p><strong>Long-term Decline (2014-2019):</strong></p>
+<p>The unemployment rate shows a consistent decline from 6.6% in January 2014 to around 3.5% in December 2019. This trend indicates a strong recovery from the post-recession period, reflecting economic growth and improved job creation.</p>
+<p>The lowest monthly rate recorded during this period was 3.5% in September 2019, suggesting that the economy was nearing full employment.</p>
+<p><strong>Impact of the COVID-19 Pandemic (2020):</strong></p>
+<p>A dramatic spike in the unemployment rate is observed in April 2020, where it peaked at 14.8%. This spike can be attributed to the widespread economic disruption caused by the COVID-19 pandemic and the resulting lockdowns. The rate remained elevated throughout 2020, with a total of 97.1% for the year, highlighting the severe impact of the pandemic on employment.</p>
+<p><strong>Recovery Phase (2021-2024):</strong></p>
+<p>In 2021, the unemployment rate began to decline again, reaching 3.9% by December 2024, indicating a recovery as businesses reopened and adapted to the new normal. The gradual decrease reflects ongoing economic recovery efforts, despite persistent challenges, with monthly rates fluctuating around 3.4% to 4.3% throughout 2023 and 2024.</p>
+<p><strong>Recent Trends (2022-2024):</strong></p>
+<p>The rates from 2022 onwards show stability with minor fluctuations, suggesting that the labor market is stabilizing. The monthly unemployment rates in 2023 and 2024 generally remain below 4.5%, demonstrating resilience in job recovery. The highest monthly rate in the recent years was 4.3% in July 2024, indicating that while fluctuations exist, they are not as severe as during the pandemic.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_1.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="annual-unrate-summation-from-2014-to-2024" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="annual-unrate-summation-from-2014-to-2024"><span class="header-section-number">2.2.4</span> 2. Annual UNRATE Summation from 2014 to 2024</h3>
+<section id="overview-1" class="level4" data-number="2.2.4.1">
+<h4 data-number="2.2.4.1" class="anchored" data-anchor-id="overview-1"><span class="header-section-number">2.2.4.1</span> Overview</h4>
+<p><strong>The table presents the annual sums of unemployment rates (UNRATE) for each year from 2014 to 2024. The analysis provides insights into the trends and significant fluctuations over the years, especially in relation to economic events such as the COVID-19 pandemic.</strong></p>
+</section>
+<section id="insights" class="level4" data-number="2.2.4.2">
+<h4 data-number="2.2.4.2" class="anchored" data-anchor-id="insights"><span class="header-section-number">2.2.4.2</span> Insights</h4>
+<p><strong>Overall Trend:</strong></p>
+<p>The Grand Total of the unemployment rates from 2014 to 2024 is 623.2. This figure reflects the cumulative unemployment rates across the years, indicating the overall employment landscape during this period.</p>
+<p><strong>Declining Unemployment Rates (2014-2019):</strong> There is a consistent decline in the sum of unemployment rates from 73.9 in 2014 to 44.1 in 2019. This period shows a strong recovery and improvement in the labor market, aligning with economic growth and increasing job opportunities.</p>
+<p>The lowest annual unemployment rate sum occurred in 2019, suggesting the economy was performing well before the pandemic.</p>
+<p><strong>Impact of the COVID-19 Pandemic (2020):</strong> The sum of 97.1 in 2020 is significantly higher than in previous years, illustrating the severe impact of the pandemic on the job market. This spike reflects the widespread layoffs and economic disruptions caused by lockdowns and reduced business activities. The increase in the unemployment rate in 2020 highlights the challenges faced by the labor market during this unprecedented crisis.</p>
+<p><strong>Subsequent Recovery (2021-2024):</strong> In 2021, the unemployment rate sum increased to 64.2, indicating a recovery as the economy began to reopen and businesses adjusted to new norms. However, this rate remains elevated compared to pre-pandemic levels. The subsequent years (2022-2024) show a notable decline in the sum of unemployment rates, with 43.6 in 2022, 43.5 in 2023, and 36 in 2024. This trend indicates a stabilization and recovery in the job market, approaching levels similar to those seen before the pandemic.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_2.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="monthly-sum-of-unrate-from-2014-to-2024" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5" class="anchored" data-anchor-id="monthly-sum-of-unrate-from-2014-to-2024"><span class="header-section-number">2.2.5</span> 3.Monthly Sum of UNRATE from 2014 to 2024</h3>
+<section id="overview-2" class="level5" data-number="2.2.5.0.1">
+<h5 data-number="2.2.5.0.1" class="anchored" data-anchor-id="overview-2"><span class="header-section-number">2.2.5.0.1</span> Overview</h5>
+<p>This analysis examines the monthly unemployment rates from January 2014 to December 2024. By evaluating these rates, we can identify seasonal trends and significant shifts, particularly the effects of economic events such as the COVID-19 pandemic.</p>
+</section>
+<section id="key-insights-1" class="level5" data-number="2.2.5.0.2">
+<h5 data-number="2.2.5.0.2" class="anchored" data-anchor-id="key-insights-1"><span class="header-section-number">2.2.5.0.2</span> Key Insights</h5>
+<p><strong>Overall Trends</strong>: The total unemployment rates from 2014 to 2024 indicate a gradual decline from&nbsp;<strong>73.9</strong>&nbsp;in 2014 to&nbsp;<strong>36</strong>&nbsp;in 2024, reflecting improvements in the job market over the years.</p>
+<p><strong>Monthly Fluctuations</strong>:</p>
+<p><strong>Seasonal Variations</strong>: Monthly data shows fluctuations that may correlate with seasonal employment patterns. For example: January typically exhibits higher rates, possibly due to post-holiday layoffs and seasonal employment reductions.</p>
+<p>In contrast, rates tend to stabilize or decrease during mid-year months (June to August), indicating seasonal hiring in various sectors, such as retail and agriculture.</p>
+<p><strong>COVID-19 Impact</strong>:</p>
+<p><strong>April and May 2020</strong>&nbsp;are notable, with unemployment spikes to&nbsp;<strong>14.8</strong>&nbsp;and&nbsp;<strong>13.2</strong>, respectively. These months represent the peak impact of the COVID-19 pandemic, leading to significant job losses due to lockdowns and economic shutdowns. Following this peak, the rates show a gradual decline, indicating recovery efforts by businesses and government interventions.</p>
+<p><strong>Post-Pandemic Recovery</strong>:</p>
+<p>By 2021, the unemployment rate begins to stabilize at&nbsp;<strong>6.4</strong>&nbsp;in January and decreases throughout the year. The overall sum for 2021 is&nbsp;<strong>64.2</strong>, indicating a substantial recovery compared to the previous year.</p>
+<p><strong>2022-2024</strong>&nbsp;show continued improvements, with 2024 ending at&nbsp;<strong>36</strong>. This suggests a strong recovery trajectory as the labor market adapts to new conditions post-pandemic.</p>
+<p><strong>Comparative Monthly Analysis</strong>:</p>
+<p>The monthly averages highlight that:</p>
+<p><strong>January</strong>&nbsp;consistently shows higher unemployment rates, peaking at&nbsp;<strong>6.6</strong>&nbsp;in 2014 and gradually decreasing to&nbsp;<strong>3.7</strong>&nbsp;in 2024.</p>
+<p><strong>Summer months (June, July, August)</strong>&nbsp;generally have lower unemployment rates, indicating higher employment levels, possibly due to seasonal hiring.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_3.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="monthly-unrate-sum-across-all-year" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6" class="anchored" data-anchor-id="monthly-unrate-sum-across-all-year"><span class="header-section-number">2.2.6</span> 4.Monthly UNRATE Sum Across All Year</h3>
+<section id="overview-3" class="level4" data-number="2.2.6.1">
+<h4 data-number="2.2.6.1" class="anchored" data-anchor-id="overview-3"><span class="header-section-number">2.2.6.1</span> Overview</h4>
+<p>The unemployment rates from January to December sum up to a total of 623.2. This analysis reviews monthly trends, identifying peaks and seasonal patterns.</p>
+<section id="key-insights-2" class="level5" data-number="2.2.6.1.1">
+<h5 data-number="2.2.6.1.1" class="anchored" data-anchor-id="key-insights-2"><span class="header-section-number">2.2.6.1.1</span> Key Insights</h5>
+<p><strong>Peak Unemployment Rates:</strong></p>
+<p>April shows the highest unemployment rate at 60.7. This spike may reflect seasonal employment dynamics or broader economic challenges. May and June follow closely, indicating continued difficulties in the labor market during the spring months.</p>
+<p><strong>Lowest Unemployment Rates:</strong> December has the lowest rate at 44.7, suggesting a typical end-of-year recovery as seasonal hiring increases for the holidays. October and November also show lower rates, reinforcing the idea of recovery and stabilization leading into the new year.</p>
+<p><strong>Seasonal Trends:</strong> The data indicates a seasonal pattern where unemployment rates are generally higher in the early part of the year (January through April) and lower towards the end (October through December). This trend may reflect various factors, including seasonal employment opportunities and economic conditions.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_4.png" class="img-fluid"></p>
+</section>
+</section>
+</section>
+<section id="distribution-of-unrate-count-by-value-and-year" class="level3" data-number="2.2.7">
+<h3 data-number="2.2.7" class="anchored" data-anchor-id="distribution-of-unrate-count-by-value-and-year"><span class="header-section-number">2.2.7</span> 5.Distribution of UNRATE Count by Value and Year”</h3>
+<section id="overview-4" class="level4" data-number="2.2.7.1">
+<h4 data-number="2.2.7.1" class="anchored" data-anchor-id="overview-4"><span class="header-section-number">2.2.7.1</span> Overview</h4>
+<p>The dataset includes observations of unemployment rates across various years. Below is a detailed breakdown of the counts for each unemployment rate value.</p>
+</section>
+<section id="insights-1" class="level4" data-number="2.2.7.2">
+<h4 data-number="2.2.7.2" class="anchored" data-anchor-id="insights-1"><span class="header-section-number">2.2.7.2</span> Insights</h4>
+<p><strong>Frequency of Rates:</strong></p>
+<p>The unemployment rates range from 3.4% to 14.8%, with the most common rate at 3.6% (15 observations). Other frequent rates include 3.5% (7 observations) and 3.8% (12 observations), indicating a strong job market during those periods.</p>
+<p><strong>High Unemployment Rates:</strong> Rates above 10% are rare, with only a few instances (e.g., 10.2%, 11%, 14.8%), suggesting significant economic distress during those times. <strong>early and Monthly Trends</strong> Years like 2019 and 2022 show low unemployment rates, reflecting economic stability. The rise in 2023 rates indicates potential economic challenges.</p>
+<p><strong>Seasonal Patterns:</strong></p>
+<p>Certain months (e.g., January, April, December) show a concentration of lower rates, likely linked to seasonal hiring trends.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_5.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="employment" class="level3" data-number="2.2.8">
+<h3 data-number="2.2.8" class="anchored" data-anchor-id="employment"><span class="header-section-number">2.2.8</span> Employment</h3>
+</section>
+<section id="monthly-sum-of-ce16ov-from-2014-to-2024" class="level3" data-number="2.2.9">
+<h3 data-number="2.2.9" class="anchored" data-anchor-id="monthly-sum-of-ce16ov-from-2014-to-2024"><span class="header-section-number">2.2.9</span> 1.Monthly Sum of CE16OV from 2014 to 2024”</h3>
+<section id="overview-5" class="level4" data-number="2.2.9.1">
+<h4 data-number="2.2.9.1" class="anchored" data-anchor-id="overview-5"><span class="header-section-number">2.2.9.1</span> Overview</h4>
+<p>The provided employment data covers monthly figures labeled as “CE16OV” from January 2014 to December 2024. Each row corresponds to a year, showing monthly employment values that indicate trends in the labor market. The total employment for the entire period sums to 9022.54, with individual monthly values reflecting both seasonal patterns and longer-term trends.</p>
+</section>
+<section id="insights-2" class="level4" data-number="2.2.9.2">
+<h4 data-number="2.2.9.2" class="anchored" data-anchor-id="insights-2"><span class="header-section-number">2.2.9.2</span> Insights</h4>
+<p><strong>Overall Employment Growth:</strong></p>
+<p>The grand total of employment rates over the period is 9022.54. The data reflects a general upward trend in employment rates from 2014 to 2019, with an average annual increase.</p>
+<p><strong>Peak Employment Years:</strong></p>
+<p>The highest annual employment rates were recorded in 2019 (856.19) and 2023 (863.19), indicating a robust labor market before and after the pandemic.</p>
+<p><strong>Impact of the COVID-19 Pandemic:</strong></p>
+<p>2020 shows a sharp decline in employment rates, particularly in April (60.17) due to the pandemic. This year marks a significant downturn, with a total of 804.10. Recovery begins in 2021, with gradual increases each month, but the employment rates remain below the pre-pandemic peak.</p>
+<p><strong>Post-Pandemic Recovery:</strong></p>
+<p>Employment rates steadily rise from 2021 to 2023, reflecting resilience in the job market. By 2024, the monthly rates are still lower than the highs of previous years but show signs of stabilization.</p>
+<p><strong>Monthly Patterns:</strong></p>
+<p>Consistently higher employment rates are observed in the latter months of the year (particularly November and December), likely due to seasonal hiring trends during holiday periods. January typically starts with lower employment figures, reflecting post-holiday layoffs or reduced hiring.</p>
+<p><strong>Fluctuations:</strong></p>
+<p>Monthly data reveals fluctuations in certain months, particularly in 2020, where employment levels drop significantly.June and July often show variability, suggesting a potential correlation with summer employment patterns or seasonal hiring practices.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_6.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="annual-sum-of-ce16ov-from-2014-to-2024" class="level3" data-number="2.2.10">
+<h3 data-number="2.2.10" class="anchored" data-anchor-id="annual-sum-of-ce16ov-from-2014-to-2024"><span class="header-section-number">2.2.10</span> 2 Annual Sum of CE16OV from 2014 to 2024</h3>
+<section id="overview-6" class="level4" data-number="2.2.10.1">
+<h4 data-number="2.2.10.1" class="anchored" data-anchor-id="overview-6"><span class="header-section-number">2.2.10.1</span> Overview</h4>
+<p>The employment rates, represented by the Sum of CE16OV, reflect the overall state of employment in the analyzed region from 2014 to 2024.</p>
+</section>
+<section id="insights-3" class="level4" data-number="2.2.10.2">
+<h4 data-number="2.2.10.2" class="anchored" data-anchor-id="insights-3"><span class="header-section-number">2.2.10.2</span> Insights</h4>
+<p><strong>General Trend:</strong></p>
+<p>The employment rates show a general upward trend from 2014 to 2019, peaking in 2023 at 863.19. This indicates a healthy labor market prior to the pandemic.</p>
+<p><strong>Pandemic Impact:</strong></p>
+<p>A significant drop occurred in 2020 (to 804.10), highlighting the adverse effects of the COVID-19 pandemic on employment levels.</p>
+<p><strong>Recovery Post-Pandemic:</strong></p>
+<p>After the dip in 2020, employment rates began to recover, with 2021 showing a rebound to 832.94 and further growth in 2022 and 2023. However, the recovery remains incomplete as 2024 shows a sharp decline to 647.04.</p>
+<p><strong>Seasonal Patterns:</strong></p>
+<p>The consistent increase in employment figures from 2014 to 2019 suggests stable growth, while the fluctuations in 2024 might indicate ongoing challenges in the labor market. <strong>Comparative Stability:</strong></p>
+<p>Despite the significant downturn in 2020, the years 2021, 2022, and 2023 demonstrate recovery and stability, reinforcing the resilience of the labor market.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_7.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="sum-of-ce16ov-for-each-year." class="level3" data-number="2.2.11">
+<h3 data-number="2.2.11" class="anchored" data-anchor-id="sum-of-ce16ov-for-each-year."><span class="header-section-number">2.2.11</span> 3. Sum of CE16OV” for each year.</h3>
+<section id="overview-7" class="level4" data-number="2.2.11.1">
+<h4 data-number="2.2.11.1" class="anchored" data-anchor-id="overview-7"><span class="header-section-number">2.2.11.1</span> Overview</h4>
+<p>This analysis examines the monthly employment rates, represented by the Sum of CE16OV, across the years 2014 to 2024. The data provides insight into employment trends and fluctuations throughout the years.</p>
+</section>
+<section id="insights-4" class="level4" data-number="2.2.11.2">
+<h4 data-number="2.2.11.2" class="anchored" data-anchor-id="insights-4"><span class="header-section-number">2.2.11.2</span> Insights</h4>
+<p><strong>2014-2019: Steady Increase</strong></p>
+<p>Monthly Trends: Each month experienced a gradual increase in employment rates over these years. For instance, January 2014 started at 67.72, and by January 2019, it had risen to 71.03. Peak in 2019: The employment rate in 2019 consistently remained above 71 for most months, indicating a strong labor market. The highest monthly rate in 2019 was in December at 71.70.</p>
+<p><strong>2020: Significant Decline</strong></p>
+<p>Impact of COVID-19: The data reflects a dramatic drop in April 2020, where the employment rate plummeted to 60.17. This decline was driven by the economic effects of the pandemic, leading to layoffs and job losses.</p>
+<p><strong>Year-End Recovery:</strong></p>
+<p>Despite a recovery in subsequent months, the total for 2020 was 804.10, showing a substantial reduction from the previous years.</p>
+<p><strong>2021-2023: Recovery Phase</strong></p>
+<p>Gradual Recovery: The employment rate began to recover in 2021, rising back to 832.94 by the end of the year. Monthly rates showed improvements across all months, although they remained below pre-pandemic levels.</p>
+<p><strong>Peak in 2023:</strong></p>
+<p>The highest employment rate recorded was in 2023, with a grand total of 863.19. Monthly figures surpassed 72 for several months, indicating a stronger labor market compared to previous years. <strong>2024: Decline in Employment Rates</strong></p>
+<p>Drop in January-March: In 2024, the data shows a decline in employment rates, starting at 72.01 in January and gradually dropping to 71.75 by August. The total for the year so far is 647.04, which is considerably lower than the previous years, indicating potential challenges facing the job market.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_8.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="monthly-sum-of-ce16ov-values" class="level3" data-number="2.2.12">
+<h3 data-number="2.2.12" class="anchored" data-anchor-id="monthly-sum-of-ce16ov-values"><span class="header-section-number">2.2.12</span> 4. Monthly Sum of CE16OV Values</h3>
+<section id="overview-8" class="level4" data-number="2.2.12.1">
+<h4 data-number="2.2.12.1" class="anchored" data-anchor-id="overview-8"><span class="header-section-number">2.2.12.1</span> Overview</h4>
+<p>This summary provides an analysis of the monthly employment rates (Sum of CE16OV) across the year, showcasing trends and significant observations.</p>
+</section>
+<section id="insights-5" class="level4" data-number="2.2.12.2">
+<h4 data-number="2.2.12.2" class="anchored" data-anchor-id="insights-5"><span class="header-section-number">2.2.12.2</span> Insights</h4>
+<p><strong>Early Year Performance:</strong></p>
+<p>The employment rates are relatively high at the beginning of the year, particularly in January (770.82) and February (771.68). This stability is often associated with post-holiday hiring and strong economic activity. Employers may be replenishing staff after seasonal fluctuations, indicating robust confidence in the economic outlook.</p>
+<p><strong>Mid-Year Stability:</strong></p>
+<p>From March (771.37) through August (770.41), the employment rates maintain a generally high level, reflecting a steady job market. This period typically aligns with spring and summer hiring, as businesses look to capitalize on increased consumer spending and seasonal demands.</p>
+<p><strong>Seasonal Variation:</strong></p>
+<p>The April to August months show minor fluctuations, with April experiencing a dip to 761.50. This drop could be indicative of seasonal employment changes, as businesses may reduce hiring in anticipation of slower demand. However, the subsequent months see a recovery, demonstrating resilience in the job market.</p>
+<p><strong>Fall Decline:</strong></p>
+<p>A sharp decline occurs in October (701.04), marking the lowest employment rate of the year. This decrease may correlate with the end of the summer hiring season, leading to layoffs or reduced hiring in preparation for the holiday season. Employers may reassess their workforce needs, reflecting broader economic uncertainties.</p>
+<p><strong>Late-Year Challenges:</strong></p>
+<p>The low employment figures persist into November (701.78) and December (702.40), suggesting a challenging end to the year. The consistent low rates could signal concerns regarding economic conditions or shifts in labor market dynamics. Additionally, these months often see seasonal fluctuations, where many temporary positions are filled but may not lead to sustained employment.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_9.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="comparison-between-unemployment-and-employment-rates" class="level3" data-number="2.2.13">
+<h3 data-number="2.2.13" class="anchored" data-anchor-id="comparison-between-unemployment-and-employment-rates"><span class="header-section-number">2.2.13</span> 1. Comparison between Unemployment and Employment Rates</h3>
+<section id="overview-9" class="level4" data-number="2.2.13.1">
+<h4 data-number="2.2.13.1" class="anchored" data-anchor-id="overview-9"><span class="header-section-number">2.2.13.1</span> Overview</h4>
+<p>The dataset contains monthly unemployment and employment rates from January 2014 to September 2024. This period encompasses significant economic events, including recovery from the Great Recession, the impact of the COVID-19 pandemic, and subsequent economic adjustments.</p>
+</section>
+<section id="inisghts" class="level4" data-number="2.2.13.2">
+<h4 data-number="2.2.13.2" class="anchored" data-anchor-id="inisghts"><span class="header-section-number">2.2.13.2</span> Inisghts</h4>
+<p><strong>Initial Recovery Phase (2014-2019)</strong></p>
+<p><strong>Consistent Decline in Unemployment:</strong></p>
+<p>The unemployment rate (UNRATE) gradually declined from 6.6% in January 2014 to 3.5% in September 2019, indicating a robust recovery in the job market. The employment rate (EMRATE) showed a corresponding upward trend, starting at 67.72% and reaching 71.71% by the end of 2019, reflecting increased workforce participation.</p>
+<p><strong>COVID-19 Impact (2020)</strong></p>
+<p><strong>Dramatic Spike in Unemployment:</strong></p>
+<p>A sharp increase in unemployment occurred in April 2020, where the rate surged to 14.8%. This spike reflects the immediate effects of the COVID-19 pandemic, leading to widespread layoffs and furloughs. The employment rate saw a significant drop, plummeting to 60.17% in April 2020, signaling a substantial contraction in available jobs.</p>
+<p><strong>Gradual Recovery (2021-2023)</strong></p>
+<p><strong>Decreasing Unemployment:</strong></p>
+<p>After the peak in April 2020, the unemployment rate began to decrease steadily, reaching 3.9% by December 2021. The employment rate recovered as well, peaking at 70.83% in December 2021. Stability and Fluctuations: From early 2022 to mid-2023, both rates exhibited relative stability, with UNRATE fluctuating around 3.5%-4.1% and EMRATE hovering near 71.0%. Notably, the employment rate maintained a positive trend, suggesting sustained recovery in job creation.</p>
+<p><strong>Current Trends (2024)</strong></p>
+<p><strong>Slight Increase in Unemployment:</strong></p>
+<p>The data indicates a slight uptick in unemployment in early 2024, rising to 4.3% by July 2024. This may reflect ongoing adjustments in the labor market as industries stabilize post-pandemic. Despite the increase in unemployment, the employment rate remained relatively stable, fluctuating between 71.81% and 72.10%, indicating a resilient workforce.</p>
+<p><img src="./Final_Project/Week_2_Files/csv/csv/images/image_10.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="conclusion" class="level3" data-number="2.2.14">
+<h3 data-number="2.2.14" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.2.14</span> Conclusion</h3>
+<p><strong>This analysis illustrates the significant fluctuations and trends in the unemployment rate from 2014 to 2024. The impacts of economic events, particularly the COVID-19 pandemic, are evident in the data, showcasing a rapid rise in unemployment followed by a gradual recovery. The trends indicate resilience in the labor market, with indications of stability in recent years.</strong></p>
+<p><strong>Future analysis should continue to monitor these indicators closely, considering potential economic shifts and the ongoing impacts of policy decisions. The insights drawn from this analysis can help inform strategies for addressing unemployment and fostering a more resilient labor market</strong></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./diego_final.html" class="pagination-link" aria-label="Energy Prices and Consumption Analysis - Diego Mendoza">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Energy Prices and Consumption Analysis - Diego Mendoza</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./janice_final.html" class="pagination-link" aria-label="Macroeconomic Analysis - Janice Oenardi">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Macroeconomic Analysis - Janice Oenardi</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
