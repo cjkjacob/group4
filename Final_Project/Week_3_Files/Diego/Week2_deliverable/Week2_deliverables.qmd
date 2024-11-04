@@ -1,0 +1,135 @@
+---
+title: "Week2Deliverables"
+author: "Diego J Mendoza"
+---
+
+# Week 2 Deliverables
+
+### Deliverables
+
+Visualization 1: A stacked area chart comparing household energy consumption by type (e.g., electricity, natural gas) over time.
+
+Visualization 2: A line graph of the Global Price of Energy Index against electricity prices. This explores how overall energy prices influence electricity costs.
+
+### Background Information
+
+EnergyIndexUrbanHouseholdCost (CUSR0000SAH21): This index tracks monthly changes in the cost of household energy (e.g., electricity, natural gas) for urban consumers across the United States. It's seasonally adjusted, providing a clear view of inflation trends in residential energy. 
+
+ConsumerPriceEnergyUSA (CPGREN01USM659N): This dataset shows the consumer price index for energy, highlighting inflation in energy costs specific to the U.S. It measures yearly changes, offering insights into the overall price trend for energy. 
+
+NaturalGasConsumptionMonthlySeries (NATURALGASD11): This dataset captures monthly natural gas consumption, providing information useful for tracking seasonal and annual trends in household and industrial energy use. 
+
+ResidentialEnergyInflationTrend (DELCRC1A027NBEA): This series reports inflation trends within residential energy, tracking the economic impact of rising energy costs on household expenses.
+
+
+#### Vizulization 1
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales) # for formatting
+
+# Load the datasets (adjust file paths as needed)
+electricity_data <- read.csv("PCU221110221110P.csv")
+natural_gas_data <- read.csv("PNRGINDEXM.csv")
+
+# Rename columns for clarity
+colnames(electricity_data) <- c("DATE", "Electricity_Consumption")
+colnames(natural_gas_data) <- c("DATE", "NaturalGas_Consumption")
+
+# Convert DATE column to Date type
+electricity_data$DATE <- as.Date(electricity_data$DATE)
+natural_gas_data$DATE <- as.Date(natural_gas_data$DATE)
+
+# Ensure consumption columns are numeric
+electricity_data$Electricity_Consumption <- as.numeric(electricity_data$Electricity_Consumption)
+natural_gas_data$NaturalGas_Consumption <- as.numeric(natural_gas_data$NaturalGas_Consumption)
+
+# Merge datasets by DATE
+merged_data <- merge(electricity_data, natural_gas_data, by = "DATE")
+
+# Reshape data to long format for ggplot stacking
+stacked_data <- merged_data %>%
+  pivot_longer(cols = c("Electricity_Consumption", "NaturalGas_Consumption"),
+               names_to = "Energy_Type", values_to = "Consumption")
+
+# Create the stacked area chart
+ggplot(data = stacked_data, aes(x = DATE, y = Consumption, fill = Energy_Type)) +
+  geom_area(alpha = 0.8, linewidth = 0.5, color = "white") +  # White borders between layers
+  scale_fill_manual(values = c("#FDB462", "#80B1D3")) +  # Custom color palette
+  labs(title = "Household Energy Consumption by Type Over Time",
+       x = "Date", y = "Consumption",
+       fill = "Energy Type") +
+  theme_minimal(base_size = 15) +
+  scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    plot.title = element_text(size = 20, face = "bold"),
+    legend.position = "bottom"
+  ) +
+  scale_y_continuous(labels = comma)  # Format y-axis with commas
+
+```
+
+#####Insights
+
+**Professional Analysis of Household Energy Consumption Trends**
+
+The stacked area chart illustrates the trends in household energy consumption for electricity and natural gas from 2004 to 2023. Observing the data, three distinct peaks in electricity consumption emerge around 2008, 2014, and especially 2022. These fluctuations align with broader socio-economic, technological, and environmental trends, offering valuable insights into shifts in household energy use over time. Understanding these patterns is essential for professionals in data visualization, as it highlights the potential drivers behind observed data points and the importance of contextual awareness in data interpretation.
+
+The peak in electricity consumption in 2008 could correspond to behavioral shifts during the global financial crisis, when many households reduced discretionary spending and spent more time at home, possibly leading to increased residential energy usage. The following years saw the adoption of energy-efficient appliances and smart technologies, which could explain the decline in consumption as households progressively became more energy-conscious. Such improvements in energy efficiency align with a growing awareness of sustainability practices, demonstrating how technological advancements can directly impact energy demand.
+
+The significant spike in 2022 likely reflects the impact of the COVID-19 pandemic and related changes in daily life. Remote work and schooling increased residential energy demand as more people relied on home heating, cooling, and digital devices. Additionally, the growing adoption of electric vehicles and home offices contributed to rising electricity use in residential areas. Environmental factors, particularly extreme weather patterns driven by climate change, also likely played a role in amplifying demand for heating and cooling systems, especially during periods of extreme temperatures in 2022. These insights underscore the importance of considering economic, technological, and environmental factors when interpreting energy consumption data, as each factor can independently and collectively drive significant changes in household energy use.
+
+
+#### Vizulization 2
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales) # for formatting
+
+df_energy_index <- read.csv("EnergyIndexUrbanHouseholdCost.csv")
+df_cpi_energy <- read.csv("ConsumerPriceEnergyUSA.csv")
+df_natgas_consumption <- read.csv("ResidentialEnergyInflationTrend.csv")
+df_res_energy_inflation <- read.csv("ResidentialEnergyInflationTrend.csv")
+
+merged_data <- merge(df_energy_index, df_cpi_energy, by = "DATE", all = TRUE)
+merged_data <- merge(merged_data, df_natgas_consumption, by = "DATE", all = TRUE)
+merged_data <- merge(merged_data, df_res_energy_inflation, by = "DATE", all = TRUE)
+
+merged_data$DATE <- as.Date(paste0(merged_data$DATE, "-01-01"), format = "%Y-%m-%d")
+
+# Drop rows with NA in DATE (optional, but recommended for plotting)
+merged_data <- merged_data %>% drop_na(DATE)
+
+colnames(merged_data) <- c("DATE", "Energy_Index", "CPI_Energy", "NatGas_Consumption", "Res_Energy_Inflation")
+
+# Plotting the data
+ggplot(data = merged_data, aes(x = DATE)) +
+  geom_line(aes(y = Energy_Index, color = "Energy Index")) +
+  geom_line(aes(y = CPI_Energy, color = "CPI Energy")) +
+  geom_line(aes(y = NatGas_Consumption, color = "Natural Gas Consumption")) +
+  geom_line(aes(y = Res_Energy_Inflation, color = "Residential Energy Inflation")) +
+  scale_color_manual(values = c("Energy Index" = "blue", "CPI Energy" = "red",
+                                "Natural Gas Consumption" = "green", "Residential Energy Inflation" = "purple")) +
+  labs(title = "Trends in Energy Index and Consumption over Time",
+       x = "Date",
+       y = "Index / Consumption / Inflation Rate",
+       color = "Legend") +
+  scale_x_date(date_labels = "%Y", date_breaks = "1 year") +
+  theme_minimal()
+
+# Rename columns for merging
+
+
+#merged_data <- reduce(list(df_energy_index, df_cpi_energy, df_natgas_consumption, df_res_energy_inflation), 
+                    #  full_join, by = "DATE")
+
+#merged_data <- merge(df_energy_index, df_cpi_energy, df_natgas_consumption, df_res_energy_inflation , by = "DATE")
+```
+
+

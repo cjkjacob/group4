@@ -487,3 +487,148 @@ The data indicates a slight uptick in unemployment in early 2024, rising to 4.3%
 **This analysis illustrates the significant fluctuations and trends in the unemployment rate from 2014 to 2024. The impacts of economic events, particularly the COVID-19 pandemic, are evident in the data, showcasing a rapid rise in unemployment followed by a gradual recovery. The trends indicate resilience in the labor market, with indications of stability in recent years.**
 
 **Future analysis should continue to monitor these indicators closely, considering potential economic shifts and the ongoing impacts of policy decisions. The insights drawn from this analysis can help inform strategies for addressing unemployment and fostering a more resilient labor market**
+
+
+
+
+## Week 3 - 10/28 ~ 11/4
+
+### 1. Labor Participation Rates
+
+#### General Trend (2004 - 2024)
+
+From 2004 to 2024, the numbers reveal an overall gradual decline with some fluctuations. Starting at a high of around 66.1 in 2004, the values taper down, reaching a low point near 63.1 around 2013-2015, and later stabilizing slightly below this level.
+
+#### Periodic Trends 2004 - 2006:
+
+Fairly stable values at or just above 66.0, with minimal variation. This period shows consistency, with average values remaining between 65.8 and 66.4. 2007 - 2012: A slow, gradual decrease begins, showing a small drop each year. By 2012, values dip into the 63.0s. 2013 - 2016: The period from 2013 to 2016 marks a stabilization around 63.0, showing that the initial decline has leveled off. 2017 - 2019: Minor fluctuations occur, but values generally hold between 62.7 and 63.2. 2020 - 2021: There’s a noticeable decrease during these years, with a low at 60.1 in April 2020, likely influenced by external events or changes. 2022 - 2024: Gradual recovery and stabilization. Values from 62.1 to 62.8 suggest a slight upward trend, signaling a return to pre-2020 levels.
+
+#### Notable Dips and Recoveries
+
+2020 Drop: There’s a significant dip in early 2020, reaching a low of 60.1 in April, possibly indicative of disruptions (potentially related to the COVID-19 pandemic). Post-2021 Recovery: Values begin to rise gradually from mid-2021 onward, climbing back toward 62.8 by 2024.
+
+#### Recent Stability (2022 - 2024)
+
+Starting in 2022, the values show relative stability, remaining within the 62.1 - 62.8 range. This could imply that the earlier volatility has settled, suggesting that the dataset is stabilizing at this new level.
+
+#### Seasonal Fluctuations
+
+Although the data displays annual cycles, the month-to-month changes are minimal, suggesting low seasonal variability. However, some minor dips in late 2008 and early 2009 hint at potential seasonal effects, with values generally lower in winter months.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL.png)
+
+### 2. Overall LPR
+
+#### Trends Over Time:
+
+The data starts at a high average value, peaking at 66.4 in early 2007 and then gradually declines. The lowest recorded value is 60.1 in April 2020, possibly indicating an unusual dip, which may correspond with the onset of the COVID-19 pandemic.
+
+After 2020, the values generally increase, showing signs of gradual recovery, but they don’t return to the initial highs seen before 2010.
+
+#### Central Tendency:
+
+The **median** value is 63.1, close to the overall **average** of 63.8, suggesting that the dataset is fairly symmetric, though with a few notable declines, especially around 2020. This average lies slightly above the midpoint between the maximum (66.4) and minimum (60.1), implying a slight skew toward higher values but balanced by the years of lower measurements around the 2020 period.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 3.png)
+
+### 3. Men LPR
+
+##### General Trend
+
+The male labor force participation rate has experienced a **gradual overall decline** from approximately 73.7% in 2004 to around 68.2% in recent years. This steady decline reflects broader shifts in the workforce, influenced by demographic factors such as aging, increased schooling, and changing job market dynamics.
+
+##### Notable Dips and Recoveries
+
+**2008 Financial Crisis**: The 2008 recession marks a significant dip in participation, with male labor force involvement dropping from around 73% to 71% between 2008 and 2009. Post-recession, the recovery was slow, and participation did not fully rebound, indicating long-term structural changes.
+
+**COVID-19 Pandemic (2020)**: The COVID-19 pandemic led to one of the most dramatic drops in male participation, falling sharply from 69.2% in February 2020 to about 66% by April 2020. This sudden drop was due to widespread lockdowns and economic uncertainty. While there was some recovery from 2021 onward, pre-pandemic levels have not yet been restored.
+
+##### Recent Stability
+
+Since 2021, labor force participation among men has shown signs of **stabilization**, with rates hovering around 68% in 2023 and 2024. This stability, although lower than in previous years, indicates a potential new normal in male workforce engagement, reflecting shifts brought about by the pandemic and economic adjustments.
+
+##### Seasonal Fluctuations
+
+The data shows **seasonal fluctuations** in male labor force participation, often peaking in the spring and summer months and dipping in the winter. This seasonal pattern likely reflects job trends in certain sectors like construction, retail, and tourism, which see higher activity in warmer months and around holiday seasons.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 5.png)
+
+### 4. Overall Men LPR
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 6.png)
+
+#### Trends Over Time
+
+**Initial Highs and Decline**: Starting with a high participation rate of **73.8%**, stability was initially strong but then declined, especially after economic downturns like the 2008 recession and the COVID-19 pandemic in 2020, which saw rates fall to **66.0%**
+
+**Recent Stabilization**: Following the pandemic, rates have stabilized near the **69.3%** median, indicating a recovery as the labor market adapted to new conditions.
+
+#### Central Tendency
+
+**Median (69.3%)** and **Average (70.2%)**: These values reflect that while there were notable dips, participation rates consistently centered around 70%, highlighting resilience despite economic shifts.
+
+### 5. Women LPR
+
+##### General Trend
+
+**Long-Term Decline:** The initial years from 2004 to 2015 saw a steady decrease in participation rates, indicating challenges for women in the workforce during that period, including potential factors such as economic downturns and shifts in job availability.
+
+**Gradual Recovery:** Post-2015, the participation rate began to recover slowly, reaching a peak of 57.9% in early 2020 before the pandemic caused a sharp decline.
+
+##### Notable Dips and Recoveries
+
+**Significant Dip in 2020:** There was a sharp decline in April 2020, dropping to 54.6%, which correlates with the onset of the pandemic and widespread job losses.
+
+**Slow Recovery Post-Pandemic:** After the initial drop, the labor force participation rate for women showed a gradual recovery, with figures improving to 57.6% by late 2021. However, the recovery has been slow and inconsistent compared to pre-pandemic levels.
+
+##### Recent Stability
+
+**Stabilization Around Mid-50s:** By 2023, the participation rate has stabilized in the range of 57% to 57.6%, suggesting a return to pre-pandemic participation levels, albeit not to the higher levels seen in the early 2000s.
+
+**Slight Variability:** There is some slight variability month-to-month, but rates have remained consistent within this range, indicating that the labor market for women may have found a new equilibrium.
+
+##### Seasonal Fluctuations
+
+**Monthly Variability:** Throughout the years, there have been minor seasonal fluctuations, often reflecting typical economic cycles, but these variations are less pronounced compared to the larger trends observed during significant economic events, like the pandemic.
+
+**No Major Seasonal Patterns Identified:** While month-to-month changes occur, no distinct seasonal pattern is evident in the data over the years; fluctuations seem more influenced by broader economic conditions rather than regular seasonal trends.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 1.png)
+
+### 6. Overall Woman LPR
+
+##### Trends Over Time
+
+The labor force participation rate for women has experienced fluctuations, reflecting the impact of economic conditions, social factors, and policy changes. Initially, the rate showed an upward trend, indicating increased opportunities for women in the workforce. However, recent data reveal a decline, particularly during economic downturns.
+
+The rate peaked at 59.6%, signaling strong participation likely linked to economic booms. Conversely, it fell to a minimum of 54.6%, with notable dips during significant events such as the COVID-19 pandemic, which led to substantial job losses among women. Recovery periods can be observed following economic stimulus and policy changes aimed at reintegrating women into the workforce.
+
+Currently, the participation rate appears stabilized around the average of 59.6%, indicating a possible recovery phase. However, this stability aligns with the maximum, suggesting that significant fluctuations persist.
+
+##### Central Tendency
+
+The central tendency of women’s labor force participation rates reveals key insights into their workforce presence. The mean (average) rate is 59.6%, indicating consistent engagement, especially during periods of economic growth. In contrast, the median rate of 54.6% shows that at least half of the recorded rates were lower, suggesting significant impacts from adverse economic conditions on women's participation.
+
+The minimum rate, also at 54.6%, indicates a threshold for participation, with its convergence with the median highlighting systemic barriers women face in the labor market. Meanwhile, the maximum rate of 59.6% serves as an aspirational benchmark for future policies aimed at enhancing women's workforce engagement, emphasizing the potential for growth and the need to address ongoing challenges.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 2.png)
+
+### 7. Comparison Between Overall, Men , Women LPR
+
+##### Overall Labor Participation Rates
+
+The overall labor participation rate demonstrates a maximum of **66.4%**, reflecting peak engagement in the workforce. The minimum rate of **60.1%** indicates a lower threshold, while the **median** of **63.1%** shows that half of the recorded rates fall below this level, providing a balanced view of workforce participation. The **average** participation rate is **63.8%**, suggesting consistent participation with minor fluctuations.
+
+##### Men’s Labor Participation Rates
+
+For men, the labor participation rate peaks at **73.8%**, with a minimum of **66.0%**. The **median** rate is **69.3%**, indicating a robust presence in the workforce, while the **average** of **70.2%** highlights sustained engagement, reflecting economic conditions that generally favor male participation.
+
+##### Women’s Labor Participation Rates
+
+Women’s labor participation shows a maximum of **59.6%** and a minimum of **54.6%**, with both the **median** and **minimum** rates aligning at **54.6%**. This convergence suggests challenges women face in maintaining consistent participation levels. The **average** of **59.6%** indicates periods of strong engagement, yet also underscores significant fluctuations influenced by economic downturns and social factors.
+
+##### Summary of Comparison
+
+The stark difference between men’s and women’s labor participation rates highlights ongoing challenges and inequalities in the workforce. While both genders exhibit some level of fluctuation, men's participation remains notably higher and more stable, reflecting traditional employment dynamics. In contrast, women's labor participation is subject to greater variability, influenced by external factors and economic conditions. Addressing these disparities is crucial for promoting gender equity and enhancing workforce participation for women.
+
+![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 4.png)

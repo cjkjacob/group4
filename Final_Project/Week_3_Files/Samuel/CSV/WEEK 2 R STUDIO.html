@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Samuel Zelaya">
+
+<title>week 2 deliverables</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="WEEK 2 R STUDIO_files/libs/clipboard/clipboard.min.js"></script>
+<script src="WEEK 2 R STUDIO_files/libs/quarto-html/quarto.js"></script>
+<script src="WEEK 2 R STUDIO_files/libs/quarto-html/popper.min.js"></script>
+<script src="WEEK 2 R STUDIO_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="WEEK 2 R STUDIO_files/libs/quarto-html/anchor.min.js"></script>
+<link href="WEEK 2 R STUDIO_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="WEEK 2 R STUDIO_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="WEEK 2 R STUDIO_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="WEEK 2 R STUDIO_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="WEEK 2 R STUDIO_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">week 2 deliverables</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Samuel Zelaya </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="labor-participation-rates" class="level1">
+<h1>1. Labor Participation Rates</h1>
+<section id="general-trend-2004---2024" class="level2">
+<h2 class="anchored" data-anchor-id="general-trend-2004---2024">General Trend (2004 - 2024)</h2>
+<p>From 2004 to 2024, the numbers reveal an overall gradual decline with some fluctuations. Starting at a high of around 66.1 in 2004, the values taper down, reaching a low point near 63.1 around 2013-2015, and later stabilizing slightly below this level.</p>
+</section>
+<section id="periodic-trends-2004---2006" class="level2">
+<h2 class="anchored" data-anchor-id="periodic-trends-2004---2006">Periodic Trends 2004 - 2006:</h2>
+<p>Fairly stable values at or just above 66.0, with minimal variation. This period shows consistency, with average values remaining between 65.8 and 66.4. 2007 - 2012: A slow, gradual decrease begins, showing a small drop each year. By 2012, values dip into the 63.0s. 2013 - 2016: The period from 2013 to 2016 marks a stabilization around 63.0, showing that the initial decline has leveled off. 2017 - 2019: Minor fluctuations occur, but values generally hold between 62.7 and 63.2. 2020 - 2021: There’s a noticeable decrease during these years, with a low at 60.1 in April 2020, likely influenced by external events or changes. 2022 - 2024: Gradual recovery and stabilization. Values from 62.1 to 62.8 suggest a slight upward trend, signaling a return to pre-2020 levels.</p>
+</section>
+<section id="notable-dips-and-recoveries" class="level2">
+<h2 class="anchored" data-anchor-id="notable-dips-and-recoveries">Notable Dips and Recoveries</h2>
+<p>2020 Drop: There’s a significant dip in early 2020, reaching a low of 60.1 in April, possibly indicative of disruptions (potentially related to the COVID-19 pandemic). Post-2021 Recovery: Values begin to rise gradually from mid-2021 onward, climbing back toward 62.8 by 2024.</p>
+</section>
+<section id="recent-stability-2022---2024" class="level2">
+<h2 class="anchored" data-anchor-id="recent-stability-2022---2024">Recent Stability (2022 - 2024)</h2>
+<p>Starting in 2022, the values show relative stability, remaining within the 62.1 - 62.8 range. This could imply that the earlier volatility has settled, suggesting that the dataset is stabilizing at this new level.</p>
+</section>
+<section id="seasonal-fluctuations" class="level2">
+<h2 class="anchored" data-anchor-id="seasonal-fluctuations">Seasonal Fluctuations</h2>
+<p>Although the data displays annual cycles, the month-to-month changes are minimal, suggesting low seasonal variability. However, some minor dips in late 2008 and early 2009 hint at potential seasonal effects, with values generally lower in winter months.</p>
+<p><img src="SAMUEL%20.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="overall-lpr" class="level1">
+<h1>2. Overall LPR</h1>
+<section id="trends-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="trends-over-time">Trends Over Time:</h2>
+<p>The data starts at a high average value, peaking at 66.4 in early 2007 and then gradually declines. The lowest recorded value is 60.1 in April 2020, possibly indicating an unusual dip, which may correspond with the onset of the COVID-19 pandemic.</p>
+<p>After 2020, the values generally increase, showing signs of gradual recovery, but they don’t return to the initial highs seen before 2010.</p>
+</section>
+<section id="central-tendency" class="level2">
+<h2 class="anchored" data-anchor-id="central-tendency">Central Tendency:</h2>
+<p>The <strong>median</strong> value is 63.1, close to the overall <strong>average</strong> of 63.8, suggesting that the dataset is fairly symmetric, though with a few notable declines, especially around 2020. This average lies slightly above the midpoint between the maximum (66.4) and minimum (60.1), implying a slight skew toward higher values but balanced by the years of lower measurements around the 2020 period.</p>
+<p><img src="SAMUEL%203.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="men-lpr" class="level1">
+<h1>3. Men LPR</h1>
+<section id="general-trend" class="level3">
+<h3 class="anchored" data-anchor-id="general-trend">General Trend</h3>
+<p>The male labor force participation rate has experienced a <strong>gradual overall decline</strong> from approximately 73.7% in 2004 to around 68.2% in recent years. This steady decline reflects broader shifts in the workforce, influenced by demographic factors such as aging, increased schooling, and changing job market dynamics.</p>
+</section>
+<section id="notable-dips-and-recoveries-1" class="level3">
+<h3 class="anchored" data-anchor-id="notable-dips-and-recoveries-1">Notable Dips and Recoveries</h3>
+<p><strong>2008 Financial Crisis</strong>: The 2008 recession marks a significant dip in participation, with male labor force involvement dropping from around 73% to 71% between 2008 and 2009. Post-recession, the recovery was slow, and participation did not fully rebound, indicating long-term structural changes.</p>
+<p><strong>COVID-19 Pandemic (2020)</strong>: The COVID-19 pandemic led to one of the most dramatic drops in male participation, falling sharply from 69.2% in February 2020 to about 66% by April 2020. This sudden drop was due to widespread lockdowns and economic uncertainty. While there was some recovery from 2021 onward, pre-pandemic levels have not yet been restored.</p>
+</section>
+<section id="recent-stability" class="level3">
+<h3 class="anchored" data-anchor-id="recent-stability">Recent Stability</h3>
+<p>Since 2021, labor force participation among men has shown signs of <strong>stabilization</strong>, with rates hovering around 68% in 2023 and 2024. This stability, although lower than in previous years, indicates a potential new normal in male workforce engagement, reflecting shifts brought about by the pandemic and economic adjustments.</p>
+</section>
+<section id="seasonal-fluctuations-1" class="level3">
+<h3 class="anchored" data-anchor-id="seasonal-fluctuations-1">Seasonal Fluctuations</h3>
+<p>The data shows <strong>seasonal fluctuations</strong> in male labor force participation, often peaking in the spring and summer months and dipping in the winter. This seasonal pattern likely reflects job trends in certain sectors like construction, retail, and tourism, which see higher activity in warmer months and around holiday seasons.</p>
+<p><img src="SAMUEL%205.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="overall-men-lpr" class="level1">
+<h1>4. Overall Men LPR</h1>
+<p><img src="SAMUEL%206.png" class="img-fluid"></p>
+<section id="trends-over-time-1" class="level2">
+<h2 class="anchored" data-anchor-id="trends-over-time-1">Trends Over Time</h2>
+<p><strong>Initial Highs and Decline</strong>: Starting with a high participation rate of <strong>73.8%</strong>, stability was initially strong but then declined, especially after economic downturns like the 2008 recession and the COVID-19 pandemic in 2020, which saw rates fall to <strong>66.0%</strong></p>
+<p><strong>Recent Stabilization</strong>: Following the pandemic, rates have stabilized near the <strong>69.3%</strong> median, indicating a recovery as the labor market adapted to new conditions.</p>
+</section>
+<section id="central-tendency-1" class="level2">
+<h2 class="anchored" data-anchor-id="central-tendency-1">Central Tendency</h2>
+<p><strong>Median (69.3%)</strong> and <strong>Average (70.2%)</strong>: These values reflect that while there were notable dips, participation rates consistently centered around 70%, highlighting resilience despite economic shifts.</p>
+</section>
+</section>
+<section id="women-lpr" class="level1">
+<h1>5. Women LPR</h1>
+<section id="general-trend-1" class="level3">
+<h3 class="anchored" data-anchor-id="general-trend-1">General Trend</h3>
+<p><strong>Long-Term Decline:</strong> The initial years from 2004 to 2015 saw a steady decrease in participation rates, indicating challenges for women in the workforce during that period, including potential factors such as economic downturns and shifts in job availability.</p>
+<p><strong>Gradual Recovery:</strong> Post-2015, the participation rate began to recover slowly, reaching a peak of 57.9% in early 2020 before the pandemic caused a sharp decline.</p>
+</section>
+<section id="notable-dips-and-recoveries-2" class="level3">
+<h3 class="anchored" data-anchor-id="notable-dips-and-recoveries-2">Notable Dips and Recoveries</h3>
+<p><strong>Significant Dip in 2020:</strong> There was a sharp decline in April 2020, dropping to 54.6%, which correlates with the onset of the pandemic and widespread job losses.</p>
+<p><strong>Slow Recovery Post-Pandemic:</strong> After the initial drop, the labor force participation rate for women showed a gradual recovery, with figures improving to 57.6% by late 2021. However, the recovery has been slow and inconsistent compared to pre-pandemic levels.</p>
+</section>
+<section id="recent-stability-1" class="level3">
+<h3 class="anchored" data-anchor-id="recent-stability-1">Recent Stability</h3>
+<p><strong>Stabilization Around Mid-50s:</strong> By 2023, the participation rate has stabilized in the range of 57% to 57.6%, suggesting a return to pre-pandemic participation levels, albeit not to the higher levels seen in the early 2000s.</p>
+<p><strong>Slight Variability:</strong> There is some slight variability month-to-month, but rates have remained consistent within this range, indicating that the labor market for women may have found a new equilibrium.</p>
+</section>
+<section id="seasonal-fluctuations-2" class="level3">
+<h3 class="anchored" data-anchor-id="seasonal-fluctuations-2">Seasonal Fluctuations</h3>
+<p><strong>Monthly Variability:</strong> Throughout the years, there have been minor seasonal fluctuations, often reflecting typical economic cycles, but these variations are less pronounced compared to the larger trends observed during significant economic events, like the pandemic.</p>
+<p><strong>No Major Seasonal Patterns Identified:</strong> While month-to-month changes occur, no distinct seasonal pattern is evident in the data over the years; fluctuations seem more influenced by broader economic conditions rather than regular seasonal trends.</p>
+<p><img src="SAMUEL%201.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="overall-woman-lpr" class="level1">
+<h1>6. Overall Woman LPR</h1>
+<section id="trends-over-time-2" class="level3">
+<h3 class="anchored" data-anchor-id="trends-over-time-2">Trends Over Time</h3>
+<p>The labor force participation rate for women has experienced fluctuations, reflecting the impact of economic conditions, social factors, and policy changes. Initially, the rate showed an upward trend, indicating increased opportunities for women in the workforce. However, recent data reveal a decline, particularly during economic downturns.</p>
+<p>The rate peaked at 59.6%, signaling strong participation likely linked to economic booms. Conversely, it fell to a minimum of 54.6%, with notable dips during significant events such as the COVID-19 pandemic, which led to substantial job losses among women. Recovery periods can be observed following economic stimulus and policy changes aimed at reintegrating women into the workforce.</p>
+<p>Currently, the participation rate appears stabilized around the average of 59.6%, indicating a possible recovery phase. However, this stability aligns with the maximum, suggesting that significant fluctuations persist.</p>
+</section>
+<section id="central-tendency-2" class="level3">
+<h3 class="anchored" data-anchor-id="central-tendency-2">Central Tendency</h3>
+<p>The central tendency of women’s labor force participation rates reveals key insights into their workforce presence. The mean (average) rate is 59.6%, indicating consistent engagement, especially during periods of economic growth. In contrast, the median rate of 54.6% shows that at least half of the recorded rates were lower, suggesting significant impacts from adverse economic conditions on women’s participation.</p>
+<p>The minimum rate, also at 54.6%, indicates a threshold for participation, with its convergence with the median highlighting systemic barriers women face in the labor market. Meanwhile, the maximum rate of 59.6% serves as an aspirational benchmark for future policies aimed at enhancing women’s workforce engagement, emphasizing the potential for growth and the need to address ongoing challenges.</p>
+<p><img src="SAMUEL%202.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="comparison-between-overall-men-women-lpr" class="level1">
+<h1>7. Comparison Between Overall, Men , Women LPR</h1>
+<section id="overall-labor-participation-rates" class="level3">
+<h3 class="anchored" data-anchor-id="overall-labor-participation-rates">Overall Labor Participation Rates</h3>
+<p>The overall labor participation rate demonstrates a maximum of <strong>66.4%</strong>, reflecting peak engagement in the workforce. The minimum rate of <strong>60.1%</strong> indicates a lower threshold, while the <strong>median</strong> of <strong>63.1%</strong> shows that half of the recorded rates fall below this level, providing a balanced view of workforce participation. The <strong>average</strong> participation rate is <strong>63.8%</strong>, suggesting consistent participation with minor fluctuations.</p>
+</section>
+<section id="mens-labor-participation-rates" class="level3">
+<h3 class="anchored" data-anchor-id="mens-labor-participation-rates">Men’s Labor Participation Rates</h3>
+<p>For men, the labor participation rate peaks at <strong>73.8%</strong>, with a minimum of <strong>66.0%</strong>. The <strong>median</strong> rate is <strong>69.3%</strong>, indicating a robust presence in the workforce, while the <strong>average</strong> of <strong>70.2%</strong> highlights sustained engagement, reflecting economic conditions that generally favor male participation.</p>
+</section>
+<section id="womens-labor-participation-rates" class="level3">
+<h3 class="anchored" data-anchor-id="womens-labor-participation-rates">Women’s Labor Participation Rates</h3>
+<p>Women’s labor participation shows a maximum of <strong>59.6%</strong> and a minimum of <strong>54.6%</strong>, with both the <strong>median</strong> and <strong>minimum</strong> rates aligning at <strong>54.6%</strong>. This convergence suggests challenges women face in maintaining consistent participation levels. The <strong>average</strong> of <strong>59.6%</strong> indicates periods of strong engagement, yet also underscores significant fluctuations influenced by economic downturns and social factors.</p>
+</section>
+<section id="summary-of-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-comparison">Summary of Comparison</h3>
+<p>The stark difference between men’s and women’s labor participation rates highlights ongoing challenges and inequalities in the workforce. While both genders exhibit some level of fluctuation, men’s participation remains notably higher and more stable, reflecting traditional employment dynamics. In contrast, women’s labor participation is subject to greater variability, influenced by external factors and economic conditions. Addressing these disparities is crucial for promoting gender equity and enhancing workforce participation for women.</p>
+<p><img src="SAMUEL%204.png" class="img-fluid"></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

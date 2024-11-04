@@ -302,3 +302,171 @@ Here are key observations and differences based on Plot 2, which illustrates the
 - **Allocation Priorities**: The sustained focus on K-12 funding over higher education may reflect priorities in achieving universal basic education or addressing early educational inequalities, potentially at the expense of expanding access to higher education.
 
 These insights highlight the government’s priority in securing strong foundational education through significant investment in K-12. In contrast, the relatively small share for higher education suggests a limited expansion focus on tertiary education, possibly affecting the country’s higher education accessibility and long-term economic mobility for students.
+
+
+## Week 3 - 10/28 ~ 11/4
+
+Here are the visualizations for this week:
+
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+# Load the data
+data = pd.read_excel(r".\EducationalSpendingFinalProject.xlsx", sheet_name="Monthly")
+
+# Convert date column to datetime format and filter for recent data
+data['DATE'] = pd.to_datetime(data['DATE'])
+recent_data = data[data['DATE'] >= data['DATE'].max() - pd.DateOffset(years=20)]
+
+# Plotting the line graph with contrasting colors
+fig1 = go.Figure()
+fig1.add_trace(go.Scatter(
+    x=recent_data['DATE'],
+    y=recent_data['Labor Force Participation Rate - High School Graduates, No College, 25 yrs and older'],
+    mode='lines',
+    name='High School Graduates',
+    line=dict(color='royalblue', width=3)
+))
+fig1.add_trace(go.Scatter(
+    x=recent_data['DATE'],
+    y=recent_data['Unemployment Rate - Some College or Associate Degree, 25 Yrs. & over'],
+    mode='lines',
+    name='Some College/Associate Degree',
+    line=dict(color='darkorange', width=3)
+))
+
+# Update layout with readability in mind
+fig1.update_layout(
+    title='Labor Force Participation Rate by Educational Attainment (Last 20 Years)',
+    xaxis_title='Year',
+    yaxis_title='Labor Force Participation Rate (%)',
+    template='plotly_white',
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(0,0,0,0)',
+    font=dict(color='black'),
+    legend=dict(bgcolor='rgba(255,255,255,0.8)', bordercolor="Black", borderwidth=1)
+)
+
+fig1.show()
+
+```
+
+### Key Insights, Observations, and Differences from Labor Force Participation Rates
+
+Here are key insights, observations, and differences from the line graph of labor force participation rates for high school graduates and individuals with some college or an associate degree over the last 20 years:
+
+#### Key Insights and Observations
+
+- **Higher Consistent Participation Among High School Graduates**: The labor force participation rate for high school graduates is consistently around 60%, maintaining a steady trend over the past two decades. This stability suggests that high school graduates have a consistent level of engagement in the workforce.
+
+- **Low Participation for Individuals with Some College or an Associate Degree**: The participation rate for those with some college education or an associate degree is notably lower than that of high school graduates, hovering around 10% or less. This low rate is surprising, as we might expect higher engagement due to the partial college education.
+
+- **Minimal Fluctuation in High School Graduate Participation**: The participation rate for high school graduates remains remarkably stable, with only minor fluctuations over time. This suggests resilience in workforce participation among this group, even in the face of economic changes.
+
+- **Sharp Decline and Recovery Around 2020 for Some College Group**: There’s a noticeable dip and spike in the participation rate for individuals with some college or an associate degree around 2020, likely due to the economic impact of the COVID-19 pandemic, followed by a rapid adjustment.
+
+- **Limited Recovery in Some College Group Post-2020**: Post-2020, the labor force participation rate for individuals with some college education or an associate degree stabilizes at a low level, suggesting that this group may have faced lasting employment challenges or shifting economic opportunities after the pandemic.
+
+#### Key Differences
+
+- **Stable vs. Variable Participation Rates**: High school graduates show a stable participation rate, indicating a steady demand for this educational group. In contrast, the participation rate for those with some college education fluctuates more, especially around 2020, suggesting that they may be more sensitive to economic shifts.
+
+- **Persistent Gap in Participation Levels**: The participation rate for high school graduates remains significantly higher than for those with some college or an associate degree. This gap might indicate structural or economic factors that limit opportunities for partially educated individuals compared to those with just a high school diploma.
+
+- **Economic Sensitivity of Some College Group**: The more variable participation rate for individuals with some college or an associate degree highlights their potential vulnerability to economic downturns, as seen in the sharp fluctuations around 2020. This group may face challenges in accessing stable employment compared to high school graduates.
+
+- **Limited Advantage of Partial College Education**: The lower labor force participation rate for those with some college education or an associate degree suggests that partial college education may not offer a significant advantage in the job market, at least in terms of workforce participation compared to high school graduates.
+
+- **Resilience of High School Graduates**: The consistent participation rate among high school graduates indicates a level of resilience, possibly due to the accessibility of entry-level jobs that require only a high school diploma, whereas partially completed higher education may not translate into comparable workforce stability.
+
+These observations indicate that individuals with a high school diploma may have better or more consistent job market access than those with only some college education, highlighting potential issues with the labor market value of partial tertiary education.
+
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+annual_data = pd.read_excel(r".\EducationalSpendingFinalProject.xlsx", sheet_name="Annual")
+monthly_data = pd.read_excel(r".\EducationalSpendingFinalProject.xlsx", sheet_name="Monthly")
+
+
+# Load data from the Annual and Monthly sheets
+# annual_data = pd.read_excel("/mnt/data/EducationalSpendingFinalProject.xlsx", sheet_name="Annual")
+# monthly_data = pd.read_excel("/mnt/data/EducationalSpendingFinalProject.xlsx", sheet_name="Monthly")
+
+# Convert dates to datetime format
+annual_data['DATE'] = pd.to_datetime(annual_data['DATE'])
+monthly_data['DATE'] = pd.to_datetime(monthly_data['DATE'])
+
+# Extract yearly averages from Monthly sheet for labor force participation rate
+monthly_data['Year'] = monthly_data['DATE'].dt.year
+yearly_avg_lfp = monthly_data.groupby('Year')['Labor Force Participation Rate - High School Graduates, No College, 25 yrs and older'].mean().reset_index()
+
+# Rename column to avoid conflicts during merging
+yearly_avg_lfp.rename(columns={'Labor Force Participation Rate - High School Graduates, No College, 25 yrs and older': 'Labor Force Participation Rate'}, inplace=True)
+
+# Merge data on matching years to align expenditures and labor force participation rates
+annual_data['Year'] = annual_data['DATE'].dt.year
+merged_data = pd.merge(annual_data, yearly_avg_lfp, on='Year', how='inner')
+
+# Rename expenditure column for easier reference
+merged_data.rename(columns={'Government current expenditures: State and local: Education: Higher': 'Higher Education Expenditures'}, inplace=True)
+
+# Scatter plot with trend line
+fig2 = px.scatter(
+    merged_data,
+    x='Higher Education Expenditures',
+    y='Labor Force Participation Rate',
+    title='Government Expenditures on Higher Education vs. Labor Force Participation Rate',
+    labels={
+        'Higher Education Expenditures': 'Higher Education Expenditures (Billions)',
+        'Labor Force Participation Rate': 'Labor Force Participation Rate (%)'
+    },
+    trendline='ols',
+    template='plotly_white'
+)
+
+# Update layout for improved contrast
+fig2.update_layout(
+    plot_bgcolor='rgba(0,0,0,0)',
+    paper_bgcolor='rgba(255,255,255,0.8)',
+    font=dict(color='black'),
+    xaxis=dict(showgrid=True, gridcolor='lightgray'),
+    yaxis=dict(showgrid=True, gridcolor='lightgray')
+)
+
+fig2.show()
+
+```
+
+### Key Insights, Observations, and Differences from the Scatter Plot on Higher Education Expenditures and Labor Force Participation Rates
+
+Here are key insights, observations, and differences based on the scatter plot showing the relationship between government expenditures on higher education and labor force participation rates for individuals with some college education:
+
+#### Key Insights and Observations
+
+- **Negative Correlation**: There is a clear negative correlation between government expenditures on higher education and labor force participation rates for individuals with some college education. As spending on higher education increases, labor force participation rates tend to decrease.
+
+- **Strong Linear Relationship**: The data points align closely along a descending trend line, indicating a strong linear relationship. This suggests that other variables, such as economic factors or policy decisions, may influence both higher education spending and labor force engagement consistently.
+
+- **Higher Participation at Lower Expenditures**: Labor force participation rates are higher when government expenditures on higher education are relatively low. This could imply that as education becomes more accessible through increased funding, fewer individuals with some college experience immediately enter the workforce, possibly choosing to continue their studies.
+
+- **Decreasing Participation with Increased Investment**: As investment in higher education grows, labor force participation for individuals with partial college education drops, which could indicate that more people are pursuing further education instead of entering the labor market immediately after some college experience.
+
+- **Potential Implications for Workforce Readiness**: The decline in participation rates as spending increases could suggest a shift in workforce readiness, with more individuals pursuing higher educational qualifications rather than participating in the labor force with partial college education.
+
+#### Key Differences
+
+- **Inverse Relationship vs. Positive Correlations in Other Contexts**: Unlike other scenarios where higher investment in education might correlate with increased workforce participation, this scatter plot shows an inverse relationship. Increased funding may encourage more students to stay in school longer, reducing the immediate labor force participation of individuals with some college experience.
+
+- **Impacts on Immediate vs. Long-Term Workforce**: This data may indicate that higher spending on education is effective in encouraging individuals to pursue full degrees, but it could reduce the availability of individuals with partial education in the labor market. This shift may affect immediate workforce availability while potentially increasing the long-term quality of the workforce.
+
+- **Influence on Partially Educated Individuals**: The trend suggests that individuals with some college experience are likely to complete their education rather than joining the workforce early when higher funding is available. This contrasts with scenarios where limited funding may pressure individuals to enter the workforce with partial qualifications.
+
+- **Policy Implications for Labor Market Dynamics**: The negative correlation highlights a possible need for policies that balance educational funding with incentives for workforce entry at different educational levels. This balance could ensure a steady labor force participation rate while still supporting continued education.
+
+- **Reflection of Economic Conditions**: The relationship might also reflect economic conditions, as increased education spending often aligns with economic prosperity, which can lead to more individuals opting for further education instead of immediate employment. This could be a structural trend, particularly if economic conditions and policy drive increased educational access.
+
+This scatter plot suggests that while increased spending on higher education encourages individuals to pursue further studies, it may temporarily reduce workforce participation rates for those with partial college education. This trend may be beneficial for building a more qualified workforce in the long term but could have implications for immediate labor force availability.
+

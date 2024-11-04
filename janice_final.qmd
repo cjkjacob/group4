@@ -161,7 +161,7 @@ library(readxl)
 
 ```{r}
 # Replace 'your_file.xlsx' with the path to your Excel file
-mydata <- read_excel("./Final_Project/Week_2_Files/Final Project/Final Project/Final_Project_copy_2.xls")
+mydata <- read_excel("./Final_Project/Week_3_Files/Janice/Final Project/Final_Project_copy_2.xls")
 
 # View the first few rows of the data
 head(mydata)
@@ -182,11 +182,17 @@ library(ggplot2)
 library(dplyr)
 library(scales)
 
-## Renaming variables for simplicty
+## Renaming variables for simplicity
 mydata <- mydata %>%
   rename(Year = `Years (DATE)`,
          Inflation_Rate = `Average of 10-Year Breakeven Inflation Rate`,
-         GDP = `Average of Nominal Gross Domestic Product for United States`)
+         GDP = `Average of Nominal Gross Domestic Product for United States`,
+         Consumer_Prices = `Average of Consumer Opinion Surveys: Consumer Prices: Future Tendency for United States`,
+         Unemployment_Rate = `Average of Unemployment Rate`,
+         Trade_Balance = `Average of Trade Balance: Goods and Services, Balance of Payments Basis`,
+         Personal_Income = `Average of Real Disposable Personal Income`,
+         Government_Receips = `Average of Federal Government Current Receipts`,
+         Federal_Debt_Ratio = `Average of Federal Debt: Total Public Debt as Percent of Gross Domestic Product`)
 
 
 ## Converting 'Year' column from character to numeric
@@ -223,7 +229,6 @@ ggplot(data = mydata, aes(x = Year, y = GDP)) +
        y = "Nominal GDP (in USD)") +
   scale_y_continuous(labels = scales::comma) +
   theme_minimal()
-
 ```
 
 The graph shows the trend of GDP in the U.S. over the last 20 years. The blue line represents the average annual changes in GDP, while the shaded grey areas highlight two significant periods in U.S. history, which are the 2008 financial crisis and the 2019 COVID-19 pandemic. Overall, the graph visualize how resilient the U.S. economy is despite the face of these challenges, as the GDP appears to continue increasing over the years. In the past 4 years, the GDP has been rising more signfiicantly at a higher pace, as seen from the stepper upward line trend. The significant increase in average GDP year over year indicate \_\_
@@ -266,3 +271,80 @@ However, it is noticable that the points with higher inflation rates are scatter
 #### Overall conclusion
 
 In summary, this graph shows that there isn’t a straightforward relationship between GDP and Inflation Rate. The factors affecting inflation may be more complex and not directly tied to GDP alone.
+
+
+## Week 3 - 10/28 ~ 11/4
+
+### Does Higher Inflation Mean Higher GDP?
+
+```{r}
+ggplot(mydata, aes(x = GDP, y = Inflation_Rate, color = GDP)) +
+  geom_point(aes(size = Inflation_Rate), alpha = 0.7) +
+  labs(title = "Scatter Plot of GDP vs Inflation Rate",
+       x = "GDP (in dollars)",
+       y = "Inflation Rate (%)") +
+  scale_x_continuous(labels = comma) +  # Format x-axis with commas
+  scale_color_gradient(low = "lightblue", high = "darkblue", name = "GDP Value") +
+  theme_minimal()
+```
+
+The scatter plots shows the relationship between GDP (in USD) and inflation rate (%). The color of the points represent the GDP value (with lower values being bright green and higher values being light blue), while the size of the poitns reflect the inflation rate (with smaller points showing a lower rate and larger points showing a higher rate).
+
+#### Unclear correlation between GDP and Inflation Rate
+
+The scatterplot does not seem to show a strong clear pattern between GDP and inflation rate. The points spread across different GDP values, without a clear upward or downward trend. This could suggest that GDP and inflation are not strongly correlated as they don't have a direct, simple relationship.
+
+#### High GDP values do not always align with high Inflation Rates, and vice versa
+
+However, it is noticable that the points with higher inflation rates are scattered across both high and low GDP values, which may indicate that even as GDP changes, the inflation does not necessarily flow a predictable path. In other words, high GDP does not directly align with high inflation rates, and vice versa.
+
+#### Overall conclusion
+
+In summary, this graph shows that there isn’t a straightforward relationship between GDP and Inflation Rate. The factors affecting inflation may be more complex and not directly tied to GDP alone.
+
+### Steady Increase in Disposable Income vs. Volatility in Consumer Confidence in Prices 
+
+```{r}
+ggplot(mydata, aes(x = Year)) +
+  geom_line(aes(y = Personal_Income, color = "Personal_Income"), size = 1) +
+  geom_line(aes(y = Consumer_Prices * (max(mydata$Personal_Income) / max(mydata$Consumer_Prices)),
+                color = "Consumer_Prices"), size = 1) +
+  scale_y_continuous(
+    name = "Disposable Personal Income (in USD)",
+    sec.axis = sec_axis(~ . * (max(mydata$Consumer_Prices) / max(mydata$Personal_Income)),
+                        name = "Consumer Confidence in Prices (%)")
+  ) +
+  scale_color_manual(values = c("Personal_Income" = "blue", "Consumer_Prices" = "green")) +
+  labs(title = "Disposable Personal Income Vs. Consumer Confidence in Prices",
+       x = "Year") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+#### Steady Increase in Disposable Personal Income
+The disposable personal income shows a generally stead upward trend, which indicates that people's purchasing power in the U.S. generally increased in the last 20 years. This could be attributed to economic growth, inflation, wage increases, and other adjustments over the years. However, there is a significant dip in the disposable personal income after 2020, which is most likely attributable to the economic shock caused by the COVID-19 pandemic that disrupted earnings and employment for many households. The subsequent quick recovery in the following years signify the government's efficient policies and support programs that are able to boost the people's personal incomes.
+
+#### Volatility in Consumer Confidence in Prices
+The green line, which represents the percentage of consumer optimism regarding prices, reflects hoow the prices have changed over the past 20 years, likely due to inflation, supply-demand imbalances, and other economic disruptions. There's a significant spike after 2020, during the same time time disposable personal income decreased. This could correspond to the economic effects of the COVID-19 pandemic that caused shortages, inflation, and widespread disruptions to supply chains and consumer markets globally.
+
+### High Consumer Confidence in Prices in the Past Four Years
+
+```{r}
+ggplot(mydata, aes(x = factor(Year), y = 1, fill = Consumer_Prices)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "lightblue", high = "darkblue", name = "Consumer Confidence in Prices") +
+  labs(title = "Consumer Confidence in Prices Heatmap Over Time",
+       x = "Year",
+       y = "") +
+  theme_minimal() +
+  # To organize the x-axis so everything looks neat
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+#### Consecutively Low Consumer Confidence is Followed by High Consumer Confidence in 2021-2024
+The heatmap shows varying shades of blue, with darker shades indicating higher levels of Consumer Confidence in Prices. There are lighter colros in earlier years, which may suggest that consumer confidence level in those periods were relatively low. On the other hand, there are some darker blue bands towards the more recent years, indicating periods of higher consumer confidence.
+
+#### Notable Dip Around 2008 and Signficant Spike After 2020 in Consumer Confidence in Prices
+There is a noticable dip from 2008 to 2009, with the color changing from darker blue to lighter blue, which may correlate with the global financial crisis affecting consumer confidence in prices. This may be due to economic instability, which caused consumers to have low confidence levels in prices, especially due to the overall decline in economic activity after the housing market crisis.  After 2020, there is a sharp increase in intensity, suggesting a spike in Consumer Confidence in Prices, which might be due to economic responses to the COVID-19 pandemic and recovery measures. The dark blue for the years 2022-2024 may imply that consumer confidence in prices has been quite strong recently and quite consistently, potentially due to post-pandemic recovery measures, which include economic policies, stimulus packages, or other factors affecting consumer confidence. In overall, the color intensity changes may reflect broader economic cycles, where confidence generally decreases during economic downturns (e.g., 2008) and increases during recovery periods (post-2020). 
