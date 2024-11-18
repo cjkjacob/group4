@@ -470,3 +470,182 @@ Here are key insights, observations, and differences based on the scatter plot s
 
 This scatter plot suggests that while increased spending on higher education encourages individuals to pursue further studies, it may temporarily reduce workforce participation rates for those with partial college education. This trend may be beneficial for building a more qualified workforce in the long term but could have implications for immediate labor force availability.
 
+
+## Week 4 - 11/4 ~ 11/10
+
+Here are the visualizations for this week:
+
+### Unemployment Rates by Educational Attainment
+
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+# Load the data
+data = pd.read_excel("EducationalSpendingFinalProject.xlsx", sheet_name="Monthly")
+
+# Convert DATE to datetime format and filter for the last 20 years
+data['DATE'] = pd.to_datetime(data['DATE'])
+filtered_data = data[data['DATE'] >= data['DATE'].max() - pd.DateOffset(years=20)]
+
+# Create the figure with dual y-axes
+fig = go.Figure()
+
+# Add the unemployment rate for high school graduates to the primary y-axis
+fig.add_trace(go.Scatter(
+    x=filtered_data['DATE'],
+    y=filtered_data['Unemployment Rate - Less Than a High School Diploma, 25 Yrs. & over'],
+    mode='lines',
+    name='Unemployment Rate - High School Diploma',
+    line=dict(color='blue')
+))
+
+# Add the unemployment rate for some college/associate degree to the secondary y-axis
+fig.add_trace(go.Scatter(
+    x=filtered_data['DATE'],
+    y=filtered_data['Unemployment Rate - Some College or Associate Degree, 25 Yrs. & over'],
+    mode='lines',
+    name='Unemployment Rate - Some College/Associate Degree',
+    line=dict(color='orange'),
+    yaxis='y2'
+))
+
+# Update layout to create a secondary y-axis
+fig.update_layout(
+    title='Unemployment Rates by Educational Attainment (Last 20 Years)',
+    xaxis=dict(title='Year'),
+    yaxis=dict(title='Unemployment Rate - High School Diploma (%)', titlefont=dict(color='blue')),
+    yaxis2=dict(
+        title='Unemployment Rate - Some College/Associate Degree (%)',
+        titlefont=dict(color='orange'),
+        overlaying='y',
+        side='right'
+    ),
+    template='plotly_white'
+)
+
+fig.show()
+
+```
+
+#### Key Insights, Observations, and Differences from Unemployment Rates by Educational Attainment
+
+Here are key insights, observations, and differences from the dual-axis line graph tracking unemployment rates for individuals with different educational attainments (high school diploma vs. some college/associate degree) over the last 20 years:
+
+##### Key Insights and Observations
+
+1. **Higher Unemployment Rates for High School Graduates**: Individuals with a high school diploma consistently experience higher unemployment rates compared to those with some college or an associate degree. This suggests that additional education beyond high school may improve employment prospects.
+
+2. **Sensitivity to Economic Shocks**: Both groups show significant spikes in unemployment rates during economic downturns, most notably around the 2008 financial crisis and the COVID-19 pandemic in 2020. However, the unemployment rate for high school graduates spikes higher than that for individuals with some college education, indicating a greater sensitivity to economic disruptions for the former group.
+
+3. **Steep Increase During the 2020 Pandemic**: The COVID-19 pandemic caused a particularly sharp increase in unemployment for both groups, with a rapid rise and subsequent decline. This impact was especially pronounced, reflecting the widespread economic disruptions of the pandemic.
+
+4. **Gradual Decline in Unemployment Post-2008 Crisis**: After the 2008 financial crisis, unemployment rates for both groups declined gradually, indicating a slow recovery for the labor market. However, high school graduates had a longer recovery period than those with some college education.
+
+5. **Convergence in Recent Years**: In recent years, the gap between the two groups has narrowed, with both unemployment rates stabilizing at relatively low levels. This convergence may reflect broader improvements in labor market conditions or a shift in demand for educational qualifications in certain job sectors.
+
+##### Key Differences
+
+1. **Magnitude of Unemployment Rate Spikes**: The unemployment rate for high school graduates shows larger spikes and fluctuations compared to those with some college education. This suggests that individuals with only a high school diploma may be more vulnerable to job losses during economic downturns.
+
+2. **Long-Term Advantage of Additional Education**: The consistently lower unemployment rates for individuals with some college or an associate degree highlight the potential long-term employment advantage of additional education beyond high school, even without completing a four-year degree.
+
+3. **Faster Recovery for Some College Group**: After economic downturns, individuals with some college education tend to experience a quicker recovery in unemployment rates compared to high school graduates. This difference suggests that the job market may be more favorable to those with higher educational qualifications during periods of economic recovery.
+
+4. **Short-Term Impact of Economic Crises**: During crises like COVID-19, the short-term impact on unemployment rates appears severe for both groups, but high school graduates are more adversely affected. The rapid spike and subsequent decline demonstrate the immediate impact of economic shutdowns on job security, particularly for lower educational levels.
+
+5. **Stable Employment Trends for Some College Group**: Over time, the unemployment rate for those with some college education appears more stable compared to the rate for high school graduates, which has more pronounced peaks and troughs. This stability may indicate that even partial college education provides a buffer against economic volatility in the job market.
+
+These insights highlight the value of additional education beyond high school for job stability, particularly during economic downturns. Higher educational attainment provides a degree of resilience in the labor market, as evidenced by lower and more stable unemployment rates for individuals with some college or an associate degree.
+
+
+### Correlation Between Youth Unemployment Rates and Government Education Spending
+
+
+```{python}
+import pandas as pd
+import plotly.express as px
+
+# Load data from the Monthly and Annual sheets
+monthly_data = pd.read_excel("EducationalSpendingFinalProject.xlsx", sheet_name="Monthly")
+annual_data = pd.read_excel("EducationalSpendingFinalProject.xlsx", sheet_name="Annual")
+
+# Convert DATE columns to datetime
+monthly_data['DATE'] = pd.to_datetime(monthly_data['DATE'])
+annual_data['DATE'] = pd.to_datetime(annual_data['DATE'])
+
+# Filter data for recent years and relevant columns
+monthly_data = monthly_data[['DATE', 'Unemployment Rate - 16-19 Yrs.']]
+annual_data = annual_data[['DATE', 'Government current expenditures: Education: Elementary and secondary']]
+
+# Extract year from the dates for easier merging
+monthly_data['Year'] = monthly_data['DATE'].dt.year
+annual_data['Year'] = annual_data['DATE'].dt.year
+
+# Calculate the annual average of youth unemployment rate
+yearly_youth_unemployment = monthly_data.groupby('Year')['Unemployment Rate - 16-19 Yrs.'].mean().reset_index()
+
+# Merge the youth unemployment data with government education spending data on Year
+merged_data = pd.merge(yearly_youth_unemployment, annual_data, on='Year', how='inner')
+
+# Rename columns for easier reference
+merged_data.rename(columns={
+    'Unemployment Rate - 16-19 Yrs.': 'Youth Unemployment Rate',
+    'Government current expenditures: Education: Elementary and secondary': 'Education Spending'
+}, inplace=True)
+
+# Create the heatmap with a contrasting color scale
+fig = px.imshow(
+    merged_data.corr(),
+    x=merged_data.corr().columns,
+    y=merged_data.corr().columns,
+    color_continuous_scale='RdBu',  # Red-to-blue scale for high contrast
+    title="Correlation Heatmap of Youth Unemployment Rate and Government Education Spending"
+)
+
+# Update layout for readability
+fig.update_layout(
+    template='plotly_white',
+    coloraxis_colorbar=dict(title="Correlation"),
+    xaxis_title="Variables",
+    yaxis_title="Variables"
+)
+
+fig.show()
+
+```
+
+#### Key Insights, Observations, and Differences from Correlation Between Youth Unemployment Rates and Government Education Spending
+
+Here are the key insights, observations, and differences from the heatmap showing the correlation between youth unemployment rates (ages 16-19) and government education spending:
+
+##### Key Insights and Observations
+
+1. **Weak Correlation Between Youth Unemployment and Education Spending**: The correlation between youth unemployment rates and government education spending is relatively low. This weak relationship suggests that increases in education spending may not have an immediate or direct impact on youth unemployment rates, at least in the short term.
+
+2. **Strong Positive Correlation Within Variables**: Expectedly, certain variables correlate strongly with themselves over time. For example, "Year" has a high positive correlation with itself, indicating consistent data across the dataset.
+
+3. **Limited Relationship Between Yearly Trends and Youth Unemployment**: The correlation between "Year" and "Youth Unemployment Rate" is not particularly strong. This suggests that youth unemployment does not follow a simple trend over time and may be influenced by multiple economic factors outside of the education budget.
+
+4. **Education Spending and Time**: Government education spending does not show a strong upward trend year over year, as seen by the lack of strong correlation with the "Year" variable. This might imply that education spending is relatively stable or varies based on specific policies or economic conditions, rather than steadily increasing.
+
+5. **No Strong Correlation Among Variables**: Overall, the variables (Youth Unemployment Rate, Education Spending, and Year) do not exhibit strong correlations with each other. This indicates that youth unemployment rates may be influenced by a range of other factors beyond just education spending or time trends.
+
+##### Key Differences
+
+1. **Weak Influence of Education Spending on Unemployment**: The low correlation between youth unemployment rates and government education spending indicates that educational investments alone may not be enough to directly influence youth employment outcomes. This contrasts with expectations that education funding might immediately help in lowering unemployment.
+
+2. **Temporal Stability**: The low correlation with "Year" implies that the variables do not change significantly over time in a way that aligns with one another. This could indicate that other external factors (e.g., economic cycles, labor market policies) play a larger role in affecting youth unemployment than the steady passage of time or incremental education investments.
+
+3. **Youth Unemployment Rates Independent of Spending Trends**: The weak correlation between youth unemployment and education spending highlights that other policies, economic conditions, or specific youth employment programs may be more effective than general education funding alone in reducing youth unemployment rates.
+
+4. **Non-linear Relationship Potential**: The lack of a strong linear correlation could indicate the presence of more complex, non-linear relationships. This means that while government spending on education may still impact youth unemployment, it could do so indirectly or only when certain conditions are met, such as a minimum level of spending or during economic growth periods.
+
+5. **Policy Implications**: This heatmap suggests that to address youth unemployment, policymakers may need to consider strategies beyond merely increasing education spending. Programs targeting skill development, vocational training, or job creation may be required in addition to education investments.
+
+These insights suggest that while government education spending is essential for long-term benefits, it may not be directly effective in lowering youth unemployment rates. Addressing youth unemployment likely requires a more holistic approach that includes tailored job-training programs and targeted employment policies for young individuals.
+
+
+## Week 5 - 11/11 ~ 11/17
+
+This week's deliverables were created via Shiny and are available on the shiny server here. 

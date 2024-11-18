@@ -1,3 +1,10 @@
+---
+execute:
+  echo: false
+  warning: false
+---
+
+
 # Labor Market Dynamics Analysis - Samuel Zelaya
 
 ## Week 1 - 10/14 ~ 10/20
@@ -632,3 +639,111 @@ Women’s labor participation shows a maximum of **59.6%** and a minimum of **54
 The stark difference between men’s and women’s labor participation rates highlights ongoing challenges and inequalities in the workforce. While both genders exhibit some level of fluctuation, men's participation remains notably higher and more stable, reflecting traditional employment dynamics. In contrast, women's labor participation is subject to greater variability, influenced by external factors and economic conditions. Addressing these disparities is crucial for promoting gender equity and enhancing workforce participation for women.
 
 ![](./Final_Project/Week_3_Files/Samuel/CSV/SAMUEL 4.png)
+
+
+## Week 4 - 11/4 ~ 11/10
+
+
+### Trends and Insights: Inflation vs. Average Hourly Earnings Over Time
+
+#### 1. Trend in Inflation (CPIAUCSL):
+
+Overall Trend: The inflation rate shows an upward trajectory over time. The inflation rate starts in the low 20s and rises steadily to mid 50s, indicating an increasing trend in inflation.
+
+Fluctuations: The data reveals periodic fluctuations with some notable peaks and plateaus. For example, inflation spiked from around 26 to 28 in a short period around the 60th data point, and later reached levels in the 50s.
+
+Rate of Increase: There seems to be a gradual but consistent increase, though some periods of slight stagnation occur, such as between 10-15 periods where inflation doesn’t rise substantially.
+
+#### 2. Trend in Average Hourly Earnings (AHETPI):
+
+Overall Trend: Average hourly earnings also show a general upward trend, with fluctuations. The hourly earnings increase from around 2.5 in the early periods to 10.9 in the later periods, indicating a steady increase in wages over time.
+
+Fluctuations: Similar to inflation, average hourly earnings show periods of consistent growth, with some abrupt changes. A more consistent upward movement starts becoming more evident after a certain period (around the 30th data point).
+
+Rate of Increase: The rate of increase in earnings seems more consistent compared to inflation, showing a steadier, smoother increase.
+
+#### 3. Correlation between Inflation and Average Hourly Earnings:
+
+Positive Correlation: Both inflation and average hourly earnings are increasing over time, suggesting a positive correlation between the two. As inflation rises, it seems that average earnings are also increasing, likely reflecting cost-of-living adjustments, wage negotiations, or other economic factors that prompt wage increases.
+
+Lag between Growth in Inflation and Earnings: In some periods, inflation seems to rise more quickly than average hourly earnings, which could signal periods of inflationary pressures outpacing wage growth. For instance, after period 50, inflation spikes while average earnings grow more gradually.
+
+Economic Pressure: A growing gap between the two could indicate economic pressure where wages are not keeping pace with inflation, which can impact purchasing power and overall economic wellbeing.
+
+```{r}
+# Load necessary libraries
+library(readxl)
+library(ggplot2)
+library(dplyr)
+
+# Load the Average Hourly Earnings and Inflation sheets
+earnings_data <- read_excel("./Final_Project/Week_4_Files/Samuel/week 3/Labor_Market_Dynamics_Trends_.xlsx", sheet = "Average Hourly Earnings")
+inflation_data <- read_excel("./Final_Project/Week_4_Files/Samuel/week 3/Labor_Market_Dynamics_Trends_.xlsx", sheet = "CPI")
+# Assuming 'AHETPI' is the column for earnings and 'CPIAUCSL' is the column for inflation, 
+# and both datasets have a common 'observation_date' column
+
+# Merge the datasets by observation_date
+merged_data <- merge(earnings_data, inflation_data, by = "observation_date")
+
+# Convert observation_date to Date type if necessary
+merged_data$observation_date <- as.Date(merged_data$observation_date)
+
+# Plot the data: Scatter plot of Wages (Average Hourly Earnings) vs Inflation (CPI)
+ggplot(merged_data, aes(x = AHETPI, y = CPIAUCSL)) +  
+  geom_point(color = "blue") + 
+  labs(title = "Scatter Plot: Wages vs Inflation", 
+       x = "Average Hourly Earnings (AHETPI)", 
+       y = "Consumer Price Index (CPIAUCSL)") + 
+  theme_minimal()
+```
+
+### Analyzing Economic Growth: Trends in Wages and GDP from 1947 to 1973"
+
+#### 1. Trends in AHETPI (Average Hourly Earnings)
+
+Growth over Time: The AHETPI begins at 2.50 in January 1964 and shows a gradual increase over the years. By the end of the period in 1973, it has grown to about 4.20, indicating a roughly 68% increase in average hourly earnings over this period.
+
+Economic Implications: This consistent increase likely reflects wage inflation, economic growth, and increased productivity over time. Higher earnings can positively impact consumer spending, fueling economic growth, especially in economies where consumption is a primary driver of GDP.
+
+Potential Cyclicality: Observing monthly changes could reveal potential seasonal or cyclical patterns (e.g., potential dips during recessions or surges during economic booms), although additional analysis would be required for precise cyclical interpretation.
+
+#### 2. Trends in GDP
+
+Steady Economic Growth: From a starting value of about 243.16 in 1947, GDP gradually rises, reaching over 1,700 by 1973, marking significant economic growth. This steady increase is indicative of post-World War II economic expansion, driven by industrial growth, increased consumer spending, and government investment.
+
+Impact of Historical Events: We can spot economic downturns and potential recessions (e.g., the slight dip in 1949, likely due to post-war adjustments, or periods where growth slows, which may be linked to events such as the Korean War or oil shocks in the 1970s).
+
+#### 3. Relationship Between AHETPI and GDP
+
+Economic Correlation: Generally, as GDP increases, we expect wages (represented by AHETPI) to increase as well due to enhanced economic productivity, higher employment demand, and inflationary pressures.
+
+Lagged Response: Wages (AHETPI) often react to economic changes with a lag. For example, in a booming economy (indicated by rising GDP), wages may not immediately increase but will likely follow as labor markets tighten and inflationary pressures push up wages.
+
+Insights on Purchasing Power: Rising wages suggest increased purchasing power for consumers, which can further drive economic growth (GDP) through higher spending. However, without considering inflation-adjusted wages, we cannot assess the real purchasing power change over time.
+
+```{r}
+# Load and clean the datasets as before
+earnings_data <- read_excel("./Final_Project/Week_4_Files/Samuel/week 3/Labor_Market_Dynamics_Trends_.xlsx", sheet = "Average Hourly Earnings")
+gdp_data <- read_excel("./Final_Project/Week_4_Files/Samuel/week 3/Labor_Market_Dynamics_Trends_.xlsx", sheet = "GDP")
+
+# Merge the datasets by observation_date
+merged_data <- merge(earnings_data, gdp_data, by = "observation_date")
+
+# Convert observation_date to Date type if necessary
+merged_data$observation_date <- as.Date(merged_data$observation_date)
+
+# Plot the data: Line graph of Wages (Average Hourly Earnings) and GDP over time
+ggplot(merged_data, aes(x = observation_date)) + 
+  geom_line(aes(y = AHETPI, color = "Average Hourly Earnings")) + 
+  geom_line(aes(y = GDP, color = "GDP")) + 
+  labs(title = "Wage Growth vs GDP Over Time", 
+       x = "Observation Date", 
+       y = "Value") + 
+  scale_color_manual(values = c("Average Hourly Earnings" = "blue", "GDP" = "red")) +
+  theme_minimal()
+```
+
+
+## Week 5 - 11/11 ~ 11/17
+
+This week's deliverables were created via Shiny and are available on the shiny server here. 

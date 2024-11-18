@@ -1,0 +1,74 @@
+---
+title: "VIIZ: Best Font and awesome ggplot +stat package!"
+author: "Diego J Mendoza, Future PH.D"
+format: html
+---
+
+## Quarto
+
+```{r}
+if(!require(devtools)) install.packages("devtools")
+devtools::install_github("kassambara/ggpubr")
+
+```
+```{r}
+library(ggplot2)
+library("ggpubr")
+
+```
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+library(ggpubr)
+
+# Loading data
+df_energy_index <- read.csv("EnergyIndexUrbanHouseholdCost.csv")
+df_cpi_energy <- read.csv("ConsumerPriceEnergyUSA.csv")
+df_natgas_consumption <- read.csv("ResidentialEnergyInflationTrend.csv")
+df_res_energy_inflation <- read.csv("ResidentialEnergyInflationTrend.csv")
+
+# Merging datasets
+merged_data <- merge(df_energy_index, df_cpi_energy, by = "DATE", all = TRUE)
+merged_data <- merge(merged_data, df_natgas_consumption, by = "DATE", all = TRUE)
+merged_data <- merge(merged_data, df_res_energy_inflation, by = "DATE", all = TRUE)
+
+# Converting DATE column to Date type
+merged_data$DATE <- as.Date(paste0(merged_data$DATE, "-01-01"), format = "%Y-%m-%d")
+
+# Drop rows with NA in DATE (recommended for clean plotting)
+merged_data <- merged_data %>% drop_na(DATE)
+
+# Renaming columns for readability
+colnames(merged_data) <- c("DATE", "Energy_Index", "CPI_Energy", "NatGas_Consumption", "Res_Energy_Inflation")
+
+# Creating individual line plots
+plot_energy_index <- ggplot(merged_data, aes(x = DATE, y = Energy_Index)) +
+  geom_line(color = "blue") +
+  labs(title = "Energy Index", x = NULL, y = NULL) +
+  theme_minimal()
+
+plot_cpi_energy <- ggplot(merged_data, aes(x = DATE, y = CPI_Energy)) +
+  geom_line(color = "red") +
+  labs(title = "CPI Energy", x = NULL, y = NULL) +
+  theme_minimal()
+
+plot_natgas_consumption <- ggplot(merged_data, aes(x = DATE, y = NatGas_Consumption)) +
+  geom_line(color = "green") +
+  labs(title = "Natural Gas Consumption", x = NULL, y = NULL) +
+  theme_minimal()
+
+plot_res_energy_inflation <- ggplot(merged_data, aes(x = DATE, y = Res_Energy_Inflation)) +
+  geom_line(color = "purple") +
+  labs(title = "Residential Energy Inflation", x = "Date", y = NULL) +
+  theme_minimal()
+
+# Arranging all plots together with a common legend
+ggarrange(plot_energy_index, plot_cpi_energy, plot_natgas_consumption, plot_res_energy_inflation,
+          ncol = 1, nrow = 4, common.legend = FALSE)
+
+```
+

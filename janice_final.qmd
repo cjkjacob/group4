@@ -191,8 +191,9 @@ mydata <- mydata %>%
          Unemployment_Rate = `Average of Unemployment Rate`,
          Trade_Balance = `Average of Trade Balance: Goods and Services, Balance of Payments Basis`,
          Personal_Income = `Average of Real Disposable Personal Income`,
-         Government_Receips = `Average of Federal Government Current Receipts`,
+         Government_Receipts = `Average of Federal Government Current Receipts`,
          Federal_Debt_Ratio = `Average of Federal Debt: Total Public Debt as Percent of Gross Domestic Product`)
+
 
 
 ## Converting 'Year' column from character to numeric
@@ -348,3 +349,58 @@ The heatmap shows varying shades of blue, with darker shades indicating higher l
 
 #### Notable Dip Around 2008 and Signficant Spike After 2020 in Consumer Confidence in Prices
 There is a noticable dip from 2008 to 2009, with the color changing from darker blue to lighter blue, which may correlate with the global financial crisis affecting consumer confidence in prices. This may be due to economic instability, which caused consumers to have low confidence levels in prices, especially due to the overall decline in economic activity after the housing market crisis.  After 2020, there is a sharp increase in intensity, suggesting a spike in Consumer Confidence in Prices, which might be due to economic responses to the COVID-19 pandemic and recovery measures. The dark blue for the years 2022-2024 may imply that consumer confidence in prices has been quite strong recently and quite consistently, potentially due to post-pandemic recovery measures, which include economic policies, stimulus packages, or other factors affecting consumer confidence. In overall, the color intensity changes may reflect broader economic cycles, where confidence generally decreases during economic downturns (e.g., 2008) and increases during recovery periods (post-2020). 
+
+
+## Week 4 - 11/4 ~ 11/10
+
+
+### Upward Trend in Government Receipts and Federal Debt Ratio
+
+```{r}
+scale_factor <- max(mydata$Government_Receipts) / max(mydata$Federal_Debt_Ratio)
+
+# Create dual chart
+ggplot(mydata, aes(x = Year)) +
+  # Bar chart for Government Receipts
+    geom_bar(aes(y = Government_Receipts), 
+           stat = "identity", 
+           fill = "#48c9b0",      # Color for the bars
+           width = 0.7) +         # Adjusting bar width
+  # Line chart for Federal Debt Ratio with secondary axis
+  geom_line(aes(y = Federal_Debt_Ratio * scale_factor, color = "Federal Debt Ratio"), size = 1) +
+  scale_y_continuous(
+    name = "Federal Government Receipts (in billions $)",
+    sec.axis = sec_axis(~ . / scale_factor, name = "Federal Debt as a Percent of GDP (%)")
+  ) +
+  labs(title = "Federal Government Receipts (in billions $) and Debt as a Percent of GDP (%)",
+       x = "Year") +
+  scale_color_manual(name = "", values = c("Federal Debt Ratio" = "#1f78b4")) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate x-axis labels for readability
+```
+#### Upward Trend in Government Receipts
+
+There is a general upward trend in government receipts over the observed period, indicating a steady increase in the amount of revenue collected by the federal government. Notable dips in receipts can be observed around 2008-2010, which coincides with the Great Recession, a period of economic downturn when tax revenues typically decline. After this period, government receipts show a recovery and continue to rise, reaching a peak around 2022-2024.
+
+#### Uppward trend with More Fluctuations in Federal Debt Ratio
+
+The Federal Debt Ratio also shows an upward trend, but with more fluctuations compared to receipts.
+The most noticeable increase in the debt ratio occurs around the 2008 financial crisis, where the federal government likely took on more debt as part of economic stimulus efforts.
+Another sharp increase is visible around 2020, likely due to the COVID-19 pandemic, when government debt rose significantly to support the economy through various relief programs.
+After 2021, the debt ratio seems to stabilize but remains high compared to earlier years.
+
+
+#### Government Receipts is not Directly Correlated to Debt Ratio
+
+Although both federal receipts and debt as a percentage of GDP generally increase over time, they are not directly synchronized. During periods of economic crises (2008 and 2020), government receipts appear to to dip or stabilize, while debt as a percent of GDP rises sharply.
+After these periods, government receipts gradually increase, but the debt ratio remains elevated, indicating that higher revenue does not immediately reduce the debt-to-GDP ratio.
+
+The long-term trend suggests that even though government revenue increased, it has not increased within the same pace with the increase in debt relative to the GDP. This hihlghts potential concerns about the sustainability of the debt, as it appears to increase more significantly than  the total money the federal government obtains from taxes.  
+
+
+
+
+
+## Week 5 - 11/11 ~ 11/17
+
+This week's deliverables were created via Shiny and are available on the shiny server here. 
