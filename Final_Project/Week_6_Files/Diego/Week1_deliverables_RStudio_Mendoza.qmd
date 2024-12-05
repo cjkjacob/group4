@@ -1,0 +1,351 @@
+---
+title: "Week1_FinalDeliverable_R_Mendoza"
+author: "Diego J Mendoza"
+---
+
+## Week 1: Expanding Data Scope and Initial Analysis
+
+### Deliverables
+
+-   Research Task: Identify at least 5 additional variables related to energy prices and consumption, with a focus on:
+    -   Sector-Specific Energy Consumption (e.g., residential, industrial)
+    -   Electricity Prices (consumer and industrial)
+    -   Natural Gas Prices
+    -   Renewable Energy Adoption Rates
+    -   Energy Efficiency Indexes (improvements in energy use per GDP unit)
+-   Graphs
+    -   Visualization 1: A line graph comparing the Global Price of Energy Index and the Consumer Price Index for Energy over the past 10 years. This will help track general energy price trends.
+    -   Visualization 2: A scatter plot showing the relationship between the Consumer Price Index for Energy and household energy consumption (if found in Week 1). This can reveal how price changes impact household behavior.
+    
+### Industrial Energy Consumption: Industrial Production Index (INDPRO)
+
+The Industrial Production Index (INDPRO) measures the output of manufacturing, mining, and utility sectors within the U.S. economy. This index is especially valuable in understanding the energy needs of industrial sectors since these industries consume a significant amount of electricity and fuel. By observing industrial output changes, analysts can infer variations in energy demand within manufacturing-heavy regions. Industrial output has been closely tied to economic cycles, with demand peaking during growth phases and dropping during recessions.
+
+Since energy-intensive industries like mining, steel, and chemical production drive industrial output, the INDPRO index serves as a useful proxy for understanding energy requirements across these sectors. Increases in industrial production often correlate with higher energy consumption, particularly for coal, natural gas, and electricity, as companies ramp up production to meet demand. This trend also emphasizes the importance of tracking INDPRO to assess the ripple effects on energy markets and forecast shifts in energy consumption.
+
+For instance, fluctuations in this index during periods like the COVID-19 pandemic reflected changes in energy usage patterns due to shutdowns and recovery stages. Policymakers, energy providers, and market analysts leverage INDPRO data to understand how industrial demand impacts overall energy consumption and to align energy resources accordingly. This index helps estimate industrial sector contributions to national energy consumption and provides a basis for energy policy.
+Explore INDPRO on FRED, https://fred.stlouisfed.org/series/PCU221110221110P
+
+##### 6Ws
+
+- What: Measures industrial output, reflecting energy use in sectors like manufacturing and mining.
+- Who: Primarily relevant for economists, industry stakeholders, and policymakers monitoring industrial energy needs.
+- Where: U.S.-focused, but relevant globally as a benchmark for industrial energy trends.
+- When: Updated monthly, reflecting real-time trends in energy use across industrial sectors.
+- Why: Helps gauge economic health and energy demands; high energy use often signals industrial growth.
+- How: The index uses data from various manufacturing and mining outputs to measure energy-intensive activities.
+
+### Consumer Price Index for Electricity (CUSR0000SEHF01)
+
+The Consumer Price Index (CPI) for Electricity provides an insight into the cost of electricity for U.S. urban consumers. As part of the larger CPI that tracks inflation, this index focuses specifically on residential electricity costs, reflecting how price changes affect household energy expenses. It’s especially relevant for understanding inflation's impact on essential services like energy, which is often a large part of a household’s budget. Rising electricity prices directly influence consumer purchasing power and spending behavior, as more income is diverted toward utility costs.
+
+Monthly changes in the CPI for Electricity are important indicators of broader economic shifts. For example, factors like extreme weather, fuel price volatility, and infrastructure issues can drive up electricity costs, often disproportionately affecting lower-income households. Observing CPI trends for electricity over time also helps policymakers assess how well existing energy subsidies or assistance programs are working to offset these increases for consumers.
+
+Since residential energy expenses reflect household cost-of-living pressures, tracking the CPI for Electricity helps analysts and the government understand trends in consumer spending and inflation. With growing attention on energy efficiency and renewable energy sources, monitoring these costs also highlights the potential impact of renewable energy transitions on consumer pricing.
+Explore CPI for Electricity on FRED
+
+##### 6Ws
+
+- What: Tracks changes in urban electricity costs for residential consumers.
+- Who: Useful for households, utility companies, and policymakers in planning and budgeting.
+- Where: Covers urban U.S. areas, providing insight into residential energy affordability.
+- When: Updated monthly, it reflects the latest electricity pricing trends.
+- Why: Reflects how shifts in energy prices impact household expenses, useful for inflation calculations.
+- How: It’s part of the broader Consumer Price Index (CPI), focusing on the electricity component to gauge inflation's effect on energy costs.
+
+### Natural Gas Consumption (NATURALGAS)
+
+The Natural Gas Consumption series from FRED provides monthly data on the U.S.'s natural gas usage, measured in billion cubic feet. Natural gas is a critical component of the U.S. energy mix, used heavily in heating, electricity generation, and industrial processes. This variable helps track both seasonal and overall trends in natural gas demand, which tends to peak during winter months when heating needs rise. High levels of natural gas consumption also signal industrial activity, as many manufacturing processes rely on it for fuel and heating.
+
+Natural gas is often viewed as a bridge fuel in the transition to renewables, given its lower carbon footprint compared to coal and oil. Monitoring its consumption can reveal trends in energy efficiency, especially if consumption declines while industrial output remains stable, suggesting increased energy efficiency. Additionally, tracking consumption levels can provide insights into how policy changes, weather patterns, and fuel substitution impact demand for natural gas in the U.S.
+
+For instance, the natural gas market is highly sensitive to global supply disruptions, as witnessed during recent geopolitical events that caused volatility in fuel prices. As natural gas continues to play a key role in the energy sector, data on its consumption aids in policy formulation and planning to ensure a stable, cost-effective energy supply.
+
+Link: https://fred.stlouisfed.org/series/NATURALGAS
+
+##### 6Ws
+
+- What: Tracks monthly natural gas usage, measured in billion cubic feet.
+- Who: Important for energy analysts, utility providers, and consumers, especially in colder months.
+- Where: U.S.-based, providing a seasonal snapshot of natural gas consumption.
+- When: Updated monthly to reflect fluctuations in energy demand.
+- Why: High natural gas demand often indicates seasonal spikes or economic growth.
+- How: By tracking gas utility consumption, it reveals trends in heating, industrial production, and electricity generation.
+
+### Producer Price Index for Electric Power Generation (PCU221110221110P)
+
+The Producer Price Index (PPI) for Electric Power Generation records the price changes for producers in the electric power generation industry, capturing monthly fluctuations in the cost of producing electricity. This index is useful for analyzing price trends upstream, which ultimately affect consumer electricity costs. As energy markets evolve, the PPI for Electric Power Generation reflects how factors like fuel costs, regulatory changes, and technology influence electricity production costs.
+
+Changes in this index have a cascading effect across the energy supply chain, with higher producer prices typically translating to increased retail prices for consumers. By examining the PPI, stakeholders can gauge the impact of input costs like fuel and maintenance on electricity production. This data is essential for utility companies planning infrastructure investments and for policymakers interested in energy security and cost management.
+
+The PPI for Electric Power Generation is closely watched during times of fuel price volatility, as fluctuations in oil, coal, and natural gas prices significantly impact electricity production costs. This makes the index a valuable tool for anticipating shifts in energy affordability and for planning energy strategies that balance economic needs with environmental goals.
+Explore PPI for Electric Power Generation on FRED
+
+##### 6Ws
+
+- What: Monitors price changes for producers in the electric power generation industry.
+- Who: Relevant to utility companies, industrial energy producers, and economic analysts.
+- Where: Focuses on the U.S., particularly within energy-producing regions.
+- When: Monthly updates make it a timely gauge of production cost trends in energy.
+- Why: Price changes here impact downstream electricity prices and reflect shifts in input costs like fuel or labor.
+- How: This index aggregates costs from electric power producers, showing changes in the cost of production across the sector.
+
+###Industrial Production: Energy, Total (IPB50089S)
+The Industrial Production: Energy, Total index (IPB50089S) measures the production of energy resources, including coal, oil, natural gas, and renewable sources. It offers a comprehensive snapshot of energy output across different types of fuel, making it a key metric for analyzing shifts in the U.S. energy portfolio. By tracking this index, analysts and policymakers can identify trends in energy source utilization, such as the growth of renewable energy production alongside traditional sources.
+
+This index is essential in tracking the U.S. transition to cleaner energy sources as it covers both fossil fuels and renewables. Policymakers and energy analysts often compare renewable energy production growth against fossil fuel production to understand how the national energy landscape is evolving. For instance, increasing production in solar and wind reflects policy incentives and technological advancements in green energy.
+
+Given the U.S.'s ambitious renewable energy goals, the Industrial Production: Energy, Total index provides a foundation for evaluating how quickly the country is moving away from fossil fuels and toward a sustainable energy economy. This data supports energy policy planning and is critical for tracking progress toward emissions reduction targets.
+Explore Industrial Production: Energy, Total on FRED
+
+
+##### 6Ws
+
+- What: Broad measure of industrial energy production across renewables, oil, gas, and coal.
+- Who: Useful for energy economists, policymakers, and renewable energy advocates tracking sector shifts.
+- Where: U.S.-centered data, but applicable for global comparisons in energy production trends.
+- When: Updated monthly, offering up-to-date data on energy output.
+- Why: Tracks renewable production growth alongside traditional sources, highlighting shifts in energy dependence.
+- How: This index aggregates output data across energy types, helping assess the energy mix and transition progress.
+
+### Graphs
+
+####Visualization 2: Scatter Plot Showing the Relationship Between the Consumer Price Index for Energy and Household Energy Consumption
+Relevant Variables:
+Consumer Price Index for Electricity (CUSR0000SEHF01)
+
+#####Why: This index directly measures residential electricity costs, making it an ideal candidate for studying the impact of price changes on household consumption. If household energy consumption data is available, plotting the CPI against it could indicate how sensitive consumers are to electricity price shifts.
+#####Use: Use the monthly or annual CPI data to see how price changes might correspond with fluctuations in household consumption.
+
+Natural Gas Consumption (NATURALGAS)
+
+#####Why: Natural gas is a major household energy source, especially for heating. If the data is broken down into residential consumption, it can be plotted against the CPI for energy to show how changes in energy prices impact natural gas usage in homes.
+#####Use: This dataset can be broken down by season to see if certain times of the year exhibit stronger correlations between price and consumption, such as during winter.
+
+Best Fit for Each Visualization:
+Visualization 1: The CPI for Electricity (CUSR0000SEHF01) is most suitable because it is the best representative of energy costs affecting consumers in the U.S., matching closely with broader global price trends.
+Visualization 2: A combination of the CPI for Electricity and Natural Gas Consumption would provide a comprehensive view of how price changes impact residential consumption patterns.
+
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(readr)
+gas_data <- read.csv("NATURALGAS.csv")
+cpi_data <- read.csv("CUSR0000SEHF01.csv")
+
+merged_data <- merge(cpi_data, gas_data, by = "DATE")
+
+# View the first few rows
+head(merged_data)
+
+# Check for missing values
+summary(merged_data)
+
+# Optionally, remove rows with missing values
+cleaned_data <- na.omit(merged_data)
+
+```
+
+
+#### Plot 1
+
+```{r}
+# Create a scatter plot
+ggplot(data = cleaned_data, aes(x = CUSR0000SEHF01
+, y = NATURALGAS)) +
+  geom_point(color = "blue", size = 3, alpha = 0.7) +
+  labs(
+    title = "Scatter Plot: CPI for Electricity vs. Household Energy Consumption",
+    x = "Consumer Price Index for Electricity",
+    y = "Natural Gas Consumption (Billion Cubic Feet)"
+  ) +
+  theme_minimal()
+
+# Scatter plot with a trend line
+ggplot(data = cleaned_data, aes(x = CUSR0000SEHF01, y = NATURALGAS)) +
+  geom_point(color = "blue", size = 3, alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +  # Adds a linear trend line
+  labs(
+    title = "Scatter Plot: CPI for Electricity vs. Household Energy Consumption",
+    x = "Consumer Price Index for Electricity",
+    y = "Natural Gas Consumption (Billion Cubic Feet)"
+  ) +
+  theme_minimal()
+```
+
+
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Read CSV files
+global_energy_data <- read_csv("PNRGINDEXM.csv", show_col_types = FALSE)
+cpi_data <- read_csv("PCU221110221110P.csv", show_col_types = FALSE)
+
+# Check column names
+print(names(global_energy_data))
+print(names(cpi_data))
+
+# Adjust column names based on actual names from the output above
+# Example: if the column is named "Date" in both, rename to DATE
+global_energy_data <- global_energy_data %>% rename(DATE = DATE)  # Replace DateColumn1 with actual column name
+cpi_data <- cpi_data %>% rename(DATE = DATE)  # Replace DateColumn2 with actual column name
+
+# Merge datasets on the DATE column
+merged_data2 <- merge(global_energy_data, cpi_data, by = "DATE")
+
+# Filter out rows with NA in the DATE column
+merged_data2 <- merged_data2 %>% filter(!is.na(DATE))
+
+# Line graph for Global Price of Energy Index and Renewable Energy Adoption Rates
+ggplot(data = merged_data2, aes(x = DATE)) +
+  geom_line(aes(y = EnergyIndex, color = "Energy Price Index"), size = 1) +
+  geom_line(aes(y = RenewableAdoptionRate, color = "Renewable Adoption Rate"), size = 1) +
+  labs(
+    title = "Global Energy Price Index and Renewable Energy Adoption Over Time",
+    x = "Date",
+    y = "Value",
+    color = "Legend"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = c("Energy Price Index" = "blue", "Renewable Adoption Rate" = "green"))
+
+
+```
+
+```{r}
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Read CSV files, ensuring column names are correctly set or automatically detected
+global_energy_data <- read_csv("PNRGINDEXM.csv", show_col_types = FALSE)
+cpi_data <- read_csv("PCU221110221110P.csv", show_col_types = FALSE)
+
+# Check for duplicate dates (adjust column names as needed)
+any(duplicated(global_energy_data$DATEDMY))  # Adjust column name if necessary
+any(duplicated(cpi_data$PCU221110221110P))   # Adjust column name if necessary
+
+# Renaming columns to allow for a common merge column if necessary
+# For example, rename 'DATEDMY' in global_energy_data to 'DATE'
+global_energy_data <- global_energy_data %>% rename(DATE = DATEDMY)
+cpi_data <- cpi_data %>% rename(DATE = PCU221110221110P)  # Or the correct date column name
+
+# Merge datasets on the DATE column
+merged_data2 <- merge(global_energy_data, cpi_data, by = "DATE")
+
+
+merged_data2 <- merged_data2 %>% filter(!is.na(DATE))
+
+
+```
+
+
+```{r}
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Read CSV files
+global_energy_data <- read_csv("PNRGINDEXM.csv", show_col_types = FALSE)
+cpi_data <- read_csv("PCU221110221110P.csv", show_col_types = FALSE)
+
+# Check column names
+print(names(global_energy_data))
+print(names(cpi_data))
+
+# Adjust column names based on actual names from the output above
+# Example: if the column is named "Date" in both, rename to DATE
+global_energy_data <- global_energy_data %>% rename(DATE = DATE) # Adjust as necessary
+cpi_data <- cpi_data %>% rename(DATE = DATE)  # Adjust as necessary
+
+# Merge datasets on the DATE column
+merged_data2 <- merge(global_energy_data, cpi_data, by = "DATE")
+
+# Filter out rows with NA in the DATE column
+merged_data2 <- merged_data2 %>% filter(!is.na(DATE))
+
+
+```
+
+
+```{r}
+# Line graph for Global Price of Energy Index and Renewable Energy Adoption Rates
+ggplot(data = merged_data2, aes(x = DATE)) +
+  geom_line(aes(y = DATE, color = "Energy Price Index"), size = 1) +
+  geom_line(aes(y = DATE, color = "Renewable Adoption Rate"), size = 1) +
+  labs(
+    title = "Global Energy Price Index and Renewable Energy Adoption Over Time",
+    x = "Date",
+    y = "Value",
+    color = "Legend"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = c("Energy Price Index" = "blue", "Renewable Adoption Rate" = "green"))
+
+
+```
+
+
+#### Plot 2
+
+
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Read CSV files
+global_energy_data <- read_csv("PNRGINDEXM.csv", show_col_types = FALSE)
+cpi_data <- read_csv("PCU221110221110P.csv", show_col_types = FALSE)
+
+# Display column names to verify structure
+print("Global energy data columns:")
+print(names(global_energy_data))
+print("CPI data columns:")
+print(names(cpi_data))
+
+# Rename or ensure both datasets have a common 'DATE' column for merging
+global_energy_data <- global_energy_data %>% rename(DATE = DATE)  # Replace ActualDateColumn1 with correct name
+cpi_data <- cpi_data %>% rename(DATE = DATE)  # Replace ActualDateColumn2 with correct name
+
+# Merge datasets on the DATE column
+merged_data2 <- merge(global_energy_data, cpi_data, by = "DATE")
+
+# Check column names in the merged data to identify correct variable names
+print("Merged data columns:")
+print(names(merged_data2))
+
+# Filter out rows with NA in the DATE column
+merged_data2 <- merged_data2 %>% filter(!is.na(DATE))
+
+
+
+# Plotting the line graph with actual column names for energy price index and adoption rate
+ggplot(data = merged_data2, aes(x = DATE)) +
+  geom_line(aes(y = DATE, color = "Energy Price Index"), size = 1) +  # Replace CorrectColumnName1
+  geom_line(aes(y = DATE, color = "Renewable Adoption Rate"), size = 1) +  # Replace CorrectColumnName2
+  labs(
+    title = "Global Energy Price Index and Renewable Energy Adoption Over Time",
+    x = "Date",
+    y = "Value",
+    color = "Legend"
+  ) +
+  theme_minimal() +
+  scale_color_manual(values = c("Energy Price Index" = "blue", "Renewable Adoption Rate" = "green"))
+
+
+```
+```{r}
+print(names(merged_data2))
+
+
+```
+
+

@@ -1,0 +1,444 @@
+---
+title: "Week5_Deliverables"
+author: "Diego J Mendoza"
+format: html
+---
+
+```{r}
+# Load required libraries
+library(ggpubr)
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Load and prepare Dataset 1 (PIEAEN01USM661N)
+data1 <- read_csv("PIEAEN01USM661N.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),  # Convert DATE column to Date format
+    Value1 = as.numeric(PIEAEN01USM661N)  # Rename for clarity
+  )
+
+# Load and prepare Dataset 2 (A939RX0Q048SBEA)
+data2 <- read_csv("A939RX0Q048SBEA.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),  # Convert DATE column to Date format
+    Value2 = as.numeric(A939RX0Q048SBEA)  # Rename for clarity
+  )
+```
+
+
+```{r}
+# Merge the two datasets by the DATE column
+merged_data <- inner_join(data1, data2, by = "DATE")
+
+# Scale Dataset 2 for dual-axis plotting
+merged_data <- merged_data %>%
+  mutate(
+    Value2_scaled = Value2 / max(Value2, na.rm = TRUE) * max(Value1, na.rm = TRUE)
+  )
+
+# Create the plot using ggpubr
+dual_axis_plot <- ggplot(merged_data, aes(x = DATE)) +
+  geom_line(aes(y = Value1, color = "Energy Price (Dataset 1)"), size = 1) +
+  geom_line(aes(y = Value2_scaled, color = "Real GDP (Dataset 2)"), size = 1) +
+  scale_y_continuous(
+    name = "Energy Price (Original Scale)",
+    sec.axis = sec_axis(~ . * max(Value2, na.rm = TRUE) / max(Value1, na.rm = TRUE),
+                        name = "Real GDP (Scaled)")
+  ) +
+  labs(
+    title = "Energy Efficiency vs. Total Energy Consumption",
+    x = "Year",
+    color = "Dataset"
+  ) +
+  theme_pubr() +  # Use ggpubr's theme for a clean look
+  scale_color_manual(values = c("Energy Price (Dataset 1)" = "blue", 
+                                "Real GDP (Dataset 2)" = "red"))
+
+# Print the plot
+print(dual_axis_plot)
+
+
+```
+
+
+```{r}
+library(ggpubr)
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Load and prepare Dataset 1 (PIEAEN01USM661N)
+data1 <- read_csv("PIEAEN01USM661N.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),
+    Value1 = as.numeric(PIEAEN01USM661N)  # Adjust if column name differs
+  )
+
+# Load and prepare Dataset 2 (A939RX0Q048SBEA)
+data2 <- read_csv("A939RX0Q048SBEA.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),
+    Value2 = as.numeric(A939RX0Q048SBEA)  # Adjust if column name differs
+  )
+
+# Merge the two datasets by DATE
+merged_data <- inner_join(data1, data2, by = "DATE")
+
+# Debugging: Check column names and structure
+print(names(merged_data))
+print(head(merged_data))
+
+# Scale Dataset 2 for dual-axis plotting
+merged_data <- merged_data %>%
+  mutate(
+    Value2_scaled = Value2 / max(Value2, na.rm = TRUE) * max(Value1, na.rm = TRUE)
+  )
+
+# Plot using ggpubr
+dual_axis_plot <- ggplot(merged_data, aes(x = DATE)) +
+  geom_line(aes(y = Value1, color = "Energy Price (Dataset 1)"), size = 1) +
+  geom_line(aes(y = Value2_scaled, color = "Real GDP (Dataset 2)"), size = 1) +
+  scale_y_continuous(
+    name = "Energy Price (Original Scale)",
+    sec.axis = sec_axis(~ . * max(Value2, na.rm = TRUE) / max(Value1, na.rm = TRUE),
+                        name = "Real GDP (Scaled)")
+  ) +
+  labs(
+    title = "Energy Efficiency vs. Total Energy Consumption",
+    x = "Year",
+    color = "Dataset"
+  ) +
+  theme_pubr() +
+  scale_color_manual(values = c("Energy Price (Dataset 1)" = "blue", 
+                                "Real GDP (Dataset 2)" = "red"))
+
+# Print the plot
+print(dual_axis_plot)
+
+
+```
+```{r}
+library(ggpubr)
+library(ggplot2)
+library(readr)
+library(dplyr)
+
+# Load and prepare Dataset 1 (PIEAEN01USM661N)
+data1 <- read_csv("PIEAEN01USM661N.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),
+    Value1 = as.numeric(PIEAEN01USM661N)  # Adjust if column name differs
+  )
+
+# Load and prepare Dataset 2 (A939RX0Q048SBEA)
+data2 <- read_csv("A939RX0Q048SBEA.csv") %>%
+  mutate(
+    DATE = as.Date(DATE),
+    Value2 = as.numeric(A939RX0Q048SBEA)  # Replace with correct column name
+  )
+
+# Debugging: Check column names and structure
+print("Data1 columns:")
+print(names(data1))
+print("Data2 columns:")
+print(names(data2))
+
+# Merge datasets by DATE
+merged_data <- inner_join(data1, data2, by = "DATE")
+print("Merged data columns:")
+print(names(merged_data))
+print(head(merged_data))
+
+# Scale Dataset 2 for dual-axis plotting
+merged_data <- merged_data %>%
+  mutate(
+    Value2_scaled = Value2 / max(Value2, na.rm = TRUE) * max(Value1, na.rm = TRUE)
+  )
+
+# Plot using ggpubr
+dual_axis_plot <- ggplot(merged_data, aes(x = DATE)) +
+  geom_line(aes(y = Value1, color = "Energy Price (Dataset 1)"), size = 1) +
+  geom_line(aes(y = Value2_scaled, color = "Real GDP (Dataset 2)"), size = 1) +
+  scale_y_continuous(
+    name = "Energy Price (Original Scale)",
+    sec.axis = sec_axis(~ . * max(Value2, na.rm = TRUE) / max(Value1, na.rm = TRUE),
+                        name = "Real GDP (Scaled)")
+  ) +
+  labs(
+    title = "Energy Efficiency vs. Total Energy Consumption",
+    x = "Year",
+    color = "Dataset"
+  ) +
+  theme_pubr() +
+  scale_color_manual(values = c("Energy Price (Dataset 1)" = "blue", 
+                                "Real GDP (Dataset 2)" = "red"))
+
+# Print the plot
+print(dual_axis_plot)
+
+
+```
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(readr)
+library(ggpubr)
+
+# Load Dataset 1 (PIEAEN01USM661N)
+data1 <- read_csv("PIEAEN01USM661N.csv")
+
+# Load Dataset 2 (A939RX0Q048SBEA)
+data2 <- read_csv("A939RX0Q048SBEA.csv")
+
+# Create the first line graph (Energy Price from Dataset 1)
+plot1 <- ggplot(data1, aes(x = DATE, y = PIEAEN01USM661N)) +
+  geom_line(color = "blue", size = 1) +
+  labs(
+    title = "Energy Price (Dataset 1)",
+    x = "Year",
+    y = "Energy Price"
+  ) +
+  theme_minimal()
+
+# Create the second line graph (Real GDP from Dataset 2)
+plot2 <- ggplot(data2, aes(x = DATE, y = A939RX0Q048SBEA)) +
+  geom_line(color = "red", size = 1) +
+  labs(
+    title = "Real GDP (Dataset 2)",
+    x = "Year",
+    y = "Real GDP"
+  ) +
+  theme_minimal()
+
+# Combine both plots into one using ggarrange from ggpubr
+ggarrange(plot1, plot2, 
+          common.legend = TRUE, legend = "bottom",
+          ncol = 1, nrow = 2)
+
+
+```
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(readr)
+library(ggpubr)
+
+# Load Dataset 1 (PIEAEN01USM661N)
+data1 <- read_csv("PIEAEN01USM661N.csv")
+
+# Load Dataset 2 (A939RX0Q048SBEA)
+data2 <- read_csv("A939RX0Q048SBEA.csv")
+
+# Convert DATE columns to Date class
+data1$DATE <- as.Date(data1$DATE, format = "%Y-%m-%d")
+data2$DATE <- as.Date(data2$DATE, format = "%Y-%m-%d")
+
+# Create the first line graph (Energy Price from Dataset 1)
+plot1 <- ggplot(data1, aes(x = DATE, y = PIEAEN01USM661N)) +
+  geom_line(color = "blue", size = 1) +
+  labs(
+    title = "Energy Price (Dataset 1)",
+    x = "Year",
+    y = "Energy Price"
+  ) +
+  theme_minimal()
+
+# Create the second line graph (Real GDP from Dataset 2)
+plot2 <- ggplot(data2, aes(x = DATE, y = A939RX0Q048SBEA)) +
+  geom_line(color = "red", size = 1) +
+  labs(
+    title = "Real GDP (Dataset 2)",
+    x = "Year",
+    y = "Real GDP"
+  ) +
+  theme_minimal()
+
+# Combine both plots into one using ggarrange from ggpubr
+ggarrange(plot1, plot2, 
+          common.legend = TRUE, legend = "bottom",
+          ncol = 1, nrow = 2)
+
+
+```
+
+```{r}
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Load energy price data
+energy_prices <- read_csv("EnergyPrices.csv")
+
+# Load energy efficiency data
+energy_efficiency <- read_csv("EnergyEfficiency.csv")
+
+# Ensure DATE columns are properly formatted as Date objects
+energy_prices$DATE <- as.Date(energy_prices$DATE, format = "%Y-%m-%d")
+energy_efficiency$DATE <- as.Date(energy_efficiency$DATE, format = "%Y-%m-%d")
+
+# Reshape data to long format for heatmap
+energy_prices_long <- energy_prices %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Price")
+
+energy_efficiency_long <- energy_efficiency %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Efficiency")
+
+
+```
+
+```{r}
+# Merge the two datasets by DATE and Sector
+heatmap_data <- inner_join(energy_prices_long, energy_efficiency_long, by = c("DATE", "Sector"))
+
+# Create a heatmap
+heatmap_plot <- ggplot(heatmap_data, aes(x = DATE, y = Sector, fill = Price)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "blue", name = "Energy Price") +
+  labs(
+    title = "Heatmap of Energy Prices by Sector",
+    x = "Year",
+    y = "Sector"
+  ) +
+  theme_minimal()
+
+# Overlay a second heatmap for efficiency
+efficiency_heatmap <- ggplot(heatmap_data, aes(x = DATE, y = Sector, fill = Efficiency)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "green", name = "Efficiency") +
+  labs(
+    title = "Heatmap of Energy Efficiency by Sector",
+    x = "Year",
+    y = "Sector"
+  ) +
+  theme_minimal()
+
+# Combine the two heatmaps using patchwork
+combined_heatmap <- heatmap_plot + efficiency_heatmap
+
+
+```
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(patchwork)
+library(gridExtra)
+
+# Load energy price data
+energy_prices <- read_csv("EnergyPrices.csv")
+
+# Load energy efficiency data
+energy_efficiency <- read_csv("EnergyEfficiency.csv")
+
+# Ensure DATE columns are properly formatted as Date objects
+energy_prices$DATE <- as.Date(energy_prices$DATE, format = "%Y-%m-%d")
+energy_efficiency$DATE <- as.Date(energy_efficiency$DATE, format = "%Y-%m-%d")
+
+# Reshape data to long format for heatmap
+energy_prices_long <- energy_prices %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Price")
+
+energy_efficiency_long <- energy_efficiency %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Efficiency")
+
+# Merge the two datasets by DATE and Sector
+heatmap_data <- inner_join(energy_prices_long, energy_efficiency_long, by = c("DATE", "Sector"))
+
+# Create the first heatmap (Energy Prices)
+heatmap_plot <- ggplot(heatmap_data, aes(x = DATE, y = Sector, fill = Price)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "blue", name = "Energy Price") +
+  labs(
+    title = "Heatmap of Energy Prices by Sector",
+    x = "Year",
+    y = "Sector"
+  ) +
+  theme_minimal()
+
+# Create the second heatmap (Energy Efficiency)
+efficiency_heatmap <- ggplot(heatmap_data, aes(x = DATE, y = Sector, fill = Efficiency)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "green", name = "Efficiency") +
+  labs(
+    title = "Heatmap of Energy Efficiency by Sector",
+    x = "Year",
+    y = "Sector"
+  ) +
+  theme_minimal()
+
+# Combine the two heatmaps side by side
+combined_heatmap <- heatmap_plot + efficiency_heatmap +
+  plot_annotation(title = "Heatmap Comparing Energy Prices and Efficiency by Sector")
+
+# Add policy discussion text
+policy_text <- "Policy and Sustainability Implications:
+- Policies that promote energy efficiency can reduce costs and carbon emissions.
+- Monitoring sector-specific energy prices can help policymakers target subsidies or taxes effectively.
+- Energy-intensive sectors (e.g., industrial and transportation) should prioritize efficiency improvements.
+- Investment in renewable energy sources is crucial for long-term sustainability."
+
+# Combine text and visualizations
+dashboard <- grid.arrange(
+  combined_heatmap,
+  textGrob(policy_text, just = "left", gp = gpar(fontsize = 12)),
+  ncol = 1,
+  heights = c(2, 1)
+)
+
+# Save the dashboard as an image or display it
+ggsave("Energy_Dashboard.png", plot = dashboard, width = 12, height = 8)
+
+
+```
+
+```{r}
+# Load required libraries
+library(readr)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Load energy price data
+energy_prices <- read_csv("EnergyPrices.csv")
+
+# Load energy efficiency data
+energy_efficiency <- read_csv("EnergyEfficiency.csv")
+
+# Ensure DATE columns are properly formatted as Date objects
+energy_prices$DATE <- as.Date(energy_prices$DATE, format = "%Y-%m-%d")
+energy_efficiency$DATE <- as.Date(energy_efficiency$DATE, format = "%Y-%m-%d")
+
+# Reshape data to long format for energy prices
+energy_prices_long <- energy_prices %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Price")
+
+# Reshape data to long format for energy efficiency
+energy_efficiency_long <- energy_efficiency %>%
+  pivot_longer(cols = -DATE, names_to = "Sector", values_to = "Efficiency")
+
+# Merge the two datasets by DATE and Sector
+heatmap_data <- inner_join(energy_prices_long, energy_efficiency_long, by = c("DATE", "Sector"))
+
+# Create a combined heatmap
+heatmap_plot <- ggplot(heatmap_data, aes(x = DATE, y = Sector, fill = Price)) +
+  geom_tile() +
+  scale_fill_gradient(low = "white", high = "blue", name = "Energy Price") +
+  labs(
+    title = "Heatmap of Energy Prices by Sector",
+    x = "Year",
+    y = "Sector"
+  ) +
+  theme_minimal()
+
+# Display the plot
+print(heatmap_plot)
+
+
+```
+

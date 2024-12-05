@@ -26,6 +26,7 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
+    css: style.css # Here should be the name of your css file
   pdf:
     documentclass: scrreprt
 
