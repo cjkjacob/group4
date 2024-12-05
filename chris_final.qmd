@@ -2,6 +2,9 @@
 execute:
   echo: false
 jupyter: python3
+format: 
+  html:
+    css: chris_font.css # Here should be the name of your css file
 ---
 
 # Education Spending and Outcomes Analysis - Chris Jacob Karottukoikal
